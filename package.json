@@ -1,0 +1,58 @@
+{
+  "name": "@openkfw/design-tokens",
+  "version": "0.1.1",
+  "description": "The source of truth for KfW-branded digital products.",
+  "files": [
+    "output",
+    "tokens/tokens.json",
+    "tokens/gen-tokens.dark.json5",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm run watch:extended\" \"npm run watch\"",
+    "watch": "tsx watch --exclude \"./tokens/gen-*.**\" --include \"./tokens/*.**\" sd.config.ts",
+    "watch:extended": "tsx watch --include \"./tokens/extended/tokens/*.**\" ./tokens/extended/build.ts",
+    "build": "npm run build:extended && tsx sd.config.ts",
+    "build:extended": "tsx ./tokens/extended/build.ts",
+    "update": "npx npm-check-updates -u",
+    "editor": "jsoneditor-cli --initialExpand false --engine svelte-jsoneditor load tokens/tokens.json",
+    "editor:dark": "jsoneditor-cli --port 5054 --engine svelte-jsoneditor load tokens/extended/tokens/tokens.dark.json",
+    "lint": "eslint . --ignore-pattern output --fix",
+    "format": "npx prettier ./ --write --config .prettierrc.json",
+    "typecheck": "tsc --noEmit",
+    "precommit": "npm run typecheck && npm run format && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openkfw/design-tokens.git"
+  },
+  "author": "KfW",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/openkfw/design-tokens/issues"
+  },
+  "homepage": "https://github.com/openkfw/design-tokens#readme",
+  "engines": {
+    "node": ">= 22.0.0"
+  },
+  "peerDependencies": {
+    "@types/lodash": "^4.17.17",
+    "@types/node": "^22.9.3",
+    "npm-check-updates": "^18.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@tsconfig/node22": "^22.0.2",
+    "concurrently": "^9.2.0",
+    "deep-get-set-ts": "^1.1.1",
+    "eslint": "^9.33.0",
+    "json5": "^2.2.3",
+    "jsoneditor-cli": "^1.1.0",
+    "lodash": "4.17.21",
+    "prettier": "^3.6.2",
+    "style-dictionary": "^5.0.1",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.40.0"
+  }
+}

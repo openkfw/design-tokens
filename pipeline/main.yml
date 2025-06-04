@@ -1,0 +1,12 @@
+# ###
+# Die Referenz auf die Default Rules nicht editieren
+# Eine Erweiterung der Rules ist hingegen moeglich
+workflow:
+  rules:
+    - !reference [.default_rules, rules]
+
+variables:
+  # Build stage variables
+  PROJECT_BUILD_PIPELINE: "project/build.yml"
+  PROJECT_RELEASE_PIPELINE: "project/release.yml"
+  PROJECT_DEPLOY_PIPELINE: "project/deploy.yml"
