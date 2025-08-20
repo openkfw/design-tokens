@@ -1,0 +1,37 @@
+publiccodeYmlVersion: '0.4'
+name: KfW Design Tokens
+url: 'https://github.com/openkfw/design-tokens'
+releaseDate: '2025-08-20'
+softwareVersion: 0.1.1
+developmentStatus: stable
+platforms:
+  - web
+  - android
+  - iOS
+categories:
+  - communications
+  - collaboration
+softwareType: library
+legal:
+  license: MPL-2.0
+  mainCopyrightOwner: KfW
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - gb
+description:
+  it:
+    genericName: KfW Design Tokens
+    documentation: 'https://brand-guide.kfw.de/document/85/de#/user-interface/user-interface'
+    shortDescription: The source of truth for designing KfW-branded digital products.
+    longDescription: >
+      The source of truth for designing KfW-branded digital products provides
+      essential guidelines for utilizing design tokens, including visual
+      elements like colors and typography, to ensure consistency, accessibility,
+      and usability. This resource empowers teams to create high-quality digital
+      products that embody KfW's mission and values, fostering collaboration and
+      innovation while enhancing user engagement across all platforms. We
+      encourage your feedback and invite you to open new issues for any
+      questions or challenges you encounter here.
+maintenance:
+  type: internal
