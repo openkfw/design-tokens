@@ -18,9 +18,9 @@ legal:
 localisation:
   localisationReady: false
   availableLanguages:
-    - gb
+    - en
 description:
-  it:
+  en:
     genericName: KfW Design Tokens
     documentation: 'https://brand-guide.kfw.de/document/85/de#/user-interface/user-interface'
     shortDescription: The source of truth for designing KfW-branded digital products.
