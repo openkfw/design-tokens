@@ -1313,7 +1313,7 @@
         $value: "{base.space.static.10}",
       },
       "heading-6": {
-        $value: "{base.space.static.20}",
+        $value: "{base.space.static.10}",
       },
     },
     fontsize: {

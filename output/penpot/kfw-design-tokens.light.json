@@ -706,7 +706,7 @@
         "$type": "dimension"
       },
       "Heading-6": {
-        "$value": "20px",
+        "$value": "10px",
         "$type": "dimension"
       }
     },

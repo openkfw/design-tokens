@@ -1,6 +1,6 @@
 {
   "name": "@openkfw/design-tokens",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The source of truth for KfW-branded digital products.",
   "files": [
     "output",
@@ -50,7 +50,7 @@
     "jsoneditor-cli": "^1.1.0",
     "lodash": "4.17.21",
     "prettier": "^3.6.2",
-    "style-dictionary": "^5.0.1",
+    "style-dictionary": "^5.0.2",
     "tsx": "^4.20.4",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.40.0"

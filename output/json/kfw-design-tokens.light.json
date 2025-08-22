@@ -6460,13 +6460,13 @@
         "key": "{semantic.fontspace.heading-6}",
         "$value": {
           "unit": "px",
-          "value": 20
+          "value": 10
         },
         "filePath": "tokens/tokens.json",
         "isSource": true,
         "$type": "dimension",
         "original": {
-          "$value": "{base.space.static.20}",
+          "$value": "{base.space.static.10}",
           "$type": "dimension",
           "key": "{semantic.fontspace.heading-6}"
         },
