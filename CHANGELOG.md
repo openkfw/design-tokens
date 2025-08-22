@@ -4,7 +4,7 @@
 
 ## [0.1.2] - 2025-08-22
 
-- Headline 5 spacing reduced from 20 to 10px.
+- Headline 6 spacing reduced from 20 to 10px.
 
 ## [0.1.1] - 2025-08-20
 
