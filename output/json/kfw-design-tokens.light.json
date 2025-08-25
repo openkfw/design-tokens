@@ -5059,37 +5059,6 @@
           ]
         }
       },
-      "accent": {
-        "key": "{semantic.color.accent}",
-        "$value": {
-          "colorSpace": "srgb",
-          "components": [
-            0.7176,
-            0.9765,
-            0.6667
-          ],
-          "hex": "#b7f9aa"
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "color",
-        "original": {
-          "$value": "{base.color.green.300}",
-          "$type": "color",
-          "key": "{semantic.color.accent}"
-        },
-        "name": "kfw-color-accent",
-        "attributes": {
-          "category": "semantic",
-          "type": "color",
-          "item": "accent"
-        },
-        "path": [
-          "semantic",
-          "color",
-          "accent"
-        ]
-      },
       "opaque": {
         "white-90": {
           "key": "{semantic.color.opaque.white-90}",

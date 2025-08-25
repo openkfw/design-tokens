@@ -491,10 +491,6 @@
           "$type": "color"
         }
       },
-      "Accent": {
-        "$value": "#b7f9aa",
-        "$type": "color"
-      },
       "Opaque": {
         "White-90": {
           "$value": "#ffffffe6",

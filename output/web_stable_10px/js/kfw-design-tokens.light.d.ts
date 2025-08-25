@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.1.1
+ * KfW Design Tokens v0.1.3
  * Copyright 2025
  * Licensed under MPL-2.0 (https://github.com/openkfw/design-tokens/blob/main/LICENSE)
  */
@@ -348,11 +348,6 @@ export const KfwColorBackgroundDarkBlue: {
   hex: string;
 };
 export const KfwColorBackgroundDarkGreen: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorAccent: {
   colorSpace: string;
   components: number[];
   hex: string;

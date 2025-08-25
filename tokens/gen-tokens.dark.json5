@@ -1142,9 +1142,6 @@
           $value: "{base.color.green.700}",
         },
       },
-      accent: {
-        $value: "{base.color.green.300}",
-      },
       opaque: {
         "white-90": {
           $value: "{base.color.white.90}",
