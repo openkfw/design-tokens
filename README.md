@@ -6,7 +6,7 @@ The documentation for how to using design tokens is accessible only <a href="htt
 
 ![Design Tokens badge](https://img.shields.io/badge/openkfw-design--tokens-005a8c) [![License: MPL-2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen)](./LICENSE) ![GitHub repo size](https://img.shields.io/github/repo-size/openkfw/design-tokens.svg?style=flat-square) ![GitHub package.json version ](https://img.shields.io/github/package-json/v/openkfw/design-tokens) [![NPM package](https://img.shields.io/npm/v/@openkfw/design-tokens.svg)](https://www.npmjs.com/package/@openkfw/design-tokens)
 
-# Customizing KfW Design Tokens for open source
+## Customizing KfW Design Tokens for open source
 
 Although the source code for KfW Design Tokens is free and available under the MPL 2.0 License, KfW fully reserves all rights to the KfW brand. To prevent users from getting confused about the source of a digital product or experience, there are strict restrictions on using the KfW brand and design, even when built into code that we provide. For any customization other than explicitly for the KfW, you must replace the KfW theme. To use KfW Design Tokens as open source software and customize it, please follow the instructions.
 
@@ -14,7 +14,7 @@ Although the source code for KfW Design Tokens is free and available under the M
 
 Run the following command to install the Design Tokens:
 
-```
+```bash
 npm install @openkfw/design-tokens
 ```
 
@@ -24,16 +24,18 @@ Import or use files inside the `output` folder, e.g.:
 @import url("@openkfw/design-tokens/output/web_stable_10px/css/kfw-design-tokens.light.css");
 ```
 
-# Contributing
+## ❤️ Contributing
 
 Our commitment to open source means that we are enabling - even encouraging - all interested parties to contribute.
 
-# Licensing
+## 📒 Licensing
 
 Copyright (c) 2025 KfW
 
-Licensed under the **Mozilla Public License 2.0 (MPL-2.0)** (the "License"); you may not use this file except in compliance with the License.
+Licensed under the **Mozilla Public License 2.0 (MPL-2.0)** (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License by reviewing the file [LICENSE](./LICENSE) in the repository. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the [LICENSE](./LICENSE) for the specific language governing permissions and limitations under the License.
 
-You may obtain a copy of the License by reviewing the file [LICENSE](./LICENSE) in the repository.
+## 💁 FAQ
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the [LICENSE](./LICENSE) for the specific language governing permissions and limitations under the License.
+### How can I use breakpoint design tokens in Tailwind CSS?
+
+In Tailwind CSS v3, you can easily add breakpoints by defining them in your tailwind.config.js file using JavaScript. In Tailwind CSS v4, if you want to use CSS variables with breakpoints, you may need to utilize a preprocessor like <a href="https://v3.tailwindcss.com/docs/using-with-preprocessors#using-sass-less-or-stylus">Sass</a>, as CSS variables and breakpoints do not work seamlessly together in that version.
