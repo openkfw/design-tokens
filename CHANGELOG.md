@@ -4,7 +4,7 @@
 
 ## [0.1.3] - 2025-08-22
 
-- Remove `kfw-color-accent`, use `kfw-color-linie-11` for header/footer instead or `kfw-base-color-green-300`.
+- Remove `kfw-color-accent`, use `kfw-color-line-11` for header/footer instead or `kfw-base-color-green-300`.
 
 ## [0.1.2] - 2025-08-22
 
