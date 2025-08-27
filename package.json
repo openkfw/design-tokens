@@ -5,8 +5,7 @@
   "files": [
     "output",
     "tokens/tokens.json",
-    "tokens/gen-tokens.dark.json5",
-    "README.md"
+    "tokens/gen-tokens.dark.json5"
   ],
   "scripts": {
     "start": "concurrently \"npm run watch:extended\" \"npm run watch\"",
