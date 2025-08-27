@@ -19,4 +19,4 @@ In the Web, we differentiate between `/web_stable_10px` and `/web_next_16px`, wh
 For KfW.de, MeineKfW, education, and other KfW applications, we use 62.5% (16px = 1.6rem) by default for readability 
 reasons, meaning that 1rem equals 10px. In third-party systems where we cannot influence the REM root value and it 
 corresponds to the standard browser font size of 16px (100%), /web_next_16px should be used instead. 
-Please note that a font size of 10px should never be used. Therefore, it is advisable to set the font size in the to 1.6rem.
+Please note that a font size of 10px should never be used. Therefore, it is advisable to set the font size in the `<body>` to 1.6rem.
