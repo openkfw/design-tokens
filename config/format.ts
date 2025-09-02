@@ -44,10 +44,15 @@ const extractTokenValue = ({ $value, $type, path }: TransformedToken) => {
   }
 }
 
+interface DeepWithP {
+  p?: boolean
+}
+
 const convertTokensToJson = (tokens: TransformedToken[]) => {
   const output: TransformedTokens & { $metadata?: Record<string, string[]> } = {}
 
-  deep.p = true
+  ;(deep as DeepWithP).p = true
+
   tokens.map((token) => {
     const path = token.path.map(humanCase)
     if (path.includes("Fluid")) return
