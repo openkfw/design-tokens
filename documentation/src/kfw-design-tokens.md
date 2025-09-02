@@ -29,6 +29,3 @@ include::chapters/What-are-Design-Tokens.md[]
 // 2. Changelog
 include::chapters/CHANGELOG.md[]
 
-<<<<
-// 3. How to use
-include::chapters/HOWTO.md[]
