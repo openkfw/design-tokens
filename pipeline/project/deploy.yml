@@ -1,3 +1,0 @@
-variables:
-  PROJECT_DEPLOY_ENTRYPOINT: "deploy:group"
-  GIT_STRATEGY: fetch
