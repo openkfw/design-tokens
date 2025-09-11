@@ -3,10 +3,6 @@
 
 image::kfw-design-tokens.png[KfW Design Tokens]
 
-_Link to Repository_
-
-https://github.com/openkfw/design-tokens
-
 # Notice
 
 In the `/output` directory, you will find all available output formats for Figma, Penpot, JSON, and Web (CSS, SCSS, JS).
@@ -26,6 +22,9 @@ Note: A font size of 10px should never be used. Therefore, it is advisable to se
 include::chapters/What-are-Design-Tokens.md[]
 
 <<<<
-// 2. Changelog
-include::chapters/CHANGELOG.md[]
+// 2. Support
+include::chapters/Support.md[]
 
+<<<<
+// 3. Changelog
+include::chapters/CHANGELOG.md[]
