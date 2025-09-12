@@ -21,7 +21,8 @@ Although the source code for KfW Design Tokens is free and available under the M
 Run the following command to install the Design Tokens:
 
 ```bash
-npm install @openkfw/design-tokens
+
+npm i -D @openkfw/design-tokens
 ```
 
 Import or use files inside the `output` folder, e.g.:
