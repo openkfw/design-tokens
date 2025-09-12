@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.1.3
+ * KfW Design Tokens v0.2.0
  * Copyright 2025
  * Licensed under MPL-2.0 (https://github.com/openkfw/design-tokens/blob/main/LICENSE)
  */
@@ -540,16 +540,9 @@ export const KfwLineheightList = 1.5;
 export const KfwLineheightHeading = 1.3;
 export const KfwLineheightHeading5 = 1.333;
 export const KfwBorderradius = "0.25rem";
-export const KfwFocusringOutline = {
-  color: {
-    colorSpace: "srgb",
-    components: [0, 0.2667, 0.4314],
-    hex: "#00446e",
-  },
-  width: "0.125rem",
-  style: "dashed",
-};
+export const KfwFocusringOutlineWidth = "0.125rem";
 export const KfwFocusringOutlineOffset = "0.125rem";
+export const KfwFocusringOutlineStyle = "dashed";
 export const KfwFontweight = 400;
 export const KfwFontweightHeading = 500;
 export const KfwBreakpointMobile = "37.5rem";

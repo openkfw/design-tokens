@@ -59,7 +59,7 @@ async function combineJsonFiles(extendedFile: string, inputFile: string, outputF
 
     const comment = `/**
  * Do not edit directly, this file was auto-generated.
- * By ${inputFile}
+ * By /extended/tokens/${path.basename(inputFile)}
  */\n\n`
 
     // Write the combined data to a new JSON5 file

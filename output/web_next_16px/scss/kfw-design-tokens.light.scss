@@ -1,5 +1,5 @@
 
-// KfW Design Tokens v0.1.3
+// KfW Design Tokens v0.2.0
 // Copyright 2025
 // Licensed under MPL-2.0 (https://github.com/openkfw/design-tokens/blob/main/LICENSE)
 
@@ -241,8 +241,9 @@ $kfw-lineheight-list: 1.5;
 $kfw-lineheight-heading: 1.3;
 $kfw-lineheight-heading-5: 1.333;
 $kfw-borderradius: 0.25rem;
-$kfw-focusring-outline: 0.125rem dashed #00446e;
+$kfw-focusring-outline-width: 0.125rem;
 $kfw-focusring-outline-offset: 0.125rem;
+$kfw-focusring-outline-style: dashed;
 $kfw-fontweight: 400;
 $kfw-fontweight-heading: 500;
 $kfw-breakpoint-mobile: 37.5rem;

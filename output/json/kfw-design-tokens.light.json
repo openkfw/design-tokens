@@ -6982,42 +6982,26 @@
       ]
     },
     "focusring": {
-      "outline": {
-        "key": "{semantic.focusring.outline}",
-        "$type": "border",
+      "outline-width": {
+        "key": "{semantic.focusring.outline-width}",
+        "$type": "dimension",
         "$value": {
-          "color": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.2667,
-              0.4314
-            ],
-            "hex": "#00446e"
-          },
-          "width": {
-            "unit": "px",
-            "value": 2
-          },
-          "style": "dashed"
+          "unit": "px",
+          "value": 2
         },
         "filePath": "tokens/tokens.json",
         "isSource": true,
         "original": {
-          "$type": "border",
-          "$value": {
-            "color": "{semantic.color.fn.active}",
-            "width": "{base.borderwidth.lg}",
-            "style": "dashed"
-          },
-          "key": "{semantic.focusring.outline}"
+          "$type": "dimension",
+          "$value": "{base.borderwidth.lg}",
+          "key": "{semantic.focusring.outline-width}"
         },
-        "name": "outline",
+        "name": "outline-width",
         "attributes": {},
         "path": [
           "semantic",
           "focusring",
-          "outline"
+          "outline-width"
         ]
       },
       "outline-offset": {
@@ -7040,6 +7024,29 @@
           "semantic",
           "focusring",
           "outline-offset"
+        ]
+      },
+      "outline-style": {
+        "key": "{semantic.focusring.outline-style}",
+        "$type": "strokeStyle",
+        "$value": "dashed",
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "original": {
+          "$type": "strokeStyle",
+          "$value": "dashed",
+          "key": "{semantic.focusring.outline-style}"
+        },
+        "name": "kfw-focusring-outline-style",
+        "attributes": {
+          "category": "semantic",
+          "type": "focusring",
+          "item": "outline-style"
+        },
+        "path": [
+          "semantic",
+          "focusring",
+          "outline-style"
         ]
       }
     },

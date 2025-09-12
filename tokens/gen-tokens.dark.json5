@@ -1,6 +1,6 @@
 /**
  * Do not edit directly, this file was auto-generated.
- * By /root/IdeaProjects/design-tokens/tokens/extended/tokens/tokens.dark.json
+ * By /extended/tokens/tokens.dark.json
  */
 
 {
@@ -1398,17 +1398,17 @@
       $value: "{base.borderradius.md}",
     },
     focusring: {
-      outline: {
-        $type: "border",
-        $value: {
-          color: "{semantic.color.fn.active}",
-          width: "{base.borderwidth.lg}",
-          style: "dashed",
-        },
+      "outline-width": {
+        $type: "dimension",
+        $value: "{base.borderwidth.lg}",
       },
       "outline-offset": {
         $type: "dimension",
         $value: "{base.borderwidth.lg}",
+      },
+      "outline-style": {
+        $type: "strokeStyle",
+        $value: "dashed",
       },
     },
     fontweight: {

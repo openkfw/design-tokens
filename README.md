@@ -7,7 +7,7 @@ The tokens follow a template that complies with the <a href="https://tr.designto
 
 **Note: The Design Tokens are still in the pilot phase.** This means that they are currently being tested and evaluated for functionality and usability. Feedback from users during this phase is crucial for making improvements and ensuring that the tokens meet the needs of all stakeholders before a full stable release.
 
-The documentation on how to use design tokens is available [internally](https://brand-guide.kfw.de/document/85/de#/user-interface/user-interface) only.
+The documentation on how to use design tokens is available [internally only](https://brand-guide.kfw.de/document/85/de#/user-interface/user-interface).
 If you have any questions or need assistance, please reach out to our "Design System & Tokens Community" in the internal Webex channel.
 
 ![Design Tokens badge](https://img.shields.io/badge/openkfw-design--tokens-005a8c) [![License: MPL-2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen)](./LICENSE) ![GitHub repo size](https://img.shields.io/github/repo-size/openkfw/design-tokens.svg?style=flat-square) ![GitHub package.json version ](https://img.shields.io/github/package-json/v/openkfw/design-tokens) [![NPM package](https://img.shields.io/npm/v/@openkfw/design-tokens.svg)](https://www.npmjs.com/package/@openkfw/design-tokens)
@@ -32,7 +32,7 @@ Import or use files inside the `output` folder, e.g.:
 
 ## ❤️ Contributing
 
-Our commitment to open source means that we are enabling - even encouraging - all interested parties to contribute.
+Our commitment to open source encourages contributions from everyone.
 
 ## 📒 Licensing
 
@@ -44,4 +44,5 @@ Licensed under the **Mozilla Public License 2.0 (MPL-2.0)** (the "License"); you
 
 ### How can I use breakpoint design tokens in Tailwind CSS?
 
-In Tailwind CSS v3, you can easily add breakpoints by defining them in your tailwind.config.js file using JavaScript. In Tailwind CSS v4, if you want to use CSS variables with breakpoints, you may need to utilize a preprocessor like <a href="https://v3.tailwindcss.com/docs/using-with-preprocessors#using-sass-less-or-stylus">Sass</a>, as CSS variables and breakpoints do not work seamlessly together in that version.
+In Tailwind CSS v3, you can define breakpoints directly in your `tailwind.config.js` using JavaScript.  
+In Tailwind CSS v4, you can either use the <a href="https://v3.tailwindcss.com/docs/using-with-preprocessors#using-sass-less-or-stylus">SCSS preprocessor</a> with variables for breakpoints, or use the standard CSS version and define your breakpoints statically in `px` (without variables), since this only affects breakpoints.

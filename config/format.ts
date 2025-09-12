@@ -18,7 +18,12 @@ const extractTokenValue = ({ $value, $type, path }: TransformedToken) => {
     $value,
     $type
   }
-
+  if (path.includes("letterspacing")) {
+    attributes.$type = "letterSpacing"
+  }
+  if (path.includes("borderwidth")) {
+    attributes.$type = "borderWidth"
+  }
   if (path.includes("fontfamily")) {
     attributes.$type = "fontFamilies"
   }
@@ -55,7 +60,28 @@ const convertTokensToJson = (tokens: TransformedToken[]) => {
 
   tokens.map((token) => {
     const path = token.path.map(humanCase)
+
+    /* Hide layout tokens */
+    if (path.includes("Layout")) return
+    if (path.includes("Breakpoint")) return
+    if (path.includes("Contentwrapper")) return
+    if (path.includes("Safezone")) return
+    if (path.includes("Focusring")) return
+
+    /* Hide fluid tokens for design, but show it in functional (mobile/desktop) */
     if (path.includes("Fluid")) return
+    if (path.includes("Val")) return
+    if (path.includes("Min")) {
+      path[path.indexOf("Min")] = "Mobile"
+    }
+    if (path.includes("Max")) {
+      path[path.indexOf("Max")] = "Desktop"
+    }
+
+    if (path.includes("Static")) {
+      path.splice(path.indexOf("Static"), 1)
+    }
+
     deep(output, path, extractTokenValue(token))
   })
 
