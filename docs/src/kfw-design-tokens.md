@@ -13,7 +13,7 @@ In the `/output` directory, you will find all available output formats for Figma
 
 - `/web_next_16px`: Use this folder for third-party systems where we cannot influence the REM root value and it corresponds to the standard browser font size of 16px (100%)
 
-Note: A font size of 10px should never be used. Therefore, it is advisable to set the font size in the `<body>` to 1.6rem.
+Note: A font size of 10px should never be used. Therefore, it is advisable to set the font size in the `<html>` to `62.5%` and `<body>` to `1.6rem` (16px).
 
 :numbered:
 
