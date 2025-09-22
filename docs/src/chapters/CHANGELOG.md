@@ -1,5 +1,9 @@
 # Changelog
 
+_[0.2.1] - 2025-09-22_
+
+- Adjust peerDependencies in package.json to ensure compatibility with Node 24
+
 _[0.2.0] - 2025-09-12_
 
 - Adjustments for Penpot 2.9 Typography, upgrade focusring handling, update docs 📑
