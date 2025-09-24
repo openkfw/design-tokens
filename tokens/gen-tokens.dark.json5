@@ -1416,7 +1416,7 @@
       default: {
         $value: "{base.fontweight.regular}",
       },
-      heading: {
+      bold: {
         $value: "{base.fontweight.medium}",
       },
     },

@@ -540,7 +540,7 @@ export const KfwFocusringOutlineWidth: string;
 export const KfwFocusringOutlineOffset: string;
 export const KfwFocusringOutlineStyle: string;
 export const KfwFontweight: number;
-export const KfwFontweightHeading: number;
+export const KfwFontweightBold: number;
 export const KfwBreakpointMobile: string;
 export const KfwBreakpointTablet: string;
 export const KfwBreakpointDesktop: string;

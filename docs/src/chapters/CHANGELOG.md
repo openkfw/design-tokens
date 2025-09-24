@@ -1,5 +1,10 @@
 # Changelog
 
+_[0.3.0] - 2025-09-24_
+
+- Rename semantic token `fontweight.heading` to `fontweight.bold` for more flexible usage (Headlines, Product numbers, Bold in WYSIWYG-Editors)
+- Use `px` values instead of `rem` for letterspacing
+
 _[0.2.1] - 2025-09-22_
 
 - Adjust peerDependencies in package.json to ensure compatibility with Node 24

@@ -20,7 +20,7 @@ const { nameKebab, sizePxToRem } = transforms
 
 export function RegisterTransforms(PREFIX: string) {
   /**
-   * Convert (pixel > 1) values to rem, not just dimensions and font sizes, uses `platform.options.basePxFontSize`
+   * Convert (pixel > 1 && pixel > -1) values to rem, not just dimensions and font sizes, uses `platform.options.basePxFontSize`
    * as the base font, or `16` if not provided
    * Scales non-zero numbers to rem, and adds ‘rem’ to the end.
    */
@@ -32,7 +32,7 @@ export function RegisterTransforms(PREFIX: string) {
     filter: (token) => {
       const { $value } = token
       const numericValue = parseFloat($value)
-      return typeof $value === "string" && $value.endsWith("px") && numericValue !== 1
+      return typeof $value === "string" && $value.endsWith("px") && (numericValue < -1 || numericValue > 1 || numericValue === 0)
     }
   })
 

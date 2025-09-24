@@ -7074,8 +7074,8 @@
           "default"
         ]
       },
-      "heading": {
-        "key": "{semantic.fontweight.heading}",
+      "bold": {
+        "key": "{semantic.fontweight.bold}",
         "$value": 500,
         "filePath": "tokens/tokens.json",
         "isSource": true,
@@ -7083,18 +7083,18 @@
         "original": {
           "$value": "{base.fontweight.medium}",
           "$type": "fontWeight",
-          "key": "{semantic.fontweight.heading}"
+          "key": "{semantic.fontweight.bold}"
         },
-        "name": "kfw-fontweight-heading",
+        "name": "kfw-fontweight-bold",
         "attributes": {
           "category": "semantic",
           "type": "fontweight",
-          "item": "heading"
+          "item": "bold"
         },
         "path": [
           "semantic",
           "fontweight",
-          "heading"
+          "bold"
         ]
       }
     },

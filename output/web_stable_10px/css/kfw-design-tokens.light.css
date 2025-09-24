@@ -126,9 +126,9 @@
   --kfw-base-borderwidth-lg: 0.2rem;
   --kfw-base-fontweight-regular: 400;
   --kfw-base-fontweight-medium: 500;
-  --kfw-base-letterspacing-tight: -0.05rem;
+  --kfw-base-letterspacing-tight: -0.5px;
   --kfw-base-letterspacing-normal: 0;
-  --kfw-base-letterspacing-wide: 0.05rem;
+  --kfw-base-letterspacing-wide: 0.5px;
   --kfw-base-letterspacing-wider: 1px;
   --kfw-base-layout-breakpoint-xs: 32rem;
   --kfw-base-layout-breakpoint-sm: 60rem;
@@ -249,7 +249,7 @@
   --kfw-focusring-outline-offset: 0.2rem;
   --kfw-focusring-outline-style: dashed;
   --kfw-fontweight: 400;
-  --kfw-fontweight-heading: 500;
+  --kfw-fontweight-bold: 500;
   --kfw-breakpoint-mobile: 60rem;
   --kfw-breakpoint-tablet: 84rem;
   --kfw-breakpoint-desktop: 96rem;

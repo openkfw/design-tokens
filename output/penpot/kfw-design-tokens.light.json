@@ -683,7 +683,7 @@
         "$value": 400,
         "$type": "fontWeights"
       },
-      "Heading": {
+      "Bold": {
         "$value": 500,
         "$type": "fontWeights"
       }

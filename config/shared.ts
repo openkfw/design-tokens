@@ -34,7 +34,7 @@ export const isPascalCase = (str: string) => {
 
 export const kebabToPascalCase = (str: string) => {
   return str
-    .split("-") // Teile den String an den Bindestrichen
+    .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Wandle jedes Wort um
-    .join("") // Füge die Wörter wieder zusammen
+    .join("")
 }
