@@ -132,11 +132,11 @@
     },
     "Fontfamily": {
       "Sans": {
-        "$value": "'KfW Centro Sans', Arial, Helvetica Neue, Helvetica, sans-serif",
+        "$value": "'KfW Centro Sans', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif",
         "$type": "fontFamilies"
       },
       "Mono": {
-        "$value": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+        "$value": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
         "$type": "fontFamilies"
       }
     },
@@ -506,11 +506,11 @@
     },
     "Fontfamily": {
       "Default": {
-        "$value": "'KfW Centro Sans', Arial, Helvetica Neue, Helvetica, sans-serif",
+        "$value": "'KfW Centro Sans', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif",
         "$type": "fontFamilies"
       },
       "Code": {
-        "$value": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+        "$value": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
         "$type": "fontFamilies"
       }
     },
@@ -553,16 +553,20 @@
         "$value": "20px",
         "$type": "dimension"
       },
-      "Introduction": {
-        "$value": "20px",
-        "$type": "dimension"
-      },
-      "Small": {
+      "2xsmall": {
         "$value": "5px",
         "$type": "dimension"
       },
-      "Large": {
+      "Xsmall": {
+        "$value": "10px",
+        "$type": "dimension"
+      },
+      "Small": {
         "$value": "15px",
+        "$type": "dimension"
+      },
+      "Large": {
+        "$value": "30px",
         "$type": "dimension"
       },
       "Heading-1": {
@@ -677,6 +681,16 @@
     "Borderradius": {
       "$value": "4px",
       "$type": "borderRadius"
+    },
+    "Borderwidth": {
+      "Default": {
+        "$value": "1px",
+        "$type": "borderWidth"
+      },
+      "Large": {
+        "$value": "2px",
+        "$type": "borderWidth"
+      }
     },
     "Fontweight": {
       "Default": {

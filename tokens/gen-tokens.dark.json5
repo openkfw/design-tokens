@@ -340,10 +340,10 @@
     fontfamily: {
       $type: "fontFamily",
       sans: {
-        $value: "'KfW Centro Sans', Arial, Helvetica Neue, Helvetica, sans-serif",
+        $value: "'KfW Centro Sans', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif",
       },
       mono: {
-        $value: "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+        $value: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
       },
     },
     space: {
@@ -420,12 +420,12 @@
           },
           val: {
             $value: {
-              value: 3.333,
+              value: 0.588,
               unit: "px",
             },
             $fluid: {
               unit: "vi",
-              value: 0.521,
+              value: 0.735,
             },
           },
         },
@@ -438,12 +438,12 @@
           },
           val: {
             $value: {
-              value: 8.333,
+              value: 5.588,
               unit: "px",
             },
             $fluid: {
               unit: "vi",
-              value: 0.521,
+              value: 0.735,
             },
           },
         },
@@ -456,12 +456,12 @@
           },
           val: {
             $value: {
-              value: 13.333,
+              value: 10.588,
               unit: "px",
             },
             $fluid: {
               unit: "vi",
-              value: 0.521,
+              value: 0.735,
             },
           },
         },
@@ -474,12 +474,12 @@
           },
           val: {
             $value: {
-              value: 18.333,
+              value: 15.588,
               unit: "px",
             },
             $fluid: {
               unit: "vi",
-              value: 0.521,
+              value: 0.735,
             },
           },
         },
@@ -492,12 +492,12 @@
           },
           val: {
             $value: {
-              value: 23.333,
+              value: 20.588,
               unit: "px",
             },
             $fluid: {
               unit: "vi",
-              value: 0.521,
+              value: 0.735,
             },
           },
         },
@@ -510,12 +510,12 @@
           },
           val: {
             $value: {
-              value: 28.333,
+              value: 25.588,
               unit: "px",
             },
             $fluid: {
               unit: "vi",
-              value: 0.521,
+              value: 0.735,
             },
           },
         },
@@ -528,12 +528,12 @@
           },
           val: {
             $value: {
-              value: 33.333,
+              value: 30.588,
               unit: "px",
             },
             $fluid: {
               unit: "vi",
-              value: 0.521,
+              value: 0.735,
             },
           },
         },
@@ -546,12 +546,12 @@
           },
           val: {
             $value: {
-              value: 36.667,
+              value: 31.176,
               unit: "px",
             },
             $fluid: {
               unit: "vi",
-              value: 1.042,
+              value: 1.471,
             },
           },
         },
@@ -564,12 +564,12 @@
           },
           val: {
             $value: {
-              value: 46.666,
+              value: 41.176,
               unit: "px",
             },
             $fluid: {
               unit: "vi",
-              value: 1.042,
+              value: 1.471,
             },
           },
         },
@@ -656,11 +656,11 @@
           val: {
             $value: {
               unit: "px",
-              value: 13.333,
+              value: 12.235,
             },
             $fluid: {
               unit: "vi",
-              value: 0.208,
+              value: 0.294,
             },
           },
         },
@@ -674,11 +674,11 @@
           val: {
             $value: {
               unit: "px",
-              value: 15.333,
+              value: 14.235,
             },
             $fluid: {
               unit: "vi",
-              value: 0.208,
+              value: 0.294,
             },
           },
         },
@@ -692,11 +692,11 @@
           val: {
             $value: {
               unit: "px",
-              value: 17.333,
+              value: 16.235,
             },
             $fluid: {
               unit: "vi",
-              value: 0.208,
+              value: 0.294,
             },
           },
         },
@@ -710,11 +710,11 @@
           val: {
             $value: {
               unit: "px",
-              value: 19.333,
+              value: 18.235,
             },
             $fluid: {
               unit: "vi",
-              value: 0.208,
+              value: 0.294,
             },
           },
         },
@@ -728,11 +728,11 @@
           val: {
             $value: {
               unit: "px",
-              value: 21.333,
+              value: 20.235,
             },
             $fluid: {
               unit: "vi",
-              value: 0.208,
+              value: 0.294,
             },
           },
         },
@@ -746,11 +746,11 @@
           val: {
             $value: {
               unit: "px",
-              value: 23.333,
+              value: 22.235,
             },
             $fluid: {
               unit: "vi",
-              value: 0.208,
+              value: 0.294,
             },
           },
         },
@@ -764,11 +764,11 @@
           val: {
             $value: {
               unit: "px",
-              value: 25.333,
+              value: 24.235,
             },
             $fluid: {
               unit: "vi",
-              value: 0.208,
+              value: 0.294,
             },
           },
         },
@@ -782,11 +782,11 @@
           val: {
             $value: {
               unit: "px",
-              value: 26.666,
+              value: 24.471,
             },
             $fluid: {
               unit: "vi",
-              value: 0.417,
+              value: 0.588,
             },
           },
         },
@@ -800,11 +800,11 @@
           val: {
             $value: {
               unit: "px",
-              value: 28,
+              value: 24.706,
             },
             $fluid: {
               unit: "vi",
-              value: 0.625,
+              value: 0.882,
             },
           },
         },
@@ -997,11 +997,11 @@
           val: {
             $value: {
               unit: "px",
-              value: -13.333,
+              value: 2.353,
             },
             $fluid: {
               unit: "vi",
-              value: 5.556,
+              value: 2.941,
             },
           },
         },
@@ -1074,11 +1074,11 @@
           val: {
             $value: {
               unit: "px",
-              value: 4,
+              value: -9.176,
             },
             $fluid: {
               unit: "vi",
-              value: 2.5,
+              value: 3.529,
             },
           },
         },
@@ -1091,6 +1091,7 @@
       fn: {
         default: {
           $value: "{base.color.white.default}",
+          $description: "Main interaction color for buttons and links",
         },
         active: {
           $value: "{base.color.white.default}",
@@ -1108,6 +1109,7 @@
       text: {
         default: {
           $value: "{base.color.gray.100}",
+          $description: "Main text color for body",
         },
         "on-dark-bg": {
           $value: "{base.color.blue.700}",
@@ -1122,6 +1124,7 @@
       background: {
         default: {
           $value: "{base.color.black}",
+          $description: "Main background color for body",
         },
         subtle: {
           $value: "{base.color.gray.600}",
@@ -1285,14 +1288,17 @@
       default: {
         $value: "{base.space.static.20}",
       },
-      introduction: {
-        $value: "{base.space.static.20}",
-      },
-      small: {
+      "2xsmall": {
         $value: "{base.space.static.5}",
       },
-      large: {
+      xsmall: {
+        $value: "{base.space.static.10}",
+      },
+      small: {
         $value: "{base.space.static.15}",
+      },
+      large: {
+        $value: "{base.space.static.30}",
       },
       "heading-1": {
         $value: "{base.space.static.20}",
@@ -1397,6 +1403,15 @@
       $type: "dimension",
       $value: "{base.borderradius.md}",
     },
+    borderwidth: {
+      $type: "dimension",
+      default: {
+        $value: "{base.borderwidth.md}",
+      },
+      large: {
+        $value: "{base.borderwidth.lg}",
+      },
+    },
     focusring: {
       "outline-width": {
         $type: "dimension",
@@ -1430,6 +1445,9 @@
       },
       desktop: {
         $value: "{base.layout.breakpoint.lg}",
+      },
+      "desktop-large": {
+        $value: "{base.layout.breakpoint.xl}",
       },
     },
     contentwrapper: {

@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.3.0
+ * KfW Design Tokens v0.4.0
  * Copyright 2025
  * Licensed under MPL-2.0 (https://github.com/openkfw/design-tokens/blob/main/LICENSE)
  */
@@ -272,6 +272,7 @@ export const KfwBaseLayoutGridgapStaticXl: string;
 export const KfwBaseLayoutGridgapFluidMin: string;
 export const KfwBaseLayoutGridgapFluidMax: string;
 export const KfwBaseLayoutGridgapFluidVal: string;
+/** Main interaction color for buttons and links */
 export const KfwColorFn: {
   colorSpace: string;
   components: number[];
@@ -297,6 +298,7 @@ export const KfwColorFnLabel: {
   components: number[];
   hex: string;
 };
+/** Main text color for body */
 export const KfwColorText: {
   colorSpace: string;
   components: number[];
@@ -317,6 +319,7 @@ export const KfwColorTextHeadlineOnDarkBg: {
   components: number[];
   hex: string;
 };
+/** Main background color for body */
 export const KfwColorBackground: {
   colorSpace: string;
   components: number[];
@@ -504,7 +507,8 @@ export const KfwSpaceBigMin: string;
 export const KfwSpaceBigMax: string;
 export const KfwSpaceBigVal: string;
 export const KfwFontspace: string;
-export const KfwFontspaceIntroduction: string;
+export const KfwFontspace2xsmall: string;
+export const KfwFontspaceXsmall: string;
 export const KfwFontspaceSmall: string;
 export const KfwFontspaceLarge: string;
 export const KfwFontspaceHeading1: string;
@@ -536,6 +540,8 @@ export const KfwLineheightList: number;
 export const KfwLineheightHeading: number;
 export const KfwLineheightHeading5: number;
 export const KfwBorderradius: string;
+export const KfwBorderwidth: string;
+export const KfwBorderwidthLarge: string;
 export const KfwFocusringOutlineWidth: string;
 export const KfwFocusringOutlineOffset: string;
 export const KfwFocusringOutlineStyle: string;
@@ -544,6 +550,7 @@ export const KfwFontweightBold: number;
 export const KfwBreakpointMobile: string;
 export const KfwBreakpointTablet: string;
 export const KfwBreakpointDesktop: string;
+export const KfwBreakpointDesktopLarge: string;
 export const KfwContentwrapperNarrow: string;
 export const KfwContentwrapperBasic: string;
 export const KfwContentwrapperExtended: string;

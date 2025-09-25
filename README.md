@@ -43,7 +43,41 @@ Licensed under the **Mozilla Public License 2.0 (MPL-2.0)** (the "License"); you
 
 ## 💁 FAQ
 
-### How can I use breakpoint design tokens in Tailwind CSS?
+### How to use fluid typography with design tokens?
+
+Fluid typography allows font sizes to scale dynamically based on the viewport size, creating a responsive and adaptable user experience. KfW Design Tokens include predefined fluid typography settings that you can directly use in your projects.
+
+For example, you can apply the following CSS variables with clamp:
+
+```css
+h1 {
+  font-size: clamp(var(--kfw-fontsize-heading-1-min), var(--kfw-fontsize-heading-1-val), var(--kfw-fontsize-heading-1-max));
+}
+```
+
+This ensures that the `h1` font size adjusts fluidly between the minimum and maximum values defined in the design tokens, depending on the viewport width — the minimum value on mobile, scaling up to the maximum value on desktop.
+
+### How to use breakpoint design tokens with @media and CSS?
+
+Currently, CSS variables cannot be used directly in media query declarations. However, the W3C is working on the [Custom Media Specification](https://www.w3.org/TR/mediaqueries-5/#at-ruledef-custom-media).
+As a workaround, you can extract your variables into @custom-media rules and generate your CSS using the PostCSS plugin `postcss-custom-media`. A sample integration can be found in the `/demo` directory.
+Otherwise you can use the static `px` values provided in the design tokens.
+
+### How to use breakpoint design tokens width @media and Tailwind CSS?
 
 In Tailwind CSS v3, you can define breakpoints directly in your `tailwind.config.js` using JavaScript.  
-In Tailwind CSS v4, you can either use the <a href="https://v3.tailwindcss.com/docs/using-with-preprocessors#using-sass-less-or-stylus">SCSS preprocessor</a> with variables for breakpoints, or use the standard CSS version and define your breakpoints statically in `px` (without variables), since this only affects breakpoints.
+In Tailwind CSS v4, you can either use the <a href="https://v3.tailwindcss.com/docs/using-with-preprocessors#using-sass-less-or-stylus">SCSS preprocessor</a> with variables for breakpoints, or use the standard CSS version with the workaround described above.
+
+### How to use KfW Design Tokens with AI?
+
+You can integrate `KfW Design Tokens` with AI tools like [Google Stitch](https://stitch.withgoogle.com/)
+by providing prompts that include specific token values. This helps generate designs aligned with KfW's branding, including colors, typography, and spacing.
+
+Example prompt:
+
+```
+Create a modern website design that aligns with the KfW brand provided by KfW Design Tokens:
+
+https://github.com/openkfw/design-tokens/blob/main/output/web_stable_10px/css/kfw-design-tokens.light.css
+(Copy the CSS from the link above and paste it here)
+```

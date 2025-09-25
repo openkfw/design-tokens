@@ -1,5 +1,19 @@
 # Changelog
 
+_[0.4.0] - 2025-09-30_
+
+- Renamed directory `output/web_next_16px` to `output/web_thirdparty_16px` for better clarity.
+- Updated semantic tokens for font spacing:
+  * **Note:** `fontspace.large` has changed from 15px to 30px. This is because the default spacing is 20px, and `fontspace.large` should sit above that.
+  * Introduced new tokens: `fontspace.2xsmall`, `fontspace.xsmall`, `fontspace.small`, and `fontspace.large`.
+- Fixed a bug with fluid font sizes at the mobile breakpoint.
+- Added a semantic breakpoint token for larger desktops (<1280px): `breakpoint.desktop-large`
+- Added semantic borderWidth tokens: `borderWidth` (1px), `borderWidth.large` (2px).
+- Added support for AI tools such as Google Stitch:
+  * Included a section on how to use AI with KfW Design Tokens.
+- Updated font family fallbacks to system fonts more closely matching KfW Centro Sans.
+- Added a demo integration for a sample website (work in progress)
+
 _[0.3.0] - 2025-09-24_
 
 - Rename semantic token `fontweight.heading` to `fontweight.bold` for more flexible usage (Headlines, Product numbers, Bold in WYSIWYG-Editors)

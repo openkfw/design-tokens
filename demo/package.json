@@ -1,0 +1,20 @@
+{
+  "name": "demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:cm": "node build-custom-media.js",
+    "preview": "vite preview",
+    "format": "npx prettier --write .",
+    "update": "npx npm-check-updates -u"
+  },
+  "devDependencies": {
+    "@openkfw/design-tokens": "^0.3.0",
+    "postcss-custom-media": "^11.0.6",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7"
+  }
+}

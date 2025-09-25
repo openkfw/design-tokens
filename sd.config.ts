@@ -16,8 +16,8 @@ import { RegisterCustom } from "./config"
 const THEMES = ["light"]
 const PREFIX = "kfw"
 const BASE_PX = {
-  next: 16,
-  stable: 10
+  stable: 10,
+  thirdparty: 16
 }
 const CONFIG: Config = {
   usesDtcg: true,
@@ -40,6 +40,7 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
   const isLight = theme === "light"
   const src = isLight ? DEFAULT_SELECTOR : `*.${theme}`
   const isStable = basePxFontSize === 10
+  const variant = isStable ? "stable_10px" : "thirdparty_16px"
 
   return {
     ...CONFIG,
@@ -47,7 +48,7 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
     platforms: {
       css: {
         basePxFontSize,
-        buildPath: `${BUILD_PATH_PREFIX}${isStable ? "/web_stable_10px" : "/web_next_16px"}/css`,
+        buildPath: `${BUILD_PATH_PREFIX}/web_${variant}/css`,
         options: { fileHeader: "kfw-file-header" },
         transformGroup: "custom/css-extended",
         prefix: PREFIX,
@@ -68,7 +69,7 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
       },
       scss: {
         basePxFontSize,
-        buildPath: `${BUILD_PATH_PREFIX}${isStable ? "/web_stable_10px" : "/web_next_16px"}/scss`,
+        buildPath: `${BUILD_PATH_PREFIX}/web_${variant}/scss`,
         options: { fileHeader: "kfw-file-header" },
         transformGroup: "custom/scss-extended",
         prefix: PREFIX,
@@ -89,7 +90,7 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
       },
       js: {
         basePxFontSize,
-        buildPath: `${BUILD_PATH_PREFIX}${isStable ? "/web_stable_10px" : "/web_next_16px"}/js`,
+        buildPath: `${BUILD_PATH_PREFIX}/web_${variant}/js`,
         options: { fileHeader: "kfw-file-header" },
         transformGroup: "custom/js-extended",
         prefix: PREFIX,

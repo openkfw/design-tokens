@@ -1,0 +1,210 @@
+<!--
+  This is a simple demo prototype to showcase the KfW Design Tokens in action.
+  Currently, it is work in progress and does not represent a real example.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KfW Design Tokens Demo</title>
+    <link rel="apple-touch-icon" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Logo_180x180px.png" />
+    <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Favicon_Pfeil_16x16px.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      .hero h1 {
+        font-size: 4.5rem; /* 45px */
+        font-weight: 900;
+        line-height: 1.2;
+      }
+
+      .hero h2 {
+        font-size: 1.6rem; /* 16px */
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      section {
+        padding: 2rem;
+      }
+
+      .grid {
+        display: grid;
+        gap: 1.6rem; /* 16px */
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      @media (min-width: 48rem) {
+        /* 480px */
+        .grid-2 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .card {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        border: 1px solid #e5e7eb;
+        padding: 1.6rem; /* 16px */
+        border-radius: 0.5rem; /* 5px */
+        background-color: #f5f7f8;
+      }
+
+      .card h3 {
+        font-size: 1.6rem; /* 16px */
+        font-weight: 700;
+        margin: 0;
+        color: inherit;
+      }
+
+      .card-icon {
+        font-size: 3rem; /* 30px */
+        color: #0081d6;
+      }
+
+      .news-item {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        border: 1px solid #e5e7eb;
+        padding: 1.6rem;
+        background-color: #f5f7f8;
+      }
+
+      .news-content {
+        flex: 1;
+      }
+
+      .news-content p {
+        margin: 0.4rem 0; /* 4px */
+      }
+
+      .news-image {
+        width: 100%;
+        height: 12rem; /* 120px */
+        background-position: center;
+        background-size: cover;
+      }
+
+      @media (min-width: 48rem) {
+        .hero {
+          padding: 2.5rem; /* 25px */
+        }
+
+        .hero h1 {
+          font-size: 5rem; /* 50px */
+        }
+
+        .hero h2 {
+          font-size: 1.8rem; /* 18px */
+        }
+
+        .news-item {
+          flex-direction: row;
+        }
+
+        .news-image {
+          width: 33%;
+          height: auto;
+        }
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid #e5e7eb;
+        padding: 0.8rem 0 1rem 0; /* 8px 10px */
+        position: sticky;
+        bottom: 0;
+        background-color: var(--kfw-color-background);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div style="width: 48px; display: flex; justify-content: start">
+          <button>menu</button>
+        </div>
+        <div>
+          <a class="d-block" href="#">
+            <img class="d-block m-auto" src="/kfw_logo.png" alt="KfW Logo" style="height: 28px" />
+          </a>
+        </div>
+        <div style="width: 148px; display: flex; justify-content: end; margin-left: auto">
+          <button>Call to Action</button>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <div class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(&quot;/welcome_image.jpeg&quot;)">
+          <h1>Welcome to KfW!</h1>
+          <h2>
+            KfW is one of the world’s leading promotional banks and has been committed to improving economic, social and environmental living
+            conditions across the globe.
+          </h2>
+        </div>
+
+        <section>
+          <h1>Welcome to KfW!</h1>
+          <p class="intro">
+            KfW is one of the world’s leading promotional banks and has been committed to improving economic, social and environmental living
+            conditions across the globe.
+          </p>
+        </section>
+
+        <section>
+          <h2>Our Focus Areas</h2>
+          <div class="grid grid-2">
+            <div class="card">
+              <span class="card-icon">apartment</span>
+              <h3>Sustainable Infrastructure</h3>
+            </div>
+            <div class="card">
+              <span class="card-icon">eco</span>
+              <h3>Environmental Protection</h3>
+            </div>
+            <div class="card">
+              <span class="card-icon">trending_up</span>
+              <h3>Economic Development</h3>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Latest News</h2>
+          <div class="news-item">
+            <div class="news-content">
+              <p style="color: #0081d6; font-weight: 500">Press Release</p>
+              <p style="font-weight: 700">KfW Announces New Funding for Renewable Energy Projects</p>
+              <p>
+                KfW will provide significant financial support to initiatives aimed at expanding renewable energy sources and reducing carbon
+                emissions.
+              </p>
+            </div>
+            <div class="news-image" style="background-image: url(&quot;/kfw-design-tokens.png&quot;)"></div>
+          </div>
+        </section>
+      </main>
+
+      <div class="text-center">
+        <p>This demo prototype created by KfW Design Tokens & Google Stich</p>
+      </div>
+
+      <footer>
+        <a href="#"><span>home</span></a>
+        <a href="#"><span>work</span></a>
+        <a href="#"><span>info</span></a>
+        <a href="#"><span>phone</span></a>
+      </footer>
+    </div>
+  </body>
+</html>
