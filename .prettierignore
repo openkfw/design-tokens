@@ -1,3 +1,4 @@
 output
 tokens/gen-**.**
 docs/build/**
+docs/src/**
