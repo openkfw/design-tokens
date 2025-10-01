@@ -1,6 +1,6 @@
 # Changelog
 
-_[0.4.0] - 2025-09-30_
+_[0.4.1] - 2025-10-02_
 
 - Renamed directory `output/web_next_16px` to `output/web_thirdparty_16px` for better clarity.
 - Updated semantic tokens for font spacing:
@@ -11,7 +11,6 @@ _[0.4.0] - 2025-09-30_
 - Added semantic borderWidth tokens: `borderWidth` (1px), `borderWidth.large` (2px).
 - Added support for AI tools such as Google Stitch:
   * Included a section on how to use AI with KfW Design Tokens.
-- Updated font family fallbacks to system fonts more closely matching KfW Centro Sans.
 - Added a demo integration for a sample website (work in progress)
 
 _[0.3.0] - 2025-09-24_

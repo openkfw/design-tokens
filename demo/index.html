@@ -15,22 +15,6 @@
     <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
     <link rel="stylesheet" href="/src/style.css" />
     <style>
-      .hero h1 {
-        font-size: 4.5rem; /* 45px */
-        font-weight: 900;
-        line-height: 1.2;
-      }
-
-      .hero h2 {
-        font-size: 1.6rem; /* 16px */
-        font-weight: 400;
-        line-height: 1.5;
-      }
-
-      section {
-        padding: 2rem;
-      }
-
       .grid {
         display: grid;
         gap: 1.6rem; /* 16px */
@@ -94,18 +78,6 @@
       }
 
       @media (min-width: 48rem) {
-        .hero {
-          padding: 2.5rem; /* 25px */
-        }
-
-        .hero h1 {
-          font-size: 5rem; /* 50px */
-        }
-
-        .hero h2 {
-          font-size: 1.8rem; /* 18px */
-        }
-
         .news-item {
           flex-direction: row;
         }
@@ -121,7 +93,7 @@
         justify-content: space-around;
         border-top: 1px solid #e5e7eb;
         padding: 0.8rem 0 1rem 0; /* 8px 10px */
-        position: sticky;
+        position: relative;
         bottom: 0;
         background-color: var(--kfw-color-background);
       }
@@ -145,54 +117,66 @@
     </header>
     <div class="container">
       <main>
-        <div class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(&quot;/welcome_image.jpeg&quot;)">
-          <h1>Welcome to KfW!</h1>
-          <h2>
-            KfW is one of the world’s leading promotional banks and has been committed to improving economic, social and environmental living
-            conditions across the globe.
-          </h2>
+        <section class="hero">
+          <div class="hero__content">
+            <img class="hero__content-bars" src="/tbalken.svg" alt="Transformation bars" />
+
+            <h1 class="hero__title">Willkommen bei Meine KfW!</h1>
+          </div>
+          <img
+            class="hero__image"
+            alt="Luftaufnahme der Zentrale der KfW Bankengruppe in Frankfurt am Main"
+            width="1280"
+            height="721"
+            decoding="async"
+            loading="lazy"
+            src="https://meine.kfw.de/images/resized/1280/welcome_image.jpeg"
+          />
+        </section>
+        <div class="content">
+          <section>
+            <h1>Headline 1</h1>
+            <p class="intro">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus, fuga natus nesciunt nisi odit, possimus repudiandae saepe
+              tempora totam voluptatem voluptates. Accusantium ducimus error hic officiis omnis reiciendis, veritatis. Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Accusamus alias aperiam atque doloribus eligendi eos esse fugit illum incidunt, iusto magni minima non
+              nostrum omnis praesentium quis reprehenderit saepe, sunt!
+            </p>
+          </section>
+
+          <section>
+            <h2>Headline 2</h2>
+            <div class="grid grid-2">
+              <div class="card">
+                <span class="card-icon">apartment</span>
+                <h3>Sustainable Infrastructure</h3>
+              </div>
+              <div class="card">
+                <span class="card-icon">eco</span>
+                <h3>Environmental Protection</h3>
+              </div>
+              <div class="card">
+                <span class="card-icon">trending_up</span>
+                <h3>Economic Development</h3>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h3>Headline 3</h3>
+            <div class="news-item">
+              <div class="news-content">
+                <p style="color: #0081d6; font-weight: 500">Press Release</p>
+                <p style="font-weight: 700">KfW Announces New Funding for Renewable Energy Projects</p>
+                <p>
+                  KfW will provide significant financial support to initiatives aimed at expanding renewable energy sources and reducing carbon
+                  emissions.
+                </p>
+              </div>
+              <div class="news-image" style="background-image: url(&quot;/kfw-design-tokens.png&quot;)"></div>
+            </div>
+          </section>
         </div>
-
-        <section>
-          <h1>Welcome to KfW!</h1>
-          <p class="intro">
-            KfW is one of the world’s leading promotional banks and has been committed to improving economic, social and environmental living
-            conditions across the globe.
-          </p>
-        </section>
-
-        <section>
-          <h2>Our Focus Areas</h2>
-          <div class="grid grid-2">
-            <div class="card">
-              <span class="card-icon">apartment</span>
-              <h3>Sustainable Infrastructure</h3>
-            </div>
-            <div class="card">
-              <span class="card-icon">eco</span>
-              <h3>Environmental Protection</h3>
-            </div>
-            <div class="card">
-              <span class="card-icon">trending_up</span>
-              <h3>Economic Development</h3>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2>Latest News</h2>
-          <div class="news-item">
-            <div class="news-content">
-              <p style="color: #0081d6; font-weight: 500">Press Release</p>
-              <p style="font-weight: 700">KfW Announces New Funding for Renewable Energy Projects</p>
-              <p>
-                KfW will provide significant financial support to initiatives aimed at expanding renewable energy sources and reducing carbon
-                emissions.
-              </p>
-            </div>
-            <div class="news-image" style="background-image: url(&quot;/kfw-design-tokens.png&quot;)"></div>
-          </div>
-        </section>
       </main>
 
       <div class="text-center">

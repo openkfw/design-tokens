@@ -1185,12 +1185,12 @@
     "fontfamily": {
       "sans": {
         "key": "{base.fontfamily.sans}",
-        "$value": "'KfW Centro Sans', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "$value": "\"KfW Centro Sans\", Arial, \"Helvetica Neue\", Helvetica, sans-serif",
         "filePath": "tokens/tokens.json",
         "isSource": true,
         "$type": "fontFamily",
         "original": {
-          "$value": "'KfW Centro Sans', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "$value": "\"KfW Centro Sans\", Arial, \"Helvetica Neue\", Helvetica, sans-serif",
           "$type": "fontFamily",
           "key": "{base.fontfamily.sans}"
         },
@@ -5977,7 +5977,7 @@
     "fontfamily": {
       "default": {
         "key": "{semantic.fontfamily.default}",
-        "$value": "'KfW Centro Sans', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "$value": "\"KfW Centro Sans\", Arial, \"Helvetica Neue\", Helvetica, sans-serif",
         "filePath": "tokens/tokens.json",
         "isSource": true,
         "$type": "fontFamily",

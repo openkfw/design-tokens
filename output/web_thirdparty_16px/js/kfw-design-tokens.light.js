@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.4.0
+ * KfW Design Tokens v0.4.1
  * Copyright 2025
  * Licensed under MPL-2.0 (https://github.com/openkfw/design-tokens/blob/main/LICENSE)
  */
@@ -150,7 +150,7 @@ export const KfwBaseColorYellow500 = {
   hex: "#eac80b",
 };
 export const KfwBaseFontfamilySans =
-  "'KfW Centro Sans', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif";
+  '"KfW Centro Sans", Arial, "Helvetica Neue", Helvetica, sans-serif';
 export const KfwBaseFontfamilyMono =
   "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace";
 export const KfwBaseSpaceStatic5 = "0.3125rem";
@@ -495,7 +495,7 @@ export const KfwColorIconDisabledSecondary = {
   hex: "#94eb90",
 };
 export const KfwFontfamily =
-  "'KfW Centro Sans', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif";
+  '"KfW Centro Sans", Arial, "Helvetica Neue", Helvetica, sans-serif';
 export const KfwFontfamilyCode =
   "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace";
 export const KfwSpaceXsmall = "0.625rem";

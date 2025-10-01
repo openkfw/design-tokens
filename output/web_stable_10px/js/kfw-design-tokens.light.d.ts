@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.4.0
+ * KfW Design Tokens v0.4.1
  * Copyright 2025
  * Licensed under MPL-2.0 (https://github.com/openkfw/design-tokens/blob/main/LICENSE)
  */

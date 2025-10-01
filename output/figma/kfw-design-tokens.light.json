@@ -132,7 +132,7 @@
     },
     "Fontfamily": {
       "Sans": {
-        "$value": "'KfW Centro Sans', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "$value": "\"KfW Centro Sans\", Arial, \"Helvetica Neue\", Helvetica, sans-serif",
         "$type": "fontFamilies"
       },
       "Mono": {
@@ -506,7 +506,7 @@
     },
     "Fontfamily": {
       "Default": {
-        "$value": "'KfW Centro Sans', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "$value": "\"KfW Centro Sans\", Arial, \"Helvetica Neue\", Helvetica, sans-serif",
         "$type": "fontFamilies"
       },
       "Code": {

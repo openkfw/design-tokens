@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.4.0
+ * KfW Design Tokens v0.4.1
  * Copyright 2025
  * Licensed under MPL-2.0 (https://github.com/openkfw/design-tokens/blob/main/LICENSE)
  */
@@ -35,7 +35,7 @@
   --kfw-base-color-violet-500: #686fc8;
   --kfw-base-color-red-400: #c80538;
   --kfw-base-color-yellow-500: #eac80b;
-  --kfw-base-fontfamily-sans: 'KfW Centro Sans', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --kfw-base-fontfamily-sans: "KfW Centro Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   --kfw-base-fontfamily-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   --kfw-base-space-static-5: 0.3125rem;
   --kfw-base-space-static-10: 0.625rem;
@@ -201,7 +201,7 @@
   --kfw-color-icon-secondary: #54b3e2;
   --kfw-color-icon-disabled: #398357;
   --kfw-color-icon-disabled-secondary: #94eb90;
-  --kfw-fontfamily: 'KfW Centro Sans', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --kfw-fontfamily: "KfW Centro Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   --kfw-fontfamily-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   --kfw-space-xsmall: 0.625rem;
   --kfw-space-small: 1.25rem;
