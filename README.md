@@ -67,17 +67,3 @@ Otherwise you can use the static `px` values provided in the design tokens.
 
 In Tailwind CSS v3, you can define breakpoints directly in your `tailwind.config.js` using JavaScript.  
 In Tailwind CSS v4, you can either use the <a href="https://v3.tailwindcss.com/docs/using-with-preprocessors#using-sass-less-or-stylus">SCSS preprocessor</a> with variables for breakpoints, or use the standard CSS version with the workaround described above.
-
-### How to use KfW Design Tokens with AI?
-
-You can integrate `KfW Design Tokens` with AI tools like [Google Stitch](https://stitch.withgoogle.com/)
-by providing prompts that include specific token values. This helps generate designs aligned with KfW's branding, including colors, typography, and spacing.
-
-Example prompt:
-
-```
-Create a modern website design that aligns with the KfW brand provided by KfW Design Tokens:
-
-https://github.com/openkfw/design-tokens/blob/main/output/web_stable_10px/css/kfw-design-tokens.light.css
-(Copy the CSS from the link above and paste it here)
-```
