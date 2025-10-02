@@ -447,6 +447,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_notice">Notice</a>
 <ul class="sectlevel1">
 <li><a href="#_web_folder_usage">Web Folder Usage</a></li>
+<li><a href="#_integration_demo_example">Integration Demo Example</a></li>
 </ul>
 </li>
 <li><a href="#_what_are_design_tokens">What are Design Tokens?</a></li>
@@ -485,6 +486,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Note: A font size of 10px should never be used. Therefore, it is advisable to set the font size in the <code>&lt;html&gt;</code> to <code>62.5%</code> and <code>&lt;body&gt;</code> to <code>1.6rem</code> (16px).</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_integration_demo_example"><a class="anchor" href="#_integration_demo_example"></a>Integration Demo Example</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://openkfw.github.io/design-tokens/demo/dist/" class="bare">https://openkfw.github.io/design-tokens/demo/dist/</a></p>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -503,6 +512,16 @@ layer.</p>
 </div>
 <div style="page-break-after: always;"></div>
 <h1 id="_changelog" class="sect0"><a class="anchor" href="#_changelog"></a>Changelog</h1>
+<div class="paragraph">
+<p><em>[0.4.2] - 2025-10-06</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Skip pxToRem conversion for breakpoint values and any sizes below 2px.</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p><em>[0.4.1] - 2025-10-02</em></p>
 </div>
@@ -628,7 +647,7 @@ border-color: var(--kfw-color-fn-active);</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-09-22 14:57:53 +0200
+Last updated 2025-10-06 19:09:00 +0200
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

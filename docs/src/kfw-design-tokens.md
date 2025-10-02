@@ -15,6 +15,10 @@ In the `/output` directory, you will find all available output formats for Figma
 
 Note: A font size of 10px should never be used. Therefore, it is advisable to set the font size in the `<html>` to `62.5%` and `<body>` to `1.6rem` (16px).
 
+## Integration Demo Example
+
+https://openkfw.github.io/design-tokens/demo/dist/
+
 :numbered:
 
 <<<<

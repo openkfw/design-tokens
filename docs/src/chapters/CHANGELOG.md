@@ -1,5 +1,9 @@
 # Changelog
 
+_[0.4.2] - 2025-10-06_
+
+- Skip pxToRem conversion for breakpoint values and any sizes below 2px.
+
 _[0.4.1] - 2025-10-02_
 
 - Renamed directory `output/web_next_16px` to `output/web_thirdparty_16px` for better clarity.

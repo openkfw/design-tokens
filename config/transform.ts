@@ -20,7 +20,7 @@ const { nameKebab, sizePxToRem } = transforms
 
 export function RegisterTransforms(PREFIX: string) {
   /**
-   * Convert (pixel > 1 && pixel > -1) values to rem, not just dimensions and font sizes, uses `platform.options.basePxFontSize`
+   * Convert (pixel > 2 && pixel > -2) values to rem, not just dimensions and font sizes, uses `platform.options.basePxFontSize`
    * as the base font, or `16` if not provided
    * Scales non-zero numbers to rem, and adds ‘rem’ to the end.
    */
@@ -30,9 +30,11 @@ export function RegisterTransforms(PREFIX: string) {
     type: transformTypes.value,
     transitive: true,
     filter: (token) => {
-      const { $value } = token
+      const { $value, path } = token
+      if (path.includes("breakpoint"))
+        return false /* 💡 Reason: Media queries use the browser's default root font size (not your custom setting, like 1rem = 10px) */
       const numericValue = parseFloat($value)
-      return typeof $value === "string" && $value.endsWith("px") && (numericValue < -1 || numericValue > 1 || numericValue === 0)
+      return typeof $value === "string" && $value.endsWith("px") && (numericValue < -2 || numericValue > 2 || numericValue === 0)
     }
   })
 
