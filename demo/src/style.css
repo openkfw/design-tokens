@@ -229,13 +229,13 @@
       padding: 0 clamp(var(--kfw-safezone-min), var(--kfw-safezone-val), var(--kfw-safezone-max));
     }
 
-    .content section {
+    .container > section {
       margin-bottom: 5rem;
       margin-top: 3.5rem;
     }
 
     @media (--kfw-breakpoint-desktop) {
-      .content section {
+      .container > section {
         margin-bottom: 6rem;
         margin-top: 4rem;
       }
