@@ -1,7 +1,7 @@
 /* Custom Media Queries generated from KfW Design Tokens */
 /* See: https://www.w3.org/TR/mediaqueries-5/#at-ruledef-custom-media */
 
-@custom-media --kfw-breakpoint-mobile (min-width: 60rem);
-@custom-media --kfw-breakpoint-tablet (min-width: 84rem);
-@custom-media --kfw-breakpoint-desktop (min-width: 96rem);
+@custom-media --kfw-breakpoint-mobile (min-width: 600px);
+@custom-media --kfw-breakpoint-tablet (min-width: 840px);
+@custom-media --kfw-breakpoint-desktop (min-width: 960px);
 @custom-media --kfw-breakpoint-desktop-large (min-width: 1280px);
