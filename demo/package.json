@@ -14,7 +14,7 @@
   "devDependencies": {
     "@openkfw/design-tokens": "^0.4.2",
     "postcss-custom-media": "^11.0.6",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.7"
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9"
   }
 }
