@@ -356,7 +356,7 @@
         background-color: var(--kfw-color-opaque-white-95);
         left: 4rem;
         top: calc(4rem + 1rem + 25px); /* outsidePaddingTop + 10px space + barsHeight */
-        border-radius: 0 0 var(--kfw-base-borderradius-lg) 0; /* @todo prefer to use --kfw-borderradius-large instead */
+        border-radius: 0 0 var(--kfw-borderradius-large) 0;
         padding: 2rem 3rem 3rem;
       }
     }

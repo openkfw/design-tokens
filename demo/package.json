@@ -13,7 +13,7 @@
     "lint:css": "npx stylelint 'src/*.css' --fix"
   },
   "devDependencies": {
-    "@openkfw/design-tokens": "^0.4.2",
+    "@openkfw/design-tokens": "^0.4.3",
     "postcss-custom-media": "^11.0.6",
     "stylelint": "^16.25.0",
     "stylelint-config-standard": "^39.0.1",
