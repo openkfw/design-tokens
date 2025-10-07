@@ -603,12 +603,12 @@
         "$value": "20px",
         "$type": "fontSizes"
       },
-      "Small": {
-        "$value": "14px",
-        "$type": "fontSizes"
-      },
       "Large": {
         "$value": "18px",
+        "$type": "fontSizes"
+      },
+      "Small": {
+        "$value": "14px",
         "$type": "fontSizes"
       },
       "Heading-1": {
@@ -679,8 +679,18 @@
       }
     },
     "Borderradius": {
-      "$value": "4px",
-      "$type": "borderRadius"
+      "Default": {
+        "$value": "4px",
+        "$type": "borderRadius"
+      },
+      "Large": {
+        "$value": "20px",
+        "$type": "borderRadius"
+      },
+      "Small": {
+        "$value": "2px",
+        "$type": "borderRadius"
+      }
     },
     "Borderwidth": {
       "Default": {

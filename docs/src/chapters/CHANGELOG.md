@@ -1,5 +1,9 @@
 # Changelog
 
+_[0.4.3] - 2025-10-07_
+
+- Added semantic `borderradius.large` and `borderradius.small` tokens.
+
 _[0.4.2] - 2025-10-06_
 
 - Skip pxToRem conversion for breakpoint values and any sizes below 2px.

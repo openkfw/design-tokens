@@ -1,4 +1,5 @@
 /* Custom Media Queries generated from KfW Design Tokens */
+
 /* See: https://www.w3.org/TR/mediaqueries-5/#at-ruledef-custom-media */
 
 @custom-media --kfw-breakpoint-mobile (min-width: 600px);

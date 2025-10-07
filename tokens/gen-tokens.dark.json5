@@ -1327,11 +1327,11 @@
       introduction: {
         $value: "{base.fontsize.static.xl}",
       },
-      small: {
-        $value: "{base.fontsize.static.sm}",
-      },
       large: {
         $value: "{base.fontsize.static.lg}",
+      },
+      small: {
+        $value: "{base.fontsize.static.sm}",
       },
       "heading-1": {
         min: {
@@ -1401,7 +1401,15 @@
     },
     borderradius: {
       $type: "dimension",
-      $value: "{base.borderradius.md}",
+      default: {
+        $value: "{base.borderradius.md}",
+      },
+      large: {
+        $value: "{base.borderradius.lg}",
+      },
+      small: {
+        $value: "{base.borderradius.sm}",
+      },
     },
     borderwidth: {
       $type: "dimension",

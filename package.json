@@ -1,6 +1,6 @@
 {
   "name": "@openkfw/design-tokens",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "The source of truth for KfW-branded digital products.",
   "files": [
     "output",

@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.4.1
+ * KfW Design Tokens v0.4.3
  * Copyright 2025
  * Licensed under MPL-2.0 (https://github.com/openkfw/design-tokens/blob/main/LICENSE)
  */
@@ -519,8 +519,8 @@ export const KfwFontspaceHeading5: string;
 export const KfwFontspaceHeading6: string;
 export const KfwFontsize: string;
 export const KfwFontsizeIntroduction: string;
-export const KfwFontsizeSmall: string;
 export const KfwFontsizeLarge: string;
+export const KfwFontsizeSmall: string;
 export const KfwFontsizeHeading1Min: string;
 export const KfwFontsizeHeading1Max: string;
 export const KfwFontsizeHeading1Val: string;
@@ -540,6 +540,8 @@ export const KfwLineheightList: number;
 export const KfwLineheightHeading: number;
 export const KfwLineheightHeading5: number;
 export const KfwBorderradius: string;
+export const KfwBorderradiusLarge: string;
+export const KfwBorderradiusSmall: string;
 export const KfwBorderwidth: string;
 export const KfwBorderwidthLarge: string;
 export const KfwFocusringOutlineWidth: string;

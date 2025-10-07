@@ -12,7 +12,7 @@ async function buildCustomMediaCSS() {
     const result = await postcss().process(cssContent, { from: undefined })
     const root = result.root
     let customMediaCSS =
-      "/* Custom Media Queries generated from KfW Design Tokens */\n/* See: https://www.w3.org/TR/mediaqueries-5/#at-ruledef-custom-media */\n\n"
+      "/* Custom Media Queries generated from KfW Design Tokens */\n\n/* See: https://www.w3.org/TR/mediaqueries-5/#at-ruledef-custom-media */\n\n"
 
     root.walkDecls((decl) => {
       const match = decl.prop.match(/^--kfw-breakpoint-(.+)$/)

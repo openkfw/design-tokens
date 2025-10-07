@@ -9,10 +9,10 @@
 /* =========================================================
    Imports
    ========================================================= */
-@import "partials/fonts.css" layer(core.fonts);
-@import "partials/uaplus.css" layer(core.reset);
+@import url("partials/fonts.css") layer(core.fonts);
+@import url("partials/uaplus.css") layer(core.reset);
 @import url("@openkfw/design-tokens/output/web_stable_10px/css/kfw-design-tokens.light.css") layer(core.tokens);
-@import "partials/gen-custom-media.css" layer(core.tokens);
+@import url("partials/gen-custom-media.css") layer(core.tokens);
 
 /* =========================================================
    Core
@@ -27,7 +27,7 @@
       line-height: var(--kfw-lineheight);
       font-weight: var(--kfw-fontweight);
       font-synthesis: none;
-      text-rendering: optimizeLegibility;
+      text-rendering: optimizelegibility;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -141,7 +141,7 @@
     ) {
       width: 100%;
       height: 4.3rem;
-      padding: 1rem 1.5rem 1rem 1.5rem;
+      padding: 1rem 1.5rem;
       font-size: var(--kfw-fontsize);
       font-family: var(--kfw-fontfamily);
       line-height: var(--kfw-lineheight);
@@ -298,8 +298,7 @@
       margin: 0;
       display: flex;
       gap: 1.6rem 2rem;
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       max-width: 100%;
     }
 
@@ -326,7 +325,7 @@
       width: 100%;
     }
 
-    @media (--kfw-breakpoint-desktop-large) {
+    @media (--kfw-breakpoint-desktop) {
       .hero__bars {
         width: var(--hero-content-desktop-width);
         position: absolute;
@@ -343,42 +342,44 @@
       display: flex;
       flex-direction: row;
       padding: 2rem;
-      background-color: var(--kfw-color-background-light-blue);
       opacity: 0.9;
+      background-color: var(--kfw-color-background-light-blue); /* @todo did we need a token for opaque light-blue 90  */
     }
 
-    @media (--kfw-breakpoint-desktop-large) {
+    @media (--kfw-breakpoint-desktop) {
       .hero__title {
         flex-direction: row;
         position: absolute;
-        opacity: 0.95;
         display: flex;
         width: var(--hero-content-desktop-width);
-        background-color: rgb(255, 255, 255);
+        opacity: 1;
+        background-color: var(--kfw-color-opaque-white-95);
         left: 4rem;
         top: calc(4rem + 1rem + 25px); /* outsidePaddingTop + 10px space + barsHeight */
-        border-radius: 0 0 2rem 0;
+        border-radius: 0 0 var(--kfw-base-borderradius-lg) 0; /* @todo prefer to use --kfw-borderradius-large instead */
         padding: 2rem 3rem 3rem;
       }
     }
 
     .hero__image {
       width: 100%;
-      max-width: 128rem;
       margin-inline: auto;
       display: block;
       object-fit: cover;
       height: auto;
+      max-width: 128rem;
     }
   }
+
   @layer variations {
-    .HL_SB {
+    .hl--sb {
       line-height: var(--kfw-lineheight-heading);
       letter-spacing: var(--kfw-base-letterspacing-normal);
       font-size: var(--kfw-fontsize-introduction);
     }
+
     @media (--kfw-breakpoint-desktop-large) {
-      .HL_SB {
+      .hl--sb {
         font-size: var(--kfw-base-fontsize-static-5xl);
       }
     }
@@ -388,7 +389,7 @@
 /* Utility and helper classes */
 @layer utility {
   .visually-hidden {
-    clip: rect(0 0 0 0);
+    clip: rect(0 0 0 0); /* stylelint-disable-line property-no-deprecated */
     clip-path: inset(50%);
     height: 1px;
     overflow: hidden;
@@ -396,12 +397,11 @@
     white-space: nowrap;
     width: 1px;
   }
+
   .d-block {
     display: block;
   }
-  .text-center {
-    text-align: center;
-  }
+
   .m-auto {
     margin-left: auto;
     margin-right: auto;

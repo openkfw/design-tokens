@@ -6521,28 +6521,6 @@
           "introduction"
         ]
       },
-      "small": {
-        "key": "{semantic.fontsize.small}",
-        "$value": {
-          "unit": "px",
-          "value": 14
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.fontsize.static.sm}",
-          "$type": "dimension",
-          "key": "{semantic.fontsize.small}"
-        },
-        "name": "small",
-        "attributes": {},
-        "path": [
-          "semantic",
-          "fontsize",
-          "small"
-        ]
-      },
       "large": {
         "key": "{semantic.fontsize.large}",
         "$value": {
@@ -6563,6 +6541,28 @@
           "semantic",
           "fontsize",
           "large"
+        ]
+      },
+      "small": {
+        "key": "{semantic.fontsize.small}",
+        "$value": {
+          "unit": "px",
+          "value": 14
+        },
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "dimension",
+        "original": {
+          "$value": "{base.fontsize.static.sm}",
+          "$type": "dimension",
+          "key": "{semantic.fontsize.small}"
+        },
+        "name": "small",
+        "attributes": {},
+        "path": [
+          "semantic",
+          "fontsize",
+          "small"
         ]
       },
       "heading-1": {
@@ -6989,25 +6989,72 @@
       }
     },
     "borderradius": {
-      "key": "{semantic.borderradius}",
-      "$type": "dimension",
-      "$value": {
-        "unit": "px",
-        "value": 4
-      },
-      "filePath": "tokens/tokens.json",
-      "isSource": true,
-      "original": {
+      "default": {
+        "key": "{semantic.borderradius.default}",
+        "$value": {
+          "unit": "px",
+          "value": 4
+        },
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
         "$type": "dimension",
-        "$value": "{base.borderradius.md}",
-        "key": "{semantic.borderradius}"
+        "original": {
+          "$value": "{base.borderradius.md}",
+          "$type": "dimension",
+          "key": "{semantic.borderradius.default}"
+        },
+        "name": "default",
+        "attributes": {},
+        "path": [
+          "semantic",
+          "borderradius",
+          "default"
+        ]
       },
-      "name": "borderradius",
-      "attributes": {},
-      "path": [
-        "semantic",
-        "borderradius"
-      ]
+      "large": {
+        "key": "{semantic.borderradius.large}",
+        "$value": {
+          "unit": "px",
+          "value": 20
+        },
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "dimension",
+        "original": {
+          "$value": "{base.borderradius.lg}",
+          "$type": "dimension",
+          "key": "{semantic.borderradius.large}"
+        },
+        "name": "large",
+        "attributes": {},
+        "path": [
+          "semantic",
+          "borderradius",
+          "large"
+        ]
+      },
+      "small": {
+        "key": "{semantic.borderradius.small}",
+        "$value": {
+          "unit": "px",
+          "value": 2
+        },
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "dimension",
+        "original": {
+          "$value": "{base.borderradius.sm}",
+          "$type": "dimension",
+          "key": "{semantic.borderradius.small}"
+        },
+        "name": "small",
+        "attributes": {},
+        "path": [
+          "semantic",
+          "borderradius",
+          "small"
+        ]
+      }
     },
     "borderwidth": {
       "default": {

@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 400;
   src: local("KfW-Centro-Sans");
-  src: url(/fonts/KFWCentroSans-Regular.woff2) format("woff2");
+  src: url("/fonts/KFWCentroSans-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -13,5 +13,5 @@
   font-style: normal;
   font-weight: 500;
   src: local("KfW-Centro-Sans");
-  src: url(/fonts/KFWCentroSans-Medium.woff2) format("woff2");
+  src: url("/fonts/KFWCentroSans-Medium.woff2") format("woff2");
 }

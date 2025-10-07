@@ -1,3 +1,5 @@
+/* stylelint-disable */
+
 /**
  * uaplus.css version 0.2.1
  */
@@ -304,3 +306,5 @@
 [hidden]:not([hidden="until-found"]) {
   display: none !important;
 }
+
+/* stylelint-enable */
