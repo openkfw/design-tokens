@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
         <a class="d-block m-auto" href="#">
           <img class="header-logo" src="/kfw_logo.png" alt="KfW Logo" />
@@ -34,6 +34,7 @@
                 .sb-tbalken-xl-429x25_svg__cls-1 {
                   fill: #005a8c;
                 }
+
                 .sb-tbalken-xl-429x25_svg__cls-2 {
                   fill: #b7f9aa;
                 }
@@ -230,10 +231,8 @@
             class="hero__image"
             alt="Luftaufnahme der Zentrale der KfW Bankengruppe in Frankfurt am Main"
             width="1280"
-            height="721"
-            decoding="async"
-            loading="lazy"
-            src="https://meine.kfw.de/images/resized/1280/welcome_image.jpeg"
+            height="427"
+            src="/welcome_image.jpeg"
           />
           <div class="hero__title">
             <span class="hl--sb" role="presentation">Welcome to KfW!</span>
@@ -242,31 +241,131 @@
       </section>
       <div class="container">
         <section>
-          <h1>Headline 1</h1>
-          <p class="intro">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus, fuga natus nesciunt nisi odit, possimus repudiandae saepe
-            tempora totam voluptatem voluptates. Accusantium ducimus error hic officiis omnis reiciendis, veritatis. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Accusamus alias aperiam atque doloribus eligendi eos esse fugit illum incidunt, iusto magni minima non
-            nostrum omnis praesentium quis reprehenderit saepe, sunt!
-          </p>
-        </section>
+          <h2>Typography</h2>
 
-        <section>
-          <h2>Headline 2</h2>
+          <p class="tx--4">
+            Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat
+            turpis pretium. Quisque sed tristique felis. Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus
+            porta nunc a erat mattis, mattis feugiat turpis pretium. Quisque sed tristique felis.
+          </p>
+
           <p>
+            Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat
+            turpis pretium. Quisque sed tristique felis.
+          </p>
+
+          <!-- Blockquote-->
+          <blockquote>
+            "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. Nam at dui sit amet ipsum cursus ornare."
+            <footer>
+              <cite>- Phasellus eget lacinia</cite>
+            </footer>
+          </blockquote>
+
+          <!-- Lists-->
+          <h3>Lists</h3>
+          <ul>
+            <li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
+            <li>Nam et magna at libero scelerisque egestas.</li>
+            <li>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</li>
+            <li>Proin ultricies turpis et volutpat vehicula.</li>
+          </ul>
+
+          <!-- Inline text elements-->
+          <h3>Inline text elements</h3>
+          <div class="grid">
+            <p><a href="#" onclick="event.preventDefault()">Link</a></p>
+            <p>
+              <a href="#" class="tx--2" onclick="event.preventDefault()"> Small Link </a>
+            </p>
+            <p>
+              <a href="#" class="tx--4" onclick="event.preventDefault()"> Large Link </a>
+            </p>
+          </div>
+          <div class="grid">
+            <p><strong>Bold</strong></p>
+            <p><em>Italic</em></p>
+            <p><u>Underline</u></p>
+          </div>
+          <div class="grid">
+            <p>
+              <del>Deleted</del>
+            </p>
+            <p>
+              <ins>Inserted</ins>
+            </p>
+            <p><s>Strikethrough</s></p>
+          </div>
+          <div class="grid">
+            <p><small>Small </small></p>
+            <p>Text <sub>Sub</sub></p>
+            <p>Text <sup>Sup</sup></p>
+          </div>
+          <div class="grid">
+            <p>
+              <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
+            </p>
+            <p><kbd>Kbd</kbd></p>
+            <p>
+              <mark>Highlighted</mark>
+            </p>
+          </div>
+
+          <div style="padding: var(--kfw-space-small); margin-block: var(--kfw-space-large)" class="bg-dark">
+            <h3 class="hl-3">Variant Negative</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
+              <a href="#">similique</a>! At enim exercitationem, explicabo labore magnam modi quod, repellat reprehenderit sed sunt totam. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+
+          <h1>Headline 1</h1>
+          <p class="tx--4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus, fuga natus nesciunt nisi odit, possimus repudiandae saepe
+            tempora totam voluptatem voluptates. Accusantium ducimus error hic officiis omnis reiciendis, veritatis.
+          </p>
+
+          <h2>Headline 2</h2>
+          <p class="tx--2">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
             possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
           </p>
-        </section>
 
-        <section>
           <h3>Headline 3</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
             possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
           </p>
 
-          <form action="#">
+          <h4>Headline 4</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
+            possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
+          </p>
+
+          <h5>Headline 5</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
+            possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
+          </p>
+
+          <h6>Headline 6</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
+            possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
+          </p>
+          <figure>
+            <img alt="Luftaufnahme der Zentrale der KfW Bankengruppe in Frankfurt am Main" width="1280" height="427" src="/welcome_image.jpeg" />
+            <figcaption>
+              Image from
+              <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank">unsplash.com</a>
+            </figcaption>
+          </figure>
+        </section>
+        <section>
+          <form>
+            <h2>Form elements</h2>
             <div class="form-group">
               <label for="exampleName">Sample Name</label>
               <input id="exampleName" type="text" placeholder="Text input" />
@@ -280,44 +379,20 @@
             </div>
           </form>
         </section>
-
-        <section>
-          <h4>Headline 4</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
-            possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
-          </p>
-        </section>
-
-        <section>
-          <h5>Headline 5</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
-            possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
-          </p>
-        </section>
-
-        <section>
-          <h6>Headline 6</h6>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
-            possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
-          </p>
-        </section>
       </div>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="container">
         <nav aria-label="Footer Navigation">
           <span>2025 KfW, Frankfurt am Main</span>
           <ul class="footer__list">
             <li>
-              <a target="_blank" rel="noopener" href="https://openkfw.github.io/design-tokens/docs/build/html5/kfw-design-tokens.html">
-                Go to docs page
-              </a>
+              <a target="_blank" rel="noopener" href="https://github.com/openkfw/design-tokens">Source code</a>
             </li>
             <li>
-              <a target="_blank" rel="noopener" href="https://github.com/openkfw/design-tokens"> GitHub Repository </a>
+              <a target="_blank" rel="noopener" href="https://openkfw.github.io/design-tokens/docs/build/html5/kfw-design-tokens.html">
+                Documentation
+              </a>
             </li>
           </ul>
         </nav>
