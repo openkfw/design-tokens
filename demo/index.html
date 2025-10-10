@@ -7,6 +7,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KfW Design Tokens Demo</title>
+    <link rel="preload" href="/_astro/ibm-plex-sans-latin-300-normal.b4i7YzLG.woff2" as="font" type="font/woff2" crossorigin="" />
+
     <link rel="apple-touch-icon" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Logo_180x180px.png" />
     <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Favicon_Pfeil_16x16px.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
@@ -15,16 +17,16 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header id="top" class="header">
       <div class="container">
         <a class="d-block m-auto" href="#">
-          <img class="header-logo" src="/kfw_logo.png" alt="KfW Logo" />
+          <img class="header-logo header-logo--large" src="/kfw_logo_large.png" alt="KfW Logo" />
         </a>
       </div>
     </header>
     <main>
       <section class="hero">
-        <div class="container-fluid">
+        <div class="container-extended">
           <svg class="hero__bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 429 25">
             <defs>
               <clipPath id="sb-tbalken-xl-429x25_svg__clippath">
@@ -311,15 +313,6 @@
             </p>
           </div>
 
-          <div style="padding: var(--kfw-space-small); margin-block: var(--kfw-space-large)" class="bg-dark">
-            <h3 class="hl-3">Variant Negative</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
-              <a href="#">similique</a>! At enim exercitationem, explicabo labore magnam modi quod, repellat reprehenderit sed sunt totam. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
-
           <h1>Headline 1</h1>
           <p class="tx--4">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus, fuga natus nesciunt nisi odit, possimus repudiandae saepe
@@ -363,6 +356,42 @@
             </figcaption>
           </figure>
         </section>
+
+        <section>
+          <h2>Buttons</h2>
+          <div class="grid">
+            <p>
+              <a href="#" class="button button--primary">Primary Button</a>
+            </p>
+            <p>
+              <a href="#" class="button button--secondary">Secondary Button</a>
+            </p>
+            <p>
+              <a href="#" class="button button--tertiary">Tertiary Button</a>
+            </p>
+          </div>
+
+          <div style="padding: var(--kfw-space-small); margin-block: var(--kfw-space-large)" class="bg-dark">
+            <h3 class="hl-3">Variant Negative</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
+              <a href="#">similique</a>! At enim exercitationem, explicabo labore magnam modi quod, repellat reprehenderit sed sunt totam. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <div class="grid">
+              <p>
+                <a href="#" class="button button--primary">Primary Button</a>
+              </p>
+              <p>
+                <a href="#" class="button button--secondary">Secondary Button</a>
+              </p>
+              <p>
+                <a href="#" class="button button--tertiary">Tertiary Button</a>
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section>
           <form>
             <h2>Form elements</h2>
@@ -383,8 +412,8 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <nav aria-label="Footer Navigation">
-          <span>2025 KfW, Frankfurt am Main</span>
+        <nav>
+          <span class="footer__copyright">2025 KfW, Frankfurt am Main</span>
           <ul class="footer__list">
             <li>
               <a target="_blank" rel="noopener" href="https://github.com/openkfw/design-tokens">Source code</a>
@@ -395,8 +424,21 @@
               </a>
             </li>
           </ul>
+          <div class="footer__top-button tx--1">
+            <a class="button button--secondary" href="#top" data-scroll-target="top" role="button"> Zum Seitenanfang </a>
+          </div>
         </nav>
       </div>
     </footer>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("kc-header")
+        if (window.scrollY > 0) {
+          header.classList.add("scrolled")
+        } else {
+          header.classList.remove("scrolled")
+        }
+      })
+    </script>
   </body>
 </html>
