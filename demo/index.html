@@ -447,20 +447,19 @@
         }
       }
 
-      function debounce(func, wait) {
-        let timeout
-        return function (...args) {
-          clearTimeout(timeout)
-          timeout = setTimeout(() => func.apply(this, args), wait)
+      let ticking = false
+
+      function onScrollHandler() {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            onScroll()
+            ticking = false
+          })
+          ticking = true
         }
       }
 
-      window.addEventListener(
-        "scroll",
-        debounce(() => {
-          onScroll()
-        }, 50)
-      )
+      window.addEventListener("scroll", onScrollHandler)
     </script>
   </body>
 </html>
