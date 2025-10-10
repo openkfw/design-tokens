@@ -415,19 +415,19 @@
       min-height: 6.4rem;
     }
 
-    .header-logo-large {
+    .header-logo-desktop {
       display: none;
     }
 
-    .header-logo-small {
+    .header-logo-mobile {
       height: 2.8rem;
     }
 
-    .header--sticky .header-logo-small {
+    .header--sticky .header-logo-mobile {
       display: block;
     }
 
-    .header--sticky .header-logo-large {
+    .header--sticky .header-logo-desktop {
       display: none;
     }
 
@@ -440,12 +440,12 @@
         height: auto;
       }
 
-      .header-logo-large {
+      .header-logo-desktop {
         display: block;
         height: 6rem;
       }
 
-      .header-logo-small {
+      .header-logo-mobile {
         display: none;
       }
     }
