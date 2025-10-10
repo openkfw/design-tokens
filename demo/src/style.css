@@ -37,7 +37,6 @@
       color: var(--kfw-color-text);
       line-height: var(--kfw-lineheight);
       font-weight: var(--kfw-fontweight);
-      font-synthesis: none;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
