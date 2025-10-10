@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <header id="top" class="header">
+    <div id="top"></div>
+    <header id="header" class="header">
       <div class="container">
         <a class="d-block m-auto" href="#">
-          <img class="header-logo header-logo--large" src="/kfw_logo_large.png" alt="KfW Logo" />
+          <img class="header-logo--large" src="/kfw_logo_large.png" alt="KfW Logo" />
+          <img class="header-logo--small" src="/kfw_logo.png" alt="KfW Logo" />
         </a>
       </div>
     </header>
@@ -431,14 +433,33 @@
       </div>
     </footer>
     <script>
-      window.addEventListener("scroll", function () {
-        const header = document.getElementById("kc-header")
-        if (window.scrollY > 0) {
-          header.classList.add("scrolled")
-        } else {
-          header.classList.remove("scrolled")
+      const header = document.getElementById("header")
+      const stickyClass = "header--sticky"
+
+      function throttle(fn, wait) {
+        let lastTime = 0
+        return function (...args) {
+          const now = Date.now()
+          if (now - lastTime >= wait) {
+            fn.apply(this, args)
+            lastTime = now
+          }
         }
-      })
+      }
+
+      function onScroll() {
+        if (window.scrollY > 0) {
+          if (!header.classList.contains(stickyClass)) {
+            header.classList.add(stickyClass)
+          }
+        } else {
+          if (header.classList.contains(stickyClass)) {
+            header.classList.remove(stickyClass)
+          }
+        }
+      }
+
+      window.addEventListener("scroll", throttle(onScroll, 100))
     </script>
   </body>
 </html>

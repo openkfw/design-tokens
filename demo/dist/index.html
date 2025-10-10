@@ -7,20 +7,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KfW Design Tokens Demo</title>
-    <link rel="preload" href="/_astro/ibm-plex-sans-latin-300-normal.b4i7YzLG.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/_astro/ibm-plex-sans-latin-300-normal.b4i7YzLG.woff2" as="font" type="font/woff2" crossorigin="" />
 
     <link rel="apple-touch-icon" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Logo_180x180px.png" />
     <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Favicon_Pfeil_16x16px.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/assets/index-BpH6XtRe.css">
+    <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/assets/index-InP-1_n5.css">
   </head>
   <body>
-    <header id="top" class="header">
+    <div id="top"></div>
+    <header id="header" class="header">
       <div class="container">
         <a class="d-block m-auto" href="#">
-          <img class="header-logo header-logo--large" src="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo_large.png" alt="KfW Logo" />
+          <img class="header-logo--large" src="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo_large.png" alt="KfW Logo" />
+          <img class="header-logo--small" src="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo.png" alt="KfW Logo" />
+
         </a>
       </div>
     </header>
@@ -242,7 +245,6 @@
         </div>
       </section>
       <div class="container">
-
         <section>
           <h2>Typography</h2>
 
@@ -426,22 +428,39 @@
             </li>
           </ul>
           <div class="footer__top-button tx--1">
-            <a class="button button--secondary" href="#top" data-scroll-target="top" role="button">
-              Zum Seitenanfang
-            </a>
+            <a class="button button--secondary" href="#top" data-scroll-target="top" role="button"> Zum Seitenanfang </a>
           </div>
         </nav>
       </div>
     </footer>
     <script>
-      window.addEventListener('scroll', function () {
-        const header = document.getElementById('kc-header');
-        if (window.scrollY > 0) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
+        const header = document.getElementById("header");
+        const stickyClass = "header--sticky";
+
+        function throttle(fn, wait) {
+            let lastTime = 0;
+            return function(...args) {
+                const now = Date.now();
+                if (now - lastTime >= wait) {
+                    fn.apply(this, args);
+                    lastTime = now;
+                }
+            }
         }
-      });
+
+        function onScroll() {
+            if (window.scrollY > 0) {
+                if (!header.classList.contains(stickyClass)) {
+                    header.classList.add(stickyClass);
+                }
+            } else {
+                if (header.classList.contains(stickyClass)) {
+                    header.classList.remove(stickyClass);
+                }
+            }
+        }
+
+        window.addEventListener("scroll", throttle(onScroll, 100));
     </script>
   </body>
 </html>

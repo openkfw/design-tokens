@@ -436,14 +436,10 @@
 @layer components {
   @layer base {
     .header {
-      height: 12rem;
       background-color: var(--kfw-color-background);
       border-bottom: 1px solid var(--kfw-color-line-11);
       display: flex;
       align-items: center;
-      transition:
-        height 0.3s ease,
-        background-color 0.3s ease;
       justify-content: center;
     }
 
@@ -453,9 +449,27 @@
       min-height: 6.4rem;
     }
 
-    .header .header-logo {
+    .header-logo--small {
+      height: 2.8rem;
+    }
+
+    .header-logo--large {
+      display: none;
       height: 6rem;
-      display: block;
+    }
+
+    @media (--kfw-breakpoint-desktop) {
+      .header {
+        height: 12rem;
+      }
+
+      .header-logo--large {
+        display: block;
+      }
+
+      .header-logo--small {
+        display: none;
+      }
     }
 
     .footer {
