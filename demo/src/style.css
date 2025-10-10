@@ -319,10 +319,6 @@
       white-space: nowrap;
     }
 
-    /*
-    --button-bg-disabled: transparent;
-    --button-color-disabled: var(--kfw-color-text); */
-
     .button--primary {
       --button-border-color: var(--kfw-color-fn);
       --button-bg: var(--kfw-color-fn);
@@ -372,42 +368,9 @@
       color: var(--button-color-hover);
     }
 
-    /*
-    .button--secondary {
-      --button-color: var(--kfw-color-fn);
-      --button-border-color: var(--kfw-color-fn);
-      --button-bg: transparent;
-      --button-bg-hover: var(--kfw-color-fn-active);
-      --button-color-hover: red;
-
-      background-color: var(--button-bg);
-      color: var(--button-color);
-      border: var(--kfw-borderwidth) solid var(--button-border-color);
-    }
-
-    .button--secondary:hover,
-    .button--secondary:focus {
-      color: var(--button-color-hover);
-      background-color: var(--button-bg-hover);
-      text-decoration: underline;
-    } */
-
     .button--small {
       padding: 0.5rem 1rem;
       font-size: var(--kfw-fontsize-small);
-    }
-
-    .button--disabled {
-      background-color: var(--kfw-color-background-disabled);
-      color: var(--kfw-color-text-on-disabled);
-      cursor: not-allowed;
-    }
-
-    .button--disabled:hover,
-    .button--disabled:focus {
-      background-color: var(--kfw-color-background-disabled);
-      color: var(--kfw-color-text-on-disabled);
-      text-decoration: none;
     }
 
     :is(.container, .container-extended, .container-fluid) {
@@ -441,6 +404,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: sticky;
+      z-index: 1000;
+      top: 0;
     }
 
     .header > div {
@@ -449,13 +415,20 @@
       min-height: 6.4rem;
     }
 
-    .header-logo--small {
+    .header-logo-large {
+      display: none;
+    }
+
+    .header-logo-small {
       height: 2.8rem;
     }
 
-    .header-logo--large {
+    .header--sticky .header-logo-small {
+      display: block;
+    }
+
+    .header--sticky .header-logo-large {
       display: none;
-      height: 6rem;
     }
 
     @media (--kfw-breakpoint-desktop) {
@@ -463,11 +436,16 @@
         height: 12rem;
       }
 
-      .header-logo--large {
-        display: block;
+      .header--sticky {
+        height: auto;
       }
 
-      .header-logo--small {
+      .header-logo-large {
+        display: block;
+        height: 6rem;
+      }
+
+      .header-logo-small {
         display: none;
       }
     }

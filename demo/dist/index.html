@@ -14,16 +14,18 @@
     <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://www.kfw.de/Techn-Medien/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/assets/index-InP-1_n5.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/assets/index-DXPJ89oX.css">
   </head>
   <body>
     <div id="top"></div>
     <header id="header" class="header">
       <div class="container">
         <a class="d-block m-auto" href="#">
-          <img class="header-logo--large" src="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo_large.png" alt="KfW Logo" />
-          <img class="header-logo--small" src="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo.png" alt="KfW Logo" />
-
+          <img class="header-logo-small" src="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
+          <picture class="header-logo-large">
+            <source media="(min-width: 960px)" srcset="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo_large.png" type="image/svg+xml" />
+            <img src="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
+          </picture>
         </a>
       </div>
     </header>
@@ -434,33 +436,33 @@
       </div>
     </footer>
     <script>
-        const header = document.getElementById("header");
-        const stickyClass = "header--sticky";
+      const header = document.getElementById("header")
+      const stickyClass = "header--sticky"
 
-        function throttle(fn, wait) {
-            let lastTime = 0;
-            return function(...args) {
-                const now = Date.now();
-                if (now - lastTime >= wait) {
-                    fn.apply(this, args);
-                    lastTime = now;
-                }
-            }
+      function onScroll() {
+        console.log("onScroll")
+
+        if (window.scrollY > 0) {
+          header.classList.add(stickyClass)
+        } else {
+          header.classList.remove(stickyClass)
         }
+      }
 
-        function onScroll() {
-            if (window.scrollY > 0) {
-                if (!header.classList.contains(stickyClass)) {
-                    header.classList.add(stickyClass);
-                }
-            } else {
-                if (header.classList.contains(stickyClass)) {
-                    header.classList.remove(stickyClass);
-                }
-            }
+      function debounce(func, wait) {
+        let timeout
+        return function (...args) {
+          clearTimeout(timeout)
+          timeout = setTimeout(() => func.apply(this, args), wait)
         }
+      }
 
-        window.addEventListener("scroll", throttle(onScroll, 100));
+      window.addEventListener(
+        "scroll",
+        debounce(() => {
+          onScroll()
+        }, 50)
+      )
     </script>
   </body>
 </html>
