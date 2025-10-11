@@ -40,7 +40,8 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
   const isLight = theme === "light"
   const src = isLight ? DEFAULT_SELECTOR : `*.${theme}`
   const isStable = basePxFontSize === 10
-  const variant = isStable ? "stable_10px" : "thirdparty_16px"
+
+  const variant = isStable ? "" : "/web_thirdparty_16px"
 
   return {
     ...CONFIG,
@@ -48,7 +49,7 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
     platforms: {
       css: {
         basePxFontSize,
-        buildPath: `${BUILD_PATH_PREFIX}/web_${variant}/css`,
+        buildPath: `${BUILD_PATH_PREFIX}${variant}/css`,
         options: { fileHeader: "kfw-file-header" },
         transformGroup: "custom/css-extended",
         prefix: PREFIX,
@@ -69,7 +70,7 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
       },
       scss: {
         basePxFontSize,
-        buildPath: `${BUILD_PATH_PREFIX}/web_${variant}/scss`,
+        buildPath: `${BUILD_PATH_PREFIX}${variant}/scss`,
         options: { fileHeader: "kfw-file-header" },
         transformGroup: "custom/scss-extended",
         prefix: PREFIX,
@@ -90,7 +91,7 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
       },
       js: {
         basePxFontSize,
-        buildPath: `${BUILD_PATH_PREFIX}/web_${variant}/js`,
+        buildPath: `${BUILD_PATH_PREFIX}${variant}/js`,
         options: { fileHeader: "kfw-file-header" },
         transformGroup: "custom/js-extended",
         prefix: PREFIX,

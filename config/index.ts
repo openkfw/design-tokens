@@ -24,11 +24,7 @@ export const RegisterCustom = (PREFIX: string) => {
   } = {
     name: "kfw-file-header",
     fileHeader: async () => {
-      return [
-        `KfW Design Tokens v${version}`,
-        "Copyright 2025",
-        "Licensed under MPL-2.0 (https://github.com/openkfw/design-tokens/blob/main/LICENSE)"
-      ]
+      return [`KfW Design Tokens v${version} | MPL-2.0 | https://github.com/openkfw/design-tokens`]
     }
   }
   StyleDictionary.registerFileHeader(customFileHeader)

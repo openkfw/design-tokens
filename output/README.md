@@ -9,16 +9,30 @@ This document outlines the structure of the /output directory and its contents.
 ├── /figma
 ├── /penpot
 ├── /json
-├── /web_stable_10px (default)
-└── /web_next_16px (third-party)
+├── /css
+├── /js
+├── /scss
+└── /web_thirdparty_16px   (third-party)
 ```
 
-In the `/output` directory, you will find all available output formats for Figma, Penpot, JSON, and Web (CSS, SCSS, JS).
+The `/output` directory contains all available export formats for design and development integration, including Figma, Penpot, JSON, CSS, SCSS, and JavaScript files.
 
-## Web Folder Usage
 
-- `/web_stable_10px`: This folder should be used by default. We use it already for KfW.de, MeineKfW, OKP and other KfW applications. It uses a REM root value of 62.5% (1rem = 10px) for optimal readability.
+# 🧭 REM and Font Scaling Guidelines
 
-- `/web_next_16px`: Use this folder for third-party systems where we cannot influence the REM root value and it corresponds to the standard browser font size of 16px (100%)
+All KfW web applications (e.g., KfW.de, MeineKfW, OKP) use a root REM value of 62.5% to ensure optimal readability and consistent scaling. 
+This means that 1rem is equivalent to 10px. Never use a font size of 10px directly. Always rely on rem units for scalable and accessible typography.
 
-Note: A font size of 10px should never be used. Therefore, it is advisable to set the font size in the `<html>` to `62.5%` and `<body>` to `1.6rem` (16px).
+Example:
+
+```
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-size: 1.6rem; /* 16px */
+}
+```
+
+For third-party systems where the REM root value cannot be modified (i.e., the default browser setting of 16px = 100%), use the assets provided in the `/web_thirdparty_16px` folder.
