@@ -11,7 +11,7 @@
    ========================================================= */
 @import url("partials/fonts.css") layer(core.fonts);
 @import url("partials/uaplus.css") layer(core.reset);
-@import url("@openkfw/design-tokens/output/web_stable_10px/css/kfw-design-tokens.light.css") layer(core.tokens);
+@import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css") layer(core.tokens);
 @import url("partials/gen-custom-media.css") layer(core.tokens);
 
 /* =========================================================

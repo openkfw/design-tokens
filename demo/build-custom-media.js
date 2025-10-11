@@ -2,7 +2,7 @@ import fs from "fs/promises"
 import postcss from "postcss"
 import path from "path"
 
-const cssFile = path.resolve("node_modules/@openkfw/design-tokens/output/web_stable_10px/css/kfw-design-tokens.light.css")
+const cssFile = path.resolve("node_modules/@openkfw/design-tokens/output/css/kfw-design-tokens.light.css")
 
 const outputFile = "./src/partials/gen-custom-media.css"
 
