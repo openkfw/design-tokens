@@ -653,6 +653,12 @@
       }
     }
 
+    .smk--1 {
+      line-height: var(--kfw-lineheight-heading);
+      letter-spacing: var(--kfw-base-letterspacing-wider);
+      font-size: var(--kfw-fontsize-small);
+    }
+
     .tx--1 {
       line-height: var(--kfw-lineheight);
       letter-spacing: var(--kfw-base-letterspacing-normal);
