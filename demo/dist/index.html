@@ -14,19 +14,27 @@
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/assets/index-DxbyJSlP.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/assets/index-BNAzGzv0.css">
   </head>
   <body>
     <div id="top"></div>
     <header id="header" class="header">
-      <div class="container">
-        <a class="d-block m-auto" href="#">
-          <img class="header-logo-mobile" src="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
-          <picture class="header-logo-desktop">
-            <source media="(min-width: 960px)" srcset="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo_large.png" type="image/svg+xml" />
-            <img src="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
-          </picture>
-        </a>
+      <div class="container-extended">
+        <div>
+          <button type="button" class="button button--tertiary">Nav</button>
+        </div>
+        <div>
+          <a class="d-block" href="#">
+            <img class="header-logo-mobile" src="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
+            <picture class="header-logo-desktop">
+              <source media="(min-width: 960px)" srcset="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo_large.png" type="image/svg+xml" />
+              <img src="https://openkfw.github.io/design-tokens/demo/dist/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
+            </picture>
+          </a>
+        </div>
+        <nav class="header__menu" aria-label="Sekundäre Navigation" data-testid="right-header-menu">
+          <a class="button button--tertiary" role="button" href="#">Login</a>
+        </nav>
       </div>
     </header>
     <main>
@@ -248,7 +256,7 @@
       </section>
       <div class="container-extended">
         <section>
-          <h2>Typography</h2>
+          <h1>Typography</h1>
 
           <p class="tx--4">
             Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat
@@ -363,7 +371,7 @@
         </section>
 
         <section>
-          <h2>Buttons</h2>
+          <h1>Buttons</h1>
           <div class="grid">
             <p>
               <a href="#" class="button button--primary">Primary Button</a>
@@ -399,7 +407,7 @@
 
         <section>
           <form>
-            <h2>Form elements</h2>
+            <h1>Form elements</h1>
             <div class="form-group">
               <label for="exampleName">Sample Name</label>
               <input id="exampleName" type="text" placeholder="Text input" />
@@ -416,19 +424,17 @@
       </div>
     </main>
     <footer class="footer">
-      <div class="container">
-        <nav>
-          <span class="footer__copyright">2025 KfW, Frankfurt am Main</span>
-          <ul class="footer__list">
-            <li>
-              <a target="_blank" rel="noopener" href="https://github.com/openkfw/design-tokens">Source code</a>
-            </li>
-          </ul>
-          <div class="footer__top-button tx--1">
-            <a class="button button--secondary" href="#top" data-scroll-target="top" role="button"> Zum Seitenanfang </a>
-          </div>
-        </nav>
-      </div>
+      <nav class="container-extended">
+        <span class="footer__copyright">2025 KfW, Frankfurt am Main</span>
+        <ul class="footer__list">
+          <li>
+            <a target="_blank" rel="noopener" href="https://github.com/openkfw/design-tokens">Source code</a>
+          </li>
+        </ul>
+        <div class="footer__top-button tx--1">
+          <a class="button button--secondary" href="#top" data-scroll-target="top" role="button"> Zum Seitenanfang </a>
+        </div>
+      </nav>
     </footer>
     <script>
       const header = document.getElementById("header")
