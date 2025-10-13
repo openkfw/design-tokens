@@ -76,11 +76,11 @@
       top: -0.5em;
     }
 
-    :is(address, blockquote, dl, ol, p, pre, table, ul, p, blockquote) {
+    :is(address, blockquote, dl, ol, p, pre, table, ul) {
       margin-block: 0 var(--kfw-fontspace);
     }
 
-    :is(address, blockquote, dl, ol, p, pre, table, ul, p, blockquote):last-child {
+    :is(address, blockquote, dl, ol, p, pre, table, ul):last-child {
       margin-block-end: 0;
     }
 
@@ -301,7 +301,7 @@
     }
 
     .button {
-      font-family: var(--kfw-fontfamily), serif;
+      font-family: var(--kfw-fontfamily);
       font-size: var(--kfw-fontsize);
       border-radius: var(--kfw-borderradius);
       cursor: pointer;
@@ -372,17 +372,28 @@
       font-size: var(--kfw-fontsize-small);
     }
 
-    :is(.container, .container-extended, .container-fluid) {
+    :is(.container, .container-fluid, .container-narrow, .container-extended, .container-extended-fullwidth) {
       margin-inline: auto;
       width: 100%;
     }
 
-    .container {
-      max-width: var(--kfw-contentwrapper-basic);
+    :is(.container, .container-fluid, .container-narrow, .container-extended) {
       padding-inline: var(--kfw-safezone);
     }
 
+    .container {
+      max-width: var(--kfw-contentwrapper-basic);
+    }
+
+    .container-narrow {
+      max-width: var(--kfw-contentwrapper-narrow);
+    }
+
     .container-extended {
+      max-width: var(--kfw-contentwrapper-extended);
+    }
+
+    .container-extended-fullwidth {
       max-width: var(--kfw-contentwrapper-extended);
     }
 
@@ -414,12 +425,12 @@
       min-height: 6.4rem;
     }
 
-    .header-logo-desktop {
-      display: none;
-    }
-
     .header-logo-mobile {
       height: 2.8rem;
+    }
+
+    .header-logo-desktop {
+      display: none;
     }
 
     .header--sticky .header-logo-mobile {
@@ -431,21 +442,15 @@
     }
 
     @media (--kfw-breakpoint-desktop) {
-      .header {
-        height: 12rem;
-      }
-
-      .header--sticky {
-        height: auto;
+      .header-logo-mobile {
+        display: none;
       }
 
       .header-logo-desktop {
         display: block;
         height: 6rem;
-      }
-
-      .header-logo-mobile {
-        display: none;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
       }
     }
 
@@ -519,7 +524,7 @@
 
     @media (--kfw-breakpoint-tablet) {
       .grid {
-        grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
         margin-block-end: 0;
       }
     }
@@ -669,19 +674,19 @@
     margin-inline: auto;
   }
 
-  .safezone-padding-x {
+  .p-x {
     padding-inline: var(--kfw-safezone);
   }
 
-  .safezone-padding-y {
+  .p-y {
     padding-block: var(--kfw-safezone);
   }
 
-  .safezone-margin-x {
+  .m-x {
     margin-inline: var(--kfw-safezone);
   }
 
-  .safezone-margin-y {
-    padding-block: var(--kfw-safezone);
+  .m-y {
+    margin-block: var(--kfw-safezone);
   }
 }
