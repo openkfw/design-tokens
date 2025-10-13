@@ -366,6 +366,7 @@
       background-color: var(--button-bg);
       color: var(--button-color);
       padding: 0;
+      border: 0;
       text-decoration: none;
     }
 
@@ -452,12 +453,10 @@
     }
 
     @media (--kfw-breakpoint-desktop) {
-      .header .button {
+      .header :is(button, a) {
         font-size: var(--kfw-fontsize-large);
       }
-    }
 
-    @media (--kfw-breakpoint-desktop) {
       .header-logo-mobile {
         display: none;
       }
