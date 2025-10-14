@@ -239,6 +239,14 @@
       line-height: var(--kfw-lineheight);
     }
 
+    label {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      font-weight: var(--kfw-fontweight-bold);
+      color: var(--kfw-color-text);
+    }
+
+    select,
     input:is(
       [type="text"],
       [type="email"],
@@ -264,28 +272,8 @@
       border: var(--kfw-borderwidth-large) solid var(--kfw-base-color-gray-500);
     }
 
-    input:is(
-        [type="text"],
-        [type="email"],
-        [type="password"],
-        [type="date"],
-        [type="datetime-local"],
-        [type="month"],
-        [type="number"],
-        [type="tel"],
-        [type="time"],
-        [type="url"],
-        [type="week"]
-      ):hover {
-      border-color: var(--kfw-color-fn-active);
-      color: var(--kfw-color-fn-active);
-    }
-
-    label {
-      display: inline-block;
-      margin-bottom: 0.8rem;
-      font-weight: var(--kfw-fontweight-bold);
-      color: var(--kfw-color-text);
+    select {
+      appearance: none;
     }
 
     .invalid-feedback {
