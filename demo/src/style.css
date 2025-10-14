@@ -294,7 +294,7 @@
       line-height: var(--kfw-lineheight);
       letter-spacing: var(--kfw-base-letterspacing-normal);
       display: block;
-      margin-block: 0.8rem 2rem;
+      margin-block: 0.8rem var(--kfw-fontspace);
     }
 
     .form-group {
