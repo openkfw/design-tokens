@@ -536,8 +536,7 @@
       display: flex;
       flex-flow: row wrap;
       max-width: 100%;
-      row-gap: 1.6rem;
-      column-gap: var(--kfw-space-large);
+      gap: 1.6rem var(--kfw-space-large);
     }
 
     .grid {
