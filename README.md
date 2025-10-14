@@ -28,7 +28,7 @@ npm i -D @openkfw/design-tokens
 Import or use files inside the `output` folder, e.g.:
 
 ```css
-@import url("@openkfw/design-tokens/output/web_stable_10px/css/kfw-design-tokens.light.css");
+@import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css");
 ```
 
 ## ❤️ Contributing
