@@ -412,17 +412,149 @@
           <form>
             <h1>Form elements</h1>
             <div class="form-group">
-              <label for="exampleName">Sample Name</label>
-              <input id="exampleName" type="text" placeholder="Text input" />
+              <label for="exampleFirstname">Sample Firstname</label>
+              <input class="form-control" id="exampleFirstname" type="text" placeholder="Text input" />
+            </div>
+            <div class="form-group">
+              <label for="exampleLastname">Sample Lastname (disabled)</label>
+              <input class="form-control" disabled id="exampleLastname" type="text" placeholder="Text input" value="Example Lastname" />
             </div>
             <div class="form-group">
               <label for="exampleEmail">Sample Email</label>
-              <input id="exampleEmail" type="email" placeholder="Email input" />
+              <input class="form-control" id="exampleEmail" type="email" placeholder="Email input" />
             </div>
+            <fieldset class="form-group">
+              <legend>Radio Example</legend>
+              <ul class="list-group-form list-group-form--with-description" role="group">
+                <li>
+                  <input name="radioButton" type="radio" id="radioButton1Desc" />
+                  <label for="radioButton1Desc">
+                    Default Radiobox
+                    <span>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
+                      dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <input name="radioButton" type="radio" id="radioButton2Desc" />
+                  <label for="radioButton2Desc">
+                    Radiobox 2
+                    <span>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
+                      dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
+                    </span>
+                  </label>
+                </li>
+              </ul>
+              <ul class="list-group-form" role="group">
+                <li>
+                  <input name="radioButton" type="radio" id="radioButton3" />
+                  <label for="radioButton3">Radiobox 3</label>
+                </li>
+                <li>
+                  <input name="radioButton" type="radio" id="radioButton4" />
+                  <label for="radioButton4">Radiobox 4 with 2 Children</label>
+                  <ul class="list-group-form list-group-form--subgroup" role="group">
+                    <li>
+                      <input name="radioButton" type="radio" id="radioButton5" />
+                      <label for="radioButton5">Radiobox 5</label>
+                    </li>
+                    <li>
+                      <input name="radioButton" type="radio" id="radioButton6" />
+                      <label for="radioButton6"> Radiobox 6 </label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <input name="radioButton" type="radio" id="radioButton7" checked />
+                  <label for="radioButton7"> Radiobox 7 checked </label>
+                </li>
+                <li>
+                  <input name="radioButton" type="radio" id="radioButton8" checked disabled />
+                  <label for="radioButton8"> Radiobox 8 disabled </label>
+                </li>
+              </ul>
+              <ul class="list-group-form list-group-form--inline" role="group">
+                <li>
+                  <input name="radioButton" type="radio" id="radioButton9" />
+                  <label for="radioButton9">Radiobox 9</label>
+                </li>
+                <li>
+                  <input name="radioButton" type="radio" id="radioButton10" />
+                  <label for="radioButton10">Radiobox 10</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form-group">
+              <legend>Checkbox Example</legend>
+              <ul class="list-group-form list-group-form--with-description" role="group">
+                <li>
+                  <input type="checkbox" id="checkButton1Desc" />
+                  <label for="checkButton1Desc">
+                    Default Checkbox
+                    <span>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
+                      dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkButton2Desc" />
+                  <label for="checkButton2Desc">
+                    Checkbox 2
+                    <span>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
+                      dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
+                    </span>
+                  </label>
+                </li>
+              </ul>
+              <ul class="list-group-form" role="group">
+                <li>
+                  <input type="checkbox" id="checkButton3" />
+                  <label for="checkButton3">Checkbox 3</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkbox4" />
+                  <label for="checkbox4">Checkbox 4 with 2 Children</label>
+                  <ul class="list-group-form list-group-form--subgroup" role="group">
+                    <li>
+                      <input type="checkbox" id="checkbox5" />
+                      <label for="checkbox5">Checkbox 5</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox6" />
+                      <label for="checkbox6"> Checkbox 6 </label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkButton7" checked />
+                  <label for="checkButton7"> Checkbox 7 checked </label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkButton8" disabled checked />
+                  <label for="checkButton8"> Checkbox 8 disabled </label>
+                </li>
+              </ul>
+              <ul class="list-group-form list-group-form--inline" role="group">
+                <li>
+                  <input type="checkbox" id="checkButton9" />
+                  <label for="checkButton9">Checkbox 9</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkButton10" />
+                  <label for="checkButton10">Checkbox 10</label>
+                </li>
+              </ul>
+            </fieldset>
             <div class="form-group">
               <label for="exampleSelect">Sample Select</label>
-              <select id="exampleSelect">
-                <option value="">Please choose</option>
+              <select class="form-control" id="exampleSelect">
+                <option selected value="">Please choose</option>
+                <option value="1">1</option>
               </select>
               <span role="alert" class="invalid-feedback">Bitte füllen Sie dieses Feld aus.</span>
             </div>

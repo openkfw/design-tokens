@@ -263,7 +263,7 @@
         "$value": "20px",
         "$type": "borderRadius"
       },
-      "Full": {
+      "Circle": {
         "$value": "9999px",
         "$type": "borderRadius"
       }
@@ -689,6 +689,10 @@
       },
       "Small": {
         "$value": "2px",
+        "$type": "borderRadius"
+      },
+      "Circle": {
+        "$value": "9999px",
         "$type": "borderRadius"
       }
     },

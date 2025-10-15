@@ -852,7 +852,7 @@
           value: 20,
         },
       },
-      full: {
+      circle: {
         $value: {
           unit: "px",
           value: 9999,
@@ -1409,6 +1409,9 @@
       },
       small: {
         $value: "{base.borderradius.sm}",
+      },
+      circle: {
+        $value: "{base.borderradius.circle}",
       },
     },
     borderwidth: {

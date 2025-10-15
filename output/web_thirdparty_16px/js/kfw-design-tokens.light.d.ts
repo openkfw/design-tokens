@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.5.0 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.5.1 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100: {
@@ -232,7 +232,7 @@ export const KfwBaseLineheightLg: number;
 export const KfwBaseBorderradiusSm: string;
 export const KfwBaseBorderradiusMd: string;
 export const KfwBaseBorderradiusLg: string;
-export const KfwBaseBorderradiusFull: string;
+export const KfwBaseBorderradiusCircle: string;
 export const KfwBaseBorderwidthNone: string;
 export const KfwBaseBorderwidthMd: string;
 export const KfwBaseBorderwidthLg: string;
@@ -540,6 +540,7 @@ export const KfwLineheightHeading5: number;
 export const KfwBorderradius: string;
 export const KfwBorderradiusLarge: string;
 export const KfwBorderradiusSmall: string;
+export const KfwBorderradiusCircle: string;
 export const KfwBorderwidth: string;
 export const KfwBorderwidthLarge: string;
 export const KfwFocusringOutlineWidth: string;

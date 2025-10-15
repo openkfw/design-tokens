@@ -1,5 +1,10 @@
 # Changelog
 
+_[0.5.1] - 2025-10-15_
+
+- Added semantic `borderradius.circle` token.
+- Rename base token `base.borderradius.full` in `base.borderradius.circle`
+
 _[0.5.0] - 2025-10-11_
 
 - Move files from `/output/web_stable_10px` directly to `output` for better clarity and smaller import paths.

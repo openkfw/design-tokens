@@ -3511,8 +3511,8 @@
           "lg"
         ]
       },
-      "full": {
-        "key": "{base.borderradius.full}",
+      "circle": {
+        "key": "{base.borderradius.circle}",
         "$value": {
           "unit": "px",
           "value": 9999
@@ -3526,14 +3526,14 @@
             "value": 9999
           },
           "$type": "dimension",
-          "key": "{base.borderradius.full}"
+          "key": "{base.borderradius.circle}"
         },
-        "name": "full",
+        "name": "circle",
         "attributes": {},
         "path": [
           "base",
           "borderradius",
-          "full"
+          "circle"
         ]
       }
     },
@@ -7053,6 +7053,28 @@
           "semantic",
           "borderradius",
           "small"
+        ]
+      },
+      "circle": {
+        "key": "{semantic.borderradius.circle}",
+        "$value": {
+          "unit": "px",
+          "value": 9999
+        },
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "dimension",
+        "original": {
+          "$value": "{base.borderradius.circle}",
+          "$type": "dimension",
+          "key": "{semantic.borderradius.circle}"
+        },
+        "name": "circle",
+        "attributes": {},
+        "path": [
+          "semantic",
+          "borderradius",
+          "circle"
         ]
       }
     },
