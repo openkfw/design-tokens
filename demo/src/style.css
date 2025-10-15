@@ -325,6 +325,7 @@
     }
 
     .form-control {
+      appearance: none;
       width: 100%;
       height: 4.3rem;
       font-size: var(--kfw-fontsize);
@@ -336,7 +337,7 @@
       border: var(--kfw-borderwidth) solid var(--kfw-base-color-gray-500);
       padding-inline: 1.5rem;
       padding-block: 1rem;
-      appearance: none;
+      background-color: var(--kfw-color-background);
     }
 
     .form-control:disabled {
@@ -354,6 +355,10 @@
 
     select.form-control {
       padding-block: 0;
+    }
+
+    select.form-control:not(:disabled) {
+      cursor: pointer;
     }
 
     fieldset {
