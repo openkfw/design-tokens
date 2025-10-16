@@ -447,7 +447,7 @@
     }
 
     .list-group-form input:is([type="radio"]) {
-      border-radius: var(--kfw-base-borderradius-full);
+      border-radius: var(--kfw-borderradius-circle);
     }
 
     .list-group-form input:is([type="checkbox"]) {
@@ -490,7 +490,7 @@
       width: 1.4rem;
       height: 1.4rem;
       transform: translate(-50%, -50%);
-      border-radius: var(--kfw-base-borderradius-full);
+      border-radius: var(--kfw-borderradius-circle);
       background-color: currentcolor;
       forced-color-adjust: none;
     }
