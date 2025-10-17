@@ -12,11 +12,8 @@ The tokens follow a template that complies with the <a href="https://tr.designto
 ## 🎨 Customizing KfW Design Tokens for Open Source
 
 KfW Design Tokens, along with all related documentation, components, support, and assets such as fonts, icons, and images, are intended for **internal use** only.
-
 Although the source code for KfW Design Tokens is available under the MPL 2.0 License, this open-source release is provided solely as a **showcase**.
-
 KfW fully reserves all rights to the KfW brand. The use of the KfW brand and design is subject to strict restrictions, even when built into code that we provide.
-
 If you have any questions or need assistance, please reach out to our "Design System & Tokens Community" in the internal Webex channel or use the official [KfW Brand-Guide](https://brand-guide.kfw.de/document/85/de#/user-interface/user-interface).
 
 ## 🚀 Installation with NPM
