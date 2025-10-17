@@ -7,21 +7,23 @@ The tokens follow a template that complies with the <a href="https://tr.designto
 
 **Note: The Design Tokens are still in the pilot phase.** This means that they are currently being tested and evaluated for functionality and usability. Feedback from users during this phase is crucial for making improvements and ensuring that the tokens meet the needs of all stakeholders before a full stable release.
 
-The documentation on how to use design tokens is available [internally only](https://brand-guide.kfw.de/document/85/de#/user-interface/user-interface).
-If you have any questions or need assistance, please reach out to our "Design System & Tokens Community" in the internal Webex channel.
-
 ![Design Tokens badge](https://img.shields.io/badge/openkfw-design--tokens-005a8c) [![License: MPL-2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen)](./LICENSE) ![GitHub repo size](https://img.shields.io/github/repo-size/openkfw/design-tokens.svg?style=flat-square) ![GitHub package.json version ](https://img.shields.io/github/package-json/v/openkfw/design-tokens) [![NPM package](https://img.shields.io/npm/v/@openkfw/design-tokens.svg)](https://www.npmjs.com/package/@openkfw/design-tokens)
 
-## Customizing KfW Design Tokens for open source
+## 🎨 Customizing KfW Design Tokens for Open Source
 
-Although the source code for KfW Design Tokens is free and available under the MPL 2.0 License, KfW fully reserves all rights to the KfW brand. To prevent users from getting confused about the source of a digital product or experience, there are strict restrictions on using the KfW brand and design, even when built into code that we provide. For any customization other than explicitly for the KfW, you must replace the KfW theme. To use KfW Design Tokens as open source software and customize it, please follow the instructions.
+KfW Design Tokens, along with all related documentation, components, support, and assets such as fonts, icons, and images, are intended for **internal use** only.
+
+Although the source code for KfW Design Tokens is available under the MPL 2.0 License, this open-source release is provided solely as a **showcase**.
+
+KfW fully reserves all rights to the KfW brand. The use of the KfW brand and design is subject to strict restrictions, even when built into code that we provide.
+
+If you have any questions or need assistance, please reach out to our "Design System & Tokens Community" in the internal Webex channel or use the official [KfW Brand-Guide](https://brand-guide.kfw.de/document/85/de#/user-interface/user-interface).
 
 ## 🚀 Installation with NPM
 
 Run the following command to install the Design Tokens:
 
 ```bash
-
 npm i -D @openkfw/design-tokens
 ```
 
@@ -33,13 +35,19 @@ Import or use files inside the `output` folder, e.g.:
 
 ## ❤️ Contributing
 
-Our commitment to open source encourages contributions from everyone.
+Considering supporting with your contribution? Whether you like to contribute new patterns, fix a bug, spotted a typo or have ideas for improvement - we'd love to hear from you. Our commitment to open source encourages contributions from everyone.
 
-## 📒 Licensing
+## 📒 License
 
-Copyright (c) 2025 KfW
+Copyright (c) 2025 KfW Bankengruppe
 
-Licensed under the **Mozilla Public License 2.0 (MPL-2.0)** (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License by reviewing the file [LICENSE](./LICENSE) in the repository. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the [LICENSE](./LICENSE) for the specific language governing permissions and limitations under the License.
+Licensed under the **Mozilla Public License 2.0 (MPL-2.0)** (the "License"); you may not use this file except in compliance with the License.
+You may obtain a copy of the License by reviewing the file [LICENSE](./LICENSE) in the repository. Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the [LICENSE](./LICENSE) for
+the specific language governing permissions and limitations under the License. KfW may update this licensing agreement at any time. This notice and permission must be
+included in all copies or substantial portions of the Software.
+
+Last updated: Nov 17, 2025
 
 ## 💁 FAQ
 

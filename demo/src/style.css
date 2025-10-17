@@ -367,7 +367,7 @@
       border: 0;
     }
 
-    :is(label, legend) {
+    :is(label, legend, .form-label) {
       display: inline-block;
       margin-block-end: 0.8rem;
       font-weight: var(--kfw-fontweight-bold);
