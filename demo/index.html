@@ -412,19 +412,43 @@
           <form>
             <h1>Form elements</h1>
             <div class="form-group">
-              <label for="exampleFirstname">Sample Firstname</label>
-              <input class="form-control" id="exampleFirstname" type="text" placeholder="Text input" />
+              <label for="search">Search</label>
+              <input type="search" id="search" name="search" placeholder="Search" class="form-control" />
             </div>
             <div class="form-group">
-              <label for="exampleLastname">Sample Lastname (disabled)</label>
-              <input class="form-control" disabled id="exampleLastname" type="text" placeholder="Text input" value="Example Lastname" />
+              <label for="text">Text</label>
+              <input type="text" id="text" name="text" placeholder="Text" class="form-control" />
+              <small>Curabitur consequat lacus at lacus porta finibus.</small>
             </div>
             <div class="form-group">
-              <label for="exampleEmail">Sample Email</label>
-              <input class="form-control" id="exampleEmail" type="email" placeholder="Email input" />
+              <label for="select">Select</label>
+              <select aria-invalid="true" class="form-control" id="select" name="select" required>
+                <option value="" selected>Select…</option>
+                <option>…</option>
+              </select>
+              <small role="alert" class="invalid-feedback">Please fill out this field.</small>
             </div>
+            <div class="form-group">
+              <label for="file">File browser</label>
+              <div class="file-upload">
+                <input type="file" id="file" name="file" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="disabled">Disabled</label>
+              <input class="form-control" type="text" id="disabled" name="disabled" placeholder="Disabled" disabled />
+            </div>
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input class="form-control" type="date" id="date" name="date" />
+            </div>
+            <div class="form-group">
+              <label for="time">Time</label>
+              <input class="form-control" type="time" id="time" name="time" />
+            </div>
+
             <fieldset class="form-group">
-              <legend>Radio Example</legend>
+              <legend>Radio buttons</legend>
               <ul class="list-group-form list-group-form--with-description" role="group">
                 <li>
                   <input name="radioButton" type="radio" id="radioButton1Desc" />
@@ -488,7 +512,7 @@
             </fieldset>
 
             <fieldset class="form-group">
-              <legend>Checkbox Example</legend>
+              <legend>Checkboxes</legend>
               <ul class="list-group-form list-group-form--with-description" role="group">
                 <li>
                   <input type="checkbox" id="checkButton1Desc" />
@@ -550,14 +574,6 @@
                 </li>
               </ul>
             </fieldset>
-            <div class="form-group">
-              <label for="exampleSelect">Sample Select</label>
-              <select class="form-control" id="exampleSelect">
-                <option selected value="">Please choose</option>
-                <option value="1">1</option>
-              </select>
-              <span role="alert" class="invalid-feedback">Bitte füllen Sie dieses Feld aus.</span>
-            </div>
             <div class="form-group">
               <button type="button" class="button button--primary">Submit</button>
             </div>
