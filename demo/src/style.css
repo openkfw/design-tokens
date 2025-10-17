@@ -46,6 +46,10 @@
       outline-offset: var(--kfw-focusring-outline-offset);
     }
 
+    ::selection {
+      background-color: var(--kfw-color-background-light-blue);
+    }
+
     body {
       margin: 0;
       font-size: 1.6rem; /* Set 16px as default */
@@ -60,8 +64,7 @@
       font-size: 80%;
     }
 
-    sub,
-    sup {
+    :is(sub, sup) {
       position: relative;
       line-height: 0;
       vertical-align: baseline;
@@ -104,19 +107,6 @@
 
     blockquote footer {
       margin-top: var(--kfw-fontspace-2xsmall);
-    }
-
-    a {
-      --link-color: var(--kfw-color-fn);
-      --link-color-hover: var(--kfw-color-fn-active);
-
-      color: var(--link-color);
-      text-decoration: none;
-    }
-
-    a:is(:hover, :focus) {
-      color: var(--link-color-hover);
-      text-decoration: underline;
     }
 
     img,
@@ -237,6 +227,28 @@
       margin-block-end: var(--kfw-fontspace-heading-6);
       letter-spacing: var(--kfw-base-letterspacing-wide);
       line-height: var(--kfw-lineheight);
+    }
+
+    /**
+    * Link
+    */
+    :where(a:not([role="button"])),
+    [role="link"] {
+      --link-color: var(--kfw-color-fn);
+      --link-color-hover: var(--kfw-color-fn-active);
+
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    :where(a:not([role="button"])):is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
+    [role="link"]:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
+      color: var(--link-color-hover);
+      text-decoration: underline;
+    }
+
+    a[role="button"] {
+      display: inline-block;
     }
 
     .button {
@@ -628,7 +640,8 @@
       --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
     }
 
-    .footer a:not(.button) {
+    .footer :where(a:not([role="button"])),
+    .footer [role="link"] {
       /* use the same styles as .bg-dark a */
       --link-color: var(--kfw-color-text-on-dark-bg);
       --link-color-hover: var(--kfw-color-text-on-dark-bg);
@@ -636,7 +649,8 @@
       text-decoration: underline;
     }
 
-    .footer a:not(.button):is(:hover, :focus) {
+    :where(a:not([role="button"])):is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
+    [role="link"]:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
       text-decoration: none;
     }
 
@@ -749,14 +763,16 @@
       color: var(--kfw-color-text-on-dark-bg);
     }
 
-    .bg-dark a:not(.button) {
+    .bg-dark :where(a:not([role="button"])),
+    .bg-dark [role="link"] {
       --link-color: var(--kfw-color-text-on-dark-bg);
       --link-color-hover: var(--kfw-color-text-on-dark-bg);
 
       text-decoration: underline;
     }
 
-    .bg-dark a:not(.button):is(:hover, :focus) {
+    .bg-dark :where(a:not([role="button"])):is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
+    .bg-dark [role="link"]:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
       text-decoration: none;
     }
 
