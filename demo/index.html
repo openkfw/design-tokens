@@ -21,7 +21,7 @@
     <header id="header" class="header">
       <div class="container-extended">
         <div>
-          <button type="button" class="button button--tertiary">Nav</button>
+          <button type="button" class="button--tertiary">Nav</button>
         </div>
         <div>
           <a class="d-block" href="#">
@@ -33,7 +33,7 @@
           </a>
         </div>
         <nav class="header__menu" aria-label="Sekundäre Navigation" data-testid="right-header-menu">
-          <a class="button button--tertiary" role="button" href="#">Login</a>
+          <a class="button--tertiary" role="button" href="#">Login</a>
         </nav>
       </div>
     </header>
@@ -429,9 +429,15 @@
               <small role="alert" class="invalid-feedback">Please fill out this field.</small>
             </div>
             <div class="form-group">
-              <label for="file">File browser</label>
+              <label for="file-upload">File browser</label>
+              <input type="file" id="file-upload" multiple />
+            </div>
+            <div class="form-group">
+              <label for="file-upload2">File browser with title</label>
               <div class="file-upload">
-                <input type="file" id="file" name="file" />
+                <span class="file-upload__icon" aria-hidden="true"></span>
+                <span class="file-upload__title">Choose the files you want to upload</span>
+                <input type="file" id="file-upload2" multiple />
               </div>
             </div>
             <div class="form-group">
@@ -575,7 +581,7 @@
               </ul>
             </fieldset>
             <div class="form-group">
-              <button type="button" class="button button--primary">Submit</button>
+              <button type="button" class="button--primary">Submit</button>
             </div>
           </form>
         </section>
@@ -590,7 +596,7 @@
           </li>
         </ul>
         <div class="footer__top-button">
-          <a class="button button--secondary" href="#top" role="button"> Zum Seitenanfang </a>
+          <a class="button--secondary" href="#top" role="button"> Zum Seitenanfang </a>
         </div>
       </nav>
     </footer>

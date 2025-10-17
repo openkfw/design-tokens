@@ -251,98 +251,9 @@
       display: inline-block;
     }
 
-    .button {
-      font-family: var(--kfw-fontfamily);
-      font-size: var(--kfw-fontsize);
-      border-radius: var(--kfw-borderradius);
-      display: inline-flex;
-      gap: 0.8rem;
-      text-align: center;
-      border: 1px solid transparent;
-      text-decoration: none;
-      line-height: var(--kfw-lineheight);
-      padding: 1.2rem 2.5rem;
-      justify-content: center;
-      max-width: 100%;
-      vertical-align: middle;
-      white-space: nowrap;
-    }
-
-    [role="button"],
-    button {
-      cursor: pointer;
-    }
-
-    .button--primary {
-      --button-border-color: var(--kfw-color-fn);
-      --button-bg: var(--kfw-color-fn);
-      --button-color: var(--kfw-color-text-on-dark-bg);
-      --button-border-color-hover: var(--kfw-color-fn-active);
-      --button-bg-hover: var(--kfw-color-fn-active);
-      --button-color-hover: var(--button-color);
-
-      background-color: var(--button-bg);
-      color: var(--button-color);
-      border: var(--kfw-borderwidth) solid var(--button-border-color);
-    }
-
-    .button--primary:is(:hover, :focus) {
-      color: var(--button-color-hover);
-      background-color: var(--button-bg-hover);
-      border-color: var(--button-border-color-hover);
-      text-decoration: underline;
-    }
-
-    .button--secondary {
-      --button-border-color: var(--kfw-color-fn);
-      --button-bg: transparent;
-      --button-color: var(--kfw-color-fn);
-      --button-border-color-hover: var(--kfw-color-fn-active);
-      --button-bg-hover: var(--kfw-color-fn-active);
-      --button-color-hover: var(--kfw-color-text-on-dark-bg);
-
-      background-color: var(--button-bg);
-      color: var(--button-color);
-      border: var(--kfw-borderwidth) solid var(--button-border-color);
-    }
-
-    .button--secondary:is(:hover, :focus) {
-      color: var(--button-color-hover);
-      background-color: var(--button-bg-hover);
-      border-color: var(--button-border-color-hover);
-      text-decoration: underline;
-    }
-
-    .button--tertiary {
-      --button-color: var(--kfw-color-fn);
-      --button-bg: transparent;
-      --button-color-hover: var(--kfw-color-fn-active);
-
-      background-color: var(--button-bg);
-      color: var(--button-color);
-      padding: 0;
-      border: 0;
-      text-decoration: none;
-    }
-
-    .button--tertiary:is(:hover, :focus) {
-      color: var(--button-color-hover);
-      text-decoration: underline;
-    }
-
-    .button--small {
-      padding: 0.8rem 1.6rem;
-      font-size: var(--kfw-fontsize-small);
-    }
-
-    input:not([type="submit"], [type="button"], [type="reset"])[disabled],
-    select[disabled],
-    textarea[disabled],
-    label[aria-disabled="true"],
-    :where(fieldset[disabled]) :is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {
-      pointer-events: none;
-    }
-
+    /**
+    * Form
+    */
     .form-control {
       appearance: none;
       width: 100%;
@@ -385,6 +296,70 @@
 
     select.form-control {
       padding-block: 0;
+    }
+
+    [type="file"] {
+      padding: 0;
+      border: 0;
+      width: 100%;
+    }
+
+    [type="file"]::file-selector-button {
+      margin-inline-end: var(--kfw-space-xsmall);
+    }
+
+    .file-upload {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: var(--kfw-space-small) var(--kfw-space-small) var(--kfw-space-medium);
+      background-color: var(--kfw-color-background-light-green);
+      margin-bottom: var(--kfw-space-medium);
+    }
+
+    .file-upload__title {
+      margin-bottom: var(--kfw-fontspace);
+    }
+
+    .file-upload [type="file"] {
+      width: auto;
+    }
+
+    .file-upload__icon {
+      position: relative;
+      display: block;
+      transform: scale(1);
+      width: 2.8rem;
+      height: 1.3rem;
+      border: 3px solid var(--kfw-color-fn);
+      border-top: 0;
+      margin-block: 2.5rem 2rem;
+    }
+
+    .file-upload__icon::before,
+    .file-upload__icon::after {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+
+    .file-upload__icon::before {
+      left: 10px;
+      bottom: 4px;
+      border-radius: 2px;
+      width: 3px;
+      height: 19px;
+      background-color: var(--kfw-color-fn);
+    }
+
+    .file-upload__icon::after {
+      width: 15px;
+      height: 16px;
+      border-left: 3px solid var(--kfw-color-fn);
+      border-top: 3.75px solid var(--kfw-color-fn);
+      transform: rotate(45deg);
+      left: 4px;
+      bottom: 7px;
     }
 
     fieldset {
@@ -549,8 +524,107 @@
       }
     }
 
-    /* Container Styles */
+    /**
+    * Button
+    */
+    button,
+    [type="submit"],
+    [type="reset"],
+    [type="button"],
+    [type="file"]::file-selector-button,
+    [role="button"] {
+      font-family: var(--kfw-fontfamily);
+      font-size: var(--kfw-fontsize);
+      border-radius: var(--kfw-borderradius);
+      display: inline-flex;
+      gap: 0.8rem;
+      text-align: center;
+      border: 1px solid transparent;
+      text-decoration: none;
+      line-height: var(--kfw-lineheight);
+      padding: 1.2rem 2.5rem;
+      justify-content: center;
+      max-width: 100%;
+      vertical-align: middle;
+      white-space: nowrap;
+      cursor: pointer;
+    }
 
+    .button--primary {
+      --button-border-color: var(--kfw-color-fn);
+      --button-bg: var(--kfw-color-fn);
+      --button-color: var(--kfw-color-text-on-dark-bg);
+      --button-border-color-hover: var(--kfw-color-fn-active);
+      --button-bg-hover: var(--kfw-color-fn-active);
+      --button-color-hover: var(--button-color);
+
+      background-color: var(--button-bg);
+      color: var(--button-color);
+      border: var(--kfw-borderwidth) solid var(--button-border-color);
+    }
+
+    .button--primary:is(:hover, :focus) {
+      color: var(--button-color-hover);
+      background-color: var(--button-bg-hover);
+      border-color: var(--button-border-color-hover);
+      text-decoration: underline;
+    }
+
+    [type="file"]::file-selector-button,
+    :is([type="reset"], .button--secondary) {
+      --button-border-color: var(--kfw-color-fn);
+      --button-bg: transparent;
+      --button-color: var(--kfw-color-fn);
+      --button-border-color-hover: var(--kfw-color-fn-active);
+      --button-bg-hover: var(--kfw-color-fn-active);
+      --button-color-hover: var(--kfw-color-text-on-dark-bg);
+
+      background-color: var(--button-bg);
+      color: var(--button-color);
+      border: var(--kfw-borderwidth) solid var(--button-border-color);
+    }
+
+    [type="file"]::file-selector-button:is(:hover, :focus),
+    :is([type="reset"], .button--secondary):is(:hover, :focus) {
+      color: var(--button-color-hover);
+      background-color: var(--button-bg-hover);
+      border-color: var(--button-border-color-hover);
+      text-decoration: underline;
+    }
+
+    .button--tertiary {
+      --button-color: var(--kfw-color-fn);
+      --button-bg: transparent;
+      --button-color-hover: var(--kfw-color-fn-active);
+
+      background-color: var(--button-bg);
+      color: var(--button-color);
+      padding: 0;
+      border: 0;
+      text-decoration: none;
+    }
+
+    .button--tertiary:is(:hover, :focus) {
+      color: var(--button-color-hover);
+      text-decoration: underline;
+    }
+
+    .button--small {
+      padding: 0.8rem 1.6rem;
+      font-size: var(--kfw-fontsize-small);
+    }
+
+    input:not([type="submit"], [type="button"], [type="reset"])[disabled],
+    select[disabled],
+    textarea[disabled],
+    label[aria-disabled="true"],
+    :where(fieldset[disabled]) :is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {
+      pointer-events: none;
+    }
+
+    /**
+    * Container
+    */
     :is(.container, .container-fluid, .container-narrow, .container-extended, .container-extended-fullwidth) {
       margin-inline: auto;
       width: 100%;
