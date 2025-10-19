@@ -25,9 +25,9 @@ export default defineConfig({
           // CSS-spezifische Anpassungen
           if (name.endsWith(".css")) {
             console.log(name)
-            if (name.includes("fonts")) return "css/fonts.min[extname]"
-            if (name.includes("style")) return "css/style.min[extname]"
-          }
+            if (name.includes("fonts")) return "css/fonts-[hash].min[extname]"
+            if (name.includes("style")) return "css/style-[hash].min[extname]"
+          } // @todo add version without hash for npm package usage
 
           if (/\.(woff2?|ttf|eot|otf)$/.test(name)) {
             return "fonts/[name]-[hash].[extname]"
