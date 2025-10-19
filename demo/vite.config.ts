@@ -1,7 +1,7 @@
-// vite.config.js
 import { defineConfig } from "vite"
 import postcssCustomMedia from "postcss-custom-media"
 import stylelint from "vite-plugin-stylelint"
+import path, { resolve } from "path"
 
 export default defineConfig({
   base: "https://openkfw.github.io/design-tokens/demo/dist/",
@@ -9,6 +9,33 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [postcssCustomMedia()]
+    }
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        style: resolve(__dirname, "src/style.css"),
+        fonts: resolve(__dirname, "src/fonts/font-face.css")
+      },
+      output: {
+        assetFileNames: (assetInfo) => {
+          const name = assetInfo.names?.[0]
+
+          // CSS-spezifische Anpassungen
+          if (name.endsWith(".css")) {
+            console.log(name)
+            if (name.includes("fonts")) return "css/fonts-[hash].min[extname]"
+            if (name.includes("style")) return "css/style-[hash].min[extname]"
+          }
+
+          if (/\.(woff2?|ttf|eot|otf)$/.test(name)) {
+            return "fonts/[name]-[hash].[extname]"
+          }
+
+          return "[name]-[hash].[extname]"
+        }
+      }
     }
   }
 })
