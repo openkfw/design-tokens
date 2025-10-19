@@ -1,30 +1,27 @@
-/* =========================================================
-   Layer Definition
-   ========================================================= */
+/* Establish the order of layers upfront */
 @layer core, third-party, components, utility;
 @layer core.reset, core.tokens, core.base;
 @layer third-party.imports, third-party.overrides;
 @layer components.base, components.variations;
 
-/* =========================================================
-   Imports
-   ========================================================= */
+/* Reset, normalize, etc. */
 @import url("vendor/uaplus.css") layer(core.reset);
+
+/* KfW Design Tokens with Custom Media Queries */
 @import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css") layer(core.tokens);
 @import url("vendor/gen-custom-media.css") layer(core.tokens);
 
-/* =========================================================
-   Core
-   ========================================================= */
 @layer core {
   @layer tokens {
     :root {
       /* fluid shorthands */
       --kfw-safezone: clamp(var(--kfw-safezone-min), var(--kfw-safezone-val), var(--kfw-safezone-max));
       --kfw-space-large: clamp(var(--kfw-space-large-min), var(--kfw-space-large-val), var(--kfw-space-large-max));
+      --kfw-space-big: clamp(var(--kfw-space-big-min), var(--kfw-space-big-val), var(--kfw-space-big-max));
 
       /* global color.tokens prepared for overwrites by parent selector (bg-dark) */
       --headline-color: var(--kfw-color-text);
+      --kfw-focusring-outline-color: var(--kfw-color-fn-active);
     }
   }
 
@@ -41,12 +38,8 @@
     }
 
     *:focus-visible {
-      outline: var(--kfw-focusring-outline-width) var(--kfw-focusring-outline-style) var(--kfw-color-fn-active);
+      outline: var(--kfw-focusring-outline-width) var(--kfw-focusring-outline-style) var(--kfw-focusring-outline-color);
       outline-offset: var(--kfw-focusring-outline-offset);
-    }
-
-    ::selection {
-      background-color: var(--kfw-color-background-light-blue);
     }
 
     body {
@@ -282,10 +275,11 @@
 
       color: var(--link-color);
       text-decoration: none;
+      border-radius: var(--kfw-borderradius);
     }
 
-    :where(a:not([role="button"])):is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
-    [role="link"]:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
+    a:not([role="button"]):where(:hover, :focus, :active, [aria-current]:not([aria-current="false"])),
+    [role="link"]:where(:hover, :focus, :active, [aria-current]:not([aria-current="false"])) {
       color: var(--link-color-hover);
       text-decoration: underline;
     }
@@ -327,10 +321,12 @@
       color: var(--kfw-color-text);
     }
 
-    .form-control:hover:not(:disabled),
+    .form-control:hover:not(:disabled) {
+      box-shadow: 0 0 0 var(--kfw-borderwidth) var(--kfw-color-fn-active);
+    }
+
     .form-control:focus:not(:disabled) {
-      outline-offset: 0;
-      outline: var(--kfw-borderwidth) solid var(--kfw-color-fn-active);
+      box-shadow: none;
     }
 
     :is([type="checkbox"], [type="radio"], select.form-control):not(:disabled) {
@@ -380,7 +376,7 @@
       transform: scale(1);
       width: 2.8rem;
       height: 1.3rem;
-      border: 3px solid var(--kfw-color-fn);
+      border: 0.3rem solid var(--kfw-color-fn);
       border-top: 0;
       margin-block: 2.5rem 2rem;
     }
@@ -393,21 +389,21 @@
     }
 
     .file-upload__icon::before {
-      left: 10px;
-      bottom: 4px;
-      width: 3px;
-      height: 19px;
+      left: 1rem;
+      bottom: 0.4rem;
+      width: 0.3rem;
+      height: 1.9rem;
       background-color: var(--kfw-color-fn);
     }
 
     .file-upload__icon::after {
-      bottom: 7px;
-      left: 3.5px;
-      width: 16px;
-      height: 16px;
+      bottom: 0.7rem;
+      left: 0.35rem;
+      width: 1.6rem;
+      height: 1.6rem;
       transform: rotate(45deg);
-      border-left: 3px solid var(--kfw-color-fn);
-      border-top: 3px solid var(--kfw-color-fn);
+      border-left: 0.3rem solid var(--kfw-color-fn);
+      border-top: 0.3rem solid var(--kfw-color-fn);
     }
 
     fieldset {
@@ -487,12 +483,12 @@
     }
 
     [type="checkbox"]::before {
-      width: 16px;
-      height: 9px;
+      width: 1.6rem;
+      height: 0.9rem;
       transform: translate(-50%, -50%) rotate(314deg);
       margin-top: -1px;
-      border-bottom-width: 2.25px;
-      border-left-width: 2.25px;
+      border-bottom-width: 0.225rem;
+      border-left-width: 0.225rem;
     }
 
     [type="radio"]::before {
@@ -581,13 +577,13 @@
     [type="button"],
     [type="file"]::file-selector-button,
     [role="button"] {
+      border: var(--kfw-borderwidth) solid transparent;
       font-family: var(--kfw-fontfamily);
       font-size: var(--kfw-fontsize);
       border-radius: var(--kfw-borderradius);
       display: inline-flex;
       gap: 0.8rem;
       text-align: center;
-      border: 1px solid transparent;
       text-decoration: none;
       line-height: var(--kfw-lineheight);
       padding: 1.2rem 2.5rem;
@@ -608,7 +604,7 @@
 
       background-color: var(--button-bg);
       color: var(--button-color);
-      border: var(--kfw-borderwidth) solid var(--button-border-color);
+      border-color: var(--button-border-color);
     }
 
     .button--primary:is(:hover, :focus) {
@@ -629,7 +625,7 @@
 
       background-color: var(--button-bg);
       color: var(--button-color);
-      border: var(--kfw-borderwidth) solid var(--button-border-color);
+      border-color: var(--button-border-color);
     }
 
     [type="file"]::file-selector-button:is(:hover, :focus),
@@ -711,14 +707,11 @@
   }
 }
 
-/* =========================================================
-   Components
-   ========================================================= */
 @layer components {
   @layer base {
     .header {
       background-color: var(--kfw-color-background);
-      border-bottom: 1px solid var(--kfw-color-line-11);
+      border-bottom: var(--kfw-borderwidth) solid var(--kfw-color-line-11);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -773,6 +766,8 @@
     }
 
     .footer {
+      --kfw-focusring-outline-color: var(--kfw-color-background);
+
       border-top: var(--kfw-base-borderwidth-md) solid var(--kfw-color-line-11);
       background-color: var(--kfw-color-background-dark-blue);
       color: var(--kfw-color-text-on-dark-bg);
@@ -799,8 +794,8 @@
       text-decoration: underline;
     }
 
-    :where(a:not([role="button"])):is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
-    [role="link"]:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
+    .footer a:not([role="button"]):where(:hover, :focus, :active, [aria-current]:not([aria-current="false"])),
+    .footer [role="link"]:where(:hover, :focus, :active, [aria-current]:not([aria-current="false"])) {
       text-decoration: none;
     }
 
@@ -908,6 +903,7 @@
   @layer variations {
     .bg-dark {
       --headline-color: var(--kfw-color-text-headline-on-dark-bg);
+      --kfw-focusring-outline-color: var(--kfw-color-background);
 
       background-color: var(--kfw-color-background-dark-blue);
       color: var(--kfw-color-text-on-dark-bg);
@@ -1032,19 +1028,23 @@
     margin-block: var(--kfw-safezone);
   }
 
-  .mb-xsmall {
+  .mb-xs {
     margin-block-end: var(--kfw-space-xsmall);
   }
 
-  .mb-small {
+  .mb-sm {
     margin-block-end: var(--kfw-space-small);
   }
 
-  .mb-medium {
+  .mb-md {
     margin-block-end: var(--kfw-space-medium);
   }
 
-  .mb-large {
+  .mb-lg {
     margin-block-end: var(--kfw-space-large);
+  }
+
+  .mb-xl {
+    margin-block-end: var(--kfw-space-big);
   }
 }

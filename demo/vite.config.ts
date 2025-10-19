@@ -1,7 +1,7 @@
 import { defineConfig } from "vite"
 import postcssCustomMedia from "postcss-custom-media"
 import stylelint from "vite-plugin-stylelint"
-import path, { resolve } from "path"
+import { resolve } from "path"
 
 export default defineConfig({
   base: "https://openkfw.github.io/design-tokens/demo/dist/",

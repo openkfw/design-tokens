@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "format": "npx prettier --write .",
     "update": "npx npm-check-updates -u",
-    "lint:css": "npx stylelint 'src/*.css' --fix"
+    "lint": "npx stylelint 'src/*.css' --fix"
   },
   "devDependencies": {
     "@openkfw/design-tokens": "^0.5.1",
