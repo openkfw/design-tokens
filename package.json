@@ -6,7 +6,9 @@
     "output",
     "tokens/tokens.json",
     "tokens/gen-tokens.dark.json5",
-    "demo/src"
+    "demo/src/styles/style.css",
+    "demo/src/styles/vendor/**.css",
+    "demo/dist/css/style.min.css"
   ],
   "scripts": {
     "start": "concurrently \"npm run watch:extended\" \"npm run watch\"",

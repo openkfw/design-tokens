@@ -2,10 +2,37 @@ import { defineConfig } from "vite"
 import postcssCustomMedia from "postcss-custom-media"
 import stylelint from "vite-plugin-stylelint"
 import { resolve } from "path"
+import fs from "fs"
+import path from "path"
+import type { OutputAsset } from "rollup"
 
 export default defineConfig({
   base: "https://openkfw.github.io/design-tokens/demo/dist/",
-  plugins: [stylelint()],
+  plugins: [
+    stylelint(),
+    {
+      name: "copy-css-without-hash",
+      generateBundle(options, bundle) {
+        const cssDir = path.join(options.dir || "dist", "css")
+        fs.mkdirSync(cssDir, { recursive: true })
+
+        for (const asset of Object.values(bundle)) {
+          if ((asset as OutputAsset).type === "asset" && (asset as OutputAsset).fileName?.endsWith(".css")) {
+            const outputAsset = asset as OutputAsset
+            const cleanName = outputAsset.fileName.includes("style")
+              ? "style.min.css"
+              : null
+
+            if (cleanName && typeof outputAsset.source === "string") {
+              let content = outputAsset.source as string
+              content = content.replace(/\/\*\$vite\$:[0-9]+\*\//g, "")
+              fs.writeFileSync(path.join(cssDir, cleanName), content)
+            }
+          }
+        }
+      }
+    }
+  ],
   css: {
     postcss: {
       plugins: [postcssCustomMedia()]
