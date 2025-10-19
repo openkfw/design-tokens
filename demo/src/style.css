@@ -2,17 +2,16 @@
    Layer Definition
    ========================================================= */
 @layer core, third-party, components, utility;
-@layer core.fonts, core.reset, core.tokens, core.base;
+@layer core.reset, core.tokens, core.base;
 @layer third-party.imports, third-party.overrides;
 @layer components.base, components.variations;
 
 /* =========================================================
    Imports
    ========================================================= */
-@import url("partials/fonts.css") layer(core.fonts);
-@import url("partials/uaplus.css") layer(core.reset);
+@import url("vendor/uaplus.css") layer(core.reset);
 @import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css") layer(core.tokens);
-@import url("partials/gen-custom-media.css") layer(core.tokens);
+@import url("vendor/gen-custom-media.css") layer(core.tokens);
 
 /* =========================================================
    Core

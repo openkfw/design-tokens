@@ -3,8 +3,7 @@
   font-family: "KfW Centro Sans";
   font-style: normal;
   font-weight: 400;
-  src: local("KfW-Centro-Sans");
-  src: url("/fonts/KFWCentroSans-Regular.woff2") format("woff2");
+  src: url("KFWCentroSans-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -12,8 +11,7 @@
   font-family: "KfW Centro Sans";
   font-style: italic;
   font-weight: 400;
-  src: local("KfW-Centro-Sans");
-  src: url("/fonts/KFWCentroSans-Italic.woff2") format("woff2");
+  src: url("KFWCentroSans-Italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -21,8 +19,7 @@
   font-family: "KfW Centro Sans";
   font-style: normal;
   font-weight: 500;
-  src: local("KfW-Centro-Sans");
-  src: url("/fonts/KFWCentroSans-Medium.woff2") format("woff2");
+  src: url("KFWCentroSans-Medium.woff2") format("woff2");
 }
 
 @font-face {
@@ -30,6 +27,5 @@
   font-family: "KfW Centro Sans";
   font-style: italic;
   font-weight: 500;
-  src: local("KfW-Centro-Sans");
-  src: url("/fonts/KFWCentroSans-MediumItalic.woff2") format("woff2");
+  src: url("KFWCentroSans-MediumItalic.woff2") format("woff2");
 }
