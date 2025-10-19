@@ -19,9 +19,7 @@ export default defineConfig({
         for (const asset of Object.values(bundle)) {
           if ((asset as OutputAsset).type === "asset" && (asset as OutputAsset).fileName?.endsWith(".css")) {
             const outputAsset = asset as OutputAsset
-            const cleanName = outputAsset.fileName.includes("style")
-              ? "style.min.css"
-              : null
+            const cleanName = outputAsset.fileName.includes("style") ? "style.min.css" : null
 
             if (cleanName && typeof outputAsset.source === "string") {
               let content = outputAsset.source as string
