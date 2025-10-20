@@ -7,7 +7,11 @@ The tokens follow a template that complies with the <a href="https://tr.designto
 
 **Note: The Design Tokens are still in the pilot phase.** This means that they are currently being tested and evaluated for functionality and usability. Feedback from users during this phase is crucial for making improvements and ensuring that the tokens meet the needs of all stakeholders before a full stable release.
 
-![Design Tokens badge](https://img.shields.io/badge/openkfw-design--tokens-005a8c) [![License: MPL-2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen)](./LICENSE) ![GitHub repo size](https://img.shields.io/github/repo-size/openkfw/design-tokens.svg?style=flat-square) ![GitHub package.json version ](https://img.shields.io/github/package-json/v/openkfw/design-tokens) [![NPM package](https://img.shields.io/npm/v/@openkfw/design-tokens.svg)](https://www.npmjs.com/package/@openkfw/design-tokens)
+![Design Tokens badge](https://img.shields.io/badge/openkfw-design--tokens-005a8c)
+![Status: Pilot](https://img.shields.io/badge/status-pilot-yellow)
+[![License: MPL-2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen)](./LICENSE)
+[![NPM package](https://img.shields.io/npm/v/@openkfw/design-tokens.svg)](https://www.npmjs.com/package/@openkfw/design-tokens)
+![GitHub repo size](https://img.shields.io/github/repo-size/openkfw/design-tokens)
 
 ## 🎨 Customizing KfW Design Tokens for Open Source
 
@@ -16,18 +20,25 @@ Although the source code for KfW Design Tokens is available under the MPL 2.0 Li
 KfW fully reserves all rights to the KfW brand. The use of the KfW brand and design is subject to strict restrictions, even when built into code that we provide.
 If you have any questions or need assistance, please reach out to our "Design System & Tokens Community" in the internal Webex channel or use the official [KfW Brand-Guide](https://brand-guide.kfw.de/document/85/de#/user-interface/user-interface).
 
-## 🚀 Installation with NPM
 
-Run the following command to install the Design Tokens:
+## 🚀 Installation
+
+Install via npm:
 
 ```bash
-npm i -D @openkfw/design-tokens
+npm install -D @openkfw/design-tokens
 ```
 
-Import or use files inside the `output` folder, e.g.:
+Import tokens from the output directory, for example:
 
 ```css
 @import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css");
+```
+
+Or use the prebuilt `demo` (css-boilerplate) stylesheet:
+
+```css
+@import url("@openkfw/design-tokens/demo/dist/css/style.min.css");
 ```
 
 ## ❤️ Contributing
@@ -68,7 +79,9 @@ Currently, CSS variables cannot be used directly in media query declarations. Ho
 As a workaround, you can extract your variables into @custom-media rules and generate your CSS using the PostCSS plugin `postcss-custom-media`. A sample integration can be found in the `/demo` directory.
 Otherwise you can use the static `px` values provided in the design tokens.
 
-### How to use breakpoint design tokens width @media and Tailwind CSS?
+### How to use breakpoint design tokens with @media in Tailwind CSS?
 
-In Tailwind CSS v3, you can define breakpoints directly in your `tailwind.config.js` using JavaScript.  
-In Tailwind CSS v4, you can either use the <a href="https://v3.tailwindcss.com/docs/using-with-preprocessors#using-sass-less-or-stylus">SCSS preprocessor</a> with variables for breakpoints, or use the standard CSS version with the workaround described above.
+In Tailwind CSS v3, define breakpoints in your `tailwind.config.js` using JavaScript.  
+In Tailwind CSS v4, you can either:
+- Use the [SCSS preprocessor](https://v3.tailwindcss.com/docs/using-with-preprocessors#using-sass-less-or-stylus) and reference breakpoint variables, or
+- Use the CSS version with the `postcss-custom-media` workaround described above.
