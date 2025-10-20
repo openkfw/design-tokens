@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/fonts-ht38TVpc.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-DfUFv6ND.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-K0LnBc4y.min.css">
   </head>
   <body>
     <div id="top"></div>
@@ -423,11 +423,10 @@
             </div>
             <div class="form-group">
               <label for="select">Select</label>
-              <select aria-invalid="true" class="form-control" id="select" name="select" required>
+              <select class="form-control" id="select" name="select" required>
                 <option value="" selected>Select…</option>
                 <option>…</option>
               </select>
-              <small role="alert" class="invalid-feedback">Please fill out this field.</small>
             </div>
             <div class="form-group">
               <label for="file-upload">File browser</label>
@@ -437,17 +436,34 @@
               <label for="file-upload2">File browser with title</label>
               <div class="file-upload">
                 <span class="file-upload__icon" aria-hidden="true"></span>
-                <span class="file-upload__title">Choose the files you want to upload</span>
-                <input type="file" id="file-upload2" multiple />
+                <label for="file-upload2" class="file-upload__title">Choose the files you want to upload</label>
+                <input
+                  class="file-upload__input"
+                  type="file"
+                  id="file-upload2"
+                  multiple
+                  onchange="this.classList.toggle('file-upload__input--has-files', this.files.length > 0)"
+                />
               </div>
             </div>
             <div class="form-group">
               <label for="range">Range slider</label>
               <input type="range" min="0" max="100" value="50" id="range" name="range" />
             </div>
-            <div class="form-group">
-              <label for="disabled">Disabled</label>
-              <input class="form-control" type="text" id="disabled" name="disabled" placeholder="Disabled" disabled />
+            <div class="grid">
+              <div class="form-group">
+                <label for="valid">Valid</label>
+                <input class="form-control" type="text" id="valid" name="valid" placeholder="Valid" aria-invalid="false" />
+              </div>
+              <div class="form-group">
+                <label for="invalid">Invalid</label>
+                <input class="form-control" type="text" id="invalid" name="invalid" placeholder="Invalid" aria-invalid="true" />
+                <small role="alert" class="invalid-feedback">Please fill out this field.</small>
+              </div>
+              <div class="form-group">
+                <label for="disabled">Disabled</label>
+                <input class="form-control" type="text" id="disabled" name="disabled" placeholder="Disabled" disabled />
+              </div>
             </div>
             <div class="form-group">
               <label for="date">Date</label>
@@ -456,6 +472,10 @@
             <div class="form-group">
               <label for="time">Time</label>
               <input class="form-control" type="time" id="time" name="time" />
+            </div>
+            <div class="form-group">
+              <label for="textarea">Textarea</label>
+              <textarea class="form-control" id="textarea" name="textarea" rows="4" placeholder="Textarea"></textarea>
             </div>
 
             <fieldset class="form-group">
@@ -505,21 +525,22 @@
                   <input name="radioButton" type="radio" id="radioButton7" checked />
                   <label for="radioButton7"> Radiobox 7 checked </label>
                 </li>
-                <li>
-                  <input name="radioButton" type="radio" id="radioButton8" checked disabled />
-                  <label for="radioButton8"> Radiobox 8 disabled </label>
-                </li>
               </ul>
               <ul class="list-group-form list-group-form--inline" role="group">
                 <li>
-                  <input name="radioButton" type="radio" id="radioButton9" />
-                  <label for="radioButton9">Radiobox 9</label>
+                  <input name="radioButton" type="radio" id="radioButton8" />
+                  <label for="radioButton8">Valid</label>
                 </li>
                 <li>
-                  <input name="radioButton" type="radio" id="radioButton10" />
-                  <label for="radioButton10">Radiobox 10</label>
+                  <input name="radioButton" type="radio" id="radioButton9" aria-invalid="true" />
+                  <label for="radioButton9">Invalid</label>
+                </li>
+                <li>
+                  <input name="radioButton" type="radio" id="radioButton10" disabled />
+                  <label for="radioButton10">Disabled</label>
                 </li>
               </ul>
+              <small role="alert" class="invalid-feedback">Please fill out this field.</small>
             </fieldset>
 
             <fieldset class="form-group">
@@ -569,21 +590,22 @@
                   <input type="checkbox" id="checkButton7" checked />
                   <label for="checkButton7"> Checkbox 7 checked </label>
                 </li>
-                <li>
-                  <input type="checkbox" id="checkButton8" disabled checked />
-                  <label for="checkButton8"> Checkbox 8 disabled </label>
-                </li>
               </ul>
               <ul class="list-group-form list-group-form--inline" role="group">
                 <li>
-                  <input type="checkbox" id="checkButton9" />
-                  <label for="checkButton9">Checkbox 9</label>
+                  <input type="checkbox" id="checkButton8" />
+                  <label for="checkButton8">Valid</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="checkButton10" />
-                  <label for="checkButton10">Checkbox 10</label>
+                  <input type="checkbox" id="checkButton9" aria-invalid="true" />
+                  <label for="checkButton9">Invalid</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkButton10" disabled />
+                  <label for="checkButton10">Disabled</label>
                 </li>
               </ul>
+              <small role="alert" class="invalid-feedback">Please fill out this field.</small>
             </fieldset>
             <div class="form-group">
               <button type="button" class="button--primary">Submit</button>
@@ -659,28 +681,21 @@
     <script>
       const header = document.getElementById("header")
       const stickyClass = "header--sticky"
-
-      function onScroll() {
-        if (window.scrollY > 10) {
-          header.classList.add(stickyClass)
-        } else {
-          header.classList.remove(stickyClass)
-        }
-      }
-
       let ticking = false
 
-      function onScrollHandler() {
+      window.addEventListener("scroll", () => {
         if (!ticking) {
-          window.requestAnimationFrame(() => {
-            onScroll()
+          requestAnimationFrame(() => {
+            if (window.scrollY > 10) {
+              header.classList.add(stickyClass)
+            } else {
+              header.classList.remove(stickyClass)
+            }
             ticking = false
           })
           ticking = true
         }
-      }
-
-      window.addEventListener("scroll", onScrollHandler)
+      })
     </script>
   </body>
 </html>

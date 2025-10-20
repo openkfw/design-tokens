@@ -292,6 +292,9 @@
     * Form
     */
     .form-control {
+      --borderhover: var(--kfw-color-fn-active);
+      --placeholder-color: var(--kfw-color-fn);
+
       appearance: none;
       width: 100%;
       height: 4.3rem;
@@ -308,25 +311,19 @@
     }
 
     .form-control::placeholder {
-      color: var(--kfw-color-fn);
+      color: var(--placeholder-color);
     }
 
     .form-control:disabled {
+      --placeholder-color: var(--kfw-color-text);
+
       background-color: transparent;
       color: var(--kfw-color-text);
       border-color: var(--kfw-color-fn-inactive);
     }
 
-    .form-control[disabled]::placeholder {
-      color: var(--kfw-color-text);
-    }
-
     .form-control:hover:not(:disabled) {
-      box-shadow: 0 0 0 var(--kfw-borderwidth) var(--kfw-color-fn-active);
-    }
-
-    .form-control:focus:not(:disabled) {
-      box-shadow: none;
+      box-shadow: 0 0 0 var(--kfw-borderwidth) var(--borderhover);
     }
 
     :is([type="checkbox"], [type="radio"], select.form-control):not(:disabled) {
@@ -337,8 +334,32 @@
       padding-block: 0;
     }
 
+    textarea.form-control {
+      height: auto;
+    }
+
+    .form-control[aria-invalid="true"] {
+      --borderhover: var(--kfw-color-state-danger);
+      --placeholder-color: var(--kfw-color-state-danger);
+
+      border-color: var(--kfw-color-state-danger);
+      color: var(--kfw-color-state-danger);
+      box-shadow: 0 0 0 var(--kfw-borderwidth) var(--borderhover);
+    }
+
     :is(progress, [type="checkbox"], [type="radio"], [type="range"]) {
       accent-color: var(--kfw-color-fn);
+    }
+
+    textarea {
+      display: block;
+      resize: vertical;
+    }
+
+    fieldset {
+      margin: 0;
+      padding: 0;
+      border: 0;
     }
 
     [type="file"],
@@ -419,31 +440,17 @@
       border-top: 0.3rem solid var(--kfw-color-fn);
     }
 
-    fieldset {
-      margin: 0;
-      padding: 0;
-      border: 0;
-    }
-
-    textarea {
-      display: block;
-      resize: vertical;
-    }
-
-    :where(input, select, textarea, fieldset) + small {
+    :where(input, select, textarea, fieldset) + small,
+    .invalid-feedback {
       display: block;
       width: 100%;
-      margin-block: 0.8rem var(--kfw-fontspace);
+      margin-block-start: 0.8rem;
       font-size: var(--kfw-fontsize-small);
       line-height: var(--kfw-lineheight);
       letter-spacing: var(--kfw-base-letterspacing-normal);
     }
 
-    :where(input, select, textarea, fieldset)[aria-invalid="false"] + small {
-      color: var(--kfw-color-state-success);
-    }
-
-    :where(input, select, textarea, fieldset)[aria-invalid="true"] + small {
+    .invalid-feedback {
       color: var(--kfw-color-state-danger);
     }
 
@@ -468,6 +475,12 @@
       flex-shrink: 0;
       justify-content: center;
       background-color: var(--kfw-color-background);
+    }
+
+    :is([type="checkbox"], [type="radio"])[aria-invalid="true"] {
+      border-color: var(--kfw-color-state-danger);
+      border-width: var(--kfw-borderwidth-large);
+      color: var(--kfw-color-state-danger);
     }
 
     [type="radio"] {
