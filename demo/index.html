@@ -437,8 +437,14 @@
               <label for="file-upload2">File browser with title</label>
               <div class="file-upload">
                 <span class="file-upload__icon" aria-hidden="true"></span>
-                <span class="file-upload__title">Choose the files you want to upload</span>
-                <input type="file" id="file-upload2" multiple />
+                <label for="file-upload2" class="file-upload__title">Choose the files you want to upload</label>
+                <input
+                  class="file-upload__input"
+                  type="file"
+                  id="file-upload2"
+                  multiple
+                  onchange="this.classList.toggle('file-upload__input--has-files', this.files.length > 0)"
+                />
               </div>
             </div>
             <div class="form-group">
@@ -657,30 +663,23 @@
       </nav>
     </footer>
     <script>
-      const header = document.getElementById("header")
-      const stickyClass = "header--sticky"
+      const header = document.getElementById("header");
+      const stickyClass = "header--sticky";
+      let ticking = false;
 
-      function onScroll() {
-        if (window.scrollY > 10) {
-          header.classList.add(stickyClass)
-        } else {
-          header.classList.remove(stickyClass)
-        }
-      }
-
-      let ticking = false
-
-      function onScrollHandler() {
+      window.addEventListener("scroll", () => {
         if (!ticking) {
-          window.requestAnimationFrame(() => {
-            onScroll()
-            ticking = false
-          })
-          ticking = true
+          requestAnimationFrame(() => {
+            if (window.scrollY > 10) {
+              header.classList.add(stickyClass)
+            } else {
+              header.classList.remove(stickyClass)
+            }
+            ticking = false;
+          });
+          ticking = true;
         }
-      }
-
-      window.addEventListener("scroll", onScrollHandler)
+      });
     </script>
   </body>
 </html>
