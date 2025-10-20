@@ -269,10 +269,6 @@
       }
     },
     "Borderwidth": {
-      "None": {
-        "$value": "0px",
-        "$type": "borderWidth"
-      },
       "Md": {
         "$value": "1px",
         "$type": "borderWidth"

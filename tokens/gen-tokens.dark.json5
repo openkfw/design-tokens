@@ -861,12 +861,6 @@
     },
     borderwidth: {
       $type: "dimension",
-      none: {
-        $value: {
-          unit: "px",
-          value: 0,
-        },
-      },
       md: {
         $value: {
           unit: "px",

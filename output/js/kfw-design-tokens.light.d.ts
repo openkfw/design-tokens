@@ -233,7 +233,6 @@ export const KfwBaseBorderradiusSm: string;
 export const KfwBaseBorderradiusMd: string;
 export const KfwBaseBorderradiusLg: string;
 export const KfwBaseBorderradiusCircle: string;
-export const KfwBaseBorderwidthNone: string;
 export const KfwBaseBorderwidthMd: string;
 export const KfwBaseBorderwidthLg: string;
 export const KfwBaseFontweightRegular: number;

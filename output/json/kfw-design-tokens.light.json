@@ -3538,31 +3538,6 @@
       }
     },
     "borderwidth": {
-      "none": {
-        "key": "{base.borderwidth.none}",
-        "$value": {
-          "unit": "px",
-          "value": 0
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": {
-            "unit": "px",
-            "value": 0
-          },
-          "$type": "dimension",
-          "key": "{base.borderwidth.none}"
-        },
-        "name": "none",
-        "attributes": {},
-        "path": [
-          "base",
-          "borderwidth",
-          "none"
-        ]
-      },
       "md": {
         "key": "{base.borderwidth.md}",
         "$value": {

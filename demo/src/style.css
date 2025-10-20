@@ -104,6 +104,7 @@
     /**
     * Table
     */
+    /*
     :where(table) {
       width: 100%;
       border-collapse: collapse;
@@ -130,7 +131,7 @@
     table.striped tbody tr:nth-child(odd) th,
     table.striped tbody tr:nth-child(odd) td {
       background-color: var(--kfw-color-background);
-    }
+    } */
 
     /**
      * Embedded content

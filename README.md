@@ -20,7 +20,6 @@ Although the source code for KfW Design Tokens is available under the MPL 2.0 Li
 KfW fully reserves all rights to the KfW brand. The use of the KfW brand and design is subject to strict restrictions, even when built into code that we provide.
 If you have any questions or need assistance, please reach out to our "Design System & Tokens Community" in the internal Webex channel or use the official [KfW Brand-Guide](https://brand-guide.kfw.de/document/85/de#/user-interface/user-interface).
 
-
 ## 🚀 Installation
 
 Install via npm:
@@ -83,5 +82,6 @@ Otherwise you can use the static `px` values provided in the design tokens.
 
 In Tailwind CSS v3, define breakpoints in your `tailwind.config.js` using JavaScript.  
 In Tailwind CSS v4, you can either:
+
 - Use the [SCSS preprocessor](https://v3.tailwindcss.com/docs/using-with-preprocessors#using-sass-less-or-stylus) and reference breakpoint variables, or
 - Use the CSS version with the `postcss-custom-media` workaround described above.

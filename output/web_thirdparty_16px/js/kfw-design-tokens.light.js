@@ -235,7 +235,6 @@ export const KfwBaseBorderradiusSm = "2px";
 export const KfwBaseBorderradiusMd = "0.25rem";
 export const KfwBaseBorderradiusLg = "1.25rem";
 export const KfwBaseBorderradiusCircle = "624.9375rem";
-export const KfwBaseBorderwidthNone = "0";
 export const KfwBaseBorderwidthMd = "1px";
 export const KfwBaseBorderwidthLg = "2px";
 export const KfwBaseFontweightRegular = 400;

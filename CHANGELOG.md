@@ -1,8 +1,12 @@
 # Changelog
 
+_[0.5.2] - 2025-10-20_
+
+- Remove `base.borderwidth.none`, add `demo` into npm package
+
 _[0.5.1] - 2025-10-15_
 
-- Added semantic `borderradius.circle` token.
+- Added semantic `borderradius.circle` token
 - Rename base token `base.borderradius.full` in `base.borderradius.circle`
 
 _[0.5.0] - 2025-10-11_
