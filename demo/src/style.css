@@ -381,6 +381,7 @@
       padding: var(--kfw-space-small) var(--kfw-space-small) var(--kfw-space-medium);
       background-color: var(--kfw-color-background-light-green);
       margin-block-end: var(--kfw-space-medium);
+      overflow: hidden;
     }
 
     .file-upload__title {
