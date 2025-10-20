@@ -397,12 +397,13 @@
       width: auto;
       max-width: 100%;
       position: relative;
-      left: 6.6rem;
+      left: 0;
+      transform: translateX(20%);
       color: transparent;
     }
 
     .file-upload__input--has-files {
-      left: 0;
+      transform: none;
       color: inherit;
     }
 
