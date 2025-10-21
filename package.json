@@ -7,8 +7,8 @@
     "output",
     "tokens/tokens.json",
     "tokens/gen-tokens.dark.json5",
-    "demo/src/styles/style.css",
-    "demo/src/styles/vendor/**.css",
+    "demo/src/style.css",
+    "demo/src/vendor/**.css",
     "demo/dist/css/style.min.css"
   ],
   "scripts": {
