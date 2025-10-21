@@ -1,5 +1,12 @@
 # KfW Design Tokens
 
+> ⚠️ **Important Usage Notice**  
+> KfW Design Tokens, along with all related documentation, components, support, and assets (e.g., fonts, icons, images), are intended for **internal use only**.
+> Although the source code for KfW Design Tokens is available under the MPL 2.0 License, this open-source release is provided solely as a **showcase**.
+> KfW fully reserves all rights to the KfW brand. The use of the KfW brand and design is subject to strict restrictions, even when built into code that we provide.
+> If you have any questions or need assistance, please reach out to our "Design System & Tokens Community" in the internal Webex channel or use the official [KfW Brand-Guide](https://brand-guide.kfw.de/document/85/de#/user-interface/user-interface).
+> The use of the protected trademark "KfW" is generally not permitted. If logo usage is necessary, the logo must be requested and approved in advance by KfW via [logo@kfw.de](mailto:logo@kfw.de).
+
 ![KfW Design Tokens](/kfw-design-tokens.png)
 
 KfW Design Tokens is the source of truth for designing KfW-branded digital products. By default, it's built to align with our corporate brand and design but allows for customization to fit your particular product.
@@ -12,13 +19,6 @@ The tokens follow a template that complies with the <a href="https://tr.designto
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen)](./LICENSE)
 [![NPM package](https://img.shields.io/npm/v/@openkfw/design-tokens.svg)](https://www.npmjs.com/package/@openkfw/design-tokens)
 ![GitHub repo size](https://img.shields.io/github/repo-size/openkfw/design-tokens)
-
-## 🎨 Customizing KfW Design Tokens for Open Source
-
-KfW Design Tokens, along with all related documentation, components, support, and assets such as fonts, icons, and images, are intended for **internal use** only.
-Although the source code for KfW Design Tokens is available under the MPL 2.0 License, this open-source release is provided solely as a **showcase**.
-KfW fully reserves all rights to the KfW brand. The use of the KfW brand and design is subject to strict restrictions, even when built into code that we provide.
-If you have any questions or need assistance, please reach out to our "Design System & Tokens Community" in the internal Webex channel or use the official [KfW Brand-Guide](https://brand-guide.kfw.de/document/85/de#/user-interface/user-interface).
 
 ## 🚀 Installation
 
@@ -54,7 +54,7 @@ software distributed under the License is distributed on an "AS IS" BASIS, WITHO
 the specific language governing permissions and limitations under the License. KfW may update this licensing agreement at any time. This notice and permission must be
 included in all copies or substantial portions of the Software.
 
-Last updated: Nov 17, 2025
+Last updated: Nov 21, 2025
 
 ## 💁 FAQ
 

@@ -104,6 +104,7 @@
     /**
     * Table
     */
+
     /*
     :where(table) {
       width: 100%;
@@ -374,75 +375,6 @@
       margin-inline-end: var(--kfw-space-xsmall);
     }
 
-    .file-upload {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: var(--kfw-space-small) var(--kfw-space-small) var(--kfw-space-medium);
-      background-color: var(--kfw-color-background-light-green);
-      margin-block-end: var(--kfw-space-medium);
-      overflow: hidden;
-    }
-
-    .file-upload__title {
-      margin-block-end: var(--kfw-fontspace);
-    }
-
-    label.file-upload__title {
-      margin-block-end: var(--kfw-fontspace);
-      font-weight: var(--kfw-fontweight);
-    }
-
-    .file-upload__input {
-      width: auto;
-      max-width: 100%;
-      position: relative;
-      left: 0;
-      transform: translateX(20%);
-      color: transparent;
-    }
-
-    .file-upload__input--has-files {
-      transform: none;
-      color: inherit;
-    }
-
-    .file-upload__icon {
-      position: relative;
-      display: block;
-      transform: scale(1);
-      width: 2.8rem;
-      height: 1.3rem;
-      border: 0.3rem solid var(--kfw-color-fn);
-      border-top: 0;
-      margin-block: 2.5rem 2rem;
-    }
-
-    .file-upload__icon::before,
-    .file-upload__icon::after {
-      content: "";
-      display: block;
-      position: absolute;
-    }
-
-    .file-upload__icon::before {
-      left: 1rem;
-      bottom: 0.4rem;
-      width: 0.3rem;
-      height: 1.9rem;
-      background-color: var(--kfw-color-fn);
-    }
-
-    .file-upload__icon::after {
-      bottom: 0.7rem;
-      left: 0.35rem;
-      width: 1.6rem;
-      height: 1.6rem;
-      transform: rotate(45deg);
-      border-left: 0.3rem solid var(--kfw-color-fn);
-      border-top: 0.3rem solid var(--kfw-color-fn);
-    }
-
     :where(input, select, textarea, fieldset) + small,
     .invalid-feedback {
       display: block;
@@ -609,6 +541,7 @@
       border: var(--kfw-borderwidth) solid transparent;
       font-family: var(--kfw-fontfamily);
       font-size: var(--kfw-fontsize);
+      font-weight: var(--kfw-fontweight);
       border-radius: var(--kfw-borderradius);
       display: inline-flex;
       gap: 0.8rem;
@@ -693,6 +626,77 @@
     label[aria-disabled="true"],
     :where(fieldset[disabled]) :is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {
       pointer-events: none;
+    }
+
+    /**
+    * File-Upload
+    */
+    .file-upload {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: var(--kfw-space-small) var(--kfw-space-small) var(--kfw-space-medium);
+      background-color: var(--kfw-color-background-light-green);
+      margin-block-end: var(--kfw-space-medium);
+    }
+
+    .file-upload__title {
+      margin-block-end: var(--kfw-fontspace);
+    }
+
+    label.file-upload__title {
+      margin-block-end: var(--kfw-fontspace);
+      font-weight: var(--kfw-fontweight);
+    }
+
+    .file-upload__input {
+      display: none;
+      width: auto;
+      max-width: 100%;
+    }
+
+    .file-upload__input--has-files {
+      display: block;
+    }
+
+    .file-upload:has(.file-upload__input--has-files) :is(button, [role="button"]) {
+      display: none;
+    }
+
+    .file-upload__icon {
+      position: relative;
+      display: block;
+      transform: scale(1);
+      width: 2.8rem;
+      height: 1.3rem;
+      border: 0.3rem solid var(--kfw-color-fn);
+      border-top: 0;
+      margin-block: 2.5rem 2rem;
+    }
+
+    .file-upload__icon::before,
+    .file-upload__icon::after {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+
+    .file-upload__icon::before {
+      left: 1rem;
+      bottom: 0.4rem;
+      width: 0.3rem;
+      height: 1.9rem;
+      background-color: var(--kfw-color-fn);
+    }
+
+    .file-upload__icon::after {
+      bottom: 0.7rem;
+      left: 0.35rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      transform: rotate(45deg);
+      border-left: 0.3rem solid var(--kfw-color-fn);
+      border-top: 0.3rem solid var(--kfw-color-fn);
     }
 
     /**

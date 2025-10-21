@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/fonts-ht38TVpc.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-C9Va5DfE.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-BJzEm-db.min.css">
   </head>
   <body>
     <div id="top"></div>
@@ -251,25 +251,38 @@
             src="https://openkfw.github.io/design-tokens/demo/dist/welcome_image.jpeg"
           />
           <div class="hero__title">
-            <span class="hl--sb" role="presentation">Welcome to KfW!</span>
+            <span class="hl--sb" role="presentation"> Welcome to KfW! </span>
           </div>
         </div>
       </section>
+
       <div class="container-extended">
+        <section>
+          <h1>Important Usage Notice</h1>
+
+          <p class="tx--4">
+            KfW Design Tokens, along with all related documentation, components, support, and assets (e.g., fonts, icons, images), are intended for
+            <strong>internal use</strong> only. Although the source code for KfW Design Tokens is available under the MPL 2.0 License, this
+            open-source release is provided solely as a <strong>showcase</strong>. KfW fully reserves all rights to the KfW brand. The use of the KfW
+            brand and design is subject to strict restrictions, even when built into code that we provide. If you have any questions or need
+            assistance, please reach out to our "Design System & Tokens Community" in the internal Webex channel or use the official
+            <a target="_blank" rel="noopener" href="https://brand-guide.kfw.de/document/85/de#/user-interface/user-interface">KfW Brand-Guide</a>. The
+            use of the protected trademark "KfW" is generally not permitted. If logo usage is necessary, the logo must be requested and approved in
+            advance by KfW via <a target="_blank" rel="noopener" href="mailto:logo@kfw.de">logo@kfw.de</a>.
+          </p>
+        </section>
         <section>
           <h1>Typography</h1>
 
           <p class="tx--4">
             Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat
-            turpis pretium. Quisque sed tristique felis. Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus
-            porta nunc a erat mattis, mattis feugiat turpis pretium. Quisque sed tristique felis.
+            turpis pretium. Quisque sed tristique felis. Aliquam lobortis vitae nibh nec rhoncus.
           </p>
 
           <p>
             Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat
             turpis pretium. Quisque sed tristique felis.
           </p>
-
           <!-- Blockquote-->
           <blockquote>
             "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. Nam at dui sit amet ipsum cursus ornare."
@@ -369,7 +382,7 @@
             <img alt="Luftaufnahme der Zentrale der KfW Bankengruppe in Frankfurt am Main" width="1280" height="427" src="https://openkfw.github.io/design-tokens/demo/dist/welcome_image.jpeg" />
             <figcaption>
               Image from
-              <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank">unsplash.com</a>
+              <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank" rel="noopener">unsplash.com</a>
             </figcaption>
           </figure>
         </section>
@@ -437,6 +450,7 @@
               <div class="file-upload">
                 <span class="file-upload__icon" aria-hidden="true"></span>
                 <label for="file-upload2" class="file-upload__title">Choose the files you want to upload</label>
+                <label for="file-upload2" role="button" class="button--secondary">Dateien auswählen</label>
                 <input
                   class="file-upload__input"
                   type="file"
