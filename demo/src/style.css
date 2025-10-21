@@ -376,6 +376,7 @@
     }
 
     :where(input, select, textarea, fieldset) + small,
+    .form-text,
     .invalid-feedback {
       display: block;
       width: 100%;
@@ -389,7 +390,7 @@
       color: var(--kfw-color-state-danger);
     }
 
-    :is(label, fieldset legend, .form-label) {
+    :is(label, .form-label) {
       display: inline-block;
       margin-block-end: 0.8rem;
       font-weight: var(--kfw-fontweight-bold);
