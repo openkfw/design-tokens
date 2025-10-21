@@ -34,9 +34,10 @@ Import tokens from the output directory, for example:
 @import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css");
 ```
 
-Or use the prebuilt `demo` (css-boilerplate) stylesheet:
+Or use the prebuilt `demo` (CSS boilerplate) stylesheet:
 
 ```css
+/* Make sure to import fonts.css yourself before */
 @import url("@openkfw/design-tokens/demo/dist/css/style.min.css");
 ```
 
