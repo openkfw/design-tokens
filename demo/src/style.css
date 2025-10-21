@@ -490,18 +490,6 @@
       margin-bottom: 0;
     }
 
-    .list-group-form--with-description label {
-      font-weight: var(--kfw-fontweight-bold);
-    }
-
-    .list-group-form--with-description label > * {
-      font-weight: var(--kfw-fontweight);
-    }
-
-    .list-group-form > *:has(.list-group-form--subgroup) {
-      flex-wrap: wrap;
-    }
-
     .list-group-form label {
       font-weight: var(--kfw-fontweight);
       padding-left: var(--col-gap);
@@ -513,8 +501,20 @@
       padding-block-start: 0.4rem;
     }
 
+    .list-group-form--with-description label {
+      font-weight: var(--kfw-fontweight-bold);
+    }
+
+    .list-group-form--with-description label > * {
+      font-weight: var(--kfw-fontweight);
+    }
+
     .list-group-form > *:has(input:not(:disabled)) label {
       cursor: pointer;
+    }
+
+    .list-group-form > *:has(.list-group-form--subgroup) {
+      flex-wrap: wrap;
     }
 
     .list-group-form--subgroup {
