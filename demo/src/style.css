@@ -650,16 +650,19 @@
     }
 
     .file-upload__input {
-      display: none;
       width: auto;
       max-width: 100%;
     }
 
-    .file-upload__input--has-files {
+    .file-upload--with-native-input .file-upload__input {
+      display: none;
+    }
+
+    .file-upload--with-native-input .file-upload__input--has-files {
       display: block;
     }
 
-    .file-upload:has(.file-upload__input--has-files) :is(button, [role="button"]) {
+    .file-upload--with-native-input:has(.file-upload__input--has-files) :is(button, [role="button"]) {
       display: none;
     }
 
