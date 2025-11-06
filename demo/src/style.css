@@ -656,6 +656,7 @@
     .file-upload__title {
       margin-block-end: var(--kfw-space-medium);
       font-weight: var(--kfw-fontweight);
+      text-align: center;
     }
 
     .file-upload__input {
