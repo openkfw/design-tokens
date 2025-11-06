@@ -461,6 +461,66 @@
               </div>
             </div>
             <div class="form-group">
+              <label for="file-upload3">File browser with title and table (css-only)</label>
+              <div class="file-upload file-upload--with-native-input">
+                <span class="file-upload__icon" aria-hidden="true"></span>
+                <label for="file-upload3" class="file-upload__title">Choose the files you want to upload</label>
+                <label role="button" for="file-upload3" class="button--secondary">Dateien auswählen</label>
+                <input class="file-upload__input" type="file" id="file-upload3" multiple />
+              </div>
+
+              <div class="file-upload-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="filename">Ihre Dateien</th>
+                      <th class="filesize">Dateigröße</th>
+                      <th class="delete">Aktion</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="filename">Uploading.jpeg</td>
+                      <td class="filesize">1.35 MB</td>
+                      <td class="delete">
+                        <a class="link" href="#">
+                          <span>
+                            <span>Löschen</span>
+                          </span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="filename">Successfully_Uploaded.jpeg</td>
+                      <td class="filesize">765.82 KB</td>
+                      <td class="delete">
+                        <a class="link" href="#">
+                          <span>
+                            <span>Löschen</span>
+                          </span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="mwf-upload-row">
+                      <td class="form-item error" colspan="4">
+                        <span class="invalid-feedback" role="alert" aria-live="polite">Das Hochladen der Datei ist fehlgeschlagen.</span>
+                      </td>
+                    </tr>
+                    <tr class="mwf-upload-row">
+                      <td class="filename">Successfully_Uploaded-final-final2.jpeg</td>
+                      <td class="filesize">765.82 KB</td>
+                      <td class="delete">
+                        <a class="link" href="#" aria-label="Löschen "
+                          ><span class="icon icon--delete" aria-hidden="true"></span
+                          ><span class="link-container"><span class="link-labeling">Löschen</span></span></a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="form-group">
               <label for="range">Range slider</label>
               <input type="range" min="0" max="100" value="50" id="range" name="range" />
             </div>
@@ -493,7 +553,7 @@
             </div>
 
             <fieldset class="form-group">
-              <legend>Radio buttons</legend>
+              <legend class="form-label">Radio buttons</legend>
               <ul class="list-group-form list-group-form--with-description" role="group">
                 <li>
                   <input name="radioButton" type="radio" id="radioButton1Desc" />
@@ -558,7 +618,7 @@
             </fieldset>
 
             <fieldset class="form-group">
-              <legend>Checkboxes</legend>
+              <legend class="form-label">Checkboxes</legend>
               <ul class="list-group-form list-group-form--with-description" role="group">
                 <li>
                   <input type="checkbox" id="checkButton1Desc" />
