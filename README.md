@@ -49,7 +49,7 @@ Considering supporting with your contribution? Whether you like to contribute ne
 
 Copyright (c) 2025 KfW Bankengruppe
 
-Only the source code in this repository is licensed under the **Mozilla Public License 2.0 (MPL-2.0)**.
+The source code in this repository is licensed under the **Mozilla Public License 2.0 (MPL-2.0)**.
 All KfW brand assets, including logos, icons, images, fonts, and design documentation, are **excluded** and remain the property of KfW Bankengruppe.
 These materials may not be used, copied, or redistributed without prior written permission.
 
@@ -61,8 +61,6 @@ Excluded brand-related materials include:
 - all files under `/demo` directory
 
 See the full MPL-2.0 license in [LICENSE](./LICENSE).
-
-_(Note: KfW may update this licensing agreement at any time. This notice and permission must be included in all copies or substantial portions of the Software.)_
 
 ## 💁 FAQ
 
