@@ -789,7 +789,8 @@
     /**
     * Overflow auto (e.g. for code blocks, tables)
     */
-    .overflow-auto {
+    .overflow-auto,
+    .file-upload-table {
       overflow: auto;
     }
   }
