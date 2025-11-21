@@ -1,9 +1,10 @@
 {
   "name": "@openkfw/design-tokens",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "The source of truth for KfW-branded digital products.",
   "files": [
     "README.md",
+    "LICENSE",
     "output",
     "tokens/tokens.json",
     "tokens/gen-tokens.dark.json5",
@@ -39,13 +40,13 @@
     "node": ">= 22.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.38.0",
-    "@tsconfig/node22": "^22.0.2",
+    "@eslint/js": "^9.39.1",
+    "@tsconfig/node22": "^22.0.5",
     "@types/lodash": "^4.17.20",
-    "@types/node": "^22.18.10",
+    "@types/node": "^24.10.1",
     "concurrently": "^9.2.1",
     "deep-get-set-ts": "^1.1.2",
-    "eslint": "^9.38.0",
+    "eslint": "^9.39.1",
     "json5": "^2.2.3",
     "jsoneditor-cli": "^1.1.0",
     "lodash": "4.17.21",
@@ -53,7 +54,7 @@
     "style-dictionary": "^5.1.1",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.2",
-    "npm-check-updates": "^19.1.1"
+    "typescript-eslint": "^8.47.0",
+    "npm-check-updates": "^19.1.2"
   }
 }

@@ -1,5 +1,9 @@
 # Changelog
 
+_[0.5.4] - 2025-11-21_
+
+- Update `demo`, `README.md`, add `LICENCE` into npm package
+
 _[0.5.3] - 2025-10-21_
 
 - Update `demo`, add `README.md` into npm package
