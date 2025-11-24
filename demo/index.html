@@ -459,18 +459,8 @@
                   onchange="this.classList.toggle('file-upload__input--has-files', this.files.length > 0)"
                 />
               </div>
-            </div>
-            <div class="form-group">
-              <label for="file-upload3">File browser with title and table (css-only)</label>
-              <div class="file-upload file-upload--with-native-input">
-                <span class="file-upload__icon" aria-hidden="true"></span>
-                <label for="file-upload3" class="file-upload__title">Choose the files you want to upload</label>
-                <label role="button" for="file-upload3" class="button--secondary">Dateien auswählen</label>
-                <input class="file-upload__input" type="file" id="file-upload3" multiple />
-              </div>
-
-              <div class="file-upload-table">
-                <table>
+              <div class="overflow-auto">
+                <table class="file-upload-table">
                   <thead>
                     <tr>
                       <th class="filename">Ihre Dateien</th>
@@ -483,22 +473,14 @@
                       <td class="filename">Uploading.jpeg</td>
                       <td class="filesize">1.35 MB</td>
                       <td class="delete">
-                        <a class="link" href="#">
-                          <span>
-                            <span>Löschen</span>
-                          </span>
-                        </a>
+                        <a class="link" href="#" onclick="event.preventDefault()"> Löschen </a>
                       </td>
                     </tr>
                     <tr>
                       <td class="filename">Successfully_Uploaded.jpeg</td>
                       <td class="filesize">765.82 KB</td>
                       <td class="delete">
-                        <a class="link" href="#">
-                          <span>
-                            <span>Löschen</span>
-                          </span>
-                        </a>
+                        <a class="link" href="#" onclick="event.preventDefault()"> Löschen </a>
                       </td>
                     </tr>
                     <tr class="mwf-upload-row">
@@ -510,10 +492,7 @@
                       <td class="filename">Successfully_Uploaded-final-final2.jpeg</td>
                       <td class="filesize">765.82 KB</td>
                       <td class="delete">
-                        <a class="link" href="#" aria-label="Löschen "
-                          ><span class="icon icon--delete" aria-hidden="true"></span
-                          ><span class="link-container"><span class="link-labeling">Löschen</span></span></a
-                        >
+                        <a class="link" href="#" onclick="event.preventDefault()"> Löschen </a>
                       </td>
                     </tr>
                   </tbody>
@@ -682,9 +661,84 @@
               <small role="alert" class="invalid-feedback">Please fill out this field.</small>
             </fieldset>
             <div class="form-group">
-              <button type="button" class="button--primary">Submit</button>
+              <input class="button--full" type="reset" value="Reset" onclick="event.preventDefault()" />
+            </div>
+            <div class="form-group">
+              <input class="button--full" type="submit" value="Submit" onclick="event.preventDefault()" />
             </div>
           </form>
+        </section>
+
+        <section id="tables">
+          <h2>Table</h2>
+          <div class="overflow-auto">
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                </tr>
+                <tr class="highlighted">
+                  <th scope="row">5</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
       </div>
     </main>

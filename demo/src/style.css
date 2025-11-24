@@ -1,15 +1,15 @@
 /* Establish the order of layers upfront */
-@layer core, third-party, components, utility;
-@layer core.reset, core.tokens, core.base;
+@layer reset, core, third-party, components, utility;
+@layer core.tokens, core.base, core.variations;
 @layer third-party.imports, third-party.overrides;
 @layer components.base, components.variations;
 
 /* Reset, normalize, etc. */
-@import url("vendor/uaplus.css") layer(core.reset);
+@import url("vendor/uaplus.css") layer(reset);
 
 /* KfW Design Tokens with Custom Media Queries */
 @import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css") layer(core.tokens);
-@import url("vendor/gen-custom-media.css") layer(core.tokens);
+@import url("vendor/gen-custom-media.css");
 
 @layer core {
   @layer tokens {
@@ -129,6 +129,15 @@
       border-bottom: var(--kfw-borderwidth) solid var(--kfw-color-line-8);
     }
 
+    tr.highlighted-col,
+    tr.highlighted,
+    td.highlighted-col,
+    td.highlighted,
+    th.highlighted-col,
+    th.highlighted {
+      background-color: var(--kfw-color-background-light-green);
+    }
+
     th {
       text-align: start;
       font-weight: var(--kfw-fontweight-bold);
@@ -144,6 +153,10 @@
       font-weight: var(--kfw-fontweight);
       color: var(--kfw-color-text);
       padding: 1.2rem 1rem;
+    }
+
+    table.striped tbody tr:nth-child(odd):not(.highlighted) {
+      background-color: var(--kfw-color-background-light-blue);
     }
 
     /**
@@ -409,80 +422,6 @@
       color: var(--kfw-color-text);
     }
 
-    :is([type="checkbox"], [type="radio"]) {
-      appearance: none;
-      width: var(--field-size);
-      height: var(--field-size);
-      margin: 0;
-      border: var(--kfw-borderwidth) solid var(--kfw-color-fn-active);
-      color: var(--kfw-color-fn-active);
-      vertical-align: middle;
-      position: relative;
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-      justify-content: center;
-      background-color: var(--kfw-color-background);
-    }
-
-    :is([type="checkbox"], [type="radio"])[aria-invalid="true"] {
-      border-color: var(--kfw-color-state-danger);
-      border-width: var(--kfw-borderwidth-large);
-      color: var(--kfw-color-state-danger);
-    }
-
-    [type="radio"] {
-      border-radius: var(--kfw-borderradius-circle);
-    }
-
-    [type="checkbox"] {
-      border-radius: var(--kfw-borderradius);
-    }
-
-    :is([type="checkbox"], [type="radio"]):disabled {
-      background-color: var(--kfw-base-color-gray-100);
-      color: var(--kfw-color-fn-inactive);
-      border-color: var(--kfw-color-fn-inactive);
-    }
-
-    :is([type="checkbox"], [type="radio"])::before {
-      content: none;
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      border-color: currentcolor;
-      border-bottom-style: solid;
-      border-left-style: solid;
-    }
-
-    [type="checkbox"]::before {
-      width: 1.6rem;
-      height: 0.9rem;
-      transform: translate(-50%, -50%) rotate(314deg);
-      margin-top: -1px;
-      border-bottom-width: 0.225rem;
-      border-left-width: 0.225rem;
-    }
-
-    [type="radio"]::before {
-      width: 1.4rem;
-      height: 1.4rem;
-      transform: translate(-50%, -50%);
-      border-radius: var(--kfw-borderradius-circle);
-      background-color: currentcolor;
-      forced-color-adjust: none;
-    }
-
-    :is([type="checkbox"], [type="radio"]):checked::before {
-      content: "";
-    }
-
-    :is([type="radio"], [type="checkbox"]):hover:not(:disabled),
-    :is([type="radio"], [type="checkbox"]):focus:not(:disabled) {
-      border-width: var(--kfw-borderwidth-large);
-    }
-
     .form-group {
       margin-block-end: var(--kfw-space-medium);
     }
@@ -512,6 +451,80 @@
       flex: 1 1;
       flex-direction: column;
       padding-block-start: 0.4rem;
+    }
+
+    .list-group-form :is([type="checkbox"], [type="radio"]) {
+      appearance: none;
+      width: var(--field-size);
+      height: var(--field-size);
+      margin: 0;
+      border: var(--kfw-borderwidth) solid var(--kfw-color-fn-active);
+      color: var(--kfw-color-fn-active);
+      vertical-align: middle;
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      justify-content: center;
+      background-color: var(--kfw-color-background);
+    }
+
+    .list-group-form :is([type="checkbox"], [type="radio"])[aria-invalid="true"] {
+      border-color: var(--kfw-color-state-danger);
+      border-width: var(--kfw-borderwidth-large);
+      color: var(--kfw-color-state-danger);
+    }
+
+    .list-group-form [type="radio"] {
+      border-radius: var(--kfw-borderradius-circle);
+    }
+
+    .list-group-form [type="checkbox"] {
+      border-radius: var(--kfw-borderradius);
+    }
+
+    .list-group-form :is([type="checkbox"], [type="radio"]):disabled {
+      background-color: var(--kfw-base-color-gray-100);
+      color: var(--kfw-color-fn-inactive);
+      border-color: var(--kfw-color-fn-inactive);
+    }
+
+    .list-group-form :is([type="checkbox"], [type="radio"])::before {
+      content: none;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-color: currentcolor;
+      border-bottom-style: solid;
+      border-left-style: solid;
+    }
+
+    .list-group-form [type="checkbox"]::before {
+      width: 1.6rem;
+      height: 0.9rem;
+      transform: translate(-50%, -50%) rotate(314deg);
+      margin-top: -1px;
+      border-bottom-width: 0.225rem;
+      border-left-width: 0.225rem;
+    }
+
+    .list-group-form [type="radio"]::before {
+      width: 1.4rem;
+      height: 1.4rem;
+      transform: translate(-50%, -50%);
+      border-radius: var(--kfw-borderradius-circle);
+      background-color: currentcolor;
+      forced-color-adjust: none;
+    }
+
+    .list-group-form :is([type="checkbox"], [type="radio"]):checked::before {
+      content: "";
+    }
+
+    .list-group-form :is([type="radio"], [type="checkbox"]):hover:not(:disabled),
+    .list-group-form :is([type="radio"], [type="checkbox"]):focus:not(:disabled) {
+      border-width: var(--kfw-borderwidth-large);
     }
 
     .list-group-form--with-description label {
@@ -569,7 +582,8 @@
       cursor: pointer;
     }
 
-    .button--primary {
+    .button--primary,
+    [type="submit"] {
       --button-border-color: var(--kfw-color-fn);
       --button-bg: var(--kfw-color-fn);
       --button-color: var(--kfw-color-text-on-dark-bg);
@@ -582,6 +596,7 @@
       border-color: var(--button-border-color);
     }
 
+    [type="submit"]:is(:hover, :focus),
     .button--primary:is(:hover, :focus) {
       color: var(--button-color-hover);
       background-color: var(--button-bg-hover);
@@ -639,6 +654,10 @@
     label[aria-disabled="true"],
     :where(fieldset[disabled]) :is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {
       pointer-events: none;
+    }
+
+    .button--full {
+      width: 100%;
     }
 
     /**
@@ -712,48 +731,6 @@
       border-top: 0.3rem solid var(--kfw-color-fn);
     }
 
-    .file-upload-table {
-      margin-top: var(--kfw-space-medium);
-    }
-
-    .file-upload-table table {
-      border-top: 0;
-      min-height: 10px;
-      min-width: 500px;
-    }
-
-    .file-upload-table .invalid-feedback {
-      margin-block-start: 0;
-    }
-
-    .file-upload-table tr {
-      --name: calc(100% - var(--size) - var(--action));
-      --size: 30%;
-      --action: 15%;
-
-      display: grid;
-      grid-template-columns: var(--name) var(--size) var(--action);
-      width: 100%;
-      border-top: var(--kfw-borderwidth) solid var(--kfw-color-line-10);
-    }
-
-    .file-upload-table tr:not(:last-of-type) {
-      border-bottom: 0;
-    }
-
-    @media (--kfw-breakpoint-mobile) {
-      .file-upload-table tr {
-        --size: 25%;
-        --action: 25%;
-      }
-    }
-
-    @media (--kfw-breakpoint-desktop) {
-      .file-upload-table tr {
-        --action: 20%;
-      }
-    }
-
     /**
     * Containers
     */
@@ -789,9 +766,52 @@
     /**
     * Overflow auto (e.g. for code blocks, tables)
     */
-    .overflow-auto,
-    .file-upload-table {
+    .overflow-auto {
       overflow: auto;
+    }
+  }
+
+  @layer variations {
+    table.file-upload-table {
+      margin-top: var(--kfw-space-medium);
+    }
+
+    table.file-upload-table table {
+      border-top: 0;
+      min-height: 10px;
+      min-width: 500px;
+    }
+
+    table.file-upload-table .invalid-feedback {
+      margin-block-start: 0;
+    }
+
+    table.file-upload-table tr {
+      --name: calc(100% - var(--size) - var(--action));
+      --size: 30%;
+      --action: 15%;
+
+      display: grid;
+      grid-template-columns: var(--name) var(--size) var(--action);
+      width: 100%;
+      border-top: var(--kfw-borderwidth) solid var(--kfw-color-line-10);
+    }
+
+    table.file-upload-table tr:not(:last-of-type) {
+      border-bottom: 0;
+    }
+
+    @media (--kfw-breakpoint-mobile) {
+      table.file-upload-table tr {
+        --size: 25%;
+        --action: 25%;
+      }
+    }
+
+    @media (--kfw-breakpoint-desktop) {
+      table.file-upload-table tr {
+        --action: 20%;
+      }
     }
   }
 }
@@ -1010,7 +1030,8 @@
       text-decoration: none;
     }
 
-    .bg-dark .button--primary {
+    .bg-dark .button--primary,
+    .bg-dark [type="submit"] {
       --button-color: var(--kfw-color-fn);
       --button-bg: var(--kfw-color-text-on-dark-bg);
       --button-border-color: var(--kfw-color-text-on-dark-bg);
