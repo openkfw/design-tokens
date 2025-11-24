@@ -34,7 +34,7 @@
           </a>
         </div>
         <nav class="header__menu" aria-label="Sekundäre Navigation" data-testid="right-header-menu">
-          <a class="button--tertiary" role="button" href="#">Login</a>
+          <a class="button--tertiary" role="button" href="#" onclick="event.preventDefault()">Login</a>
         </nav>
       </div>
     </header>
@@ -304,12 +304,8 @@
           <h3>Inline text elements</h3>
           <div class="grid">
             <p><a href="#" onclick="event.preventDefault()">Link</a></p>
-            <p>
-              <a href="#" class="tx--2" onclick="event.preventDefault()"> Small Link </a>
-            </p>
-            <p>
-              <a href="#" class="tx--4" onclick="event.preventDefault()"> Large Link </a>
-            </p>
+            <p><a href="#" class="tx--2" onclick="event.preventDefault()">Small Link</a></p>
+            <p><a href="#" class="tx--4" onclick="event.preventDefault()">Large Link</a></p>
           </div>
           <div class="grid">
             <p><strong>Bold</strong></p>
