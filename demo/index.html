@@ -25,7 +25,7 @@
           <button type="button" class="button--tertiary">Nav</button>
         </div>
         <div>
-          <a class="d-block" href="#">
+          <a class="d-block" href="#" onclick="event.preventDefault()">
             <img class="header-logo-mobile" src="/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
             <picture class="header-logo-desktop">
               <source media="(min-width: 960px)" srcset="/kfw_logo_large.png" type="image/svg+xml" />
@@ -34,7 +34,7 @@
           </a>
         </div>
         <nav class="header__menu" aria-label="Sekundäre Navigation" data-testid="right-header-menu">
-          <a class="button--tertiary" role="button" href="#">Login</a>
+          <a class="button--tertiary" role="button" href="#" onclick="event.preventDefault()">Login</a>
         </nav>
       </div>
     </header>
@@ -83,6 +83,7 @@
             Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat
             turpis pretium. Quisque sed tristique felis.
           </p>
+
           <!-- Blockquote-->
           <blockquote>
             "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. Nam at dui sit amet ipsum cursus ornare."
@@ -132,7 +133,7 @@
           </div>
           <div class="grid">
             <p>
-              <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
+              <abbr title="Abbreviation">Abbr.</abbr>
             </p>
             <p><kbd>Kbd</kbd></p>
             <p>
@@ -191,13 +192,13 @@
           <h1>Buttons</h1>
           <div class="grid">
             <p>
-              <a href="#" class="button--primary" role="button">Primary Button</a>
+              <a href="#" onclick="event.preventDefault()" class="button--primary" role="button">Primary Button</a>
             </p>
             <p>
-              <a href="#" class="button--secondary" role="button">Secondary Button</a>
+              <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">Secondary Button</a>
             </p>
             <p>
-              <a href="#" class="button--tertiary" role="button">Tertiary Button</a>
+              <a href="#" onclick="event.preventDefault()" class="button--tertiary" role="button">Tertiary Button</a>
             </p>
           </div>
 
@@ -205,18 +206,18 @@
             <h3 class="hl-3">Variant Negative</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
-              <a href="#">similique</a>! At enim exercitationem, explicabo labore magnam modi quod, repellat reprehenderit sed sunt totam. Lorem ipsum
+              <a href="#" onclick="event.preventDefault()">similique</a>! At enim exercitationem, explicabo labore magnam modi quod, repellat reprehenderit sed sunt totam. Lorem ipsum
               dolor sit amet, consectetur adipisicing elit.
             </p>
             <div class="grid">
               <p>
-                <a href="#" class="button--primary" role="button">Primary Button</a>
+                <a href="#" onclick="event.preventDefault()" class="button--primary" role="button">Primary Button</a>
               </p>
               <p>
-                <a href="#" class="button--secondary" role="button">Secondary Button</a>
+                <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">Secondary Button</a>
               </p>
               <p>
-                <a href="#" class="button--tertiary" role="button">Tertiary Button</a>
+                <a href="#" onclick="event.preventDefault()" class="button--tertiary" role="button">Tertiary Button</a>
               </p>
             </div>
           </div>
