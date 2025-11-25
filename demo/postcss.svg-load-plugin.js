@@ -1,24 +1,15 @@
 import fs from "fs/promises"
 import path from "path"
-import { Result, Root } from "postcss"
 
-interface Options {
-  baseDir?: string
-}
+const svgCache = {}
 
-interface CssVariablesMap {
-  [key: string]: string
-}
-
-const svgCache: CssVariablesMap = {}
-
-export default function postcssSvgLoadPlugin(options: Options = {}) {
+export default function postcssSvgLoadPlugin(options = {}) {
   return {
     postcssPlugin: "postcss-svg-load",
-    async Once(root: Root, { result }: { result: Result }) {
+    async Once(root, { result }) {
       const cssFilePath = result.opts.from
       const baseDir = options.baseDir ?? (cssFilePath ? path.dirname(cssFilePath) : process.cwd())
-      const cssVariables: CssVariablesMap = {}
+      const cssVariables = {}
 
       root.walkRules((rule) => {
         if (rule.selector === ":root" || rule.selector.startsWith(":root,")) {
@@ -31,11 +22,11 @@ export default function postcssSvgLoadPlugin(options: Options = {}) {
       })
 
       const svgLoadRegex = /svg-load\(\s*["']([^"']+)["'](?:\s*,\s*["']([^"']*)["'])?\s*\)/g
-      const processingPromises: Promise<void>[] = []
+      const processingPromises = []
 
       root.walkDecls((decl) => {
-        let match: RegExpExecArray | null
-        const matches: RegExpExecArray[] = []
+        let match
+        const matches = []
 
         while ((match = svgLoadRegex.exec(decl.value)) !== null) {
           matches.push(match)
@@ -44,7 +35,7 @@ export default function postcssSvgLoadPlugin(options: Options = {}) {
         for (const match of matches) {
           const [fullMatch, svgRelativePath, colorParam] = match
 
-          let color: string | null = null
+          let color = null
 
           if (colorParam !== undefined && colorParam !== "") {
             const varMatch = colorParam.match(/^var\((--[^)]+)\)$/)
@@ -74,7 +65,6 @@ export default function postcssSvgLoadPlugin(options: Options = {}) {
               let svgContent = await fs.readFile(svgAbsolutePath, "utf8")
 
               if (color !== null) {
-                // Replace or add fill attribute only if color is set
                 if (/<svg[^>]*fill="[^"]*"[^>]*>/.test(svgContent)) {
                   svgContent = svgContent.replace(/(<svg[^>]*?)fill="[^"]*"([^>]*>)/, `$1fill="${color}"$2`)
                 } else {

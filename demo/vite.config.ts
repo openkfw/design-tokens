@@ -6,6 +6,8 @@ import fs from "fs"
 import path from "path"
 import type { OutputAsset } from "rollup"
 import postcssSvgo from "postcss-svgo"
+
+// @ts-ignore
 import postcssSvgLoadPlugin from "./postcss.svg-load-plugin.js"
 
 export default defineConfig({
