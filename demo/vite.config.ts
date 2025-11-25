@@ -5,6 +5,8 @@ import { resolve } from "path"
 import fs from "fs"
 import path from "path"
 import type { OutputAsset } from "rollup"
+import postcssSvgo from "postcss-svgo"
+import postcssSvgLoadPlugin from "./postcss.svg-load-plugin.js"
 
 export default defineConfig({
   base: "https://openkfw.github.io/design-tokens/demo/dist/",
@@ -33,7 +35,7 @@ export default defineConfig({
   ],
   css: {
     postcss: {
-      plugins: [postcssCustomMedia()]
+      plugins: [postcssCustomMedia(), postcssSvgo(), postcssSvgLoadPlugin()]
     }
   },
   build: {

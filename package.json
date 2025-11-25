@@ -8,9 +8,10 @@
     "output",
     "tokens/tokens.json",
     "tokens/gen-tokens.dark.json5",
+    "demo/dist/css/style.min.css",
     "demo/src/style.css",
     "demo/src/vendor/**.css",
-    "demo/dist/css/style.min.css"
+    "demo/postcss.svg-load-plugin.ts"
   ],
   "scripts": {
     "start": "concurrently \"npm run watch:extended\" \"npm run watch\"",
