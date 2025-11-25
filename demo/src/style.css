@@ -964,13 +964,24 @@
       width: 100%;
     }
 
-    @media (--kfw-breakpoint-desktop) {
+    @media (--kfw-breakpoint-mobile) {
       .hero__bars {
-        width: var(--hero-content-desktop-width);
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
-        bottom: 4rem;
+        display: none;
+      }
+    }
+
+    .hero__bars-desktop {
+      display: none;
+      width: var(--hero-content-desktop-width);
+      position: absolute;
+      top: 4rem;
+      left: 4rem;
+      bottom: 4rem;
+    }
+
+    @media (--kfw-breakpoint-mobile) {
+      .hero__bars-desktop {
+        display: block;
       }
     }
 
