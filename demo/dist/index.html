@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/fonts-ht38TVpc.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-DlLVyZjB.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-B0qj-pmG.min.css">
   </head>
   <body>
     <div id="top"></div>
@@ -41,8 +41,8 @@
     <main>
       <section class="hero">
         <div class="container-extended-fullwidth">
-          <img class="hero__bars" src="https://openkfw.github.io/design-tokens/demo/dist/sb-tbalken-s-600x20.svg" alt="" role="presentation" />
-          <img class="hero__bars-desktop" src="https://openkfw.github.io/design-tokens/demo/dist/sb-tbalken-xl-429x25.svg" alt="" role="presentation" />
+          <img class="hero__bars" src="https://openkfw.github.io/design-tokens/demo/dist/sb-tbalken-s-600x20.svg" alt="" aria-hidden="true" />
+          <img class="hero__bars-desktop" src="https://openkfw.github.io/design-tokens/demo/dist/sb-tbalken-xl-429x25.svg" alt="" aria-hidden="true" />
           <img
             class="hero__image"
             src="https://openkfw.github.io/design-tokens/demo/dist/welcome_image.jpeg"
@@ -104,12 +104,16 @@
           <!-- Inline text elements-->
           <h3>Inline text elements</h3>
           <div class="grid">
-            <p><a href="#" onclick="event.preventDefault()">Link</a></p>
             <p>
-              <a href="#" class="tx--2" onclick="event.preventDefault()"> Small Link </a>
+              <a href="#" onclick="event.preventDefault()">
+                <img width="16" height="16" class="icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='%23000'%20fill-rule='evenodd'%20d='m7.852%2021.854-.706-.706a.5.5%200%200%201%200-.706l8.238-8.447-8.238-8.437a.5.5%200%200%201%200-.706l.706-.706a.5.5%200%200%201%20.706%200l9.296%209.496a.5.5%200%200%201%200%20.705l-9.296%209.507a.5.5%200%200%201-.706%200'%20/%3e%3c/svg%3e" alt="" aria-hidden="true" loading="lazy" /> Link
+              </a>
             </p>
             <p>
-              <a href="#" class="tx--4" onclick="event.preventDefault()"> Large Link </a>
+              <a href="#" class="tx--2" onclick="event.preventDefault()">Small Link</a>
+            </p>
+            <p>
+              <a href="#" class="tx--4" onclick="event.preventDefault()">Large Link</a>
             </p>
           </div>
           <div class="grid">
@@ -206,8 +210,10 @@
             <h3 class="hl-3">Variant Negative</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
-              <a href="#" onclick="event.preventDefault()">similique</a>! At enim exercitationem, explicabo labore magnam modi quod, repellat
-              reprehenderit sed sunt totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <a href="#" onclick="event.preventDefault()"
+                ><img width="16" height="16" class="icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='%23000'%20fill-rule='evenodd'%20d='m7.852%2021.854-.706-.706a.5.5%200%200%201%200-.706l8.238-8.447-8.238-8.437a.5.5%200%200%201%200-.706l.706-.706a.5.5%200%200%201%20.706%200l9.296%209.496a.5.5%200%200%201%200%20.705l-9.296%209.507a.5.5%200%200%201-.706%200'%20/%3e%3c/svg%3e" alt="" aria-hidden="true" loading="lazy" />similique</a
+              >! At enim exercitationem, explicabo labore magnam modi quod, repellat reprehenderit sed sunt totam. Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit.
             </p>
             <div class="grid">
               <p>
@@ -274,14 +280,14 @@
                       <td class="filename">Uploading.jpeg</td>
                       <td class="filesize">1.35 MB</td>
                       <td class="delete">
-                        <a class="link" href="#" onclick="event.preventDefault()"> Löschen </a>
+                        <a href="#" onclick="event.preventDefault()"> Löschen </a>
                       </td>
                     </tr>
                     <tr>
                       <td class="filename">Successfully_Uploaded.jpeg</td>
                       <td class="filesize">765.82 KB</td>
                       <td class="delete">
-                        <a class="link" href="#" onclick="event.preventDefault()"> Löschen </a>
+                        <a href="#" onclick="event.preventDefault()"> Löschen </a>
                       </td>
                     </tr>
                     <tr class="mwf-upload-row">
@@ -293,7 +299,7 @@
                       <td class="filename">Successfully_Uploaded-final-final2.jpeg</td>
                       <td class="filesize">765.82 KB</td>
                       <td class="delete">
-                        <a class="link" href="#" onclick="event.preventDefault()"> Löschen </a>
+                        <a href="#" onclick="event.preventDefault()"> Löschen </a>
                       </td>
                     </tr>
                   </tbody>
