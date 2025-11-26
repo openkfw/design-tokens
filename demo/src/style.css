@@ -373,6 +373,14 @@
       background-image: var(--kfw-icon-arrow-down);
     }
 
+    .form-control[type="search"] {
+      background: url("icons/search.svg") no-repeat right 10px center;
+      padding-block: 0;
+      background-position: center right 1.5rem;
+      background-size: 2.4rem auto;
+      background-repeat: no-repeat;
+    }
+
     textarea.form-control {
       height: auto;
     }
@@ -561,6 +569,30 @@
       padding-left: calc(var(--field-size) + var(--col-gap));
     }
 
+    input[type="date"],
+    input[type="time"] {
+      appearance: none;
+      -webkit-appearance: none;
+      position: relative;
+      padding-right: 36px;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator,
+    input[type="time"]::-webkit-calendar-picker-indicator,
+    input[type="time"]::-webkit-inner-spin-button {
+      opacity: 0;
+    }
+
+    input[type="date"] {
+      background: url("icons/calendar.svg") no-repeat right 10px center;
+      background-size: 18px;
+    }
+
+    input[type="time"] {
+      background: url("icons/time.svg") no-repeat right 10px center;
+      background-size: 18px;
+    }
+
     @media (--kfw-breakpoint-mobile) {
       .list-group-form--inline {
         flex-flow: row wrap;
@@ -707,41 +739,45 @@
       display: none;
     }
 
-    .file-upload__icon {
+    #icon-upload {
+      width: 4rem;
+      margin: 2rem;
+    }
+        
+    .form-item.error .invalid-feedback {
       position: relative;
-      display: block;
-      transform: scale(1);
-      width: 2.8rem;
-      height: 1.3rem;
-      border: 0.3rem solid var(--kfw-color-fn);
-      border-top: 0;
-      margin-block: 2.5rem 2rem;
+      padding-left: 22px;
     }
 
-    .file-upload__icon::before,
-    .file-upload__icon::after {
+    .form-item.error .invalid-feedback::before {
       content: "";
-      display: block;
       position: absolute;
+      left: 0;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      transform: translateY(-50%);
+      background: url("icons/alert.svg") no-repeat center / contain;
+      pointer-events: none;
     }
 
-    .file-upload__icon::before {
-      left: 1rem;
-      bottom: 0.4rem;
-      width: 0.3rem;
-      height: 1.9rem;
-      background-color: var(--kfw-color-fn);
+    td.delete .link {
+      position: relative;
+      padding-left: 22px;
     }
 
-    .file-upload__icon::after {
-      bottom: 0.7rem;
-      left: 0.35rem;
-      width: 1.6rem;
-      height: 1.6rem;
-      transform: rotate(45deg);
-      border-left: 0.3rem solid var(--kfw-color-fn);
-      border-top: 0.3rem solid var(--kfw-color-fn);
+    td.delete .link::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      transform: translateY(-50%);
+      background: url("icons/delete.svg") no-repeat center / contain;
+      pointer-events: none;
     }
+
 
     /**
     * Containers
