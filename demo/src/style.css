@@ -1040,7 +1040,7 @@
       background-color: var(--kfw-color-background-light-blue);
     }
 
-    @media (--kfw-breakpoint-desktop) {
+    @media (--kfw-breakpoint-mobile) {
       .hero__title {
         flex-direction: row;
         position: absolute;
