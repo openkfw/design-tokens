@@ -322,8 +322,7 @@
       border-radius: var(--kfw-borderradius);
     }
 
-    a:not([role="button"]):where(:hover, :focus, :active, [aria-current]:not([aria-current="false"])),
-    [role="link"]:where(:hover, :focus, :active, [aria-current]:not([aria-current="false"])) {
+    :where([role="link"], a:not([role="button"])):where(:hover, :focus, :active, [aria-current]:not([aria-current="false"])) {
       color: var(--link-color-hover);
       text-decoration: underline;
     }
@@ -458,8 +457,8 @@
       color: var(--kfw-color-state-danger);
     }
 
-    .invalid-feedback .icon {
-      filter: color-to-filter(var(--kfw-base-color-red-400))
+    .invalid-feedback__icon {
+      filter: color-to-filter(var(--kfw-base-color-red-400));
     }
 
     :is(label, .form-label) {
@@ -606,7 +605,7 @@
     [type="time"] {
       appearance: none;
       position: relative;
-      padding-right: 36px;
+      padding-right: 3.6rem;
     }
 
     [type="date"]::-webkit-calendar-picker-indicator,
@@ -616,16 +615,16 @@
     }
 
     [type="date"] {
-      background-size: 18px;
+      background-size: 1.8rem auto;
       background-repeat: no-repeat;
-      background-position: right 10px center;
+      background-position: right 1rem center;
       background-image: var(--kfw-icon-calendar-fn);
     }
 
     [type="time"] {
-      background-size: 18px;
+      background-size: 1.8rem auto;
       background-repeat: no-repeat;
-      background-position: right 10px center;
+      background-position: right 1rem center;
       background-image: var(--kfw-icon-time-fn);
     }
 
@@ -656,6 +655,14 @@
       cursor: pointer;
     }
 
+    :where(button, [type="submit"], [type="reset"], [type="button"], [type="file"]::file-selector-button, [role="button"]):has(.icon) {
+      display: inline-flex;
+      gap: 0.5rem;
+      justify-content: flex-start;
+      align-items: center;
+      vertical-align: top;
+    }
+
     .button--primary,
     [type="submit"] {
       --button-border-color: var(--kfw-color-fn);
@@ -668,6 +675,10 @@
       background-color: var(--button-bg);
       color: var(--button-color);
       border-color: var(--button-border-color);
+    }
+
+    :where([type="submit"], .button--primary) .icon {
+      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
     }
 
     [type="submit"]:is(:hover, :focus),
@@ -698,6 +709,14 @@
       background-color: var(--button-bg-hover);
       border-color: var(--button-border-color-hover);
       text-decoration: underline;
+    }
+
+    :where([type="reset"], .button--secondary) .icon {
+      filter: color-to-filter(var(--kfw-color-fn));
+    }
+
+    :where([type="reset"], .button--secondary):is(:hover, :focus) .icon {
+      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
     }
 
     .button--tertiary {
@@ -760,17 +779,15 @@
       border-radius: 1rem;
     }
 
-    .searchfield__button:is(:hover, :focus){
+    .searchfield__button:is(:hover, :focus) {
       outline: 2px solid var(--kfw-color-fn-active);
     }
 
     .searchfield__icon {
       width: 2.4rem;
       height: 2.4rem;
-      filter: color-to-filter(var(--kfw-color-fn))
+      filter: color-to-filter(var(--kfw-color-fn));
     }
-
-  
 
     /**
     * File-Upload
@@ -811,7 +828,7 @@
       width: 4rem;
       height: 4rem;
       margin: 2rem;
-      filter: color-to-filter(var(--kfw-color-fn))
+      filter: color-to-filter(var(--kfw-color-fn));
     }
 
     /**
