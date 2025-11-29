@@ -5,6 +5,13 @@ import { resolve } from "path"
 import fs from "fs"
 import path from "path"
 import type { OutputAsset } from "rollup"
+import postcssSvgo from "postcss-svgo"
+
+// @ts-ignore
+import postcssSvgLoadPlugin from "./scripts/postcss.svg-load-plugin.js"
+
+// @ts-ignore
+import postcssColorToFilterPlugin from "./scripts/postcss.color-to-filter.js"
 
 export default defineConfig({
   base: "https://openkfw.github.io/design-tokens/demo/dist/",
@@ -33,7 +40,7 @@ export default defineConfig({
   ],
   css: {
     postcss: {
-      plugins: [postcssCustomMedia()]
+      plugins: [postcssCustomMedia(), postcssSvgo(), postcssSvgLoadPlugin(), postcssColorToFilterPlugin()]
     }
   },
   build: {

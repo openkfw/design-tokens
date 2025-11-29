@@ -8,9 +8,10 @@
     "output",
     "tokens/tokens.json",
     "tokens/gen-tokens.dark.json5",
+    "demo/dist/css/style.min.css",
     "demo/src/style.css",
     "demo/src/vendor/**.css",
-    "demo/dist/css/style.min.css"
+    "demo/postcss.svg-load-plugin.ts"
   ],
   "scripts": {
     "start": "concurrently \"npm run watch:extended\" \"npm run watch\"",
@@ -41,7 +42,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
-    "@tsconfig/node22": "^22.0.5",
+    "@tsconfig/node24": "^24.0.3",
     "@types/lodash": "^4.17.20",
     "@types/node": "^24.10.1",
     "concurrently": "^9.2.1",

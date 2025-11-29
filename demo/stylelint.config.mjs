@@ -3,6 +3,14 @@ export default {
   extends: ["stylelint-config-standard"],
   plugins: ["stylelint-media-use-custom-media"],
   rules: {
+    "declaration-property-value-no-unknown": [
+      true,
+      {
+        "ignoreProperties": {
+          "background-image": ["/^svg-load/"]
+        }
+      }
+    ],
     "csstools/media-use-custom-media": "always",
     "selector-class-pattern": [
       "^[a-z]([-]?[a-z0-9]+)*(__[a-z0-9]([-]?[a-z0-9]+)*)?(--[a-z0-9]([-]?[a-z0-9]+)*)?$",
