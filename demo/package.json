@@ -17,7 +17,7 @@
     "css-filter-converter": "^1.0.110",
     "postcss-custom-media": "^11.0.6",
     "postcss-inline-svg": "^6.0.0",
-    "stylelint": "^16.25.0",
+    "stylelint": "^16.26.1",
     "stylelint-config-standard": "^39.0.1",
     "stylelint-media-use-custom-media": "^4.0.0",
     "typescript": "^5.9.3",
