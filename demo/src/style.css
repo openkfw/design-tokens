@@ -303,50 +303,11 @@
     */
     .icon {
       display: inline-block;
-      vertical-align: top;
-      width: 16px;
-      height: 16px;
-      filter: color-to-filter(var(--kfw-color-text));
-    }
-
-    /**
-    * Link
-    */
-    :where(a:not([role="button"])),
-    [role="link"] {
-      --link-color: var(--kfw-color-fn);
-      --link-color-hover: var(--kfw-color-fn-active);
-
-      color: var(--link-color);
-      text-decoration: none;
-      border-radius: var(--kfw-borderradius);
-    }
-
-    :where([role="link"], a:not([role="button"])):where(:hover, :focus, :active, [aria-current]:not([aria-current="false"])) {
-      color: var(--link-color-hover);
-      text-decoration: underline;
-    }
-
-    a[role="button"] {
-      display: inline-flex;
-    }
-
-    :where([role="link"], a:not([role="button"])):has(.icon) {
-      display: inline-flex;
-      gap: 0.5rem;
-      justify-content: flex-start;
-      align-items: center;
-      vertical-align: top;
-    }
-
-    :where([role="link"], a:not([role="button"])) .icon {
-      position: relative;
       flex-shrink: 0;
-      filter: color-to-filter(var(--kfw-color-fn));
-    }
-
-    :where([role="link"], a:not([role="button"])):where(:hover, :focus, :active, [aria-current]:not([aria-current="false"])) .icon {
-      filter: color-to-filter(var(--kfw-color-fn-active));
+      vertical-align: top;
+      min-width: 1.6rem;
+      min-height: 1.6rem;
+      filter: color-to-filter(var(--kfw-color-text));
     }
 
     /**
@@ -628,15 +589,42 @@
       background-image: var(--kfw-icon-time-fn);
     }
 
-    /**
-    * Button
-    */
+    :where(a:not([role="button"]), [role="link"]) {
+      --link-color: var(--kfw-color-fn);
+      --link-color-hover: var(--kfw-color-fn-active);
+
+      color: var(--link-color);
+      text-decoration: none;
+      border-radius: var(--kfw-borderradius);
+      display: inline-flex;
+      vertical-align: top;
+    }
+
+    :where(a:not([role="button"]), [role="link"]):is(:hover, :focus, :active) {
+      color: var(--link-color-hover);
+      text-decoration: underline;
+    }
+
+    :where(a:not([role="button"]), [role="link"]):has(.icon) {
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    :where(a, [role="link"], button, [type="button"]) .icon {
+      filter: color-to-filter(var(--kfw-color-fn));
+    }
+
+    :where(a, [role="link"], button, [type="button"]):is(:hover, :focus) .icon {
+      filter: color-to-filter(var(--kfw-color-fn-active));
+    }
+
     button,
     [type="submit"],
     [type="reset"],
     [type="button"],
-    [type="file"]::file-selector-button,
-    [role="button"] {
+    [role="button"],
+    [type="file"]::file-selector-button {
       border: var(--kfw-borderwidth) solid transparent;
       font-family: var(--kfw-fontfamily);
       font-size: var(--kfw-fontsize);
@@ -647,24 +635,17 @@
       text-align: center;
       text-decoration: none;
       line-height: var(--kfw-lineheight);
-      padding: 1.2rem 2.5rem;
+      padding-block: 1.2rem;
+      padding-inline: 2.5rem;
       justify-content: center;
       max-width: 100%;
       vertical-align: middle;
       white-space: nowrap;
       cursor: pointer;
-    }
-
-    :where(button, [type="submit"], [type="reset"], [type="button"], [type="file"]::file-selector-button, [role="button"]):has(.icon) {
-      display: inline-flex;
-      gap: 0.5rem;
-      justify-content: flex-start;
       align-items: center;
-      vertical-align: top;
     }
 
-    .button--primary,
-    [type="submit"] {
+    :where([type="submit"], .button--primary) {
       --button-border-color: var(--kfw-color-fn);
       --button-bg: var(--kfw-color-fn);
       --button-color: var(--kfw-color-text-on-dark-bg);
@@ -677,16 +658,27 @@
       border-color: var(--button-border-color);
     }
 
-    :where([type="submit"], .button--primary) .icon {
-      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
-    }
-
-    [type="submit"]:is(:hover, :focus),
-    .button--primary:is(:hover, :focus) {
+    :where([type="submit"], .button--primary):is(:hover, :focus) {
       color: var(--button-color-hover);
       background-color: var(--button-bg-hover);
       border-color: var(--button-border-color-hover);
       text-decoration: underline;
+    }
+
+    .button--primary .icon {
+      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
+    }
+
+    .button--secondary .icon {
+      filter: color-to-filter(var(--kfw-color-fn));
+    }
+
+    .button--primary:is(:hover, :focus) .icon {
+      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
+    }
+
+    .button--secondary:is(:hover, :focus) .icon {
+      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
     }
 
     [type="file"]::file-selector-button,
@@ -711,12 +703,12 @@
       text-decoration: underline;
     }
 
-    :where([type="reset"], .button--secondary) .icon {
-      filter: color-to-filter(var(--kfw-color-fn));
+    :where(.button--primary, .button--secondary):has(.icon--left) {
+      padding-inline-start: 2rem;
     }
 
-    :where([type="reset"], .button--secondary):is(:hover, :focus) .icon {
-      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
+    :where(.button--primary, .button--secondary):has(.icon--right) {
+      padding-inline-end: 2rem;
     }
 
     .button--tertiary {
@@ -753,6 +745,9 @@
       width: 100%;
     }
 
+    /**
+    * Searchfield
+    */
     .searchfield {
       position: relative;
       display: flex;
@@ -934,12 +929,16 @@
       gap: var(--kfw-space-medium);
     }
 
-    .header img {
-      width: auto;
-    }
-
     .header__menu {
       text-align: end;
+    }
+
+    .header__menu .icon {
+      margin: 1.2rem 0.8rem;
+    }
+
+    :where(.header-logo-mobile, .header-logo-desktop) {
+      width: auto;
     }
 
     .header-logo-mobile {
@@ -978,38 +977,9 @@
       --kfw-focusring-outline-color: var(--kfw-color-background);
 
       border-top: var(--kfw-base-borderwidth-md) solid var(--kfw-color-line-11);
-      background-color: var(--kfw-color-background-dark-blue);
-      color: var(--kfw-color-text-on-dark-bg);
       font-size: var(--kfw-fontsize-small);
       line-height: var(--kfw-lineheight);
       padding-block: var(--kfw-space-medium) var(--kfw-space-large);
-    }
-
-    .footer .button--secondary {
-      /* use the same styles as .bg-dark .button--secondary */
-      --button-color: var(--kfw-color-text-on-dark-bg);
-      --button-border-color: var(--kfw-color-text-on-dark-bg);
-      --button-bg-hover: var(--kfw-color-text-on-dark-bg);
-      --button-color-hover: var(--kfw-color-text);
-      --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
-    }
-
-    .footer :where(a:not([role="button"])),
-    .footer [role="link"] {
-      /* use the same styles as .bg-dark a */
-      --link-color: var(--kfw-color-text-on-dark-bg);
-      --link-color-hover: var(--kfw-color-text-on-dark-bg);
-
-      text-decoration: underline;
-    }
-
-    .footer a:not([role="button"]):where(:hover, :focus, :active, [aria-current]:not([aria-current="false"])),
-    .footer [role="link"]:where(:hover, :focus, :active, [aria-current]:not([aria-current="false"])) {
-      text-decoration: none;
-    }
-
-    .footer :where([role="link"], a:not([role="button"])) .icon {
-      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
     }
 
     .footer > * {
@@ -1124,7 +1094,7 @@
   }
 
   @layer variations {
-    .bg-dark {
+    :where(.bg-dark, .footer) {
       --headline-color: var(--kfw-color-text-headline-on-dark-bg);
       --kfw-focusring-outline-color: var(--kfw-color-background);
 
@@ -1132,25 +1102,26 @@
       color: var(--kfw-color-text-on-dark-bg);
     }
 
-    .bg-dark :where(a:not([role="button"])),
-    .bg-dark [role="link"] {
+    :where(.bg-dark, .footer) :where(a:not([role="button"]), [role="link"]) {
       --link-color: var(--kfw-color-text-on-dark-bg);
       --link-color-hover: var(--kfw-color-text-on-dark-bg);
 
       text-decoration: underline;
     }
 
-    .bg-dark :where(a:not([role="button"])):is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
-    .bg-dark [role="link"]:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
+    :where(.bg-dark, .footer) :where(a:not([role="button"]), [role="link"]):is(:hover, :focus, :active) {
       text-decoration: none;
     }
 
-    .bg-dark :where([role="link"], a:not([role="button"])) .icon {
+    :where(.bg-dark, .footer) :where([role="link"], a:not([role="button"])) .icon {
       filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
     }
 
-    .bg-dark .button--primary,
-    .bg-dark [type="submit"] {
+    :where(.bg-dark, .footer) :where(button, [type="submit"], [type="reset"], [type="button"], [role="button"]) .icon {
+      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
+    }
+
+    :where(.bg-dark, .footer) :where(.button--primary, [type="submit"]) {
       --button-color: var(--kfw-color-fn);
       --button-bg: var(--kfw-color-text-on-dark-bg);
       --button-border-color: var(--kfw-color-text-on-dark-bg);
@@ -1159,7 +1130,11 @@
       --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
     }
 
-    .bg-dark .button--secondary {
+    :where(.bg-dark, .footer) :where(.button--primary, [type="submit"]) .icon {
+      filter: color-to-filter(var(--kfw-color-fn));
+    }
+
+    :where(.bg-dark, .footer) :where(.button--secondary, [type="reset"]) {
       --button-color: var(--kfw-color-text-on-dark-bg);
       --button-border-color: var(--kfw-color-text-on-dark-bg);
       --button-bg-hover: var(--kfw-color-text-on-dark-bg);
@@ -1167,7 +1142,15 @@
       --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
     }
 
-    .bg-dark .button--tertiary {
+    :where(.bg-dark, .footer) :where(.button--secondary, [type="reset"]) .icon {
+      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
+    }
+
+    :where(.bg-dark, .footer) :where(.button--secondary, [type="reset"]):is(:hover, :focus) .icon {
+      filter: color-to-filter(var(--kfw-color-text));
+    }
+
+    :where(.bg-dark, .footer) .button--tertiary {
       --button-color: var(--kfw-color-text-on-dark-bg);
       --button-color-hover: var(--kfw-color-text-on-dark-bg);
     }
