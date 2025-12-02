@@ -606,9 +606,10 @@
     }
 
     :where(a:not([role="button"]), [role="link"]):has(.icon) {
+      --space-between: 0.5rem;
       justify-content: flex-start;
       align-items: center;
-      gap: 0.5rem;
+      gap: var(--space-between);
     }
 
     :where(a, [role="link"], button, [type="button"]) .icon {
@@ -625,13 +626,15 @@
     [type="button"],
     [role="button"],
     [type="file"]::file-selector-button {
+      --space-between: 0.8rem;
+
       border: var(--kfw-borderwidth) solid transparent;
       font-family: var(--kfw-fontfamily);
       font-size: var(--kfw-fontsize);
       font-weight: var(--kfw-fontweight);
       border-radius: var(--kfw-borderradius);
       display: inline-flex;
-      gap: 0.8rem;
+      gap: var(--space-between);
       text-align: center;
       text-decoration: none;
       line-height: var(--kfw-lineheight);
@@ -715,6 +718,7 @@
       --button-color: var(--kfw-color-fn);
       --button-bg: transparent;
       --button-color-hover: var(--kfw-color-fn-active);
+      --space-between: 0.5rem;
 
       background-color: var(--button-bg);
       color: var(--button-color);
