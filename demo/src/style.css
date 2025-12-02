@@ -937,7 +937,7 @@
       margin: 1.2rem 0.8rem;
     }
 
-    :where(.header-logo-mobile, .header-logo-desktop) {
+    :where(.header-logo-mobile, .header-logo-desktop img) {
       width: auto;
     }
 
