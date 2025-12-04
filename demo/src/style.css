@@ -562,31 +562,18 @@
       }
     }
 
-    [type="date"],
-    [type="time"] {
-      appearance: none;
-      position: relative;
-      padding-right: 3.6rem;
+    :where([type="date"], [type="time"])::-webkit-calendar-picker-indicator {
+      background: transparent; /* rest native icon */
+      width: 1.8rem;
+      height: 1.8rem;
     }
 
-    [type="date"]::-webkit-calendar-picker-indicator,
-    [type="time"]::-webkit-calendar-picker-indicator,
-    [type="time"]::-webkit-inner-spin-button {
-      display: none;
+    [type="date"]::-webkit-calendar-picker-indicator {
+      content: var(--kfw-icon-calendar-fn);
     }
 
-    [type="date"] {
-      background-size: 1.8rem auto;
-      background-repeat: no-repeat;
-      background-position: right 1rem center;
-      background-image: var(--kfw-icon-calendar-fn);
-    }
-
-    [type="time"] {
-      background-size: 1.8rem auto;
-      background-repeat: no-repeat;
-      background-position: right 1rem center;
-      background-image: var(--kfw-icon-time-fn);
+    [type="time"]::-webkit-calendar-picker-indicator {
+      content: var(--kfw-icon-time-fn);
     }
 
     :where(a:not([role="button"]), [role="link"]) {
@@ -607,6 +594,7 @@
 
     :where(a:not([role="button"]), [role="link"]):has(.icon) {
       --space-between: 0.5rem;
+
       justify-content: flex-start;
       align-items: center;
       gap: var(--space-between);
