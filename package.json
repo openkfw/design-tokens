@@ -11,7 +11,7 @@
     "demo/dist/css/style.min.css",
     "demo/src/style.css",
     "demo/src/vendor/**.css",
-    "demo/postcss.svg-load-plugin.ts"
+    "demo/scripts/**.js"
   ],
   "scripts": {
     "start": "concurrently \"npm run watch:extended\" \"npm run watch\"",

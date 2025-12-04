@@ -51,7 +51,7 @@ export default function postcssColorToFilterPlugin() {
             newValue = newValue.replace(fullMatch, filterString)
             hasReplacements = true
           } catch (e) {
-            result.warn(`Fehler beim Generieren des Filters für Farbe "${param}": ${e.message}`, { node: decl })
+            result.warn(`Error generating filter for color "${param}": ${e.message}`, { node: decl })
           }
         }
 
