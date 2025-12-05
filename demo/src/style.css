@@ -608,15 +608,10 @@
       filter: color-to-filter(var(--kfw-color-fn-active));
     }
 
-    button,
-    [type="submit"],
-    [type="reset"],
-    [type="button"],
-    [role="button"],
-    [type="file"]::file-selector-button {
+    [type="file"]::file-selector-button,
+    :where(button, [type="submit"], [type="reset"], [type="button"], [role="button"]) {
       --space-between: 0.8rem;
 
-      border: var(--kfw-borderwidth) solid transparent;
       font-family: var(--kfw-fontfamily);
       font-size: var(--kfw-fontsize);
       font-weight: var(--kfw-fontweight);
@@ -634,6 +629,9 @@
       white-space: nowrap;
       cursor: pointer;
       align-items: center;
+      border-width: var(--kfw-borderwidth);
+      border-style: solid;
+      border-color: transparent;
     }
 
     :where([type="submit"], .button--primary) {
