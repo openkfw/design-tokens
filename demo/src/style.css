@@ -305,6 +305,7 @@
       display: inline-block;
       flex-shrink: 0;
       vertical-align: top;
+      pointer-events: none;
       min-width: 1.6rem;
       min-height: 1.6rem;
       filter: color-to-filter(var(--kfw-color-text));
