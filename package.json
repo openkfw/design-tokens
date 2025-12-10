@@ -1,6 +1,6 @@
 {
   "name": "@openkfw/design-tokens",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "The source of truth for KfW-branded digital products.",
   "files": [
     "README.md",
@@ -15,10 +15,8 @@
   ],
   "scripts": {
     "start": "concurrently \"npm run watch:extended\" \"npm run watch\"",
-    "watch": "tsx watch --exclude \"./tokens/gen-*.**\" --include \"./tokens/*.**\" sd.config.ts",
-    "watch:extended": "tsx watch --include \"./tokens/extended/tokens/*.**\" ./tokens/extended/build.ts",
-    "build": "npm run build:extended && tsx sd.config.ts",
-    "build:extended": "tsx ./tokens/extended/build.ts",
+    "watch": "tsx watch --include \"./tokens/*.**\" sd.config.ts",
+    "build": "tsx sd.config.ts",
     "update": "npx npm-check-updates -u",
     "editor": "jsoneditor-cli --initialExpand false --engine svelte-jsoneditor load tokens/tokens.json",
     "editor:dark": "jsoneditor-cli --port 5054 --engine svelte-jsoneditor load tokens/extended/tokens/tokens.dark.json",
@@ -44,18 +42,18 @@
     "@eslint/js": "^9.39.1",
     "@tsconfig/node24": "^24.0.3",
     "@types/lodash": "^4.17.21",
-    "@types/node": "^24.10.1",
+    "@types/node": "^24.10.2",
     "concurrently": "^9.2.1",
     "deep-get-set-ts": "^1.1.2",
     "eslint": "^9.39.1",
     "json5": "^2.2.3",
     "jsoneditor-cli": "^1.1.0",
     "lodash": "4.17.21",
-    "prettier": "^3.7.3",
+    "prettier": "^3.7.4",
     "style-dictionary": "^5.1.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.48.0",
+    "typescript-eslint": "^8.49.0",
     "npm-check-updates": "^19.1.2"
   }
 }

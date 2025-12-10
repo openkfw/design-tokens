@@ -4513,12 +4513,22 @@
             "hex": "#005a8c"
           },
           "$description": "Main interaction color for buttons and links",
+          "$darkValue": {
+            "colorSpace": "srgb",
+            "components": [
+              1,
+              1,
+              1
+            ],
+            "hex": "#ffffff"
+          },
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.blue.600}",
             "$description": "Main interaction color for buttons and links",
+            "$darkValue": "{base.color.white.default}",
             "$type": "color",
             "key": "{semantic.color.fn.default}"
           },
@@ -4547,11 +4557,21 @@
             ],
             "hex": "#00446e"
           },
+          "$darkValue": {
+            "colorSpace": "srgb",
+            "components": [
+              1,
+              1,
+              1
+            ],
+            "hex": "#ffffff"
+          },
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.blue.700}",
+            "$darkValue": "{base.color.white.default}",
             "$type": "color",
             "key": "{semantic.color.fn.active}"
           },
@@ -4613,11 +4633,21 @@
             ],
             "hex": "#2d3134"
           },
+          "$darkValue": {
+            "colorSpace": "srgb",
+            "components": [
+              0.9333,
+              0.9412,
+              0.949
+            ],
+            "hex": "#eef0f2"
+          },
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.gray.600}",
+            "$darkValue": "{base.color.gray.100}",
             "$type": "color",
             "key": "{semantic.color.fn.border}"
           },
@@ -4646,11 +4676,21 @@
             ],
             "hex": "#2d3134"
           },
+          "$darkValue": {
+            "colorSpace": "srgb",
+            "components": [
+              0.9333,
+              0.9412,
+              0.949
+            ],
+            "hex": "#eef0f2"
+          },
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.gray.600}",
+            "$darkValue": "{base.color.gray.100}",
             "$type": "color",
             "key": "{semantic.color.fn.label}"
           },
@@ -4682,12 +4722,22 @@
             "hex": "#2d3134"
           },
           "$description": "Main text color for body",
+          "$darkValue": {
+            "colorSpace": "srgb",
+            "components": [
+              0.9333,
+              0.9412,
+              0.949
+            ],
+            "hex": "#eef0f2"
+          },
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.gray.600}",
             "$description": "Main text color for body",
+            "$darkValue": "{base.color.gray.100}",
             "$type": "color",
             "key": "{semantic.color.text.default}"
           },

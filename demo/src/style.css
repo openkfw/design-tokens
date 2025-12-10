@@ -8,7 +8,9 @@
 @import url("vendor/uaplus.css") layer(reset);
 
 /* KfW Design Tokens with Custom Media Queries */
-@import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css") layer(core.tokens);
+@import url("blub.css") layer(core.tokens);
+
+/* @import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css") layer(core.tokens); */
 @import url("vendor/gen-custom-media.css");
 
 @layer core {

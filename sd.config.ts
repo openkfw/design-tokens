@@ -1,148 +1,132 @@
-/**
- * KfW Design Tokens https://github.com/openkfw/design-tokens
- *
- * Copyright (c) 2025 Artur Sopelnik and contributors, KfW
- *
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at https://mozilla.org/MPL/2.0/.
- */
-
 import StyleDictionary from "style-dictionary"
 import { Config } from "style-dictionary/types"
 import { formats, logBrokenReferenceLevels, logVerbosityLevels } from "style-dictionary/enums"
 import { RegisterCustom } from "./config"
 
-const THEMES = ["light"]
+const THEMES = ["light", "dark"] as const
+export type Theme = (typeof THEMES)[number]
+
+export const formatsFigmaPenpot = "json/figma-penpot"
+
 const PREFIX = "kfw"
-const BASE_PX = {
-  stable: 10,
-  thirdparty: 16
-}
-const CONFIG: Config = {
+const BASE_PX = { default: 10, thirdparty: 16 } as const
+
+const CONFIG_BASE: Config = {
   usesDtcg: true,
   expand: false,
   log: {
     warnings: "disabled",
     verbosity: logVerbosityLevels.verbose,
-    errors: {
-      brokenReferences: logBrokenReferenceLevels.throw
-    }
+    errors: { brokenReferences: logBrokenReferenceLevels.throw }
   }
 }
-const DEFAULT_SELECTOR = `!(*.${THEMES.join("|*.")})`
 
 RegisterCustom(PREFIX)
 
 const BUILD_PATH_PREFIX = "output"
 
-const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Config => {
-  const isLight = theme === "light"
-  const src = isLight ? DEFAULT_SELECTOR : `*.${theme}`
-  const isStable = basePxFontSize === 10
-
-  const variant = isStable ? "" : "/web_thirdparty_16px"
+function createPlatform(type: "css" | "scss" | "js", theme: Theme, variant: string, basePxFontSize: number) {
+  const isDefaultTheme = theme === "light"
+  const formatsMap = {
+    css: formats.cssVariables,
+    scss: formats.scssVariables,
+    js: formats.javascriptEs6
+  }
 
   return {
-    ...CONFIG,
-    source: [`tokens/${src}.{json,json5}`],
-    platforms: {
-      css: {
-        basePxFontSize,
-        buildPath: `${BUILD_PATH_PREFIX}${variant}/css`,
-        options: { fileHeader: "kfw-file-header" },
-        transformGroup: "custom/css-extended",
-        prefix: PREFIX,
-        files: [
-          {
-            destination: `kfw-design-tokens.${theme}.css`,
-            format: formats.cssVariables,
-            options: {
-              selector: (() => {
-                // For convenience, the light theme is scoped to :root and will be activated by default when imported.
-                const SELECTOR = isLight ? `:root, :host, .${PREFIX}-theme--${theme}` : `:host, .${PREFIX}-theme--${theme}`
-                return `${SELECTOR} { color-scheme: ${theme}; }\n\n${SELECTOR}`
-              })(),
-              outputReferences: false
-            }
-          }
-        ]
-      },
-      scss: {
-        basePxFontSize,
-        buildPath: `${BUILD_PATH_PREFIX}${variant}/scss`,
-        options: { fileHeader: "kfw-file-header" },
-        transformGroup: "custom/scss-extended",
-        prefix: PREFIX,
-        files: [
-          {
-            destination: `kfw-design-tokens.${theme}.scss`,
-            format: formats.scssVariables,
-            options: {
-              selector: (() => {
-                // For convenience, the light theme is scoped to :root and will be activated by default when imported.
-                const SELECTOR = isLight ? `:root, :host, .${PREFIX}-theme--${theme}` : `:host, .${PREFIX}-theme--${theme}`
-                return `${SELECTOR} { color-scheme: ${theme}; }\n\n${SELECTOR}`
-              })(),
-              outputReferences: false
-            }
-          }
-        ]
-      },
-      js: {
-        basePxFontSize,
-        buildPath: `${BUILD_PATH_PREFIX}${variant}/js`,
-        options: { fileHeader: "kfw-file-header" },
-        transformGroup: "custom/js-extended",
-        prefix: PREFIX,
-        files: [
-          {
-            destination: `kfw-design-tokens.${theme}.js`,
-            format: formats.javascriptEs6
-          },
-          {
-            destination: `kfw-design-tokens.${theme}.d.ts`,
-            format: formats.typescriptEs6Declarations
-          }
-        ]
-      },
-      ...(!isStable && {
-        json: {
-          basePxFontSize,
-          buildPath: `${BUILD_PATH_PREFIX}/json`,
-          transformGroup: "custom/web-extended",
-          prefix: PREFIX,
-          files: [
-            {
-              destination: `kfw-design-tokens.${theme}.json`,
-              format: formats.json
-            }
-          ]
-        },
-        figma: {
-          basePxFontSize,
-          buildPath: `${BUILD_PATH_PREFIX}/figma`,
-          transformGroup: "custom/figma-penpot",
-          files: [
-            {
-              destination: `kfw-design-tokens.${theme}.json`,
-              format: "json/figma"
-            }
-          ]
-        },
-        penpot: {
-          basePxFontSize,
-          buildPath: `${BUILD_PATH_PREFIX}/penpot`,
-          transformGroup: "custom/figma-penpot",
-          files: [
-            {
-              destination: `kfw-design-tokens.${theme}.json`,
-              format: "json/penpot"
-            }
-          ]
-        }
-      })
+    basePxFontSize,
+    transformGroup: `custom/${type}-extended`,
+    prefix: PREFIX,
+    options: { fileHeader: "kfw-file-header" },
+    files: [
+      {
+        destination: `kfw-design-tokens.${theme}.${type}`,
+        format:  isDefaultTheme ? formatsMap[type] : `${formatsMap[type]}.dark`,
+        options: { outputReferences: false }
+      }
+    ],
+    buildPath: `${BUILD_PATH_PREFIX}${variant}/${type}`
+  }
+}
+
+function createAllPlatform(type: "css" | "scss" | "js", basePxFontSize: number) {
+  const formatsMap = {
+    css: `${formats.cssVariables}.all`,
+    scss: formats.scssVariables,
+    js: formats.javascriptEs6
+  }
+
+  return {
+    basePxFontSize,
+    transformGroup: `custom/${type}-extended`,
+    prefix: PREFIX,
+    options: { showFileHeader: false },
+    files: [
+      {
+        destination: `kfw-design-tokens.${type}`,
+        format: formatsMap[type],
+        options: { outputReferences: false }
+      }
+    ],
+    buildPath: `${BUILD_PATH_PREFIX}/${type}`
+  }
+}
+
+const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Config => {
+  const isDefaultTheme = theme === "light"
+  const isDefaultSize = basePxFontSize === 10
+  const variant = isDefaultSize ? "" : "/web_thirdparty_16px"
+
+  const platforms: Config["platforms"] = {
+    css: createPlatform("css", theme, variant, basePxFontSize),
+    scss: createPlatform("scss", theme, variant, basePxFontSize),
+    js: createPlatform("js", theme, variant, basePxFontSize)
+  }
+
+  // Figma & Penpot are theme and baseFontSize independent
+  const figPenConfig = (destinationTheme: Theme) => ({
+    files: [
+      {
+        destination: `kfw-design-tokens.${destinationTheme}.json`,
+        format:  isDefaultTheme ? formatsFigmaPenpot : `${formatsFigmaPenpot}.dark`,
+      }
+    ],
+    transformGroup: "custom/figma-penpot"
+  })
+
+  platforms.figma = {
+    ...figPenConfig(theme),
+    buildPath: `${BUILD_PATH_PREFIX}/figma`
+  }
+
+  platforms.penpot = {
+    ...figPenConfig(theme),
+    buildPath: `${BUILD_PATH_PREFIX}/penpot`
+  }
+
+  if (isDefaultTheme && isDefaultSize) {
+    platforms.json = {
+      transformGroup: "custom/web-extended",
+      prefix: PREFIX,
+      buildPath: `${BUILD_PATH_PREFIX}/json`,
+      files: [{ destination: `kfw-design-tokens.json`, format: formats.json }]
     }
+
+    platforms.jsTypes = {
+      transformGroup: "custom/js-extended",
+      prefix: PREFIX,
+      buildPath: `${BUILD_PATH_PREFIX}${variant}/js`,
+      options: { fileHeader: "kfw-file-header" },
+      files: [{ destination: `kfw-design-tokens.d.ts`, format: formats.typescriptEs6Declarations }]
+    }
+
+    platforms.allCss = createAllPlatform("css", basePxFontSize)
+  }
+
+  return {
+    ...CONFIG_BASE,
+    source: ["tokens/**/*.json"],
+    platforms
   }
 }
 
@@ -151,14 +135,12 @@ export default (async function buildThemes() {
   console.log("\n==============================================")
 
   for (const theme of THEMES) {
-    for (const key in BASE_PX) {
-      if (Object.prototype.hasOwnProperty.call(BASE_PX, key)) {
-        const basePxFontSize = BASE_PX[key as keyof typeof BASE_PX]
-        const sd = new StyleDictionary(createStyleDictionaryConfig(theme, basePxFontSize))
-        await sd.buildAllPlatforms()
-      }
+    for (const basePxFontSize of Object.values(BASE_PX)) {
+      const sd = new StyleDictionary(createStyleDictionaryConfig(theme, basePxFontSize))
+      await sd.buildAllPlatforms()
     }
   }
+
   console.log("\n==============================================")
   console.log("\nBuild completed!")
 })()
