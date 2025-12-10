@@ -14,9 +14,9 @@ import { resolveReferences, usesReferences } from "style-dictionary/utils"
 import JSON5 from "json5"
 import { fs } from "style-dictionary/fs"
 
-import { formatUnitValue, getBasePxFontSize, isPascalCase, kebabToPascalCase } from "./shared"
+import { formatUnitValue, isPascalCase, kebabToPascalCase } from "./shared"
 
-const { nameKebab, sizePxToRem } = transforms
+const { sizePxToRem } = transforms
 
 export function RegisterTransforms(PREFIX: string) {
   /**
@@ -139,68 +139,6 @@ export function RegisterTransforms(PREFIX: string) {
   })
 
   StyleDictionary.registerTransform({
-    name: "web/flatten-properties-typography",
-    transitive: true, // typography properties can be references
-    type: transformTypes.value,
-    filter: (token) => token.$type === "typography",
-    transform: async (token, platform) => {
-      const { $value, $type, original, name } = token
-      if (!$value || $type !== "typography") return undefined
-
-      const dictionary = JSON5.parse(fs.readFileSync(token.filePath, "utf8").toString())
-
-      const { fontFamily, fontSize, fontWeight, letterSpacing, lineHeight, fontStyle, fontVariant, textTransform, textDecoration } = original.$value
-      if (!fontFamily || !fontSize || !fontWeight || !letterSpacing || !lineHeight) return undefined
-
-      const resolveIfReference = (value: string) => (usesReferences(value) ? resolveReferences(value, dictionary, { usesDtcg: true }) : value)
-
-      const flattenFontSize = formatUnitValue(resolveIfReference(fontSize), platform)
-      const flattenLetterSpacing = formatUnitValue(resolveIfReference(letterSpacing), platform)
-
-      const lineHeightResolved = resolveIfReference(lineHeight)
-      const flattenLineHeight =
-        typeof lineHeightResolved === "object" && lineHeightResolved !== null && "$value" in lineHeightResolved
-          ? lineHeightResolved.$value
-          : lineHeightResolved
-
-      const value = {
-        fontFamily: resolveIfReference(fontFamily),
-        fontSize: flattenFontSize,
-        fontWeight: resolveIfReference(fontWeight),
-        letterSpacing: flattenLetterSpacing,
-        lineHeight: flattenLineHeight,
-        ...(fontStyle ? { fontStyle: resolveIfReference(fontStyle) } : {}),
-        ...(fontVariant ? { fontStyle: resolveIfReference(fontVariant) } : {}),
-        ...(textTransform ? { fontStyle: resolveIfReference(textTransform) } : {}),
-        ...(textDecoration ? { fontStyle: resolveIfReference(textDecoration) } : {})
-      }
-
-      const typographyCssShorthand = `${fontStyle ? `${fontStyle} ` : ""}${fontVariant ? `${fontVariant} ` : ""}${
-        fontWeight ? `${fontWeight} ` : ""
-      }${flattenFontSize ? `${flattenFontSize}` : `${getBasePxFontSize(platform)}px`}${lineHeight ? `/${lineHeight} ` : " "}${fontFamily};`
-
-      const entries = Object.entries(value)
-
-      const seperator = "\n  "
-
-      return entries.reduce((acc, [key, v], index) => {
-        const kebabName = StyleDictionary.hooks.transforms[nameKebab].transform(
-          {
-            filePath: "",
-            isSource: false,
-            name: "",
-            original: {},
-            path: [key]
-          },
-          {},
-          {}
-        )
-        return `${acc ? `${acc}${seperator}` : ""}--${name}-${kebabName}: ${v}${index + 1 === entries.length ? "" : ";"}`
-      }, typographyCssShorthand)
-    }
-  })
-
-  StyleDictionary.registerTransform({
     name: "web/flatten-properties-border",
     transitive: true,
     type: transformTypes.value,
@@ -227,12 +165,7 @@ export function RegisterTransforms(PREFIX: string) {
 
   StyleDictionary.registerTransformGroup({
     name: "custom/flatten-dtcg-props",
-    transforms: [
-      "web/flatten-properties-color",
-      "web/flatten-properties-dimension",
-      "web/flatten-properties-border",
-      "web/flatten-properties-typography"
-    ]
+    transforms: ["web/flatten-properties-color", "web/flatten-properties-dimension", "web/flatten-properties-border"]
   })
 
   StyleDictionary.registerTransformGroup({

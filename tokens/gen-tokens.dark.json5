@@ -1106,7 +1106,7 @@
           $description: "Main text color for body",
         },
         "on-dark-bg": {
-          $value: "{base.color.blue.700}",
+          $value: "{base.color.white.default}",
         },
         "on-disabled": {
           $value: "{base.color.white.default}",
