@@ -13,7 +13,7 @@
     "lint": "npx stylelint 'src/*.css' --fix"
   },
   "devDependencies": {
-    "@openkfw/design-tokens": "^0.5.5",
+    "@openkfw/design-tokens": "^0.5.6",
     "css-filter-converter": "^1.0.110",
     "postcss-custom-media": "^11.0.6",
     "postcss-inline-svg": "^6.0.0",
@@ -21,7 +21,7 @@
     "stylelint-config-standard": "^39.0.1",
     "stylelint-media-use-custom-media": "^4.0.0",
     "typescript": "^5.9.3",
-    "vite": "^7.2.6",
+    "vite": "^7.2.7",
     "vite-plugin-stylelint": "^6.0.2"
   },
   "dependencies": {
