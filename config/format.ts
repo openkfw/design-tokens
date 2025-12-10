@@ -12,6 +12,7 @@ import StyleDictionary from "style-dictionary"
 import { TransformedToken, TransformedTokens } from "style-dictionary/types"
 import { humanCase } from "./shared"
 import deep from "deep-get-set-ts"
+import { formatsFigmaPenpot } from "../sd.config"
 
 const extractTokenValue = ({ $value, $type, path }: TransformedToken) => {
   const attributes = {
@@ -92,17 +93,14 @@ const convertTokensToJson = (tokens: TransformedToken[]) => {
   return output
 }
 
-const registerFormat = (name: string) => {
-  StyleDictionary.registerFormat({
-    name: `json/${name}`,
-    format: ({ dictionary }) => {
-      const transformedTokens = convertTokensToJson(dictionary.allTokens)
-      return JSON.stringify(transformedTokens, null, 2)
-    }
-  })
-}
-
 export function RegisterFormats() {
-  registerFormat("figma")
-  registerFormat("penpot")
+  const convertTokensToDesign = (allTokens: TransformedToken[]): string => {
+    const transformedTokens = convertTokensToJson(allTokens)
+    return JSON.stringify(transformedTokens, null, 2)
+  }
+
+  StyleDictionary.registerFormat({
+    name: formatsFigmaPenpot,
+    format: ({ dictionary }) => convertTokensToDesign(dictionary.allTokens)
+  })
 }

@@ -6,7 +6,8 @@ import tseslint from "typescript-eslint"
 export default tseslint.config(eslint.configs.recommended, tseslint.configs.recommended, tseslint.configs.strict, tseslint.configs.stylistic, {
   languageOptions: {
     globals: {
-      console: "readable"
+      console: "readable",
+      process: "readable"
     }
   }
 })

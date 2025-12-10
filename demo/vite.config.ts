@@ -7,10 +7,10 @@ import path from "path"
 import type { OutputAsset } from "rollup"
 import postcssSvgo from "postcss-svgo"
 
-// @ts-ignore
+// @ts-expect-error: TypeScript cannot infer the type from this JS module
 import postcssSvgLoadPlugin from "./scripts/postcss.svg-load-plugin.js"
 
-// @ts-ignore
+// @ts-expect-error: TypeScript cannot infer the type from this JS module
 import postcssColorToFilterPlugin from "./scripts/postcss.color-to-filter.js"
 
 export default defineConfig({

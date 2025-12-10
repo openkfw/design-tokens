@@ -13,13 +13,15 @@ import { Config } from "style-dictionary/types"
 import { formats, logBrokenReferenceLevels, logVerbosityLevels } from "style-dictionary/enums"
 import { RegisterCustom } from "./config"
 
-const THEMES = ["light"]
+const THEMES = ["light"] as const
+export type Theme = (typeof THEMES)[number]
+
+export const formatsFigmaPenpot = "json/figma-penpot"
+
 const PREFIX = "kfw"
-const BASE_PX = {
-  stable: 10,
-  thirdparty: 16
-}
-const CONFIG: Config = {
+const BASE_PX = { default: 10, thirdparty: 16 } as const
+
+const CONFIG_BASE: Config = {
   usesDtcg: true,
   expand: false,
   log: {
@@ -30,21 +32,22 @@ const CONFIG: Config = {
     }
   }
 }
-const DEFAULT_SELECTOR = `!(*.${THEMES.join("|*.")})`
 
 RegisterCustom(PREFIX)
 
+const DEFAULT_SELECTOR = `!(*.${THEMES.join("|*.")})`
+
 const BUILD_PATH_PREFIX = "output"
 
-const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Config => {
-  const isLight = theme === "light"
-  const src = isLight ? DEFAULT_SELECTOR : `*.${theme}`
-  const isStable = basePxFontSize === 10
+const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Config => {
+  const isDefaultTheme = theme === "light"
+  const isDefaultSize = basePxFontSize === 10
+  const variant = isDefaultSize ? "" : "/web_thirdparty_16px"
 
-  const variant = isStable ? "" : "/web_thirdparty_16px"
+  const src = isDefaultTheme ? DEFAULT_SELECTOR : `*.${theme}`
 
   return {
-    ...CONFIG,
+    ...CONFIG_BASE,
     source: [`tokens/${src}.{json,json5}`],
     platforms: {
       css: {
@@ -60,7 +63,7 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
             options: {
               selector: (() => {
                 // For convenience, the light theme is scoped to :root and will be activated by default when imported.
-                const SELECTOR = isLight ? `:root, :host, .${PREFIX}-theme--${theme}` : `:host, .${PREFIX}-theme--${theme}`
+                const SELECTOR = isDefaultTheme ? `:root, :host, .${PREFIX}-theme--${theme}` : `:host, .${PREFIX}-theme--${theme}`
                 return `${SELECTOR} { color-scheme: ${theme}; }\n\n${SELECTOR}`
               })(),
               outputReferences: false
@@ -81,7 +84,7 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
             options: {
               selector: (() => {
                 // For convenience, the light theme is scoped to :root and will be activated by default when imported.
-                const SELECTOR = isLight ? `:root, :host, .${PREFIX}-theme--${theme}` : `:host, .${PREFIX}-theme--${theme}`
+                const SELECTOR = isDefaultTheme ? `:root, :host, .${PREFIX}-theme--${theme}` : `:host, .${PREFIX}-theme--${theme}`
                 return `${SELECTOR} { color-scheme: ${theme}; }\n\n${SELECTOR}`
               })(),
               outputReferences: false
@@ -99,26 +102,28 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
           {
             destination: `kfw-design-tokens.${theme}.js`,
             format: formats.javascriptEs6
-          },
-          {
-            destination: `kfw-design-tokens.${theme}.d.ts`,
-            format: formats.typescriptEs6Declarations
           }
         ]
       },
-      ...(!isStable && {
-        json: {
-          basePxFontSize,
-          buildPath: `${BUILD_PATH_PREFIX}/json`,
-          transformGroup: "custom/web-extended",
-          prefix: PREFIX,
-          files: [
-            {
-              destination: `kfw-design-tokens.${theme}.json`,
-              format: formats.json
-            }
-          ]
-        },
+      ...(isDefaultTheme &&
+        isDefaultSize && {
+          json: {
+            basePxFontSize,
+            buildPath: `${BUILD_PATH_PREFIX}/json`,
+            transformGroup: "custom/web-extended",
+            prefix: PREFIX,
+            files: [{ destination: `kfw-design-tokens.json`, format: formats.json }]
+          },
+          jsTypes: {
+            basePxFontSize,
+            buildPath: `${BUILD_PATH_PREFIX}${variant}/js`,
+            options: { fileHeader: "kfw-file-header" },
+            transformGroup: "custom/js-extended",
+            prefix: PREFIX,
+            files: [{ destination: `kfw-design-tokens.d.ts`, format: formats.typescriptEs6Declarations }]
+          }
+        }),
+      ...(!isDefaultSize && {
         figma: {
           basePxFontSize,
           buildPath: `${BUILD_PATH_PREFIX}/figma`,
@@ -126,7 +131,7 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
           files: [
             {
               destination: `kfw-design-tokens.${theme}.json`,
-              format: "json/figma"
+              format: formatsFigmaPenpot
             }
           ]
         },
@@ -137,7 +142,7 @@ const createStyleDictionaryConfig = (theme: string, basePxFontSize: number): Con
           files: [
             {
               destination: `kfw-design-tokens.${theme}.json`,
-              format: "json/penpot"
+              format: formatsFigmaPenpot
             }
           ]
         }
