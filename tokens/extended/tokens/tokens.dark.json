@@ -9,8 +9,7 @@
         "label": { "$value": "{base.color.gray.100}" }
       },
       "text": {
-        "default": { "$value": "{base.color.gray.100}" },
-        "on-dark-bg": { "$value": "{base.color.blue.700}" }
+        "default": { "$value": "{base.color.gray.100}" }
       },
       "background": {
         "default": { "$value": "{base.color.black}" },
