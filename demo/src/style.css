@@ -393,8 +393,7 @@
       border: 0;
     }
 
-    [type="file"],
-    [type="range"] {
+    :where([type="file"], [type="range"]) {
       padding: 0;
       border: 0;
       width: 100%;
@@ -779,12 +778,16 @@
     * File-Upload
     */
     .file-upload {
+      display: grid;
+      row-gap: var(--kfw-space-medium);
+    }
+
+    .file-upload__inner {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: var(--kfw-space-small) var(--kfw-space-small) var(--kfw-space-medium);
       background-color: var(--kfw-color-background-light-green);
-      margin-block-end: var(--kfw-space-medium);
     }
 
     .file-upload__title {
@@ -794,13 +797,16 @@
     }
 
     .file-upload__input {
+      display: none;
+    }
+
+    .file-upload :where([type="file"], [type="range"]) {
       width: auto;
       max-width: 100%;
     }
 
-    .file-upload--with-native-input .file-upload__input {
-      display: none;
-    }
+    /*
+
 
     .file-upload--with-native-input .file-upload__input--has-files {
       display: block;
@@ -809,6 +815,8 @@
     .file-upload--with-native-input:has(.file-upload__input--has-files) :where(button, [role="button"]) {
       display: none;
     }
+
+     */
 
     .file-upload__icon {
       width: 4rem;
@@ -866,6 +874,10 @@
       border-top: 0;
       min-height: 10px;
       min-width: 500px;
+    }
+
+    table.file-upload-table .file-upload-table__error {
+      grid-column: 1 / span 3;
     }
 
     table.file-upload-table .invalid-feedback {
