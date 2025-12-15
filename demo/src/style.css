@@ -894,6 +894,10 @@
         --action: 20%;
       }
     }
+
+    table.file-upload-table .file-upload-table__filename {
+      overflow-wrap: break-word;
+    }
   }
 }
 
