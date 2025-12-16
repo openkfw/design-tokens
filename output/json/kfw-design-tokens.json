@@ -1017,11 +1017,11 @@
           "$value": {
             "colorSpace": "srgb",
             "components": [
-              0.5765,
-              0.5961,
-              0.8784
+              0.6431,
+              0.3333,
+              0.7725
             ],
-            "hex": "#9598e0"
+            "hex": "#a455c5"
           },
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -1030,11 +1030,11 @@
             "$value": {
               "colorSpace": "srgb",
               "components": [
-                0.5765,
-                0.5961,
-                0.8784
+                0.6431,
+                0.3333,
+                0.7725
               ],
-              "hex": "#9598e0"
+              "hex": "#a455c5"
             },
             "$type": "color",
             "key": "{base.color.violet.400}"
@@ -1058,11 +1058,11 @@
           "$value": {
             "colorSpace": "srgb",
             "components": [
-              0.4,
-              0.4353,
-              0.7843
+              0.3921,
+              0.1921,
+              0.4745
             ],
-            "hex": "#686fc8"
+            "hex": "#643179"
           },
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -1071,11 +1071,11 @@
             "$value": {
               "colorSpace": "srgb",
               "components": [
-                0.4,
-                0.4353,
-                0.7843
+                0.3921,
+                0.1921,
+                0.4745
               ],
-              "hex": "#686fc8"
+              "hex": "#643179"
             },
             "$type": "color",
             "key": "{base.color.violet.500}"
@@ -4512,13 +4512,13 @@
             ],
             "hex": "#005a8c"
           },
-          "$description": "Main interaction color for buttons and links",
+          "$description": "Main interaction color for buttons and links (Blue 600)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.blue.600}",
-            "$description": "Main interaction color for buttons and links",
+            "$description": "Main interaction color for buttons and links (Blue 600)",
             "$type": "color",
             "key": "{semantic.color.fn.default}"
           },
@@ -4547,11 +4547,13 @@
             ],
             "hex": "#00446e"
           },
+          "$description": "Interaction color when active (e.g., hover, Blue 700)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.blue.700}",
+            "$description": "Interaction color when active (e.g., hover, Blue 700)",
             "$type": "color",
             "key": "{semantic.color.fn.active}"
           },
@@ -4580,11 +4582,13 @@
             ],
             "hex": "#a1adb5"
           },
+          "$description": "Interaction color when inactive (Gray 300)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.gray.300}",
+            "$description": "Interaction color when inactive (Gray 300)",
             "$type": "color",
             "key": "{semantic.color.fn.inactive}"
           },
@@ -4613,11 +4617,13 @@
             ],
             "hex": "#2d3134"
           },
+          "$description": "Interaction border color (Gray 600)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.gray.600}",
+            "$description": "Interaction border color (Gray 600)",
             "$type": "color",
             "key": "{semantic.color.fn.border}"
           },
@@ -4646,11 +4652,13 @@
             ],
             "hex": "#2d3134"
           },
+          "$description": "Interaction label color (Gray 600)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.gray.600}",
+            "$description": "Interaction label color (Gray 600)",
             "$type": "color",
             "key": "{semantic.color.fn.label}"
           },
@@ -4681,13 +4689,13 @@
             ],
             "hex": "#2d3134"
           },
-          "$description": "Main text color for body",
+          "$description": "Main text color for body (Gray 600)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.gray.600}",
-            "$description": "Main text color for body",
+            "$description": "Main text color for body (Gray 600)",
             "$type": "color",
             "key": "{semantic.color.text.default}"
           },
@@ -4716,11 +4724,13 @@
             ],
             "hex": "#ffffff"
           },
+          "$description": "Main text color on dark background (White)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.white.default}",
+            "$description": "Main text color on dark background (White)",
             "$type": "color",
             "key": "{semantic.color.text.on-dark-bg}"
           },
@@ -4749,11 +4759,13 @@
             ],
             "hex": "#ffffff"
           },
+          "$description": "Main text color on disabled (White)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.white.default}",
+            "$description": "Main text color on disabled (White)",
             "$type": "color",
             "key": "{semantic.color.text.on-disabled}"
           },
@@ -4782,11 +4794,13 @@
             ],
             "hex": "#b7f9aa"
           },
+          "$description": "Headline text color on dark background (Green 300)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.green.300}",
+            "$description": "Headline text color on dark background (Green 300)",
             "$type": "color",
             "key": "{semantic.color.text.headline-on-dark-bg}"
           },
@@ -4817,13 +4831,13 @@
             ],
             "hex": "#ffffff"
           },
-          "$description": "Main background color for body",
+          "$description": "Main background color for body (White)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.white.default}",
-            "$description": "Main background color for body",
+            "$description": "Main background color for body (White)",
             "$type": "color",
             "key": "{semantic.color.background.default}"
           },
@@ -4852,11 +4866,13 @@
             ],
             "hex": "#f6f7f8"
           },
+          "$description": "Neutral (Gray 50)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.gray.50}",
+            "$description": "Neutral (Gray 50)",
             "$type": "color",
             "key": "{semantic.color.background.subtle}"
           },
@@ -4885,11 +4901,13 @@
             ],
             "hex": "#a1adb5"
           },
+          "$description": "Disabled (Gray 300)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.gray.300}",
+            "$description": "Disabled (Gray 300)",
             "$type": "color",
             "key": "{semantic.color.background.disabled}"
           },
@@ -4918,11 +4936,13 @@
             ],
             "hex": "#e9f5fb"
           },
+          "$description": "Light blue (Blue 100)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.blue.100}",
+            "$description": "Light blue (Blue 100)",
             "$type": "color",
             "key": "{semantic.color.background.light-blue}"
           },
@@ -4951,11 +4971,13 @@
             ],
             "hex": "#ecfded"
           },
+          "$description": "Light green (Green 100)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.green.100}",
+            "$description": "Light green (Green 100)",
             "$type": "color",
             "key": "{semantic.color.background.light-green}"
           },
@@ -4984,11 +5006,13 @@
             ],
             "hex": "#00375b"
           },
+          "$description": "Dark blue (Blue 800)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.blue.800}",
+            "$description": "Dark blue (Blue 800)",
             "$type": "color",
             "key": "{semantic.color.background.dark-blue}"
           },
@@ -5017,11 +5041,13 @@
             ],
             "hex": "#398357"
           },
+          "$description": "Dark green (Green 700)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.green.700}",
+            "$description": "Dark green (Green 700)",
             "$type": "color",
             "key": "{semantic.color.background.dark-green}"
           },
@@ -5053,11 +5079,13 @@
             "hex": "#ffffff",
             "alpha": 0.9
           },
+          "$description": "White 90%",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.white.90}",
+            "$description": "White 90%",
             "$type": "color",
             "key": "{semantic.color.opaque.white-90}"
           },
@@ -5087,11 +5115,13 @@
             "hex": "#ffffff",
             "alpha": 0.95
           },
+          "$description": "White 95%",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.white.95}",
+            "$description": "White 95%",
             "$type": "color",
             "key": "{semantic.color.opaque.white-95}"
           },
@@ -5121,11 +5151,13 @@
             "hex": "#41484c",
             "alpha": 0.1
           },
+          "$description": "Gray 500 10%",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.gray.500.10}",
+            "$description": "Gray 500 10%",
             "$type": "color",
             "key": "{semantic.color.opaque.gray-500-10}"
           },
@@ -5155,11 +5187,13 @@
             "hex": "#41484c",
             "alpha": 0.3
           },
+          "$description": "Gray 500 30%",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.gray.500.30}",
+            "$description": "Gray 500 30%",
             "$type": "color",
             "key": "{semantic.color.opaque.gray-500-30}"
           },
@@ -5189,11 +5223,13 @@
             "hex": "#41484c",
             "alpha": 0.9
           },
+          "$description": "Gray 500 90%",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.gray.500.90}",
+            "$description": "Gray 500 90%",
             "$type": "color",
             "key": "{semantic.color.opaque.gray-500-90}"
           },
@@ -5284,11 +5320,11 @@
           "$value": {
             "colorSpace": "srgb",
             "components": [
-              0.5765,
-              0.5961,
-              0.8784
+              0.6431,
+              0.3333,
+              0.7725
             ],
-            "hex": "#9598e0"
+            "hex": "#a455c5"
           },
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -5752,11 +5788,11 @@
           "$value": {
             "colorSpace": "srgb",
             "components": [
-              0.4,
-              0.4353,
-              0.7843
+              0.3921,
+              0.1921,
+              0.4745
             ],
-            "hex": "#686fc8"
+            "hex": "#643179"
           },
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -7098,6 +7134,27 @@
           "large"
         ]
       }
+    },
+    "borderstyle": {
+      "key": "{semantic.borderstyle}",
+      "$type": "strokeStyle",
+      "$value": "solid",
+      "filePath": "tokens/tokens.json",
+      "isSource": true,
+      "original": {
+        "$type": "strokeStyle",
+        "$value": "solid",
+        "key": "{semantic.borderstyle}"
+      },
+      "name": "kfw-borderstyle",
+      "attributes": {
+        "category": "semantic",
+        "type": "borderstyle"
+      },
+      "path": [
+        "semantic",
+        "borderstyle"
+      ]
     },
     "focusring": {
       "outline-width": {

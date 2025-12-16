@@ -25,8 +25,8 @@ $kfw-base-color-gray-500-30: #41484c4d;
 $kfw-base-color-gray-500-90: #41484ce6;
 $kfw-base-color-gray-500: #41484c;
 $kfw-base-color-gray-600: #2d3134;
-$kfw-base-color-violet-400: #9598e0;
-$kfw-base-color-violet-500: #686fc8;
+$kfw-base-color-violet-400: #a455c5;
+$kfw-base-color-violet-500: #643179;
 $kfw-base-color-red-400: #c80538;
 $kfw-base-color-yellow-500: #eac80b;
 $kfw-base-fontfamily-sans: "KfW Centro Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -151,30 +151,30 @@ $kfw-base-layout-gridgap-static-xl: 3.6rem;
 $kfw-base-layout-gridgap-fluid-min: 1.2rem;
 $kfw-base-layout-gridgap-fluid-max: 3.6rem;
 $kfw-base-layout-gridgap-fluid-val: 3.529vi - 0.9176rem;
-$kfw-color-fn: #005a8c; // Main interaction color for buttons and links
-$kfw-color-fn-active: #00446e;
-$kfw-color-fn-inactive: #a1adb5;
-$kfw-color-fn-border: #2d3134;
-$kfw-color-fn-label: #2d3134;
-$kfw-color-text: #2d3134; // Main text color for body
-$kfw-color-text-on-dark-bg: #ffffff;
-$kfw-color-text-on-disabled: #ffffff;
-$kfw-color-text-headline-on-dark-bg: #b7f9aa;
-$kfw-color-background: #ffffff; // Main background color for body
-$kfw-color-background-subtle: #f6f7f8;
-$kfw-color-background-disabled: #a1adb5;
-$kfw-color-background-light-blue: #e9f5fb;
-$kfw-color-background-light-green: #ecfded;
-$kfw-color-background-dark-blue: #00375b;
-$kfw-color-background-dark-green: #398357;
-$kfw-color-opaque-white-90: #ffffffe6;
-$kfw-color-opaque-white-95: #fffffff2;
-$kfw-color-opaque-gray-500-10: #41484c1a;
-$kfw-color-opaque-gray-500-30: #41484c4d;
-$kfw-color-opaque-gray-500-90: #41484ce6;
+$kfw-color-fn: #005a8c; // Main interaction color for buttons and links (Blue 600)
+$kfw-color-fn-active: #00446e; // Interaction color when active (e.g., hover, Blue 700)
+$kfw-color-fn-inactive: #a1adb5; // Interaction color when inactive (Gray 300)
+$kfw-color-fn-border: #2d3134; // Interaction border color (Gray 600)
+$kfw-color-fn-label: #2d3134; // Interaction label color (Gray 600)
+$kfw-color-text: #2d3134; // Main text color for body (Gray 600)
+$kfw-color-text-on-dark-bg: #ffffff; // Main text color on dark background (White)
+$kfw-color-text-on-disabled: #ffffff; // Main text color on disabled (White)
+$kfw-color-text-headline-on-dark-bg: #b7f9aa; // Headline text color on dark background (Green 300)
+$kfw-color-background: #ffffff; // Main background color for body (White)
+$kfw-color-background-subtle: #f6f7f8; // Neutral (Gray 50)
+$kfw-color-background-disabled: #a1adb5; // Disabled (Gray 300)
+$kfw-color-background-light-blue: #e9f5fb; // Light blue (Blue 100)
+$kfw-color-background-light-green: #ecfded; // Light green (Green 100)
+$kfw-color-background-dark-blue: #00375b; // Dark blue (Blue 800)
+$kfw-color-background-dark-green: #398357; // Dark green (Green 700)
+$kfw-color-opaque-white-90: #ffffffe6; // White 90%
+$kfw-color-opaque-white-95: #fffffff2; // White 95%
+$kfw-color-opaque-gray-500-10: #41484c1a; // Gray 500 10%
+$kfw-color-opaque-gray-500-30: #41484c4d; // Gray 500 30%
+$kfw-color-opaque-gray-500-90: #41484ce6; // Gray 500 90%
 $kfw-color-state-danger: #c80538;
 $kfw-color-state-success: #398357;
-$kfw-color-state-warning: #9598e0;
+$kfw-color-state-warning: #a455c5;
 $kfw-color-status-red: #c80538;
 $kfw-color-status-yellow: #eac80b;
 $kfw-color-status-green: #398357;
@@ -188,7 +188,7 @@ $kfw-color-line-12: #a1adb5;
 $kfw-color-product-container: #f6f7f8;
 $kfw-color-product-benefit: #007abc;
 $kfw-color-product-credit: #398357;
-$kfw-color-product-cooperation: #686fc8;
+$kfw-color-product-cooperation: #643179;
 $kfw-color-product-credit-benefit: #41484c;
 $kfw-color-icon: #005a8c;
 $kfw-color-icon-secondary: #54b3e2;
@@ -244,6 +244,7 @@ $kfw-borderradius-small: 2px;
 $kfw-borderradius-circle: 999.9rem;
 $kfw-borderwidth: 1px;
 $kfw-borderwidth-large: 2px;
+$kfw-borderstyle: solid;
 $kfw-focusring-outline-width: 2px;
 $kfw-focusring-outline-offset: 2px;
 $kfw-focusring-outline-style: dashed;

@@ -291,22 +291,22 @@
           $value: {
             colorSpace: "srgb",
             components: [
-              0.5765,
-              0.5961,
-              0.8784,
+              0.6431,
+              0.3333,
+              0.7725,
             ],
-            hex: "#9598e0",
+            hex: "#a455c5",
           },
         },
         "500": {
           $value: {
             colorSpace: "srgb",
             components: [
-              0.4,
-              0.4353,
-              0.7843,
+              0.3921,
+              0.1921,
+              0.4745,
             ],
-            hex: "#686fc8",
+            hex: "#643179",
           },
         },
       },
@@ -1085,75 +1085,93 @@
       fn: {
         default: {
           $value: "{base.color.white.default}",
-          $description: "Main interaction color for buttons and links",
+          $description: "Main interaction color for buttons and links (Blue 600)",
         },
         active: {
           $value: "{base.color.white.default}",
+          $description: "Interaction color when active (e.g., hover, Blue 700)",
         },
         inactive: {
           $value: "{base.color.gray.300}",
+          $description: "Interaction color when inactive (Gray 300)",
         },
         border: {
           $value: "{base.color.gray.100}",
+          $description: "Interaction border color (Gray 600)",
         },
         label: {
           $value: "{base.color.gray.100}",
+          $description: "Interaction label color (Gray 600)",
         },
       },
       text: {
         default: {
           $value: "{base.color.gray.100}",
-          $description: "Main text color for body",
+          $description: "Main text color for body (Gray 600)",
         },
         "on-dark-bg": {
           $value: "{base.color.white.default}",
+          $description: "Main text color on dark background (White)",
         },
         "on-disabled": {
           $value: "{base.color.white.default}",
+          $description: "Main text color on disabled (White)",
         },
         "headline-on-dark-bg": {
           $value: "{base.color.green.300}",
+          $description: "Headline text color on dark background (Green 300)",
         },
       },
       background: {
         default: {
           $value: "{base.color.black}",
-          $description: "Main background color for body",
+          $description: "Main background color for body (White)",
         },
         subtle: {
           $value: "{base.color.gray.600}",
+          $description: "Neutral (Gray 50)",
         },
         disabled: {
           $value: "{base.color.gray.300}",
+          $description: "Disabled (Gray 300)",
         },
         "light-blue": {
           $value: "{base.color.blue.100}",
+          $description: "Light blue (Blue 100)",
         },
         "light-green": {
           $value: "{base.color.green.100}",
+          $description: "Light green (Green 100)",
         },
         "dark-blue": {
           $value: "{base.color.blue.800}",
+          $description: "Dark blue (Blue 800)",
         },
         "dark-green": {
           $value: "{base.color.green.700}",
+          $description: "Dark green (Green 700)",
         },
       },
       opaque: {
         "white-90": {
           $value: "{base.color.white.90}",
+          $description: "White 90%",
         },
         "white-95": {
           $value: "{base.color.white.95}",
+          $description: "White 95%",
         },
         "gray-500-10": {
           $value: "{base.color.gray.500.10}",
+          $description: "Gray 500 10%",
         },
         "gray-500-30": {
           $value: "{base.color.gray.500.30}",
+          $description: "Gray 500 30%",
         },
         "gray-500-90": {
           $value: "{base.color.gray.500.90}",
+          $description: "Gray 500 90%",
         },
       },
       state: {
@@ -1416,6 +1434,10 @@
       large: {
         $value: "{base.borderwidth.lg}",
       },
+    },
+    borderstyle: {
+      $type: "strokeStyle",
+      $value: "solid",
     },
     focusring: {
       "outline-width": {

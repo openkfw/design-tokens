@@ -109,11 +109,11 @@
       },
       "Violet": {
         "400": {
-          "$value": "#9598e0",
+          "$value": "#a455c5",
           "$type": "color"
         },
         "500": {
-          "$value": "#686fc8",
+          "$value": "#643179",
           "$type": "color"
         }
       },
@@ -411,7 +411,7 @@
           "$type": "color"
         },
         "Warning": {
-          "$value": "#9598e0",
+          "$value": "#a455c5",
           "$type": "color"
         }
       },
@@ -473,7 +473,7 @@
           "$type": "color"
         },
         "Cooperation": {
-          "$value": "#686fc8",
+          "$value": "#643179",
           "$type": "color"
         },
         "Credit-benefit": {
@@ -701,6 +701,10 @@
         "$value": "2px",
         "$type": "borderWidth"
       }
+    },
+    "Borderstyle": {
+      "$value": "solid",
+      "$type": "strokeStyle"
     },
     "Fontweight": {
       "Default": {

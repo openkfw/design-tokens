@@ -269,113 +269,131 @@ export const KfwBaseLayoutGridgapStaticXl: string;
 export const KfwBaseLayoutGridgapFluidMin: string;
 export const KfwBaseLayoutGridgapFluidMax: string;
 export const KfwBaseLayoutGridgapFluidVal: string;
-/** Main interaction color for buttons and links */
+/** Main interaction color for buttons and links (Blue 600) */
 export const KfwColorFn: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Interaction color when active (e.g., hover, Blue 700) */
 export const KfwColorFnActive: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Interaction color when inactive (Gray 300) */
 export const KfwColorFnInactive: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Interaction border color (Gray 600) */
 export const KfwColorFnBorder: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Interaction label color (Gray 600) */
 export const KfwColorFnLabel: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
-/** Main text color for body */
+/** Main text color for body (Gray 600) */
 export const KfwColorText: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Main text color on dark background (White) */
 export const KfwColorTextOnDarkBg: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Main text color on disabled (White) */
 export const KfwColorTextOnDisabled: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Headline text color on dark background (Green 300) */
 export const KfwColorTextHeadlineOnDarkBg: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
-/** Main background color for body */
+/** Main background color for body (White) */
 export const KfwColorBackground: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Neutral (Gray 50) */
 export const KfwColorBackgroundSubtle: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Disabled (Gray 300) */
 export const KfwColorBackgroundDisabled: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Light blue (Blue 100) */
 export const KfwColorBackgroundLightBlue: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Light green (Green 100) */
 export const KfwColorBackgroundLightGreen: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Dark blue (Blue 800) */
 export const KfwColorBackgroundDarkBlue: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** Dark green (Green 700) */
 export const KfwColorBackgroundDarkGreen: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
+/** White 90% */
 export const KfwColorOpaqueWhite90: {
   colorSpace: string;
   components: number[];
   hex: string;
   alpha: number;
 };
+/** White 95% */
 export const KfwColorOpaqueWhite95: {
   colorSpace: string;
   components: number[];
   hex: string;
   alpha: number;
 };
+/** Gray 500 10% */
 export const KfwColorOpaqueGray50010: {
   colorSpace: string;
   components: number[];
   hex: string;
   alpha: number;
 };
+/** Gray 500 30% */
 export const KfwColorOpaqueGray50030: {
   colorSpace: string;
   components: number[];
   hex: string;
   alpha: number;
 };
+/** Gray 500 90% */
 export const KfwColorOpaqueGray50090: {
   colorSpace: string;
   components: number[];
@@ -542,6 +560,7 @@ export const KfwBorderradiusSmall: string;
 export const KfwBorderradiusCircle: string;
 export const KfwBorderwidth: string;
 export const KfwBorderwidthLarge: string;
+export const KfwBorderstyle: string;
 export const KfwFocusringOutlineWidth: string;
 export const KfwFocusringOutlineOffset: string;
 export const KfwFocusringOutlineStyle: string;

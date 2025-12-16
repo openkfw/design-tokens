@@ -129,13 +129,13 @@ export const KfwBaseColorGray600 = {
 };
 export const KfwBaseColorViolet400 = {
   colorSpace: "srgb",
-  components: [0.5765, 0.5961, 0.8784],
-  hex: "#9598e0",
+  components: [0.6431, 0.3333, 0.7725],
+  hex: "#a455c5",
 };
 export const KfwBaseColorViolet500 = {
   colorSpace: "srgb",
-  components: [0.4, 0.4353, 0.7843],
-  hex: "#686fc8",
+  components: [0.3921, 0.1921, 0.4745],
+  hex: "#643179",
 };
 export const KfwBaseColorRed400 = {
   colorSpace: "srgb",
@@ -275,112 +275,112 @@ export const KfwColorFn = {
   colorSpace: "srgb",
   components: [0, 0.3529, 0.549],
   hex: "#005a8c",
-}; // Main interaction color for buttons and links
+}; // Main interaction color for buttons and links (Blue 600)
 export const KfwColorFnActive = {
   colorSpace: "srgb",
   components: [0, 0.2667, 0.4314],
   hex: "#00446e",
-};
+}; // Interaction color when active (e.g., hover, Blue 700)
 export const KfwColorFnInactive = {
   colorSpace: "srgb",
   components: [0.6314, 0.6784, 0.7098],
   hex: "#a1adb5",
-};
+}; // Interaction color when inactive (Gray 300)
 export const KfwColorFnBorder = {
   colorSpace: "srgb",
   components: [0.1765, 0.1922, 0.2039],
   hex: "#2d3134",
-};
+}; // Interaction border color (Gray 600)
 export const KfwColorFnLabel = {
   colorSpace: "srgb",
   components: [0.1765, 0.1922, 0.2039],
   hex: "#2d3134",
-};
+}; // Interaction label color (Gray 600)
 export const KfwColorText = {
   colorSpace: "srgb",
   components: [0.1765, 0.1922, 0.2039],
   hex: "#2d3134",
-}; // Main text color for body
+}; // Main text color for body (Gray 600)
 export const KfwColorTextOnDarkBg = {
   colorSpace: "srgb",
   components: [1, 1, 1],
   hex: "#ffffff",
-};
+}; // Main text color on dark background (White)
 export const KfwColorTextOnDisabled = {
   colorSpace: "srgb",
   components: [1, 1, 1],
   hex: "#ffffff",
-};
+}; // Main text color on disabled (White)
 export const KfwColorTextHeadlineOnDarkBg = {
   colorSpace: "srgb",
   components: [0.7176, 0.9765, 0.6667],
   hex: "#b7f9aa",
-};
+}; // Headline text color on dark background (Green 300)
 export const KfwColorBackground = {
   colorSpace: "srgb",
   components: [1, 1, 1],
   hex: "#ffffff",
-}; // Main background color for body
+}; // Main background color for body (White)
 export const KfwColorBackgroundSubtle = {
   colorSpace: "srgb",
   components: [0.9647, 0.9686, 0.9725],
   hex: "#f6f7f8",
-};
+}; // Neutral (Gray 50)
 export const KfwColorBackgroundDisabled = {
   colorSpace: "srgb",
   components: [0.6314, 0.6784, 0.7098],
   hex: "#a1adb5",
-};
+}; // Disabled (Gray 300)
 export const KfwColorBackgroundLightBlue = {
   colorSpace: "srgb",
   components: [0.9137, 0.9608, 0.9843],
   hex: "#e9f5fb",
-};
+}; // Light blue (Blue 100)
 export const KfwColorBackgroundLightGreen = {
   colorSpace: "srgb",
   components: [0.9255, 0.9922, 0.9294],
   hex: "#ecfded",
-};
+}; // Light green (Green 100)
 export const KfwColorBackgroundDarkBlue = {
   colorSpace: "srgb",
   components: [0, 0.2157, 0.3588],
   hex: "#00375b",
-};
+}; // Dark blue (Blue 800)
 export const KfwColorBackgroundDarkGreen = {
   colorSpace: "srgb",
   components: [0.2235, 0.5137, 0.3412],
   hex: "#398357",
-};
+}; // Dark green (Green 700)
 export const KfwColorOpaqueWhite90 = {
   colorSpace: "srgb",
   components: [1, 1, 1],
   hex: "#ffffff",
   alpha: 0.9,
-};
+}; // White 90%
 export const KfwColorOpaqueWhite95 = {
   colorSpace: "srgb",
   components: [1, 1, 1],
   hex: "#ffffff",
   alpha: 0.95,
-};
+}; // White 95%
 export const KfwColorOpaqueGray50010 = {
   colorSpace: "srgb",
   components: [0.2549, 0.2784, 0.298],
   hex: "#41484c",
   alpha: 0.1,
-};
+}; // Gray 500 10%
 export const KfwColorOpaqueGray50030 = {
   colorSpace: "srgb",
   components: [0.2549, 0.2784, 0.298],
   hex: "#41484c",
   alpha: 0.3,
-};
+}; // Gray 500 30%
 export const KfwColorOpaqueGray50090 = {
   colorSpace: "srgb",
   components: [0.2549, 0.2784, 0.298],
   hex: "#41484c",
   alpha: 0.9,
-};
+}; // Gray 500 90%
 export const KfwColorStateDanger = {
   colorSpace: "srgb",
   components: [0.7843, 0.0196, 0.2157],
@@ -393,8 +393,8 @@ export const KfwColorStateSuccess = {
 };
 export const KfwColorStateWarning = {
   colorSpace: "srgb",
-  components: [0.5765, 0.5961, 0.8784],
-  hex: "#9598e0",
+  components: [0.6431, 0.3333, 0.7725],
+  hex: "#a455c5",
 };
 export const KfwColorStatusRed = {
   colorSpace: "srgb",
@@ -463,8 +463,8 @@ export const KfwColorProductCredit = {
 };
 export const KfwColorProductCooperation = {
   colorSpace: "srgb",
-  components: [0.4, 0.4353, 0.7843],
-  hex: "#686fc8",
+  components: [0.3921, 0.1921, 0.4745],
+  hex: "#643179",
 };
 export const KfwColorProductCreditBenefit = {
   colorSpace: "srgb",
@@ -543,6 +543,7 @@ export const KfwBorderradiusSmall = "2px";
 export const KfwBorderradiusCircle = "624.9375rem";
 export const KfwBorderwidth = "1px";
 export const KfwBorderwidthLarge = "2px";
+export const KfwBorderstyle = "solid";
 export const KfwFocusringOutlineWidth = "2px";
 export const KfwFocusringOutlineOffset = "2px";
 export const KfwFocusringOutlineStyle = "dashed";
