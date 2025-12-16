@@ -101,22 +101,22 @@
           </div>
           <script>
             function getByPath(obj, path) {
-              return path.split('.').reduce((o, k) => (o ? o[k] : undefined), obj)
+              return path.split(".").reduce((o, k) => (o ? o[k] : undefined), obj)
             }
 
             document.addEventListener("DOMContentLoaded", () => {
-              document.querySelectorAll('[type="color"][data-token-key]').forEach(input => {
+              document.querySelectorAll('[type="color"][data-token-key]').forEach((input) => {
                 const key = input.dataset.tokenKey
-                const group = input.closest('.form-group')
-                const tCenter = group.querySelector('.t-center')
+                const group = input.closest(".form-group")
+                const tCenter = group.querySelector(".t-center")
                 tCenter.innerHTML = ""
 
-                const desc = document.createElement('label')
-                desc.className = 'form-text'
+                const desc = document.createElement("label")
+                desc.className = "form-text"
 
-                const btn = document.createElement('button')
-                btn.type = 'button'
-                btn.className = 'button--tertiary'
+                const btn = document.createElement("button")
+                btn.type = "button"
+                btn.className = "button--tertiary"
 
                 const token = getByPath(window.allTokens?.semantic?.color, key)
                 desc.textContent = token?.$description || ""

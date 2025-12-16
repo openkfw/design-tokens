@@ -403,9 +403,7 @@
       margin-inline-end: var(--kfw-space-xsmall);
     }
 
-    :where(input, select, textarea, fieldset) + small,
-    .form-text,
-    .invalid-feedback {
+    :where(.form-text, .invalid-feedback, .valid-feedback) {
       display: block;
       width: 100%;
       margin-block-start: 0.8rem;
@@ -414,12 +412,20 @@
       letter-spacing: var(--kfw-base-letterspacing-normal);
     }
 
+    .valid-feedback {
+      color: var(--kfw-color-state-success);
+    }
+
+    .valid-feedback__icon {
+      filter: color-to-filter(var(--kfw-color-state-success));
+    }
+
     .invalid-feedback {
       color: var(--kfw-color-state-danger);
     }
 
     .invalid-feedback__icon {
-      filter: color-to-filter(var(--kfw-base-color-red-400));
+      filter: color-to-filter(var(--kfw-color-state-danger));
     }
 
     :where(label, .form-label) {
@@ -859,11 +865,11 @@
       min-width: 500px;
     }
 
-    table.file-upload-table .file-upload-table__error {
+    table.file-upload-table :where(.file-upload-table__error, .file-upload-table__success, .file-upload-table__info) {
       grid-column: 1 / span 3;
     }
 
-    table.file-upload-table .invalid-feedback {
+    table.file-upload-table :where(.form-text, .invalid-feedback, .valid-feedback) {
       margin-block-start: 0;
     }
 

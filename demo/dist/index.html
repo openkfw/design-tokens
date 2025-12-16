@@ -14,8 +14,9 @@
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
+    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/demo/dist/assets/main-aLfxbq8f.js"></script>
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/fonts-ht38TVpc.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-Bmc1RwkB.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-BlNXpB1O.min.css">
   </head>
   <body>
     <div id="top"></div>
@@ -73,6 +74,63 @@
             advance by KfW via <a target="_blank" rel="noopener" href="mailto:logo@kfw.de">logo@kfw.de</a>.
           </p>
         </section>
+
+        <section>
+          <h1>Color</h1>
+          <h3>Interaktion</h3>
+          <div class="grid">
+            <div class="form-group">
+              <input class="form-control p-0" type="color" data-token-key="fn.default" />
+              <div class="t-center"></div>
+            </div>
+            <div class="form-group">
+              <input class="form-control p-0" type="color" data-token-key="fn.active" />
+              <div class="t-center"></div>
+            </div>
+            <div class="form-group">
+              <input class="form-control p-0" type="color" data-token-key="fn.inactive" />
+              <div class="t-center"></div>
+            </div>
+            <div class="form-group">
+              <input class="form-control p-0" type="color" data-token-key="fn.border" />
+              <div class="t-center"></div>
+            </div>
+          </div>
+          <script>
+            function getByPath(obj, path) {
+              return path.split('.').reduce((o, k) => (o ? o[k] : undefined), obj)
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+              document.querySelectorAll('[type="color"][data-token-key]').forEach(input => {
+                const key = input.dataset.tokenKey
+                const group = input.closest('.form-group')
+                const tCenter = group.querySelector('.t-center')
+                tCenter.innerHTML = ""
+
+                const desc = document.createElement('label')
+                desc.className = 'form-text'
+
+                const btn = document.createElement('button')
+                btn.type = 'button'
+                btn.className = 'button--tertiary'
+
+                const token = getByPath(window.allTokens?.semantic?.color, key)
+                desc.textContent = token?.$description || ""
+                btn.textContent = token ? token.name : "var(--kfw-color-fn)"
+                input.value = token?.$value?.hex || ""
+
+                btn.addEventListener("click", () => {
+                  navigator.clipboard.writeText(`var(--${btn.textContent})`).then(() => alert("Copied!"))
+                })
+
+                tCenter.appendChild(desc)
+                tCenter.appendChild(btn)
+              })
+            })
+          </script>
+        </section>
+
         <section>
           <h1>Typography</h1>
 
@@ -86,7 +144,6 @@
             turpis pretium. Quisque sed tristique felis.
           </p>
 
-          <!-- Blockquote-->
           <blockquote>
             "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. Nam at dui sit amet ipsum cursus ornare."
             <footer>
@@ -94,7 +151,6 @@
             </footer>
           </blockquote>
 
-          <!-- Lists-->
           <h3>Lists</h3>
           <ul>
             <li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
@@ -103,7 +159,6 @@
             <li>Proin ultricies turpis et volutpat vehicula.</li>
           </ul>
 
-          <!-- Inline text elements-->
           <h3>Inline text elements</h3>
           <div class="grid">
             <p>
@@ -198,10 +253,10 @@
           <h1>Buttons</h1>
           <div class="grid">
             <p>
-              <a href="#" onclick="event.preventDefault()" class="button--primary" role="button">
+              <button type="button" class="button--primary">
                 <img width="16" height="16" class="icon icon--left" src="https://openkfw.github.io/design-tokens/demo/dist/arrow-right-DydGX-Fx..svg" alt="" aria-hidden="true" loading="lazy" />
                 Primary Button
-              </a>
+              </button>
             </p>
             <p>
               <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">
@@ -316,20 +371,20 @@
                         <td class="file-upload-table__filename">Uploading.jpeg</td>
                         <td>1.35 MB</td>
                         <td>
-                          <a href="#" onclick="event.preventDefault()">
+                          <button type="button" class="button--tertiary">
                             <img loading="lazy" src="https://openkfw.github.io/design-tokens/demo/dist/delete-DSVLeodh..svg" alt="" class="icon" width="16" height="16" aria-hidden="true" />
                             Delete
-                          </a>
+                          </button>
                         </td>
                       </tr>
                       <tr>
                         <td class="file-upload-table__filename">Successfully_Uploaded.jpeg</td>
                         <td>765.82 KB</td>
                         <td>
-                          <a href="#" onclick="event.preventDefault()">
+                          <button type="button" class="button--tertiary">
                             <img loading="lazy" src="https://openkfw.github.io/design-tokens/demo/dist/delete-DSVLeodh..svg" alt="" class="icon" width="16" height="16" aria-hidden="true" />
                             Delete
-                          </a>
+                          </button>
                         </td>
                       </tr>
                       <tr>
@@ -351,10 +406,10 @@
                         <td class="file-upload-table__filename">Successfully_Uploaded-final-final2.jpeg</td>
                         <td>765.82 KB</td>
                         <td>
-                          <a href="#" onclick="event.preventDefault()">
+                          <button type="button" class="button--tertiary">
                             <img loading="lazy" src="https://openkfw.github.io/design-tokens/demo/dist/delete-DSVLeodh..svg" alt="" class="icon" width="16" height="16" aria-hidden="true" />
                             Delete
-                          </a>
+                          </button>
                         </td>
                       </tr>
                     </tbody>
