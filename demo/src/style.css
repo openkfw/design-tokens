@@ -1213,6 +1213,10 @@
     margin-inline: auto;
   }
 
+  .p-0 {
+    padding: 0;
+  }
+
   .p-x {
     padding-inline: var(--kfw-safezone);
   }
@@ -1247,5 +1251,9 @@
 
   .mb-xl {
     margin-block-end: var(--kfw-space-big);
+  }
+
+  .t-center {
+    text-align: center;
   }
 }
