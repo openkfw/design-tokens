@@ -46,6 +46,13 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
 
   const src = isDefaultTheme ? DEFAULT_SELECTOR : `*.${theme}`
 
+  function seletorRoot() {
+    const SELECTOR = isDefaultTheme
+      ? `[data-theme=${theme}], :root:not([data-theme=dark]), :host(:not([data-theme=dark]))`
+      : `[data-theme=${theme}], :host(:not([data-theme=light]))`
+    return `${SELECTOR} { color-scheme: ${theme}; }\n\n${SELECTOR}`
+  }
+
   return {
     ...CONFIG_BASE,
     source: [`tokens/${src}.{json,json5}`],
@@ -61,11 +68,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
             destination: `kfw-design-tokens.${theme}.css`,
             format: formats.cssVariables,
             options: {
-              selector: (() => {
-                // For convenience, the light theme is scoped to :root and will be activated by default when imported.
-                const SELECTOR = isDefaultTheme ? `:root, :host, .${PREFIX}-theme--${theme}` : `:host, .${PREFIX}-theme--${theme}`
-                return `${SELECTOR} { color-scheme: ${theme}; }\n\n${SELECTOR}`
-              })(),
+              selector: seletorRoot(),
               outputReferences: false
             }
           }
@@ -82,11 +85,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
             destination: `kfw-design-tokens.${theme}.scss`,
             format: formats.scssVariables,
             options: {
-              selector: (() => {
-                // For convenience, the light theme is scoped to :root and will be activated by default when imported.
-                const SELECTOR = isDefaultTheme ? `:root, :host, .${PREFIX}-theme--${theme}` : `:host, .${PREFIX}-theme--${theme}`
-                return `${SELECTOR} { color-scheme: ${theme}; }\n\n${SELECTOR}`
-              })(),
+              selector: seletorRoot(),
               outputReferences: false
             }
           }
