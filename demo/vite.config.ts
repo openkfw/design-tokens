@@ -63,7 +63,7 @@ export default defineConfig({
           } // @todo add version without hash for npm package usage
 
           if (/\.(woff2?|ttf|eot|otf)$/.test(name)) {
-            return "fonts/[name]-[hash].[extname]"
+            return "fonts/[name].[extname]"
           }
 
           return "[name]-[hash].[extname]"
