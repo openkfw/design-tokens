@@ -1025,19 +1025,33 @@
       const stickyClass = "header--sticky"
       let ticking = false
 
-      window.addEventListener("scroll", () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            if (window.scrollY > 10) {
-              header.classList.add(stickyClass)
-            } else {
-              header.classList.remove(stickyClass)
-            }
-            ticking = false
-          })
-          ticking = true
+      const update = () => {
+        const y = window.scrollY
+        const isSticky = header.classList.contains(stickyClass)
+
+        // Minimum hysteresis
+        if (y >= 128 && !isSticky) {
+          header.classList.add(stickyClass)
+        } else if (y < 64 && isSticky) {
+          header.classList.remove(stickyClass)
         }
-      })
+      }
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              update()
+              ticking = false
+            })
+            ticking = true
+          }
+        },
+        { passive: true }
+      )
+
+      update()
     </script>
   </body>
 </html>

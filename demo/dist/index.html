@@ -14,9 +14,9 @@
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
-    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/demo/dist/assets/main-DmKgTzeD.js"></script>
+    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/demo/dist/assets/main-BJE2uizg.js"></script>
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/fonts-ht38TVpc.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-y1yUYyJ_.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-CFIFC9gd.min.css">
   </head>
   <body>
     <div id="top"></div>
@@ -1022,19 +1022,33 @@
       const stickyClass = "header--sticky"
       let ticking = false
 
-      window.addEventListener("scroll", () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            if (window.scrollY > 10) {
-              header.classList.add(stickyClass)
-            } else {
-              header.classList.remove(stickyClass)
-            }
-            ticking = false
-          })
-          ticking = true
+      const update = () => {
+        const y = window.scrollY
+        const isSticky = header.classList.contains(stickyClass)
+
+        // Minimum hysteresis
+        if (y >= 128 && !isSticky) {
+          header.classList.add(stickyClass)
+        } else if (y < 64 && isSticky) {
+          header.classList.remove(stickyClass)
         }
-      })
+      }
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              update()
+              ticking = false
+            })
+            ticking = true
+          }
+        },
+        { passive: true }
+      )
+
+      update()
     </script>
   </body>
 </html>
