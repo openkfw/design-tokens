@@ -4,6 +4,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KfW Design Tokens Demo</title>
@@ -14,9 +15,12 @@
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
-    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/demo/dist/assets/main-BJE2uizg.js"></script>
+
+
+
+    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/demo/dist/assets/main-CuuLDAfo.js"></script>
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/fonts-ht38TVpc.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-CFIFC9gd.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-D66dwqp9.min.css">
   </head>
   <body>
     <div id="top"></div>
@@ -432,8 +436,8 @@
                 const tCenter = group.querySelector(".color-palette__container")
                 tCenter.innerHTML = ""
 
-                const desc = document.createElement("label")
-                desc.className = "color-palette__label"
+                const desc = document.createElement("span")
+                desc.className = "color-palette__label form-label"
 
                 const btn = document.createElement("button")
                 btn.type = "button"
