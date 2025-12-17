@@ -1258,6 +1258,14 @@
     padding: 0;
   }
 
+  .p-sm {
+    padding: var(--kfw-space-small);
+  }
+
+  .pb-0 {
+    padding-block-end: 0;
+  }
+
   .p-x {
     padding-inline: var(--kfw-safezone);
   }
