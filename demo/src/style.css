@@ -772,7 +772,7 @@
       padding: 0.25rem;
       margin: 0;
       cursor: pointer;
-      border-radius: 1rem;
+      border-radius: var(--kfw-borderradius); /* @todo check 1rem? */
     }
 
     .searchfield__button:where(:hover, :focus) {
@@ -1108,7 +1108,7 @@
       height: 3rem;
       border-color: var(--kfw-color-fn-inactive);
       border-width: var(--kfw-borderwidth);
-      border-style: solid; /* @todo add border-style token here later */
+      border-style: var(--kfw-borderstyle);
     }
 
     .color-palette__label {
@@ -1119,7 +1119,7 @@
 
     .color-palette__container {
       text-align: center;
-      padding-inline: 1rem;
+      padding-inline: var(--kfw-space-xsmall);
     }
   }
 
