@@ -22,7 +22,7 @@
     "update": "npx npm-check-updates -u",
     "editor": "jsoneditor-cli --initialExpand false --engine svelte-jsoneditor load tokens/tokens.json",
     "editor:dark": "jsoneditor-cli --port 5054 --engine svelte-jsoneditor load tokens/extended/tokens/tokens.dark.json",
-    "lint": "eslint . --ignore-pattern output --fix",
+    "lint": "eslint --ignore-pattern demo . --fix",
     "format": "npx prettier ./ --write --config .prettierrc.json",
     "typecheck": "tsc --noEmit",
     "precommit": "npm run typecheck && npm run format && npm run lint"
@@ -41,21 +41,22 @@
     "node": ">= 22.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
+    "@eslint/js": "^9.39.2",
     "@tsconfig/node24": "^24.0.3",
     "@types/lodash": "^4.17.21",
-    "@types/node": "^25.0.1",
+    "@types/node": "^24.0.3",
     "concurrently": "^9.2.1",
     "deep-get-set-ts": "^1.1.2",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "json5": "^2.2.3",
     "jsoneditor-cli": "^1.1.0",
     "lodash": "4.17.21",
+    "npm-check-updates": "^19.2.0",
     "prettier": "^3.7.4",
     "style-dictionary": "^5.1.1",
+    "style-dictionary-utils": "^6.0.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.49.0",
-    "npm-check-updates": "^19.2.0"
+    "typescript-eslint": "^8.50.0"
   }
 }

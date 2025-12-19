@@ -101,25 +101,25 @@ export const KfwBaseColorGray400 = {
 };
 export const KfwBaseColorGray50010 = {
   colorSpace: "srgb",
-  components: [0.2549, 0.2784, 0.298],
+  components: [0.2549, 0.2824, 0.298],
   hex: "#41484c",
   alpha: 0.1,
 };
 export const KfwBaseColorGray50030 = {
   colorSpace: "srgb",
-  components: [0.2549, 0.2784, 0.298],
+  components: [0.2549, 0.2824, 0.298],
   hex: "#41484c",
   alpha: 0.3,
 };
 export const KfwBaseColorGray50090 = {
   colorSpace: "srgb",
-  components: [0.2549, 0.2784, 0.298],
+  components: [0.2549, 0.2824, 0.298],
   hex: "#41484c",
   alpha: 0.9,
 };
 export const KfwBaseColorGray500 = {
   colorSpace: "srgb",
-  components: [0.2549, 0.2784, 0.298],
+  components: [0.2549, 0.2824, 0.298],
   hex: "#41484c",
 };
 export const KfwBaseColorGray600 = {
@@ -139,7 +139,7 @@ export const KfwBaseColorViolet500 = {
 };
 export const KfwBaseColorRed400 = {
   colorSpace: "srgb",
-  components: [0.7843, 0.0196, 0.2157],
+  components: [0.7843, 0.0196, 0.2196],
   hex: "#c80538",
 };
 export const KfwBaseColorYellow500 = {
@@ -163,31 +163,31 @@ export const KfwBaseSpaceStatic50 = "5rem";
 export const KfwBaseSpaceStatic60 = "6rem";
 export const KfwBaseSpaceFluid5Min = "0.5rem";
 export const KfwBaseSpaceFluid5Max = "1rem";
-export const KfwBaseSpaceFluid5Val = "0.588px";
+export const KfwBaseSpaceFluid5Val = "0.735vi + 0.588px";
 export const KfwBaseSpaceFluid10Min = "1rem";
 export const KfwBaseSpaceFluid10Max = "1.5rem";
-export const KfwBaseSpaceFluid10Val = "0.5588rem";
+export const KfwBaseSpaceFluid10Val = "0.735vi + 0.5588rem";
 export const KfwBaseSpaceFluid15Min = "1.5rem";
 export const KfwBaseSpaceFluid15Max = "2rem";
-export const KfwBaseSpaceFluid15Val = "1.0588rem";
+export const KfwBaseSpaceFluid15Val = "0.735vi + 1.0588rem";
 export const KfwBaseSpaceFluid20Min = "2rem";
 export const KfwBaseSpaceFluid20Max = "2.5rem";
-export const KfwBaseSpaceFluid20Val = "1.5588rem";
+export const KfwBaseSpaceFluid20Val = "0.735vi + 1.5588rem";
 export const KfwBaseSpaceFluid25Min = "2.5rem";
 export const KfwBaseSpaceFluid25Max = "3rem";
-export const KfwBaseSpaceFluid25Val = "2.0588rem";
+export const KfwBaseSpaceFluid25Val = "0.735vi + 2.0588rem";
 export const KfwBaseSpaceFluid30Min = "3rem";
 export const KfwBaseSpaceFluid30Max = "3.5rem";
-export const KfwBaseSpaceFluid30Val = "2.5588rem";
+export const KfwBaseSpaceFluid30Val = "0.735vi + 2.5588rem";
 export const KfwBaseSpaceFluid35Min = "3.5rem";
 export const KfwBaseSpaceFluid35Max = "4rem";
-export const KfwBaseSpaceFluid35Val = "3.0588rem";
+export const KfwBaseSpaceFluid35Val = "0.735vi + 3.0588rem";
 export const KfwBaseSpaceFluid40Min = "4rem";
 export const KfwBaseSpaceFluid40Max = "5rem";
-export const KfwBaseSpaceFluid40Val = "3.1176rem";
+export const KfwBaseSpaceFluid40Val = "1.471vi + 3.1176rem";
 export const KfwBaseSpaceFluid50Min = "5rem";
 export const KfwBaseSpaceFluid50Max = "6rem";
-export const KfwBaseSpaceFluid50Val = "4.1176rem";
+export const KfwBaseSpaceFluid50Val = "1.471vi + 4.1176rem";
 export const KfwBaseFontsizeStaticSm = "1.4rem";
 export const KfwBaseFontsizeStaticMd = "1.6rem";
 export const KfwBaseFontsizeStaticLg = "1.8rem";
@@ -201,31 +201,31 @@ export const KfwBaseFontsizeStatic7xl = "3.2rem";
 export const KfwBaseFontsizeStatic8xl = "3.6rem";
 export const KfwBaseFontsizeFluidSmMin = "1.4rem";
 export const KfwBaseFontsizeFluidSmMax = "1.6rem";
-export const KfwBaseFontsizeFluidSmVal = "1.2235rem";
+export const KfwBaseFontsizeFluidSmVal = "0.294vi + 1.2235rem";
 export const KfwBaseFontsizeFluidMdMin = "1.6rem";
 export const KfwBaseFontsizeFluidMdMax = "1.8rem";
-export const KfwBaseFontsizeFluidMdVal = "1.4235rem";
+export const KfwBaseFontsizeFluidMdVal = "0.294vi + 1.4235rem";
 export const KfwBaseFontsizeFluidLgMin = "1.8rem";
 export const KfwBaseFontsizeFluidLgMax = "2rem";
-export const KfwBaseFontsizeFluidLgVal = "1.6235rem";
+export const KfwBaseFontsizeFluidLgVal = "0.294vi + 1.6235rem";
 export const KfwBaseFontsizeFluidXlMin = "2rem";
 export const KfwBaseFontsizeFluidXlMax = "2.2rem";
-export const KfwBaseFontsizeFluidXlVal = "1.8235rem";
+export const KfwBaseFontsizeFluidXlVal = "0.294vi + 1.8235rem";
 export const KfwBaseFontsizeFluid2xlMin = "2.2rem";
 export const KfwBaseFontsizeFluid2xlMax = "2.4rem";
-export const KfwBaseFontsizeFluid2xlVal = "2.0235rem";
+export const KfwBaseFontsizeFluid2xlVal = "0.294vi + 2.0235rem";
 export const KfwBaseFontsizeFluid3xlMin = "2.4rem";
 export const KfwBaseFontsizeFluid3xlMax = "2.6rem";
-export const KfwBaseFontsizeFluid3xlVal = "2.2235rem";
+export const KfwBaseFontsizeFluid3xlVal = "0.294vi + 2.2235rem";
 export const KfwBaseFontsizeFluid4xlMin = "2.6rem";
 export const KfwBaseFontsizeFluid4xlMax = "2.8rem";
-export const KfwBaseFontsizeFluid4xlVal = "2.4234999999999998rem";
+export const KfwBaseFontsizeFluid4xlVal = "0.294vi + 2.4234999999999998rem";
 export const KfwBaseFontsizeFluid5xlMin = "2.8rem";
 export const KfwBaseFontsizeFluid5xlMax = "3.2rem";
-export const KfwBaseFontsizeFluid5xlVal = "2.4471rem";
+export const KfwBaseFontsizeFluid5xlVal = "0.588vi + 2.4471rem";
 export const KfwBaseFontsizeFluid6xlMin = "3rem";
 export const KfwBaseFontsizeFluid6xlMax = "3.6rem";
-export const KfwBaseFontsizeFluid6xlVal = "2.4706rem";
+export const KfwBaseFontsizeFluid6xlVal = "0.882vi + 2.4706rem";
 export const KfwBaseLineheight2xs = 1.2;
 export const KfwBaseLineheightXs = 1.3;
 export const KfwBaseLineheightSm = 1.333;
@@ -255,7 +255,7 @@ export const KfwBaseLayoutSafezoneStaticMd = "2rem";
 export const KfwBaseLayoutSafezoneStaticLg = "4rem";
 export const KfwBaseLayoutSafezoneFluidMin = "2rem";
 export const KfwBaseLayoutSafezoneFluidMax = "4rem";
-export const KfwBaseLayoutSafezoneFluidVal = "0.2353rem";
+export const KfwBaseLayoutSafezoneFluidVal = "2.941vi + 0.2353rem";
 export const KfwBaseLayoutGridcolumn1 = 1;
 export const KfwBaseLayoutGridcolumn2 = 2;
 export const KfwBaseLayoutGridcolumn3 = 3;
@@ -270,7 +270,7 @@ export const KfwBaseLayoutGridgapStaticLg = "2.6rem";
 export const KfwBaseLayoutGridgapStaticXl = "3.6rem";
 export const KfwBaseLayoutGridgapFluidMin = "1.2rem";
 export const KfwBaseLayoutGridgapFluidMax = "3.6rem";
-export const KfwBaseLayoutGridgapFluidVal = "-0.9176rem";
+export const KfwBaseLayoutGridgapFluidVal = "3.529vi - 0.9176rem";
 export const KfwColorFn = {
   colorSpace: "srgb",
   components: [0, 0.3529, 0.549],
@@ -365,25 +365,25 @@ export const KfwColorOpaqueWhite95 = {
 }; // White 95%
 export const KfwColorOpaqueGray50010 = {
   colorSpace: "srgb",
-  components: [0.2549, 0.2784, 0.298],
+  components: [0.2549, 0.2824, 0.298],
   hex: "#41484c",
   alpha: 0.1,
 }; // Gray 500 10%
 export const KfwColorOpaqueGray50030 = {
   colorSpace: "srgb",
-  components: [0.2549, 0.2784, 0.298],
+  components: [0.2549, 0.2824, 0.298],
   hex: "#41484c",
   alpha: 0.3,
 }; // Gray 500 30%
 export const KfwColorOpaqueGray50090 = {
   colorSpace: "srgb",
-  components: [0.2549, 0.2784, 0.298],
+  components: [0.2549, 0.2824, 0.298],
   hex: "#41484c",
   alpha: 0.9,
 }; // Gray 500 90%
 export const KfwColorStateDanger = {
   colorSpace: "srgb",
-  components: [0.7843, 0.0196, 0.2157],
+  components: [0.7843, 0.0196, 0.2196],
   hex: "#c80538",
 };
 export const KfwColorStateSuccess = {
@@ -398,7 +398,7 @@ export const KfwColorStateWarning = {
 };
 export const KfwColorStatusRed = {
   colorSpace: "srgb",
-  components: [0.7843, 0.0196, 0.2157],
+  components: [0.7843, 0.0196, 0.2196],
   hex: "#c80538",
 };
 export const KfwColorStatusYellow = {
@@ -468,7 +468,7 @@ export const KfwColorProductCooperation = {
 };
 export const KfwColorProductCreditBenefit = {
   colorSpace: "srgb",
-  components: [0.2549, 0.2784, 0.298],
+  components: [0.2549, 0.2824, 0.298],
   hex: "#41484c",
 };
 export const KfwColorIcon = {
@@ -500,10 +500,10 @@ export const KfwSpaceSmall = "2rem";
 export const KfwSpaceMedium = "3rem";
 export const KfwSpaceLargeMin = "3.5rem";
 export const KfwSpaceLargeMax = "4rem";
-export const KfwSpaceLargeVal = "3.0588rem";
+export const KfwSpaceLargeVal = "0.735vi + 3.0588rem";
 export const KfwSpaceBigMin = "5rem";
 export const KfwSpaceBigMax = "6rem";
-export const KfwSpaceBigVal = "4.1176rem";
+export const KfwSpaceBigVal = "1.471vi + 4.1176rem";
 export const KfwFontspace = "2rem";
 export const KfwFontspace2xsmall = "0.5rem";
 export const KfwFontspaceXsmall = "1rem";
@@ -521,16 +521,16 @@ export const KfwFontsizeLarge = "1.8rem";
 export const KfwFontsizeSmall = "1.4rem";
 export const KfwFontsizeHeading1Min = "3rem";
 export const KfwFontsizeHeading1Max = "3.6rem";
-export const KfwFontsizeHeading1Val = "2.4706rem";
+export const KfwFontsizeHeading1Val = "0.882vi + 2.4706rem";
 export const KfwFontsizeHeading2Min = "2.8rem";
 export const KfwFontsizeHeading2Max = "3.2rem";
-export const KfwFontsizeHeading2Val = "2.4471rem";
+export const KfwFontsizeHeading2Val = "0.588vi + 2.4471rem";
 export const KfwFontsizeHeading3Min = "2.4rem";
 export const KfwFontsizeHeading3Max = "2.6rem";
-export const KfwFontsizeHeading3Val = "2.2235rem";
+export const KfwFontsizeHeading3Val = "0.294vi + 2.2235rem";
 export const KfwFontsizeHeading4Min = "2rem";
 export const KfwFontsizeHeading4Max = "2.2rem";
-export const KfwFontsizeHeading4Val = "1.8235rem";
+export const KfwFontsizeHeading4Val = "0.294vi + 1.8235rem";
 export const KfwFontsizeHeading5 = "1.8rem";
 export const KfwFontsizeHeading6 = "1.6rem";
 export const KfwLineheight = 1.4;
@@ -558,4 +558,4 @@ export const KfwContentwrapperBasic = "108rem";
 export const KfwContentwrapperExtended = "128rem";
 export const KfwSafezoneMin = "2rem";
 export const KfwSafezoneMax = "4rem";
-export const KfwSafezoneVal = "0.2353rem";
+export const KfwSafezoneVal = "2.941vi + 0.2353rem";

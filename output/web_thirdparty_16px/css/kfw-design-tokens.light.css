@@ -17,8 +17,8 @@
   --kfw-base-color-green-700: #398357;
   --kfw-base-color-white-90: #ffffffe6;
   --kfw-base-color-white-95: #fffffff2;
-  --kfw-base-color-white: #ffffff;
-  --kfw-base-color-black: #000000;
+  --kfw-base-color-white: #fff;
+  --kfw-base-color-black: #000;
   --kfw-base-color-gray-50: #f6f7f8;
   --kfw-base-color-gray-100: #eef0f2;
   --kfw-base-color-gray-200: #d8dfe3;
@@ -161,10 +161,10 @@
   --kfw-color-fn-border: #2d3134; /** Interaction border color (Gray 600) */
   --kfw-color-fn-label: #2d3134; /** Interaction label color (Gray 600) */
   --kfw-color-text: #2d3134; /** Main text color for body (Gray 600) */
-  --kfw-color-text-on-dark-bg: #ffffff; /** Main text color on dark background (White) */
-  --kfw-color-text-on-disabled: #ffffff; /** Main text color on disabled (White) */
+  --kfw-color-text-on-dark-bg: #fff; /** Main text color on dark background (White) */
+  --kfw-color-text-on-disabled: #fff; /** Main text color on disabled (White) */
   --kfw-color-text-headline-on-dark-bg: #b7f9aa; /** Headline text color on dark background (Green 300) */
-  --kfw-color-background: #ffffff; /** Main background color for body (White) */
+  --kfw-color-background: #fff; /** Main background color for body (White) */
   --kfw-color-background-subtle: #f6f7f8; /** Neutral (Gray 50) */
   --kfw-color-background-disabled: #a1adb5; /** Disabled (Gray 300) */
   --kfw-color-background-light-blue: #e9f5fb; /** Light blue (Blue 100) */

@@ -55,12 +55,12 @@
           "$type": "color"
         },
         "Default": {
-          "$value": "#ffffff",
+          "$value": "#fff",
           "$type": "color"
         }
       },
       "Black": {
-        "$value": "#000000",
+        "$value": "#000",
         "$type": "color"
       },
       "Gray": {
@@ -337,11 +337,11 @@
           "$type": "color"
         },
         "On-dark-bg": {
-          "$value": "#ffffff",
+          "$value": "#fff",
           "$type": "color"
         },
         "On-disabled": {
-          "$value": "#ffffff",
+          "$value": "#fff",
           "$type": "color"
         },
         "Headline-on-dark-bg": {
@@ -351,7 +351,7 @@
       },
       "Background": {
         "Default": {
-          "$value": "#ffffff",
+          "$value": "#fff",
           "$type": "color"
         },
         "Subtle": {

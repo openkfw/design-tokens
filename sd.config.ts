@@ -8,10 +8,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import StyleDictionary from "style-dictionary"
 import { Config } from "style-dictionary/types"
 import { formats, logBrokenReferenceLevels, logVerbosityLevels } from "style-dictionary/enums"
 import { RegisterCustom } from "./config"
+import { StyleDictionary } from "style-dictionary-utils"
 
 const THEMES = ["light"] as const
 export type Theme = (typeof THEMES)[number]
@@ -61,7 +61,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
         basePxFontSize,
         buildPath: `${BUILD_PATH_PREFIX}${variant}/css`,
         options: { fileHeader: "kfw-file-header" },
-        transformGroup: "custom/css-extended",
+        transformGroup: "css-scss/extended",
         prefix: PREFIX,
         files: [
           {
@@ -78,7 +78,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
         basePxFontSize,
         buildPath: `${BUILD_PATH_PREFIX}${variant}/scss`,
         options: { fileHeader: "kfw-file-header" },
-        transformGroup: "custom/scss-extended",
+        transformGroup: "css-scss/extended",
         prefix: PREFIX,
         files: [
           {
@@ -95,7 +95,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
         basePxFontSize,
         buildPath: `${BUILD_PATH_PREFIX}${variant}/js`,
         options: { fileHeader: "kfw-file-header" },
-        transformGroup: "custom/js-extended",
+        transformGroup: "js/extended",
         prefix: PREFIX,
         files: [
           {
@@ -109,15 +109,15 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
           json: {
             basePxFontSize,
             buildPath: `${BUILD_PATH_PREFIX}/json`,
-            transformGroup: "custom/web-extended",
+            transformGroup: "web/extended",
             prefix: PREFIX,
             files: [{ destination: `kfw-design-tokens.json`, format: formats.json }]
           },
           jsTypes: {
             basePxFontSize,
             buildPath: `${BUILD_PATH_PREFIX}${variant}/js`,
+            transformGroup: "js/extended",
             options: { fileHeader: "kfw-file-header" },
-            transformGroup: "custom/js-extended",
             prefix: PREFIX,
             files: [{ destination: `kfw-design-tokens.d.ts`, format: formats.typescriptEs6Declarations }]
           }
@@ -126,7 +126,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
         figma: {
           basePxFontSize,
           buildPath: `${BUILD_PATH_PREFIX}/figma`,
-          transformGroup: "custom/figma-penpot",
+          transformGroup: "figma-penpot",
           files: [
             {
               destination: `kfw-design-tokens.${theme}.json`,
@@ -137,7 +137,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
         penpot: {
           basePxFontSize,
           buildPath: `${BUILD_PATH_PREFIX}/penpot`,
-          transformGroup: "custom/figma-penpot",
+          transformGroup: "figma-penpot",
           files: [
             {
               destination: `kfw-design-tokens.${theme}.json`,
@@ -158,8 +158,10 @@ export default (async function buildThemes() {
     for (const key in BASE_PX) {
       if (Object.prototype.hasOwnProperty.call(BASE_PX, key)) {
         const basePxFontSize = BASE_PX[key as keyof typeof BASE_PX]
-        const sd = new StyleDictionary(createStyleDictionaryConfig(theme, basePxFontSize))
-        await sd.buildAllPlatforms()
+
+        const myStyleDictionary = new StyleDictionary()
+        const extendedSd = await myStyleDictionary.extend(createStyleDictionaryConfig(theme, basePxFontSize))
+        await extendedSd.buildAllPlatforms()
       }
     }
   }

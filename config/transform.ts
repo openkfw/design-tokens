@@ -8,15 +8,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import StyleDictionary from "style-dictionary"
 import { transforms, transformTypes } from "style-dictionary/enums"
-import { resolveReferences, usesReferences } from "style-dictionary/utils"
-import JSON5 from "json5"
-import { fs } from "style-dictionary/fs"
-
-import { formatUnitValue, isPascalCase, kebabToPascalCase } from "./shared"
-
-const { sizePxToRem } = transforms
+import { isPascalCase, kebabToPascalCase } from "./shared"
+import { StyleDictionary } from "style-dictionary-utils"
 
 export function RegisterTransforms(PREFIX: string) {
   /**
@@ -25,8 +19,8 @@ export function RegisterTransforms(PREFIX: string) {
    * Scales non-zero numbers to rem, and adds ‘rem’ to the end.
    */
   StyleDictionary.registerTransform({
-    ...StyleDictionary.hooks.transforms[sizePxToRem],
-    name: sizePxToRem,
+    ...StyleDictionary.hooks.transforms[transforms.sizePxToRem],
+    name: "size/pxToRem/extended",
     type: transformTypes.value,
     transitive: true,
     filter: (token) => {
@@ -90,128 +84,38 @@ export function RegisterTransforms(PREFIX: string) {
     }
   })
 
-  StyleDictionary.registerTransform({
-    name: "web/flatten-properties-color",
-    transitive: false,
-    type: transformTypes.value,
-    filter: (token) => token.$type === "color" && typeof token.$value === "object",
-    transform: (token) => {
-      const { $value, $type } = token
-      if (!$value || $type !== "color") return undefined
-
-      const { colorSpace, hex, components, alpha } = $value
-
-      if (hex) {
-        if (alpha) {
-          const a = Math.round(alpha * 255)
-            .toString(16)
-            .padStart(2, "0")
-          return hex + a
-        }
-        return hex
-      }
-
-      if (colorSpace === "srgb" && components?.length === 3) {
-        const [red, green, blue] = components
-        if (red !== undefined && green !== undefined && blue !== undefined) {
-          const sRGBtoRGB = (num: number) => {
-            const result = Math.round(num * 255)
-            return result % 1 === 0 ? result : result.toFixed(4)
-          }
-          const color = `rgb(${sRGBtoRGB(red)}, ${sRGBtoRGB(green)}, ${sRGBtoRGB(blue)})`
-          return alpha ? `rgba(${color.slice(4, -1)}, ${alpha})` : color
-        }
-      }
-      return $value
-    }
-  })
-
-  StyleDictionary.registerTransform({
-    name: "web/flatten-properties-dimension",
-    transitive: false,
-    type: transformTypes.value,
-    filter: (token) => token.$type === "dimension" && typeof token.$value === "object",
-    transform: (token, platform) => {
-      const { $value, $type } = token
-      if (!$value || $type !== "dimension") return undefined
-      return formatUnitValue($value, platform)
-    }
-  })
-
-  StyleDictionary.registerTransform({
-    name: "web/flatten-properties-border",
-    transitive: true,
-    type: transformTypes.value,
-    filter: (token) => token.$type === "border",
-    transform: (token, platform) => {
-      const { $value, $type, original } = token
-      if (!$value || $type !== "border") return undefined
-
-      const dictionary = JSON5.parse(fs.readFileSync(token.filePath, "utf8").toString())
-      const { width } = original.$value
-      if (!width) return undefined
-
-      const resolveIfReference = (value: string) => (usesReferences(value) ? resolveReferences(value, dictionary, { usesDtcg: true }) : value)
-      const flattenWidth = formatUnitValue(resolveIfReference(width), platform)
-
-      if ($value.includes("[object Object]")) {
-        const op = $value.split("[object Object] ")
-        return `${flattenWidth}${op.join(" ")}`
-      }
-
-      return $value
-    }
+  StyleDictionary.registerTransformGroup({
+    name: "final/output",
+    transforms: ["name/exclude-semantic-and-modify-this", "size/pxToRem/extended", "size/fluid"]
   })
 
   StyleDictionary.registerTransformGroup({
-    name: "custom/flatten-dtcg-props",
-    transforms: ["web/flatten-properties-color", "web/flatten-properties-dimension", "web/flatten-properties-border"]
+    name: "css-scss/extended",
+    transforms: [...StyleDictionary.hooks.transformGroups["css/extended"], ...StyleDictionary.hooks.transformGroups["final/output"]]
   })
 
+  // For JS output, we want to convert dimensions and typography to CSS values, srgb colors should be stay as is
   StyleDictionary.registerTransformGroup({
-    name: "custom/css-extended",
-    transforms: [
-      ...StyleDictionary.hooks.transformGroups.css,
-      ...StyleDictionary.hooks.transformGroups["custom/flatten-dtcg-props"],
-      "name/exclude-semantic-and-modify-this",
-      sizePxToRem,
-      "size/fluid"
-    ]
-  })
-
-  StyleDictionary.registerTransformGroup({
-    name: "custom/scss-extended",
-    transforms: [
-      ...StyleDictionary.hooks.transformGroups.scss,
-      ...StyleDictionary.hooks.transformGroups["custom/flatten-dtcg-props"],
-      "name/exclude-semantic-and-modify-this",
-      sizePxToRem,
-      "size/fluid"
-    ]
-  })
-
-  StyleDictionary.registerTransformGroup({
-    name: "custom/js-extended",
+    name: "js/extended",
     transforms: [
       ...StyleDictionary.hooks.transformGroups.js,
-      "name/exclude-semantic-and-modify-this",
-      "web/flatten-properties-dimension",
-      sizePxToRem
+      "dimension/css",
+      "typography/css",
+      ...StyleDictionary.hooks.transformGroups["final/output"]
     ]
   })
 
   StyleDictionary.registerTransformGroup({
-    name: "custom/web-extended",
+    name: "web/extended",
     transforms: [
       ...StyleDictionary.hooks.transformGroups.web,
-      "name/exclude-semantic-and-modify-this",
-      "web/flatten-properties-dimension",
-      sizePxToRem
+      ...StyleDictionary.hooks.transformGroups["css/extended"],
+      ...StyleDictionary.hooks.transformGroups["final/output"]
     ]
   })
 
   StyleDictionary.registerTransformGroup({
-    name: "custom/figma-penpot",
-    transforms: [...StyleDictionary.hooks.transformGroups["custom/flatten-dtcg-props"]]
+    name: "figma-penpot",
+    transforms: [...StyleDictionary.hooks.transformGroups["css/extended"], "name/exclude-semantic-and-modify-this"]
   })
 }

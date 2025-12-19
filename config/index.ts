@@ -10,9 +10,10 @@
 
 import { RegisterTransforms } from "./transform"
 import { RegisterFormats } from "./format"
-import StyleDictionary from "style-dictionary"
 import { FileHeader } from "style-dictionary/types"
 import { version } from "../package.json"
+
+import { StyleDictionary } from "style-dictionary-utils"
 
 export const RegisterCustom = (PREFIX: string) => {
   RegisterTransforms(PREFIX)

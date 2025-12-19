@@ -8,11 +8,11 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import StyleDictionary from "style-dictionary"
 import { TransformedToken, TransformedTokens } from "style-dictionary/types"
 import { humanCase } from "./shared"
 import deep from "deep-get-set-ts"
 import { formatsFigmaPenpot } from "../sd.config"
+import { StyleDictionary } from "style-dictionary-utils"
 
 const extractTokenValue = ({ $value, $type, path }: TransformedToken) => {
   const attributes = {

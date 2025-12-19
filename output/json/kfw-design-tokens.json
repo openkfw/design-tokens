@@ -4,15 +4,7 @@
       "blue": {
         "100": {
           "key": "{base.color.blue.100}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.9137,
-              0.9608,
-              0.9843
-            ],
-            "hex": "#e9f5fb"
-          },
+          "$value": "#e9f5fb",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -45,15 +37,7 @@
         },
         "400": {
           "key": "{base.color.blue.400}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.3294,
-              0.7039,
-              0.8863
-            ],
-            "hex": "#54b3e2"
-          },
+          "$value": "#54b3e2",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -86,15 +70,7 @@
         },
         "500": {
           "key": "{base.color.blue.500}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.4784,
-              0.7373
-            ],
-            "hex": "#007abc"
-          },
+          "$value": "#007abc",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -127,15 +103,7 @@
         },
         "600": {
           "key": "{base.color.blue.600}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.3529,
-              0.549
-            ],
-            "hex": "#005a8c"
-          },
+          "$value": "#005a8c",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -168,15 +136,7 @@
         },
         "700": {
           "key": "{base.color.blue.700}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.2667,
-              0.4314
-            ],
-            "hex": "#00446e"
-          },
+          "$value": "#00446e",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -209,15 +169,7 @@
         },
         "800": {
           "key": "{base.color.blue.800}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.2157,
-              0.3588
-            ],
-            "hex": "#00375b"
-          },
+          "$value": "#00375b",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -252,15 +204,7 @@
       "green": {
         "100": {
           "key": "{base.color.green.100}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.9255,
-              0.9922,
-              0.9294
-            ],
-            "hex": "#ecfded"
-          },
+          "$value": "#ecfded",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -293,15 +237,7 @@
         },
         "300": {
           "key": "{base.color.green.300}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.7176,
-              0.9765,
-              0.6667
-            ],
-            "hex": "#b7f9aa"
-          },
+          "$value": "#b7f9aa",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -334,15 +270,7 @@
         },
         "400": {
           "key": "{base.color.green.400}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.5804,
-              0.9216,
-              0.5647
-            ],
-            "hex": "#94eb90"
-          },
+          "$value": "#94eb90",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -375,15 +303,7 @@
         },
         "700": {
           "key": "{base.color.green.700}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.2235,
-              0.5137,
-              0.3412
-            ],
-            "hex": "#398357"
-          },
+          "$value": "#398357",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -418,16 +338,7 @@
       "white": {
         "90": {
           "key": "{base.color.white.90}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              1,
-              1,
-              1
-            ],
-            "hex": "#ffffff",
-            "alpha": 0.9
-          },
+          "$value": "#ffffffe6",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -461,16 +372,7 @@
         },
         "95": {
           "key": "{base.color.white.95}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              1,
-              1,
-              1
-            ],
-            "hex": "#ffffff",
-            "alpha": 0.95
-          },
+          "$value": "#fffffff2",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -504,15 +406,7 @@
         },
         "default": {
           "key": "{base.color.white.default}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              1,
-              1,
-              1
-            ],
-            "hex": "#ffffff"
-          },
+          "$value": "#fff",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -546,15 +440,7 @@
       },
       "black": {
         "key": "{base.color.black}",
-        "$value": {
-          "colorSpace": "srgb",
-          "components": [
-            0,
-            0,
-            0
-          ],
-          "hex": "#000000"
-        },
+        "$value": "#000",
         "filePath": "tokens/tokens.json",
         "isSource": true,
         "$type": "color",
@@ -586,15 +472,7 @@
       "gray": {
         "50": {
           "key": "{base.color.gray.50}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.9647,
-              0.9686,
-              0.9725
-            ],
-            "hex": "#f6f7f8"
-          },
+          "$value": "#f6f7f8",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -627,15 +505,7 @@
         },
         "100": {
           "key": "{base.color.gray.100}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.9333,
-              0.9412,
-              0.949
-            ],
-            "hex": "#eef0f2"
-          },
+          "$value": "#eef0f2",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -668,15 +538,7 @@
         },
         "200": {
           "key": "{base.color.gray.200}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.8471,
-              0.8755,
-              0.8902
-            ],
-            "hex": "#d8dfe3"
-          },
+          "$value": "#d8dfe3",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -709,15 +571,7 @@
         },
         "300": {
           "key": "{base.color.gray.300}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.6314,
-              0.6784,
-              0.7098
-            ],
-            "hex": "#a1adb5"
-          },
+          "$value": "#a1adb5",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -750,15 +604,7 @@
         },
         "400": {
           "key": "{base.color.gray.400}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.4275,
-              0.4627,
-              0.4902
-            ],
-            "hex": "#6d767d"
-          },
+          "$value": "#6d767d",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -792,16 +638,7 @@
         "500": {
           "10": {
             "key": "{base.color.gray.500.10}",
-            "$value": {
-              "colorSpace": "srgb",
-              "components": [
-                0.2549,
-                0.2784,
-                0.298
-              ],
-              "hex": "#41484c",
-              "alpha": 0.1
-            },
+            "$value": "#41484c1a",
             "filePath": "tokens/tokens.json",
             "isSource": true,
             "$type": "color",
@@ -810,7 +647,7 @@
                 "colorSpace": "srgb",
                 "components": [
                   0.2549,
-                  0.2784,
+                  0.2824,
                   0.298
                 ],
                 "hex": "#41484c",
@@ -837,16 +674,7 @@
           },
           "30": {
             "key": "{base.color.gray.500.30}",
-            "$value": {
-              "colorSpace": "srgb",
-              "components": [
-                0.2549,
-                0.2784,
-                0.298
-              ],
-              "hex": "#41484c",
-              "alpha": 0.3
-            },
+            "$value": "#41484c4d",
             "filePath": "tokens/tokens.json",
             "isSource": true,
             "$type": "color",
@@ -855,7 +683,7 @@
                 "colorSpace": "srgb",
                 "components": [
                   0.2549,
-                  0.2784,
+                  0.2824,
                   0.298
                 ],
                 "hex": "#41484c",
@@ -882,16 +710,7 @@
           },
           "90": {
             "key": "{base.color.gray.500.90}",
-            "$value": {
-              "colorSpace": "srgb",
-              "components": [
-                0.2549,
-                0.2784,
-                0.298
-              ],
-              "hex": "#41484c",
-              "alpha": 0.9
-            },
+            "$value": "#41484ce6",
             "filePath": "tokens/tokens.json",
             "isSource": true,
             "$type": "color",
@@ -900,7 +719,7 @@
                 "colorSpace": "srgb",
                 "components": [
                   0.2549,
-                  0.2784,
+                  0.2824,
                   0.298
                 ],
                 "hex": "#41484c",
@@ -927,15 +746,7 @@
           },
           "default": {
             "key": "{base.color.gray.500.default}",
-            "$value": {
-              "colorSpace": "srgb",
-              "components": [
-                0.2549,
-                0.2784,
-                0.298
-              ],
-              "hex": "#41484c"
-            },
+            "$value": "#41484c",
             "filePath": "tokens/tokens.json",
             "isSource": true,
             "$type": "color",
@@ -944,7 +755,7 @@
                 "colorSpace": "srgb",
                 "components": [
                   0.2549,
-                  0.2784,
+                  0.2824,
                   0.298
                 ],
                 "hex": "#41484c"
@@ -971,15 +782,7 @@
         },
         "600": {
           "key": "{base.color.gray.600}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.1765,
-              0.1922,
-              0.2039
-            ],
-            "hex": "#2d3134"
-          },
+          "$value": "#2d3134",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -1014,15 +817,7 @@
       "violet": {
         "400": {
           "key": "{base.color.violet.400}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.6431,
-              0.3333,
-              0.7725
-            ],
-            "hex": "#a455c5"
-          },
+          "$value": "#a455c5",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -1055,15 +850,7 @@
         },
         "500": {
           "key": "{base.color.violet.500}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.3921,
-              0.1921,
-              0.4745
-            ],
-            "hex": "#643179"
-          },
+          "$value": "#643179",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -1098,15 +885,7 @@
       "red": {
         "400": {
           "key": "{base.color.red.400}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.7843,
-              0.0196,
-              0.2157
-            ],
-            "hex": "#c80538"
-          },
+          "$value": "#c80538",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -1116,7 +895,7 @@
               "components": [
                 0.7843,
                 0.0196,
-                0.2157
+                0.2196
               ],
               "hex": "#c80538"
             },
@@ -1141,15 +920,7 @@
       "yellow": {
         "500": {
           "key": "{base.color.yellow.500}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.9176,
-              0.7843,
-              0.0431
-            ],
-            "hex": "#eac80b"
-          },
+          "$value": "#eac80b",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -4503,15 +4274,7 @@
       "fn": {
         "default": {
           "key": "{semantic.color.fn.default}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.3529,
-              0.549
-            ],
-            "hex": "#005a8c"
-          },
+          "$value": "#005a8c",
           "$description": "Main interaction color for buttons and links (Blue 600)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4538,15 +4301,7 @@
         },
         "active": {
           "key": "{semantic.color.fn.active}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.2667,
-              0.4314
-            ],
-            "hex": "#00446e"
-          },
+          "$value": "#00446e",
           "$description": "Interaction color when active (e.g., hover, Blue 700)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4573,15 +4328,7 @@
         },
         "inactive": {
           "key": "{semantic.color.fn.inactive}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.6314,
-              0.6784,
-              0.7098
-            ],
-            "hex": "#a1adb5"
-          },
+          "$value": "#a1adb5",
           "$description": "Interaction color when inactive (Gray 300)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4608,15 +4355,7 @@
         },
         "border": {
           "key": "{semantic.color.fn.border}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.1765,
-              0.1922,
-              0.2039
-            ],
-            "hex": "#2d3134"
-          },
+          "$value": "#2d3134",
           "$description": "Interaction border color (Gray 600)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4643,15 +4382,7 @@
         },
         "label": {
           "key": "{semantic.color.fn.label}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.1765,
-              0.1922,
-              0.2039
-            ],
-            "hex": "#2d3134"
-          },
+          "$value": "#2d3134",
           "$description": "Interaction label color (Gray 600)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4680,15 +4411,7 @@
       "text": {
         "default": {
           "key": "{semantic.color.text.default}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.1765,
-              0.1922,
-              0.2039
-            ],
-            "hex": "#2d3134"
-          },
+          "$value": "#2d3134",
           "$description": "Main text color for body (Gray 600)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4715,15 +4438,7 @@
         },
         "on-dark-bg": {
           "key": "{semantic.color.text.on-dark-bg}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              1,
-              1,
-              1
-            ],
-            "hex": "#ffffff"
-          },
+          "$value": "#fff",
           "$description": "Main text color on dark background (White)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4750,15 +4465,7 @@
         },
         "on-disabled": {
           "key": "{semantic.color.text.on-disabled}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              1,
-              1,
-              1
-            ],
-            "hex": "#ffffff"
-          },
+          "$value": "#fff",
           "$description": "Main text color on disabled (White)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4785,15 +4492,7 @@
         },
         "headline-on-dark-bg": {
           "key": "{semantic.color.text.headline-on-dark-bg}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.7176,
-              0.9765,
-              0.6667
-            ],
-            "hex": "#b7f9aa"
-          },
+          "$value": "#b7f9aa",
           "$description": "Headline text color on dark background (Green 300)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4822,15 +4521,7 @@
       "background": {
         "default": {
           "key": "{semantic.color.background.default}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              1,
-              1,
-              1
-            ],
-            "hex": "#ffffff"
-          },
+          "$value": "#fff",
           "$description": "Main background color for body (White)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4857,15 +4548,7 @@
         },
         "subtle": {
           "key": "{semantic.color.background.subtle}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.9647,
-              0.9686,
-              0.9725
-            ],
-            "hex": "#f6f7f8"
-          },
+          "$value": "#f6f7f8",
           "$description": "Neutral (Gray 50)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4892,15 +4575,7 @@
         },
         "disabled": {
           "key": "{semantic.color.background.disabled}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.6314,
-              0.6784,
-              0.7098
-            ],
-            "hex": "#a1adb5"
-          },
+          "$value": "#a1adb5",
           "$description": "Disabled (Gray 300)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4927,15 +4602,7 @@
         },
         "light-blue": {
           "key": "{semantic.color.background.light-blue}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.9137,
-              0.9608,
-              0.9843
-            ],
-            "hex": "#e9f5fb"
-          },
+          "$value": "#e9f5fb",
           "$description": "Light blue (Blue 100)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4962,15 +4629,7 @@
         },
         "light-green": {
           "key": "{semantic.color.background.light-green}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.9255,
-              0.9922,
-              0.9294
-            ],
-            "hex": "#ecfded"
-          },
+          "$value": "#ecfded",
           "$description": "Light green (Green 100)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -4997,15 +4656,7 @@
         },
         "dark-blue": {
           "key": "{semantic.color.background.dark-blue}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.2157,
-              0.3588
-            ],
-            "hex": "#00375b"
-          },
+          "$value": "#00375b",
           "$description": "Dark blue (Blue 800)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -5032,15 +4683,7 @@
         },
         "dark-green": {
           "key": "{semantic.color.background.dark-green}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.2235,
-              0.5137,
-              0.3412
-            ],
-            "hex": "#398357"
-          },
+          "$value": "#398357",
           "$description": "Dark green (Green 700)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -5069,16 +4712,7 @@
       "opaque": {
         "white-90": {
           "key": "{semantic.color.opaque.white-90}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              1,
-              1,
-              1
-            ],
-            "hex": "#ffffff",
-            "alpha": 0.9
-          },
+          "$value": "#ffffffe6",
           "$description": "White 90%",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -5105,16 +4739,7 @@
         },
         "white-95": {
           "key": "{semantic.color.opaque.white-95}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              1,
-              1,
-              1
-            ],
-            "hex": "#ffffff",
-            "alpha": 0.95
-          },
+          "$value": "#fffffff2",
           "$description": "White 95%",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -5141,16 +4766,7 @@
         },
         "gray-500-10": {
           "key": "{semantic.color.opaque.gray-500-10}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.2549,
-              0.2784,
-              0.298
-            ],
-            "hex": "#41484c",
-            "alpha": 0.1
-          },
+          "$value": "#41484c1a",
           "$description": "Gray 500 10%",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -5177,16 +4793,7 @@
         },
         "gray-500-30": {
           "key": "{semantic.color.opaque.gray-500-30}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.2549,
-              0.2784,
-              0.298
-            ],
-            "hex": "#41484c",
-            "alpha": 0.3
-          },
+          "$value": "#41484c4d",
           "$description": "Gray 500 30%",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -5213,16 +4820,7 @@
         },
         "gray-500-90": {
           "key": "{semantic.color.opaque.gray-500-90}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.2549,
-              0.2784,
-              0.298
-            ],
-            "hex": "#41484c",
-            "alpha": 0.9
-          },
+          "$value": "#41484ce6",
           "$description": "Gray 500 90%",
           "filePath": "tokens/tokens.json",
           "isSource": true,
@@ -5251,15 +4849,7 @@
       "state": {
         "danger": {
           "key": "{semantic.color.state.danger}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.7843,
-              0.0196,
-              0.2157
-            ],
-            "hex": "#c80538"
-          },
+          "$value": "#c80538",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5284,15 +4874,7 @@
         },
         "success": {
           "key": "{semantic.color.state.success}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.2235,
-              0.5137,
-              0.3412
-            ],
-            "hex": "#398357"
-          },
+          "$value": "#398357",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5317,15 +4899,7 @@
         },
         "warning": {
           "key": "{semantic.color.state.warning}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.6431,
-              0.3333,
-              0.7725
-            ],
-            "hex": "#a455c5"
-          },
+          "$value": "#a455c5",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5352,15 +4926,7 @@
       "status": {
         "red": {
           "key": "{semantic.color.status.red}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.7843,
-              0.0196,
-              0.2157
-            ],
-            "hex": "#c80538"
-          },
+          "$value": "#c80538",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5385,15 +4951,7 @@
         },
         "yellow": {
           "key": "{semantic.color.status.yellow}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.9176,
-              0.7843,
-              0.0431
-            ],
-            "hex": "#eac80b"
-          },
+          "$value": "#eac80b",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5418,15 +4976,7 @@
         },
         "green": {
           "key": "{semantic.color.status.green}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.2235,
-              0.5137,
-              0.3412
-            ],
-            "hex": "#398357"
-          },
+          "$value": "#398357",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5453,15 +5003,7 @@
       "line": {
         "6": {
           "key": "{semantic.color.line.6}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.2667,
-              0.4314
-            ],
-            "hex": "#00446e"
-          },
+          "$value": "#00446e",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5486,15 +5028,7 @@
         },
         "7": {
           "key": "{semantic.color.line.7}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.1765,
-              0.1922,
-              0.2039
-            ],
-            "hex": "#2d3134"
-          },
+          "$value": "#2d3134",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5519,15 +5053,7 @@
         },
         "8": {
           "key": "{semantic.color.line.8}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.6314,
-              0.6784,
-              0.7098
-            ],
-            "hex": "#a1adb5"
-          },
+          "$value": "#a1adb5",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5552,15 +5078,7 @@
         },
         "9": {
           "key": "{semantic.color.line.9}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.3529,
-              0.549
-            ],
-            "hex": "#005a8c"
-          },
+          "$value": "#005a8c",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5585,15 +5103,7 @@
         },
         "10": {
           "key": "{semantic.color.line.10}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.1765,
-              0.1922,
-              0.2039
-            ],
-            "hex": "#2d3134"
-          },
+          "$value": "#2d3134",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5618,15 +5128,7 @@
         },
         "11": {
           "key": "{semantic.color.line.11}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.7176,
-              0.9765,
-              0.6667
-            ],
-            "hex": "#b7f9aa"
-          },
+          "$value": "#b7f9aa",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5651,15 +5153,7 @@
         },
         "12": {
           "key": "{semantic.color.line.12}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.6314,
-              0.6784,
-              0.7098
-            ],
-            "hex": "#a1adb5"
-          },
+          "$value": "#a1adb5",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5686,15 +5180,7 @@
       "product": {
         "container": {
           "key": "{semantic.color.product.container}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.9647,
-              0.9686,
-              0.9725
-            ],
-            "hex": "#f6f7f8"
-          },
+          "$value": "#f6f7f8",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5719,15 +5205,7 @@
         },
         "benefit": {
           "key": "{semantic.color.product.benefit}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.4784,
-              0.7373
-            ],
-            "hex": "#007abc"
-          },
+          "$value": "#007abc",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5752,15 +5230,7 @@
         },
         "credit": {
           "key": "{semantic.color.product.credit}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.2235,
-              0.5137,
-              0.3412
-            ],
-            "hex": "#398357"
-          },
+          "$value": "#398357",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5785,15 +5255,7 @@
         },
         "cooperation": {
           "key": "{semantic.color.product.cooperation}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.3921,
-              0.1921,
-              0.4745
-            ],
-            "hex": "#643179"
-          },
+          "$value": "#643179",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5818,15 +5280,7 @@
         },
         "credit-benefit": {
           "key": "{semantic.color.product.credit-benefit}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.2549,
-              0.2784,
-              0.298
-            ],
-            "hex": "#41484c"
-          },
+          "$value": "#41484c",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5853,15 +5307,7 @@
       "icon": {
         "default": {
           "key": "{semantic.color.icon.default}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.3529,
-              0.549
-            ],
-            "hex": "#005a8c"
-          },
+          "$value": "#005a8c",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5886,15 +5332,7 @@
         },
         "secondary": {
           "key": "{semantic.color.icon.secondary}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.3294,
-              0.7039,
-              0.8863
-            ],
-            "hex": "#54b3e2"
-          },
+          "$value": "#54b3e2",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5919,15 +5357,7 @@
         },
         "disabled": {
           "key": "{semantic.color.icon.disabled}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.2235,
-              0.5137,
-              0.3412
-            ],
-            "hex": "#398357"
-          },
+          "$value": "#398357",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
@@ -5952,15 +5382,7 @@
         },
         "disabled-secondary": {
           "key": "{semantic.color.icon.disabled-secondary}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.5804,
-              0.9216,
-              0.5647
-            ],
-            "hex": "#94eb90"
-          },
+          "$value": "#94eb90",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
