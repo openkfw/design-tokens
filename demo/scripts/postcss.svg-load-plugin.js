@@ -3,6 +3,8 @@ import path from "path"
 
 const svgCache = {}
 
+const ROOT_SELECTOR = ":root:not([data-theme=dark])"
+
 export default function postcssSvgLoadPlugin(options = {}) {
   return {
     postcssPlugin: "postcss-svg-load",
@@ -12,7 +14,7 @@ export default function postcssSvgLoadPlugin(options = {}) {
       const cssVariables = {}
 
       root.walkRules((rule) => {
-        if (rule.selector === ":root" || rule.selector.startsWith(":root,")) {
+        if (rule.selector.includes(ROOT_SELECTOR)) {
           rule.walkDecls((decl) => {
             if (decl.prop.startsWith("--")) {
               cssVariables[decl.prop] = decl.value.trim()

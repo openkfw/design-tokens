@@ -15,9 +15,9 @@
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
-    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/demo/dist/assets/main-Bh2CmyHC.js"></script>
+    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/demo/dist/assets/main-B4zDpSXd.js"></script>
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/fonts-GQk87xMl.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-Dl4HRYvb.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-ctMamWsO.min.css">
   </head>
   <body>
     <div id="top"></div>
@@ -425,20 +425,29 @@
               return path.split(".").reduce((o, k) => (o ? o[k] : undefined), obj)
             }
 
+            const convertToRgb = (color) => Math.min(255, Math.max(0, Math.round(color * 255)))
+
             document.addEventListener("DOMContentLoaded", () => {
-              document.querySelectorAll(".color-palette__color[data-token-key]").forEach((color) => {
+              document.querySelectorAll(".color-palette__color").forEach((color) => {
                 const key = color.dataset.tokenKey
                 const tokenGroup = color.dataset.tokenGroup || "semantic"
                 const group = color.closest(".color-palette__item")
-                const tCenter = group.querySelector(".color-palette__container")
-                tCenter.innerHTML = ""
 
                 const desc = document.createElement("span")
                 desc.className = "color-palette__label form-label"
 
+                const tCenter = group.querySelector(".color-palette__container")
+                tCenter.innerHTML = ""
+
                 const btn = document.createElement("button")
                 btn.type = "button"
                 btn.className = "button--tertiary"
+                btn.addEventListener("click", () => {
+                  navigator.clipboard.writeText(`var(--${btn.textContent})`).then(() => alert("Copied!"))
+                })
+
+                tCenter.appendChild(desc)
+                tCenter.appendChild(btn)
 
                 const tokenColorPath = window.allTokens[tokenGroup].color
                 const token = getByPath(tokenColorPath, key)
@@ -457,13 +466,6 @@
                 } else {
                   color.style.backgroundColor = token?.$value?.hex
                 }
-
-                btn.addEventListener("click", () => {
-                  navigator.clipboard.writeText(`var(--${btn.textContent})`).then(() => alert("Copied!"))
-                })
-
-                tCenter.appendChild(desc)
-                tCenter.appendChild(btn)
               })
             })
           </script>

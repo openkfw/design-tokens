@@ -107,11 +107,7 @@ export function RegisterTransforms(PREFIX: string) {
 
   StyleDictionary.registerTransformGroup({
     name: "web/extended",
-    transforms: [
-      ...StyleDictionary.hooks.transformGroups.web,
-      ...StyleDictionary.hooks.transformGroups["css/extended"],
-      ...StyleDictionary.hooks.transformGroups["final/output"]
-    ]
+    transforms: [...StyleDictionary.hooks.transformGroups.web, ...StyleDictionary.hooks.transformGroups["final/output"]]
   })
 
   StyleDictionary.registerTransformGroup({
