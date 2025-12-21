@@ -47,9 +47,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
   const src = isDefaultTheme ? DEFAULT_SELECTOR : `*.${theme}`
 
   function seletorRoot() {
-    const SELECTOR = isDefaultTheme
-      ? `[data-theme=${theme}], :root:not([data-theme=dark]), :host(:not([data-theme=dark]))`
-      : `[data-theme=${theme}], :host(:not([data-theme=light]))`
+    const SELECTOR = isDefaultTheme ? `:root, :host` : `[data-theme=${theme}], :host(:not([data-theme=light]))`
     return `${SELECTOR} { color-scheme: ${theme}; }\n\n${SELECTOR}`
   }
 
