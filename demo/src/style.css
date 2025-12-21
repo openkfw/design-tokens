@@ -866,8 +866,8 @@
   @layer variations {
     table.file-upload-table {
       border-top: 0;
-      min-height: 10px;
-      min-width: 500px;
+      min-height: 1rem;
+      min-width: 50rem;
     }
 
     table.file-upload-table :where(.file-upload-table__error, .file-upload-table__success, .file-upload-table__info) {
@@ -1019,11 +1019,6 @@
       margin-block-end: var(--kfw-fontspace);
     }
 
-    .grid [type="file"]::file-selector-button,
-    .grid :where(button, [type="submit"], [type="reset"], [type="button"], [role="button"]) {
-      white-space: normal;
-    }
-
     @media (--kfw-breakpoint-tablet) {
       .grid {
         grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
@@ -1099,6 +1094,22 @@
     }
 
     .color-palette {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (--kfw-breakpoint-tablet) {
+      .color-palette {
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+      }
+    }
+
+    .color-palette [type="file"]::file-selector-button,
+    .color-palette :where(button, [type="submit"], [type="reset"], [type="button"], [role="button"]) {
+      white-space: normal;
+    }
+
+    .color-palette__item {
       margin-block-end: var(--kfw-space-small);
     }
 
@@ -1106,9 +1117,26 @@
       display: block;
       width: 100%;
       height: 3rem;
-      border-color: var(--kfw-color-fn-inactive);
-      border-width: var(--kfw-borderwidth);
-      border-style: var(--kfw-borderstyle);
+      border: var(--kfw-borderwidth) solid transparent;
+      border-inline-width: 0;
+      border-block-color: var(--kfw-color-fn-inactive);
+      border-inline-start: var(--kfw-borderwidth) solid var(--kfw-color-fn-inactive);
+      border-inline-end: var(--kfw-borderwidth) solid var(--kfw-color-fn-inactive);
+    }
+
+    @media (--kfw-breakpoint-tablet) {
+      .color-palette__color {
+        border-inline-start: 0;
+        border-inline-end: 0;
+      }
+
+      .color-palette__item:first-child .color-palette__color {
+        border-inline-start: var(--kfw-borderwidth) solid var(--kfw-color-fn-inactive);
+      }
+
+      .color-palette__item:last-child .color-palette__color {
+        border-inline-end: var(--kfw-borderwidth) solid var(--kfw-color-fn-inactive);
+      }
     }
 
     .color-palette__label {
@@ -1262,10 +1290,6 @@
     padding: var(--kfw-space-small);
   }
 
-  .pb-0 {
-    padding-block-end: 0;
-  }
-
   .p-x {
     padding-inline: var(--kfw-safezone);
   }
@@ -1304,9 +1328,5 @@
 
   .t-center {
     text-align: center;
-  }
-
-  .gutter-0 {
-    column-gap: 0;
   }
 }
