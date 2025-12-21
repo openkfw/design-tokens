@@ -458,14 +458,9 @@
                 btn.textContent = token ? token.name : "var(--kfw-color-fn)"
 
                 if (token?.$value?.alpha) {
-                  const convertToRgb = (color) => color * 255
+                  const [r, g, b] = token?.$value?.components
 
-                  const [_red, _green, _blue] = token?.$value?.components
-                  const red = convertToRgb(_red)
-                  const green = convertToRgb(_green)
-                  const blue = convertToRgb(_blue)
-
-                  color.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${token?.$value?.alpha})`
+                  color.style.backgroundColor = `rgba(${convertToRgb(r)}, ${convertToRgb(g)}, ${convertToRgb(b)}, ${token?.$value?.alpha})`
                 } else {
                   color.style.backgroundColor = token?.$value?.hex
                 }

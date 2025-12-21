@@ -13,7 +13,7 @@
     "lint": "npx stylelint 'src/*.css' --fix"
   },
   "devDependencies": {
-    "@openkfw/design-tokens": "^0.5.8",
+    "@openkfw/design-tokens": "^0.5.9",
     "css-filter-converter": "^1.0.110",
     "postcss-custom-media": "^11.0.6",
     "postcss-inline-svg": "^6.0.0",

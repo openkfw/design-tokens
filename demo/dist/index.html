@@ -15,9 +15,9 @@
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/demo/dist/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
-    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/demo/dist/assets/main-B4zDpSXd.js"></script>
+    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/demo/dist/assets/main-Dmx1TDTN.js"></script>
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/fonts-GQk87xMl.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-ctMamWsO.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/demo/dist/css/style-9C0WYatG.min.css">
   </head>
   <body>
     <div id="top"></div>
@@ -455,14 +455,9 @@
                 btn.textContent = token ? token.name : "var(--kfw-color-fn)"
 
                 if (token?.$value?.alpha) {
-                  const convertToRgb = (color) => color * 255
+                  const [r, g, b] = token?.$value?.components
 
-                  const [_red, _green, _blue] = token?.$value?.components
-                  const red = convertToRgb(_red)
-                  const green = convertToRgb(_green)
-                  const blue = convertToRgb(_blue)
-
-                  color.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${token?.$value?.alpha})`
+                  color.style.backgroundColor = `rgba(${convertToRgb(r)}, ${convertToRgb(g)}, ${convertToRgb(b)}, ${token?.$value?.alpha})`
                 } else {
                   color.style.backgroundColor = token?.$value?.hex
                 }
