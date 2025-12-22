@@ -1,15 +1,46 @@
 /* Establish the order of layers upfront */
 @layer reset, core, third-party, components, utility;
-@layer core.tokens, core.base, core.variations;
+@layer core.tokens, core.icons, core.base, core.variations;
 @layer third-party.imports, third-party.overrides;
 @layer components.base, components.variations;
+
+/* Custom Media Queries */
+@import url("vendor/gen-custom-media.css");
 
 /* Reset, normalize, etc. */
 @import url("vendor/uaplus.css") layer(reset);
 
-/* KfW Design Tokens with Custom Media Queries */
+/* KfW Design Tokens */
 @import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css") layer(core.tokens);
-@import url("vendor/gen-custom-media.css");
+
+/* Icons */
+@import url("vendor/gen-icons.css") layer(core.icons);
+
+@layer core.icons {
+  .icon {
+    --size: 1.6rem;
+
+    display: inline-block;
+    flex-shrink: 0;
+    vertical-align: top;
+    pointer-events: none;
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: currentcolor;
+    mask-image: var(--icon);
+    min-width: var(--size);
+    min-height: var(--size);
+  }
+
+  .icon--large {
+    --size: 2.4rem;
+  }
+
+  .icon--xlarge {
+    --size: 4rem;
+  }
+}
 
 @layer core {
   @layer tokens {
@@ -299,19 +330,6 @@
     }
 
     /**
-    * Icon
-    */
-    .icon {
-      display: inline-block;
-      flex-shrink: 0;
-      vertical-align: top;
-      pointer-events: none;
-      min-width: 1.6rem;
-      min-height: 1.6rem;
-      filter: color-to-filter(var(--kfw-color-text));
-    }
-
-    /**
     * Form
     */
     .form-control {
@@ -419,16 +437,8 @@
       color: var(--kfw-color-state-success);
     }
 
-    .valid-feedback__icon {
-      filter: color-to-filter(var(--kfw-color-state-success));
-    }
-
     .invalid-feedback {
       color: var(--kfw-color-state-danger);
-    }
-
-    .invalid-feedback__icon {
-      filter: color-to-filter(var(--kfw-color-state-danger));
     }
 
     :where(label, .form-label) {
@@ -609,14 +619,6 @@
       gap: var(--space-between);
     }
 
-    :where(a, [role="link"], button, [type="button"]) .icon {
-      filter: color-to-filter(var(--kfw-color-fn));
-    }
-
-    :where(a, [role="link"], button, [type="button"]):where(:hover, :focus) .icon {
-      filter: color-to-filter(var(--kfw-color-fn-active));
-    }
-
     [type="file"]::file-selector-button,
     :where(button, [type="submit"], [type="reset"], [type="button"], [role="button"]) {
       --space-between: 0.8rem;
@@ -641,6 +643,7 @@
       border-width: var(--kfw-borderwidth);
       border-style: solid;
       border-color: transparent;
+      color: var(--kfw-color-fn);
     }
 
     :where([type="submit"], .button--primary) {
@@ -661,22 +664,6 @@
       background-color: var(--button-bg-hover);
       border-color: var(--button-border-color-hover);
       text-decoration: underline;
-    }
-
-    .button--primary .icon {
-      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
-    }
-
-    .button--secondary .icon {
-      filter: color-to-filter(var(--kfw-color-fn));
-    }
-
-    .button--primary:where(:hover, :focus) .icon {
-      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
-    }
-
-    .button--secondary:where(:hover, :focus) .icon {
-      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
     }
 
     [type="file"]::file-selector-button,
@@ -777,12 +764,6 @@
       outline: 2px solid var(--kfw-color-fn-active);
     }
 
-    .searchfield__icon {
-      width: 2.4rem;
-      height: 2.4rem;
-      filter: color-to-filter(var(--kfw-color-fn));
-    }
-
     /**
     * File-Upload
     */
@@ -815,10 +796,8 @@
     }
 
     .file-upload__icon {
-      width: 4rem;
-      height: 4rem;
+      color: var(--kfw-color-fn);
       margin: 2rem;
-      filter: color-to-filter(var(--kfw-color-fn));
     }
 
     /**
@@ -1170,14 +1149,6 @@
       text-decoration: none;
     }
 
-    :where(.bg-dark, .footer) :where([role="link"], a:not([role="button"])) .icon {
-      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
-    }
-
-    :where(.bg-dark, .footer) :where(button, [type="submit"], [type="reset"], [type="button"], [role="button"]) .icon {
-      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
-    }
-
     :where(.bg-dark, .footer) :where(.button--primary, [type="submit"]) {
       --button-color: var(--kfw-color-fn);
       --button-bg: var(--kfw-color-text-on-dark-bg);
@@ -1187,24 +1158,12 @@
       --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
     }
 
-    :where(.bg-dark, .footer) :where(.button--primary, [type="submit"]) .icon {
-      filter: color-to-filter(var(--kfw-color-fn));
-    }
-
     :where(.bg-dark, .footer) :where(.button--secondary, [type="reset"]) {
       --button-color: var(--kfw-color-text-on-dark-bg);
       --button-border-color: var(--kfw-color-text-on-dark-bg);
       --button-bg-hover: var(--kfw-color-text-on-dark-bg);
       --button-color-hover: var(--kfw-color-text);
       --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
-    }
-
-    :where(.bg-dark, .footer) :where(.button--secondary, [type="reset"]) .icon {
-      filter: color-to-filter(var(--kfw-color-text-on-dark-bg));
-    }
-
-    :where(.bg-dark, .footer) :where(.button--secondary, [type="reset"]):where(:hover, :focus) .icon {
-      filter: color-to-filter(var(--kfw-color-text));
     }
 
     :where(.bg-dark, .footer) .button--tertiary {

@@ -40,7 +40,7 @@
         </div>
         <nav class="header__menu" aria-label="Sekundäre Navigation" data-testid="right-header-menu">
           <a class="button--tertiary" role="button" href="#" onclick="event.preventDefault()">
-            <img width="24" height="24" class="icon" src="./src/icons/login.svg" alt="" aria-hidden="true" loading="lazy" /> Login
+            <i aria-hidden="true" class="icon icon--large icon--login"></i> Login
           </a>
         </nav>
       </div>
@@ -500,9 +500,7 @@
           <h3>Inline text elements</h3>
           <div class="grid">
             <p>
-              <a href="#" onclick="event.preventDefault()">
-                <img width="16" height="16" class="icon" src="./src/icons/arrow-right.svg" alt="" aria-hidden="true" loading="lazy" /> Link
-              </a>
+              <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--arrow-right"></i> Link </a>
             </p>
             <p>
               <a href="#" class="tx--2" onclick="event.preventDefault()">Small Link</a>
@@ -592,22 +590,19 @@
           <div class="grid">
             <p>
               <button type="button" class="button--primary">
-                <img width="16" height="16" class="icon icon--left" src="./src/icons/arrow-right.svg" alt="" aria-hidden="true" loading="lazy" />
-                Primary Button
+                <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Primary Button
               </button>
             </p>
             <p>
               <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">
-                <img width="16" height="16" class="icon icon--left" src="./src/icons/arrow-right.svg" alt="" aria-hidden="true" loading="lazy" />
-                Secondary Button
-                <img width="16" height="16" class="icon icon--right" src="./src/icons/lock.svg" alt="" aria-hidden="true" loading="lazy" />
+                <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Secondary Button
+                <i aria-hidden="true" class="icon icon--right icon--lock"></i>
               </a>
             </p>
             <p>
               <a href="#" onclick="event.preventDefault()" class="button--tertiary" role="button">
-                <img width="16" height="16" class="icon icon--left" src="./src/icons/arrow-right.svg" alt="" aria-hidden="true" loading="lazy" />
-                Tertiary Button
-                <img width="16" height="16" class="icon icon--right" src="./src/icons/lock.svg" alt="" aria-hidden="true" loading="lazy" />
+                <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Tertiary Button
+                <i aria-hidden="true" class="icon icon--right icon--lock"></i>
               </a>
             </p>
           </div>
@@ -617,31 +612,27 @@
           <h3 class="hl-3">Variant Negative</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
-            <a href="#" onclick="event.preventDefault()">
-              <img width="16" height="16" class="icon" src="./src/icons/arrow-right.svg" alt="" aria-hidden="true" loading="lazy" />similique
-            </a>
+            <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i>similique </a>
             At enim exercitationem, explicabo labore magnam modi quod, repellat reprehenderit sed sunt totam. Lorem ipsum dolor sit amet, consectetur
             adipisicing elit.
           </p>
           <div class="grid">
             <p>
               <a href="#" onclick="event.preventDefault()" class="button--primary" role="button">
-                <img width="16" height="16" class="icon icon--left" src="./src/icons/arrow-right.svg" alt="" aria-hidden="true" loading="lazy" />
+                <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i>
                 Primary Button
               </a>
             </p>
             <p>
               <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">
-                <img width="16" height="16" class="icon icon--left" src="./src/icons/arrow-right.svg" alt="" aria-hidden="true" loading="lazy" />
-                Secondary Button
-                <img width="16" height="16" class="icon icon--right" src="./src/icons/lock.svg" alt="" aria-hidden="true" loading="lazy" />
+                <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Secondary Button
+                <i aria-hidden="true" class="icon icon--right icon--lock"></i>
               </a>
             </p>
             <p>
               <a href="#" onclick="event.preventDefault()" class="button--tertiary" role="button">
-                <img width="16" height="16" class="icon icon--left" src="./src/icons/arrow-right.svg" alt="" aria-hidden="true" loading="lazy" />
-                Tertiary Button
-                <img width="16" height="16" class="icon icon--right" src="./src/icons/lock.svg" alt="" aria-hidden="true" loading="lazy" />
+                <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Tertiary Button
+                <i aria-hidden="true" class="icon icon--right icon--lock"></i>
               </a>
             </p>
           </div>
@@ -655,7 +646,7 @@
               <div class="searchfield">
                 <input id="searchfield" type="search" class="searchfield__input form-control" placeholder="Search…" />
                 <button type="button" class="searchfield__button" aria-label="Search">
-                  <img loading="lazy" src="src/icons/search.svg" class="icon searchfield__icon" alt="" aria-hidden="true" width="24" height="24" />
+                  <i aria-hidden="true" class="icon icon--large icon--search"></i>
                 </button>
               </div>
             </div>
@@ -679,18 +670,10 @@
               <label for="file-upload2">File browser with title</label>
               <div class="file-upload">
                 <div class="file-upload__inner">
-                  <img loading="lazy" class="icon file-upload__icon" src="./src/icons/upload.svg" width="40" height="40" alt="" aria-hidden="true" />
+                  <i aria-hidden="true" class="icon icon--xlarge icon--upload file-upload__icon"></i>
                   <label for="file-upload2" class="file-upload__title">Choose the files you want to upload</label>
                   <button type="button" class="button--secondary">
-                    <img
-                      loading="lazy"
-                      src="./src/icons/plus.svg"
-                      class="icon file-upload__buttonicon"
-                      alt=""
-                      width="24"
-                      height="24"
-                      aria-hidden="true"
-                    />
+                    <i aria-hidden="true" class="icon icon--plus icon--large"></i>
                     Choose files
                   </button>
                   <input class="file-upload__input" type="file" id="file-upload2" multiple />
@@ -710,7 +693,7 @@
                         <td>1.35 MB</td>
                         <td>
                           <button type="button" class="button--tertiary">
-                            <img loading="lazy" src="src/icons/delete.svg" alt="" class="icon" width="16" height="16" aria-hidden="true" />
+                            <i aria-hidden="true" class="icon icon--delete"></i>
                             Delete
                           </button>
                         </td>
@@ -720,7 +703,7 @@
                         <td>765.82 KB</td>
                         <td>
                           <button type="button" class="button--tertiary">
-                            <img loading="lazy" src="src/icons/delete.svg" alt="" class="icon" width="16" height="16" aria-hidden="true" />
+                            <i aria-hidden="true" class="icon icon--delete"></i>
                             Delete
                           </button>
                         </td>
@@ -728,16 +711,9 @@
                       <tr>
                         <td class="file-upload-table__error" colspan="4">
                           <span class="invalid-feedback" role="alert" aria-live="polite">
-                            <img
-                              loading="lazy"
-                              src="src/icons/alert.svg"
-                              alt=""
-                              class="invalid-feedback__icon icon"
-                              width="16"
-                              height="16"
-                              aria-hidden="true"
-                            />The upload of the file has failed.</span
-                          >
+                            <i aria-hidden="true" class="icon icon--alert"></i>
+                            The upload of the file has failed.
+                          </span>
                         </td>
                       </tr>
                       <tr>
@@ -745,7 +721,7 @@
                         <td>765.82 KB</td>
                         <td>
                           <button type="button" class="button--tertiary">
-                            <img loading="lazy" src="src/icons/delete.svg" alt="" class="icon" width="16" height="16" aria-hidden="true" />
+                            <i aria-hidden="true" class="icon icon--delete"></i>
                             Delete
                           </button>
                         </td>
@@ -1008,7 +984,7 @@
         </ul>
         <div class="footer__top-button">
           <a class="button--secondary" href="#top" role="button">
-            <img width="16" height="16" class="icon icon--left" src="./src/icons/arrow-up.svg" alt="" aria-hidden="true" loading="lazy" />
+            <i aria-hidden="true" class="icon icon--left icon--arrow-up"></i>
             Scroll to the top
           </a>
         </div>

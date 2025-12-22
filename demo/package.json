@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:icons": "node scripts/build-icons.js",
     "build:cm": "node scripts/build-custom-media.js",
     "preview": "vite preview",
     "format": "npx prettier --write .",
@@ -14,7 +15,6 @@
   },
   "devDependencies": {
     "@openkfw/design-tokens": "^0.6.0",
-    "hex-to-css-filter": "^6.0.0",
     "postcss-custom-media": "^11.0.6",
     "postcss-inline-svg": "^6.0.0",
     "stylelint": "^16.26.1",
@@ -22,9 +22,7 @@
     "stylelint-media-use-custom-media": "^4.1.0",
     "typescript": "^5.9.3",
     "vite": "^7.3.0",
-    "vite-plugin-stylelint": "^6.0.2"
-  },
-  "dependencies": {
+    "vite-plugin-stylelint": "^6.0.2",
     "autoprefixer": "^10.4.23",
     "postcss-svgo": "^7.1.0"
   }

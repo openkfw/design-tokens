@@ -11,9 +11,6 @@ import autoprefixer from "autoprefixer"
 // @ts-expect-error: TypeScript cannot infer the type from this JS module
 import postcssSvgLoadPlugin from "./scripts/postcss.svg-load-plugin.js"
 
-// @ts-expect-error: TypeScript cannot infer the type from this JS module
-import postcssColorToFilterPlugin from "./scripts/postcss.color-to-filter.js"
-
 export default defineConfig({
   base: "https://openkfw.github.io/design-tokens/",
   plugins: [
@@ -41,7 +38,7 @@ export default defineConfig({
   ],
   css: {
     postcss: {
-      plugins: [postcssCustomMedia(), autoprefixer(), postcssSvgo(), postcssSvgLoadPlugin(), postcssColorToFilterPlugin()]
+      plugins: [postcssCustomMedia(), autoprefixer(), postcssSvgo(), postcssSvgLoadPlugin()]
     }
   },
   build: {

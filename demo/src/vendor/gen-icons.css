@@ -1,0 +1,53 @@
+/* Auto-generated icon classes */
+
+.icon--alert {
+  --icon: url("../icons/alert.svg");
+}
+
+.icon--arrow-down {
+  --icon: url("../icons/arrow-down.svg");
+}
+
+.icon--arrow-left {
+  --icon: url("../icons/arrow-left.svg");
+}
+
+.icon--arrow-right {
+  --icon: url("../icons/arrow-right.svg");
+}
+
+.icon--arrow-up {
+  --icon: url("../icons/arrow-up.svg");
+}
+
+.icon--calendar {
+  --icon: url("../icons/calendar.svg");
+}
+
+.icon--delete {
+  --icon: url("../icons/delete.svg");
+}
+
+.icon--lock {
+  --icon: url("../icons/lock.svg");
+}
+
+.icon--login {
+  --icon: url("../icons/login.svg");
+}
+
+.icon--plus {
+  --icon: url("../icons/plus.svg");
+}
+
+.icon--search {
+  --icon: url("../icons/search.svg");
+}
+
+.icon--time {
+  --icon: url("../icons/time.svg");
+}
+
+.icon--upload {
+  --icon: url("../icons/upload.svg");
+}
