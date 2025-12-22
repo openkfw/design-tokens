@@ -1,5 +1,10 @@
 import { hexToCSSFilter } from "hex-to-css-filter"
 
+const filterConfig = {
+  acceptanceLossPercentage: 1,
+  maxChecks: 10
+}
+
 export default function postcssColorToFilterPlugin() {
   return {
     postcssPlugin: "postcss-color-to-filter",
@@ -44,13 +49,8 @@ export default function postcssColorToFilterPlugin() {
             }
           }
 
-          const config = {
-            acceptanceLossPercentage: 1,
-            maxChecks: 10
-          }
-
           try {
-            const result = hexToCSSFilter(param, config)
+            const result = hexToCSSFilter(param, filterConfig)
             const filterString = result.filter || param
             newValue = newValue.replace(fullMatch, filterString)
             hasReplacements = true
