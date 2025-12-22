@@ -1,6 +1,5 @@
 /* Establish the order of layers upfront */
 @layer reset, core, icons, third-party, components, utility;
-
 @layer core.tokens, core.base, core.variations;
 @layer icons.base, icons.classes;
 @layer third-party.imports, third-party.overrides;
