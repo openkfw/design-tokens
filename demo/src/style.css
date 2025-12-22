@@ -1,6 +1,8 @@
 /* Establish the order of layers upfront */
-@layer reset, core, third-party, components, utility;
-@layer core.tokens, core.icons, core.base, core.variations;
+@layer reset, core, icons, third-party, components, utility;
+
+@layer core.tokens, core.base, core.variations;
+@layer icons.base, icons.classes;
 @layer third-party.imports, third-party.overrides;
 @layer components.base, components.variations;
 
@@ -14,9 +16,9 @@
 @import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css") layer(core.tokens);
 
 /* Icons */
-@import url("vendor/gen-icons.css") layer(core.icons);
+@import url("vendor/gen-icons.css") layer(icons.classes);
 
-@layer core.icons {
+@layer icons.base {
   .icon {
     --size: 1.6rem;
 
