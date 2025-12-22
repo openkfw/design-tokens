@@ -10,9 +10,6 @@
 /* KfW Design Tokens with Custom Media Queries */
 @import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css") layer(core.tokens);
 @import url("vendor/gen-custom-media.css");
-@import url("vendor/gen-filter-colors.css");
-
-
 
 @layer core {
   @layer tokens {
@@ -613,11 +610,11 @@
     }
 
     :where(a, [role="link"], button, [type="button"]) .icon {
-      filter: var(--kfw-color-fn-filter);
+      filter: color-to-filter(var(--kfw-color-fn));
     }
 
     :where(a, [role="link"], button, [type="button"]):where(:hover, :focus) .icon {
-      filter: var(--kfw-color-fn-active-filter);
+      filter: color-to-filter(var(--kfw-color-fn-active));
     }
 
     [type="file"]::file-selector-button,

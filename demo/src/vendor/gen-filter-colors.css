@@ -1,6 +1,0 @@
-@layer core.tokens {
-    :root, :host {
-        --kfw-color-fn-filter: brightness(0) saturate(100%) invert(19%) sepia(48%) saturate(3769%) hue-rotate(182deg) brightness(100%) contrast(103%);
-        --kfw-color-fn-active-filter: brightness(0) saturate(100%) invert(16%) sepia(84%) saturate(1750%) hue-rotate(182deg) brightness(94%) contrast(101%);
-    }
-}
