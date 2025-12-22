@@ -1,4 +1,4 @@
-import CssFilterConverter from "css-filter-converter"
+import { hexToCSSFilter } from "hex-to-css-filter"
 
 export default function postcssColorToFilterPlugin() {
   return {
@@ -44,9 +44,14 @@ export default function postcssColorToFilterPlugin() {
             }
           }
 
+          const config = {
+            acceptanceLossPercentage: 1,
+            maxChecks: 10
+          }
+
           try {
-            const result = await CssFilterConverter.hexToFilter(param)
-            const filterString = result.color || param
+            const result = hexToCSSFilter(param, config)
+            const filterString = result.filter || param
             newValue = newValue.replace(fullMatch, filterString)
             hasReplacements = true
           } catch (e) {
