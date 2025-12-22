@@ -6,6 +6,7 @@ import fs from "fs"
 import path from "path"
 import type { OutputAsset } from "rollup"
 import postcssSvgo from "postcss-svgo"
+import autoprefixer from "autoprefixer"
 
 // @ts-expect-error: TypeScript cannot infer the type from this JS module
 import postcssSvgLoadPlugin from "./scripts/postcss.svg-load-plugin.js"
@@ -40,7 +41,7 @@ export default defineConfig({
   ],
   css: {
     postcss: {
-      plugins: [postcssCustomMedia(), postcssSvgo(), postcssSvgLoadPlugin(), postcssColorToFilterPlugin()]
+      plugins: [postcssCustomMedia(), autoprefixer(), postcssSvgo(), postcssSvgLoadPlugin(), postcssColorToFilterPlugin()]
     }
   },
   build: {

@@ -25,6 +25,7 @@
     "vite-plugin-stylelint": "^6.0.2"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.23",
     "postcss-svgo": "^7.1.0"
   }
 }

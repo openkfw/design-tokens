@@ -6,9 +6,8 @@ export default function postcssColorToFilterPlugin() {
     async Once(root, { result }) {
       const cssVariables = {}
 
-      // CSS-Variablen aus :root sammeln
       root.walkRules((rule) => {
-        if (rule.selector === ":root" || rule.selector.startsWith(":root,")) {
+        if (rule.selector.startsWith(":root,")) {
           rule.walkDecls((decl) => {
             if (decl.prop.startsWith("--")) {
               cssVariables[decl.prop] = decl.value.trim()

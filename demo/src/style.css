@@ -382,11 +382,6 @@
       accent-color: var(--kfw-color-fn);
     }
 
-    [type="color"] {
-      padding-inline: 0.2rem;
-      padding-block: 0;
-    }
-
     textarea {
       display: block;
       resize: vertical;
