@@ -15,7 +15,7 @@ import postcssSvgLoadPlugin from "./scripts/postcss.svg-load-plugin.js"
 import postcssColorToFilterPlugin from "./scripts/postcss.color-to-filter.js"
 
 export default defineConfig({
-  base: "https://openkfw.github.io/design-tokens/demo/dist/",
+  base: "https://openkfw.github.io/design-tokens/",
   plugins: [
     stylelint(),
     {
