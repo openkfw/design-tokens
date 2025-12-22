@@ -404,7 +404,10 @@
     }
 
     :where(.form-text, .invalid-feedback, .valid-feedback) {
-      display: block;
+      --space-between: 0.8rem;
+
+      gap: var(--space-between);
+      display: flex;
       width: 100%;
       margin-block-start: 0.8rem;
       font-size: var(--kfw-fontsize-small);
