@@ -18,8 +18,16 @@
 @import url("vendor/gen-icons.css") layer(icons.classes);
 
 @layer icons.base {
+  :root {
+    --icon-size: 1.6rem;
+    --icon-size-lg: 2.4rem;
+    --icon-size-xl: 2.8rem;
+    --icon-size-2xl: 3.2rem;
+    --icon-size-3xl: 4rem;
+  }
+
   .icon {
-    --size: 1.6rem;
+    --size: var(--icon-size);
 
     display: inline-block;
     flex-shrink: 0;
@@ -35,11 +43,19 @@
   }
 
   .icon--large {
-    --size: 2.4rem;
+    --size: var(--icon-size-lg);
   }
 
   .icon--xlarge {
-    --size: 4rem;
+    --size: var(--icon-size-xl);
+  }
+
+  .icon--2xl {
+    --size: var(--icon-size-2xl);
+  }
+
+  .icon--3xl {
+    --size: var(--icon-size-3xl);
   }
 }
 
@@ -54,10 +70,6 @@
       --kfw-icon-calendar-fn: svg-load("icons/calendar.svg", "var(--kfw-color-fn)");
       --kfw-icon-time-fn: svg-load("icons/time.svg", "var(--kfw-color-fn)");
       --kfw-icon-checked-accent-dark: svg-load("icons/checked.svg", "var(--kfw-color-background-dark-green)");
-      --kfw-icon-personal-settings-accent-dark: svg-load("icons/personal-settings.svg", "var(--kfw-color-background-dark-green)");
-      --kfw-icon-dialogue-accent-dark: svg-load("icons/dialogue.svg", "var(--kfw-color-background-dark-green)");
-      --kfw-icon-home-accent-dark: svg-load("icons/home.svg", "var(--kfw-color-background-dark-green)");
-      --kfw-icon-exclamation-mark-filled-accent-dark: svg-load("icons/exclamation-mark-filled.svg", "var(--kfw-color-background-dark-green)");
 
       /* fluid shorthands */
       --kfw-safezone: clamp(var(--kfw-safezone-min), var(--kfw-safezone-val), var(--kfw-safezone-max));
@@ -124,13 +136,6 @@
       margin-block-end: 0;
     }
 
-    ul,
-    ol,
-    menu {
-      list-style: none inside none;
-      padding-inline-start: 0;
-    }
-
     mark {
       padding: 0.125rem 0.25rem;
       vertical-align: baseline;
@@ -144,6 +149,143 @@
 
     blockquote footer {
       margin-block-start: var(--kfw-fontspace-2xsmall);
+    }
+
+    /**
+    * Lists
+    */
+    ul,
+    ol,
+    menu {
+      list-style: none inside none;
+      padding-inline-start: 0;
+      font-weight: var(--kfw-fontweight);
+    }
+
+    ul li ul,
+    ul li ol,
+    ol li ul,
+    ol li ol {
+      margin-block-start: var(--kfw-space-xsmall);
+      padding-inline-start: var(--kfw-space-small);
+    }
+
+    .list-item {
+      position: relative;
+      margin-block-end: var(--kfw-space-xsmall);
+    }
+
+    .list-item::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+
+    :where(.list--numbers, .list--letters, .list--caps, .list--icon, .list--big-checks, .list--checks, .list--bullets) > .list-item {
+      padding-inline-start: 2rem;
+    }
+
+    :where(.list--numbers, .list--letters, .list--caps, .list--icon, .list--big-checks, .list--checks, .list--bullets) > .list-item::before {
+      content: "";
+    }
+
+    :where(.list--numbers, .list--letters, .list--caps, .list--icon, .list--big-checks, .list--checks, .list--bullets) > .list-item :where(ul, ol) {
+      padding-inline-start: 0;
+    }
+
+    .list--bullets .list-item {
+      --icon-size: 0.5rem;
+
+      padding-inline-start: calc(var(--icon-size) + 10px);
+    }
+
+    .list--bullets .list-item::before {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      background-image: var(--kfw-icon-bullet-point);
+      top: 0.8rem;
+    }
+
+    .list--bullets-empty .list-item::before {
+      background-image: var(--kfw-icon-bullet-point-empty);
+    }
+
+    .list--numbers {
+      counter-reset: item-counter;
+    }
+
+    .list--numbers .list-item::before {
+      content: counter(item-counter) ".";
+      counter-increment: item-counter;
+      font-weight: var(--kfw-fontweight-bold);
+    }
+
+    .list--letters,
+    .list--caps {
+      counter-reset: item;
+    }
+
+    .list--letters .list-item::before,
+    .list--caps .list-item::before {
+      content: counter(item, lower-latin) ".";
+      counter-increment: item;
+      font-weight: var(--kfw-fontweight-bold);
+    }
+
+    .list--caps .list-item::before {
+      content: counter(item, upper-latin) ".";
+    }
+
+    .list--icon > .list-item {
+      --size: var(--icon-size-lg);
+      --space: 1.5rem;
+      --icon: var(--kfw-icon-checked-accent-dark);
+
+      margin-block-end: var(--kfw-space-small);
+      font-weight: var(--kfw-fontweight-bold);
+      padding-inline-start: calc(var(--size) + var(--space));
+    }
+
+    .list--icon > .list-item::before {
+      --icon-color: var(--kfw-color-background-dark-green);
+
+      width: var(--size);
+      height: var(--size);
+      mask-image: var(--icon);
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-color: var(--icon-color);
+    }
+
+    .list--checks .list-item::before {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      background-image: var(--kfw-icon-checked-accent-dark);
+      top: 0.3rem;
+    }
+
+    .list--big-checks .list-item {
+      --size: var(--icon-size-xl);
+      --space: 1.5rem;
+
+      padding-inline-start: calc(var(--size) + var(--space));
+    }
+
+    .list--big-checks .list-item::before {
+      width: var(--size);
+      height: var(--size);
+      background-image: var(--kfw-icon-checked-accent-dark);
+      top: -0.4rem;
+    }
+
+    @media (--kfw-breakpoint-desktop-large) {
+      .list--big-checks .list-item {
+        --size: var(--icon-size-2xl);
+        --space: 1rem;
+      }
     }
 
     /**
@@ -357,6 +499,7 @@
       padding-inline: 1.5rem;
       padding-block: 1rem;
       background-color: var(--kfw-color-background);
+      background-repeat: no-repeat;
     }
 
     .form-control::placeholder {
@@ -383,7 +526,6 @@
       padding-block: 0;
       background-position: center right 1.5rem;
       background-size: 2.4rem auto;
-      background-repeat: no-repeat;
       background-image: var(--kfw-icon-arrow-down-fn);
     }
 
@@ -765,7 +907,7 @@
       padding: 0.25rem;
       margin: 0;
       cursor: pointer;
-      border-radius: var(--kfw-borderradius); /* @todo check 1rem? */
+      border-radius: var(--kfw-borderradius);
     }
 
     .searchfield__button:where(:hover, :focus) {
@@ -1098,6 +1240,18 @@
       margin-block-end: var(--kfw-space-small);
     }
 
+    .color-palette__label {
+      text-wrap: balance;
+      display: block;
+      padding: 0.5rem;
+      margin-block-end: 0;
+    }
+
+    .color-palette__container {
+      text-align: center;
+      padding-inline: var(--kfw-space-xsmall);
+    }
+
     .color-palette__color {
       display: block;
       width: 100%;
@@ -1122,177 +1276,6 @@
       .color-palette__item:last-child .color-palette__color {
         border-inline-end: var(--kfw-borderwidth) solid var(--kfw-color-fn-inactive);
       }
-    }
-
-    .color-palette__label {
-      text-wrap: balance;
-      display: block;
-      padding: 0.5rem;
-      margin-block-end: 0;
-    }
-
-    .color-palette__container {
-      text-align: center;
-      padding-inline: var(--kfw-space-xsmall);
-    }
-
-    ul li ul, ul li ol, ol li ul, ol li ol {
-      margin-block-end: 0;
-      margin-block-start: var(--kfw-space-xsmall);
-    }
-
-    .list--default ul  {
-        padding-inline-start: var(--kfw-space-small);
-    }
-
-    .list-item {
-        margin-block-end: var(--kfw-space-xsmall);
-        position: relative;
-    }
-
-    .list--numbers {
-      counter-reset: item-counter;
-    }
-
-    .list--numbers .list-item {
-        padding-inline-start: 1.9rem;
-    }
-
-    .list--numbers .list-item::before {
-      content: counter(item-counter) ".";
-      counter-increment: item-counter;
-      font-weight: var(--kfw-fontweight-bold);
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .list--letters,
-    .list--caps {
-      counter-reset: item;
-    }
-
-    .list--letters .list-item {
-        padding-inline-start: 1.8rem;
-    }
-
-    .list--caps .list-item {
-        padding-inline-start: 2.1rem;
-    }
-
-    .list--letters .list-item::before,
-    .list--caps .list-item::before {
-      content: counter(item, lower-latin) ".";
-      counter-increment: item;
-      font-weight: var(--kfw-fontweight-bold);
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .list--caps .list-item::before {
-      content: counter(item, upper-latin) ".";
-    }
-
-    .list--icon .list-item {
-      margin-block-end: var(--kfw-space-small);
-      font-weight: var(--kfw-fontweight-bold);
-      line-height: 2.4rem;
-      padding-inline-start: 3.9rem;
-    }
-
-    .list--icon .home-image.list-item p {
-      margin-block-start: var(--kfw-space-xsmall);
-      font-weight: var(--kfw-fontweight);
-    }
-
-    .list--icon .list-item .list--icon .list-item {
-      font-weight: var(--kfw-fontweight);
-      line-height: var(--kfw-lineheight);
-      padding-inline-start: 1.6rem;
-      margin-block-end: var(--kfw-space-xsmall);
-    }
-
-    .list--icon .list-item::before {
-      content: "";
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      background-image: var(--kfw-icon-checked-accent-dark);
-      background-repeat: no-repeat;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .list--icon .personal-image.list-item::before {
-      background-image: var(--kfw-icon-personal-settings-accent-dark);
-    }
-
-    .list--icon .dialogue-image.list-item::before {
-      background-image: var(--kfw-icon-dialogue-accent-dark);
-    }
-
-    .list--icon .home-image.list-item::before {
-      background-image: var(--kfw-icon-home-accent-dark);
-    }
-
-    .list--icon .exclamation-image.list-item::before {
-      background-image: var(--kfw-icon-exclamation-mark-filled-accent-dark);
-    }
-
-    .list--icon.bullet-point .list-item::before {
-      width: 15px;
-      height: 5px;
-      background-image: var(--kfw-icon-bullet-point);
-      top: 10px;
-    }
-
-    .list--big-checks .list-item {
-      padding-inline-start: 4.2rem;
-    }
-
-    .list--checks .list-item {
-      padding-inline-start: 4.3rem;
-    }
-
-    .list--checks .list-item::before,
-    .list--big-checks .list-item::before {
-      content: "";
-      display: inline-block;
-      width: 28px;
-      height: 28px;
-      background-image: var(--kfw-icon-checked-accent-dark);
-      background-repeat: no-repeat;
-      position: absolute;
-      top: -4px;
-      left: 0;
-    }
-
-    .list--big-checks .list-item::before {
-      width: 32px;
-      height: 32px;
-      top: -5px;
-    }
-
-    .list--bullets .list-item {
-      padding-inline-start: 1.5rem;
-    }
-
-    .list--bullets .list-item::before {
-      content: "";
-      display: inline-block;
-      width: 15px;
-      height: 5px;
-      background-image: var(--kfw-icon-bullet-point);
-      background-repeat: no-repeat;
-      position: absolute;
-      top: 8px;
-      left: 0;
-    }
-
-    .bullet-empty.list--bullets .list-item::before {
-      background-image: var(--kfw-icon-bullet-point-empty);
     }
   }
 

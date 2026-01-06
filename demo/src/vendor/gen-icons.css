@@ -20,12 +20,36 @@
   --icon: url("../icons/arrow-up.svg");
 }
 
+.icon--bullet-point-empty {
+  --icon: url("../icons/bullet-point-empty.svg");
+}
+
+.icon--bullet-point {
+  --icon: url("../icons/bullet-point.svg");
+}
+
 .icon--calendar {
   --icon: url("../icons/calendar.svg");
 }
 
+.icon--checked {
+  --icon: url("../icons/checked.svg");
+}
+
 .icon--delete {
   --icon: url("../icons/delete.svg");
+}
+
+.icon--dialogue {
+  --icon: url("../icons/dialogue.svg");
+}
+
+.icon--exclamation-mark-filled {
+  --icon: url("../icons/exclamation-mark-filled.svg");
+}
+
+.icon--home {
+  --icon: url("../icons/home.svg");
 }
 
 .icon--lock {
@@ -34,6 +58,10 @@
 
 .icon--login {
   --icon: url("../icons/login.svg");
+}
+
+.icon--personal-settings {
+  --icon: url("../icons/personal-settings.svg");
 }
 
 .icon--plus {
