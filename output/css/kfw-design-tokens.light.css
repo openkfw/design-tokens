@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.0 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.1 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 :root, :host { color-scheme: light; }
@@ -156,13 +156,15 @@
   --kfw-base-layout-gridgap-fluid-max: 3.6rem;
   --kfw-base-layout-gridgap-fluid-val: 3.529vi - 0.9176rem;
   --kfw-color-fn: #005a8c; /** Main interaction color for buttons and links (Blue 600) */
-  --kfw-color-fn-active: #00446e; /** Interaction color when active (e.g., hover, Blue 700) */
+  --kfw-color-fn-active: #00446e; /** Main interaction color when active (e.g., hover, Blue 700) */
   --kfw-color-fn-inactive: #a1adb5; /** Interaction color when inactive (Gray 300) */
   --kfw-color-fn-border: #2d3134; /** Interaction border color (Gray 600) */
   --kfw-color-fn-label: #2d3134; /** Interaction label color (Gray 600) */
   --kfw-color-text: #2d3134; /** Main text color for body (Gray 600) */
   --kfw-color-text-on-dark-bg: #fff; /** Main text color on dark background (White) */
-  --kfw-color-text-on-disabled: #fff; /** Main text color on disabled (White) */
+  --kfw-color-text-on-white-bg: #b7f9aa; /** Text color on white background (Green 300) */
+  --kfw-color-text-on-colored-bg: #00375b; /** Text color on colored background (Blue 800) */
+  --kfw-color-text-on-disabled: #fff; /** Text color on disabled (White) */
   --kfw-color-text-headline-on-dark-bg: #b7f9aa; /** Headline text color on dark background (Green 300) */
   --kfw-color-background: #fff; /** Main background color for body (White) */
   --kfw-color-background-subtle: #f6f7f8; /** Neutral (Gray 50) */

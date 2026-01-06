@@ -4547,13 +4547,13 @@
             ],
             "hex": "#00446e"
           },
-          "$description": "Interaction color when active (e.g., hover, Blue 700)",
+          "$description": "Main interaction color when active (e.g., hover, Blue 700)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.blue.700}",
-            "$description": "Interaction color when active (e.g., hover, Blue 700)",
+            "$description": "Main interaction color when active (e.g., hover, Blue 700)",
             "$type": "color",
             "key": "{semantic.color.fn.active}"
           },
@@ -4748,6 +4748,76 @@
             "on-dark-bg"
           ]
         },
+        "on-white-bg": {
+          "key": "{semantic.color.text.on-white-bg}",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.7176,
+              0.9765,
+              0.6667
+            ],
+            "hex": "#b7f9aa"
+          },
+          "$description": "Text color on white background (Green 300)",
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "color",
+          "original": {
+            "$value": "{base.color.green.300}",
+            "$description": "Text color on white background (Green 300)",
+            "$type": "color",
+            "key": "{semantic.color.text.on-white-bg}"
+          },
+          "name": "kfw-color-text-on-white-bg",
+          "attributes": {
+            "category": "semantic",
+            "type": "color",
+            "item": "text",
+            "subitem": "on-white-bg"
+          },
+          "path": [
+            "semantic",
+            "color",
+            "text",
+            "on-white-bg"
+          ]
+        },
+        "on-colored-bg": {
+          "key": "{semantic.color.text.on-colored-bg}",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [
+              0,
+              0.2157,
+              0.3588
+            ],
+            "hex": "#00375b"
+          },
+          "$description": "Text color on colored background (Blue 800)",
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "color",
+          "original": {
+            "$value": "{base.color.blue.800}",
+            "$description": "Text color on colored background (Blue 800)",
+            "$type": "color",
+            "key": "{semantic.color.text.on-colored-bg}"
+          },
+          "name": "kfw-color-text-on-colored-bg",
+          "attributes": {
+            "category": "semantic",
+            "type": "color",
+            "item": "text",
+            "subitem": "on-colored-bg"
+          },
+          "path": [
+            "semantic",
+            "color",
+            "text",
+            "on-colored-bg"
+          ]
+        },
         "on-disabled": {
           "key": "{semantic.color.text.on-disabled}",
           "$value": {
@@ -4759,13 +4829,13 @@
             ],
             "hex": "#ffffff"
           },
-          "$description": "Main text color on disabled (White)",
+          "$description": "Text color on disabled (White)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.white.default}",
-            "$description": "Main text color on disabled (White)",
+            "$description": "Text color on disabled (White)",
             "$type": "color",
             "key": "{semantic.color.text.on-disabled}"
           },

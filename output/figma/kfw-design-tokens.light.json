@@ -340,6 +340,14 @@
           "$value": "#fff",
           "$type": "color"
         },
+        "On-white-bg": {
+          "$value": "#b7f9aa",
+          "$type": "color"
+        },
+        "On-colored-bg": {
+          "$value": "#00375b",
+          "$type": "color"
+        },
         "On-disabled": {
           "$value": "#fff",
           "$type": "color"

@@ -1089,7 +1089,7 @@
         },
         active: {
           $value: "{base.color.white.default}",
-          $description: "Interaction color when active (e.g., hover, Blue 700)",
+          $description: "Main interaction color when active (e.g., hover, Blue 700)",
         },
         inactive: {
           $value: "{base.color.gray.300}",
@@ -1113,9 +1113,17 @@
           $value: "{base.color.white.default}",
           $description: "Main text color on dark background (White)",
         },
+        "on-white-bg": {
+          $value: "{base.color.green.300}",
+          $description: "Text color on white background (Green 300)",
+        },
+        "on-colored-bg": {
+          $value: "{base.color.blue.800}",
+          $description: "Text color on colored background (Blue 800)",
+        },
         "on-disabled": {
           $value: "{base.color.white.default}",
-          $description: "Main text color on disabled (White)",
+          $description: "Text color on disabled (White)",
         },
         "headline-on-dark-bg": {
           $value: "{base.color.green.300}",

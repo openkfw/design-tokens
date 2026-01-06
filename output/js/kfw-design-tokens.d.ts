@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.0 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.1 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100: {
@@ -275,7 +275,7 @@ export const KfwColorFn: {
   components: number[];
   hex: string;
 };
-/** Interaction color when active (e.g., hover, Blue 700) */
+/** Main interaction color when active (e.g., hover, Blue 700) */
 export const KfwColorFnActive: {
   colorSpace: string;
   components: number[];
@@ -311,7 +311,19 @@ export const KfwColorTextOnDarkBg: {
   components: number[];
   hex: string;
 };
-/** Main text color on disabled (White) */
+/** Text color on white background (Green 300) */
+export const KfwColorTextOnWhiteBg: {
+  colorSpace: string;
+  components: number[];
+  hex: string;
+};
+/** Text color on colored background (Blue 800) */
+export const KfwColorTextOnColoredBg: {
+  colorSpace: string;
+  components: number[];
+  hex: string;
+};
+/** Text color on disabled (White) */
 export const KfwColorTextOnDisabled: {
   colorSpace: string;
   components: number[];
