@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.2 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.3 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100: {
@@ -237,6 +237,8 @@ export const KfwBaseBorderwidthMd: string;
 export const KfwBaseBorderwidthLg: string;
 export const KfwBaseFontweightRegular: number;
 export const KfwBaseFontweightMedium: number;
+export const KfwBaseWordspacingNormal: string;
+export const KfwBaseWordspacingWide: string;
 export const KfwBaseLetterspacingTight: string;
 export const KfwBaseLetterspacingNormal: string;
 export const KfwBaseLetterspacingWide: string;
@@ -563,6 +565,7 @@ export const KfwFontsizeHeading4Val: string;
 export const KfwFontsizeHeading5: string;
 export const KfwFontsizeHeading6: string;
 export const KfwLineheight: number;
+export const KfwLineheightLightspeech: number;
 export const KfwLineheightList: number;
 export const KfwLineheightHeading: number;
 export const KfwLineheightHeading5: number;
@@ -578,6 +581,7 @@ export const KfwFocusringOutlineOffset: string;
 export const KfwFocusringOutlineStyle: string;
 export const KfwFontweight: number;
 export const KfwFontweightBold: number;
+export const KfwWordspacingLightspeech: string;
 export const KfwBreakpointMobile: string;
 export const KfwBreakpointTablet: string;
 export const KfwBreakpointDesktop: string;

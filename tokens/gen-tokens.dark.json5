@@ -883,6 +883,21 @@
         $value: 500,
       },
     },
+    wordspacing: {
+      $type: "dimension",
+      normal: {
+        $value: {
+          unit: "px",
+          value: 0,
+        },
+      },
+      wide: {
+        $value: {
+          unit: "px",
+          value: 1.6,
+        },
+      },
+    },
     letterspacing: {
       $type: "dimension",
       tight: {
@@ -1409,6 +1424,9 @@
       default: {
         $value: "{base.lineheight.md}",
       },
+      lightspeech: {
+        $value: "{base.lineheight.lg}",
+      },
       list: {
         $value: "{base.lineheight.lg}",
       },
@@ -1468,6 +1486,12 @@
       },
       bold: {
         $value: "{base.fontweight.medium}",
+      },
+    },
+    wordspacing: {
+      $type: "dimension",
+      lightspeech: {
+        $value: "{base.wordspacing.wide}",
       },
     },
     breakpoint: {

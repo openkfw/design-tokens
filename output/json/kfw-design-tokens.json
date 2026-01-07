@@ -3637,6 +3637,58 @@
         ]
       }
     },
+    "wordspacing": {
+      "normal": {
+        "key": "{base.wordspacing.normal}",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        },
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "dimension",
+        "original": {
+          "$value": {
+            "unit": "px",
+            "value": 0
+          },
+          "$type": "dimension",
+          "key": "{base.wordspacing.normal}"
+        },
+        "name": "normal",
+        "attributes": {},
+        "path": [
+          "base",
+          "wordspacing",
+          "normal"
+        ]
+      },
+      "wide": {
+        "key": "{base.wordspacing.wide}",
+        "$value": {
+          "unit": "px",
+          "value": 1.6
+        },
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "dimension",
+        "original": {
+          "$value": {
+            "unit": "px",
+            "value": 1.6
+          },
+          "$type": "dimension",
+          "key": "{base.wordspacing.wide}"
+        },
+        "name": "wide",
+        "attributes": {},
+        "path": [
+          "base",
+          "wordspacing",
+          "wide"
+        ]
+      }
+    },
     "letterspacing": {
       "tight": {
         "key": "{base.letterspacing.tight}",
@@ -6999,6 +7051,29 @@
           "default"
         ]
       },
+      "lightspeech": {
+        "key": "{semantic.lineheight.lightspeech}",
+        "$value": 1.5,
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "number",
+        "original": {
+          "$value": "{base.lineheight.lg}",
+          "$type": "number",
+          "key": "{semantic.lineheight.lightspeech}"
+        },
+        "name": "kfw-lineheight-lightspeech",
+        "attributes": {
+          "category": "semantic",
+          "type": "lineheight",
+          "item": "lightspeech"
+        },
+        "path": [
+          "semantic",
+          "lineheight",
+          "lightspeech"
+        ]
+      },
       "list": {
         "key": "{semantic.lineheight.list}",
         "$value": 1.5,
@@ -7340,6 +7415,30 @@
           "semantic",
           "fontweight",
           "bold"
+        ]
+      }
+    },
+    "wordspacing": {
+      "lightspeech": {
+        "key": "{semantic.wordspacing.lightspeech}",
+        "$value": {
+          "unit": "px",
+          "value": 1.6
+        },
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "dimension",
+        "original": {
+          "$value": "{base.wordspacing.wide}",
+          "$type": "dimension",
+          "key": "{semantic.wordspacing.lightspeech}"
+        },
+        "name": "lightspeech",
+        "attributes": {},
+        "path": [
+          "semantic",
+          "wordspacing",
+          "lightspeech"
         ]
       }
     },

@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.2 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.3 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100 = {
@@ -239,6 +239,8 @@ export const KfwBaseBorderwidthMd = "1px";
 export const KfwBaseBorderwidthLg = "2px";
 export const KfwBaseFontweightRegular = 400;
 export const KfwBaseFontweightMedium = 500;
+export const KfwBaseWordspacingNormal = "0";
+export const KfwBaseWordspacingWide = "1.6px";
 export const KfwBaseLetterspacingTight = "-0.5px";
 export const KfwBaseLetterspacingNormal = "0";
 export const KfwBaseLetterspacingWide = "0.5px";
@@ -544,6 +546,7 @@ export const KfwFontsizeHeading4Val = "0.294vi + 1.1396875rem";
 export const KfwFontsizeHeading5 = "1.125rem";
 export const KfwFontsizeHeading6 = "1rem";
 export const KfwLineheight = 1.4;
+export const KfwLineheightLightspeech = 1.5;
 export const KfwLineheightList = 1.5;
 export const KfwLineheightHeading = 1.3;
 export const KfwLineheightHeading5 = 1.333;
@@ -559,6 +562,7 @@ export const KfwFocusringOutlineOffset = "2px";
 export const KfwFocusringOutlineStyle = "dashed";
 export const KfwFontweight = 400;
 export const KfwFontweightBold = 500;
+export const KfwWordspacingLightspeech = "1.6px";
 export const KfwBreakpointMobile = "600px";
 export const KfwBreakpointTablet = "840px";
 export const KfwBreakpointDesktop = "960px";

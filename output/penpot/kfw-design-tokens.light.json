@@ -288,6 +288,16 @@
         "$type": "fontWeights"
       }
     },
+    "Wordspacing": {
+      "Normal": {
+        "$value": "0px",
+        "$type": "dimension"
+      },
+      "Wide": {
+        "$value": "1.6px",
+        "$type": "dimension"
+      }
+    },
     "Letterspacing": {
       "Tight": {
         "$value": "-0.5px",
@@ -669,6 +679,10 @@
         "$value": "140%",
         "$type": "lineHeights"
       },
+      "Lightspeech": {
+        "$value": "150%",
+        "$type": "lineHeights"
+      },
       "List": {
         "$value": "150%",
         "$type": "lineHeights"
@@ -722,6 +736,12 @@
       "Bold": {
         "$value": 500,
         "$type": "fontWeights"
+      }
+    },
+    "Wordspacing": {
+      "Lightspeech": {
+        "$value": "1.6px",
+        "$type": "dimension"
       }
     }
   },
