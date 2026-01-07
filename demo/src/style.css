@@ -283,7 +283,7 @@
 
     /* Bullet Lists */
     .list--bullets > .list-item {
-      --icon-size: 0.6rem;
+      --icon-size: 0.7rem;
 
       padding-inline-start: calc(var(--icon-size) + 1rem);
     }
