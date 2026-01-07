@@ -14,7 +14,7 @@
     "lint": "npx stylelint 'src/*.css' --fix"
   },
   "devDependencies": {
-    "@openkfw/design-tokens": "^0.6.2",
+    "@openkfw/design-tokens": "^0.6.3",
     "postcss-custom-media": "^11.0.6",
     "postcss-inline-svg": "^6.0.0",
     "stylelint": "^16.26.1",

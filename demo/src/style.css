@@ -63,7 +63,7 @@
   @layer tokens {
     :root,
     :host {
-      /* Base64 icons, used for elements without their own element or pseudo-elements (::before, ::after) like <select>, <input> */
+      /* Base64 icons for mask-image workaround on elements without pseudo-elements (::before, ::after), e.g., <select>, <input> */
       --kfw-icon-select-disabled: svg-load("icons/arrow-down.svg", "var(--kfw-color-text)");
       --kfw-icon-select: svg-load("icons/arrow-down.svg", "var(--kfw-color-fn)");
       --kfw-icon-input-datepicker: svg-load("icons/calendar.svg", "var(--kfw-color-fn)");
