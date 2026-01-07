@@ -61,15 +61,13 @@
 
 @layer core {
   @layer tokens {
-    :root {
-      /* icons */
-      --kfw-icon-arrow-down: svg-load("icons/arrow-down.svg", "var(--kfw-color-text)");
-      --kfw-icon-bullet-point: svg-load("icons/bullet-point.svg", "var(--kfw-color-text)");
-      --kfw-icon-bullet-point-empty: svg-load("icons/bullet-point-empty.svg", "var(--kfw-color-text)");
-      --kfw-icon-arrow-down-fn: svg-load("icons/arrow-down.svg", "var(--kfw-color-fn)");
-      --kfw-icon-calendar-fn: svg-load("icons/calendar.svg", "var(--kfw-color-fn)");
-      --kfw-icon-time-fn: svg-load("icons/time.svg", "var(--kfw-color-fn)");
-      --kfw-icon-checked-accent-dark: svg-load("icons/checked.svg", "var(--kfw-color-background-dark-green)");
+    :root,
+    :host {
+      /* Base64 icons, used for elements without their own element or pseudo-elements (::before, ::after) like <select>, <input> */
+      --kfw-icon-base64-arrow-down: svg-load("icons/arrow-down.svg", "var(--kfw-color-text)");
+      --kfw-icon-base64-arrow-down-fn: svg-load("icons/arrow-down.svg", "var(--kfw-color-fn)");
+      --kfw-icon-base64-calendar-fn: svg-load("icons/calendar.svg", "var(--kfw-color-fn)");
+      --kfw-icon-base64-time-fn: svg-load("icons/time.svg", "var(--kfw-color-fn)");
 
       /* fluid shorthands */
       --kfw-safezone: clamp(var(--kfw-safezone-min), var(--kfw-safezone-val), var(--kfw-safezone-max));
@@ -157,7 +155,7 @@
     ul,
     ol,
     menu {
-      list-style: none inside none;
+      list-style: none;
       padding-inline-start: 0;
       font-weight: var(--kfw-fontweight);
     }
@@ -179,8 +177,11 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-repeat: no-repeat;
       pointer-events: none;
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-repeat: no-repeat;
     }
 
     :where(.list--numbers, .list--letters, .list--caps, .list--icon, .list--big-checks, .list--checks, .list--bullets) > .list-item {
@@ -195,40 +196,12 @@
       padding-inline-start: 0;
     }
 
-    .list--bullets .list-item {
-      --icon-size: 0.5rem;
-
-      padding-inline-start: calc(var(--icon-size) + 10px);
-    }
-
-    .list--bullets .list-item::before {
-      width: var(--icon-size);
-      height: var(--icon-size);
-      background-image: var(--kfw-icon-bullet-point);
-      top: 0.8rem;
-    }
-
-    .list--bullets-empty .list-item::before {
-      background-image: var(--kfw-icon-bullet-point-empty);
-    }
-
-    .list--numbers {
-      counter-reset: item-counter;
-    }
-
-    .list--numbers .list-item::before {
-      content: counter(item-counter) ".";
-      counter-increment: item-counter;
-      font-weight: var(--kfw-fontweight-bold);
-    }
-
-    .list--letters,
-    .list--caps {
+    /* Numbered and Lettered Lists */
+    :where(.list--letters, .list--caps) {
       counter-reset: item;
     }
 
-    .list--letters .list-item::before,
-    .list--caps .list-item::before {
+    :where(.list--letters, .list--caps) .list-item::before {
       content: counter(item, lower-latin) ".";
       counter-increment: item;
       font-weight: var(--kfw-fontweight-bold);
@@ -238,10 +211,60 @@
       content: counter(item, upper-latin) ".";
     }
 
+    .list--numbers {
+      counter-reset: item-counter;
+    }
+
+    .list--numbers > .list-item::before {
+      content: counter(item-counter) ".";
+      counter-increment: item-counter;
+      font-weight: var(--kfw-fontweight-bold);
+    }
+
+    /* Check and Big Check Lists */
+    :where(.list--checks, .list--big-checks) > .list-item {
+      --icon: var(--kfw-icon-checked);
+    }
+
+    .list--checks > .list-item::before {
+      min-width: var(--icon-size);
+      min-height: var(--icon-size);
+      top: 0.3rem;
+      mask-image: var(--icon);
+      background-color: var(--kfw-color-background-dark-green);
+    }
+
+    .list--big-checks > .list-item {
+      --size: var(--icon-size-xl);
+      --space: 1.5rem;
+
+      padding-inline-start: calc(var(--size) + var(--space));
+    }
+
+    .list--big-checks > .list-item::before {
+      min-width: var(--size);
+      min-height: var(--size);
+      top: -0.1rem;
+      mask-image: var(--icon);
+      background-color: var(--kfw-color-background-dark-green);
+    }
+
+    @media (--kfw-breakpoint-desktop-large) {
+      .list--big-checks > .list-item {
+        --size: var(--icon-size-2xl);
+        --space: 1rem;
+      }
+
+      .list--big-checks > .list-item::before {
+        top: -0.3rem;
+      }
+    }
+
+    /* Icon Lists */
     .list--icon > .list-item {
       --size: var(--icon-size-lg);
       --space: 1.5rem;
-      --icon: var(--kfw-icon-checked-accent-dark);
+      --icon: var(--kfw-icon-checked);
 
       margin-block-end: var(--kfw-space-small);
       font-weight: var(--kfw-fontweight-bold);
@@ -251,41 +274,31 @@
     .list--icon > .list-item::before {
       --icon-color: var(--kfw-color-background-dark-green);
 
-      width: var(--size);
-      height: var(--size);
+      min-width: var(--size);
+      min-height: var(--size);
       mask-image: var(--icon);
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
       background-color: var(--icon-color);
+      top: -0.1rem;
     }
 
-    .list--checks .list-item::before {
-      width: var(--icon-size);
-      height: var(--icon-size);
-      background-image: var(--kfw-icon-checked-accent-dark);
-      top: 0.3rem;
+    /* Bullet Lists */
+    .list--bullets > .list-item {
+      --icon-size: 0.5rem;
+
+      padding-inline-start: calc(var(--icon-size) + 10px);
     }
 
-    .list--big-checks .list-item {
-      --size: var(--icon-size-xl);
-      --space: 1.5rem;
-
-      padding-inline-start: calc(var(--size) + var(--space));
+    .list--bullets > .list-item::before {
+      min-width: var(--icon-size);
+      min-height: var(--icon-size);
+      top: 0.8rem;
+      mask-image: var(--kfw-icon-bullet-point);
+      background-color: currentcolor;
     }
 
-    .list--big-checks .list-item::before {
-      width: var(--size);
-      height: var(--size);
-      background-image: var(--kfw-icon-checked-accent-dark);
-      top: -0.4rem;
-    }
-
-    @media (--kfw-breakpoint-desktop-large) {
-      .list--big-checks .list-item {
-        --size: var(--icon-size-2xl);
-        --space: 1rem;
-      }
+    .list--bullets-empty > .list-item::before {
+      mask-image: var(--kfw-icon-bullet-point-empty);
+      background-color: currentcolor;
     }
 
     /**
@@ -526,11 +539,11 @@
       padding-block: 0;
       background-position: center right 1.5rem;
       background-size: 2.4rem auto;
-      background-image: var(--kfw-icon-arrow-down-fn);
+      background-image: var(--kfw-icon-base64-arrow-down-fn);
     }
 
     select.form-control:disabled {
-      background-image: var(--kfw-icon-arrow-down);
+      background-image: var(--kfw-icon-base64-arrow-down);
     }
 
     textarea.form-control {
@@ -738,11 +751,11 @@
     }
 
     [type="date"]::-webkit-calendar-picker-indicator {
-      content: var(--kfw-icon-calendar-fn);
+      content: var(--kfw-icon-base64-calendar-fn);
     }
 
     [type="time"]::-webkit-calendar-picker-indicator {
-      content: var(--kfw-icon-time-fn);
+      content: var(--kfw-icon-base64-time-fn);
     }
 
     :where(a:not([role="button"]), [role="link"]) {

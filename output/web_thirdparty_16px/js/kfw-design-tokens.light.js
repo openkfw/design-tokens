@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.0 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.1 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100 = {
@@ -280,7 +280,7 @@ export const KfwColorFnActive = {
   colorSpace: "srgb",
   components: [0, 0.2667, 0.4314],
   hex: "#00446e",
-}; // Interaction color when active (e.g., hover, Blue 700)
+}; // Main interaction color when active (e.g., hover, Blue 700)
 export const KfwColorFnInactive = {
   colorSpace: "srgb",
   components: [0.6314, 0.6784, 0.7098],
@@ -306,11 +306,21 @@ export const KfwColorTextOnDarkBg = {
   components: [1, 1, 1],
   hex: "#ffffff",
 }; // Main text color on dark background (White)
+export const KfwColorTextOnWhiteBg = {
+  colorSpace: "srgb",
+  components: [0.7176, 0.9765, 0.6667],
+  hex: "#b7f9aa",
+}; // Text color on white background (Green 300)
+export const KfwColorTextOnColoredBg = {
+  colorSpace: "srgb",
+  components: [0, 0.2157, 0.3588],
+  hex: "#00375b",
+}; // Text color on colored background (Blue 800)
 export const KfwColorTextOnDisabled = {
   colorSpace: "srgb",
   components: [1, 1, 1],
   hex: "#ffffff",
-}; // Main text color on disabled (White)
+}; // Text color on disabled (White)
 export const KfwColorTextHeadlineOnDarkBg = {
   colorSpace: "srgb",
   components: [0.7176, 0.9765, 0.6667],

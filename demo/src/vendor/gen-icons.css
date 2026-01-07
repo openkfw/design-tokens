@@ -1,81 +1,105 @@
 /* Auto-generated icon classes */
 
+:root,
+:host {
+  --kfw-icon-alert: url("../icons/alert.svg");
+  --kfw-icon-arrow-down: url("../icons/arrow-down.svg");
+  --kfw-icon-arrow-left: url("../icons/arrow-left.svg");
+  --kfw-icon-arrow-right: url("../icons/arrow-right.svg");
+  --kfw-icon-arrow-up: url("../icons/arrow-up.svg");
+  --kfw-icon-bullet-point-empty: url("../icons/bullet-point-empty.svg");
+  --kfw-icon-bullet-point: url("../icons/bullet-point.svg");
+  --kfw-icon-calendar: url("../icons/calendar.svg");
+  --kfw-icon-checked: url("../icons/checked.svg");
+  --kfw-icon-delete: url("../icons/delete.svg");
+  --kfw-icon-dialogue: url("../icons/dialogue.svg");
+  --kfw-icon-exclamation-mark-filled: url("../icons/exclamation-mark-filled.svg");
+  --kfw-icon-home: url("../icons/home.svg");
+  --kfw-icon-lock: url("../icons/lock.svg");
+  --kfw-icon-login: url("../icons/login.svg");
+  --kfw-icon-personal-settings: url("../icons/personal-settings.svg");
+  --kfw-icon-plus: url("../icons/plus.svg");
+  --kfw-icon-search: url("../icons/search.svg");
+  --kfw-icon-time: url("../icons/time.svg");
+  --kfw-icon-upload: url("../icons/upload.svg");
+}
+
 .icon--alert {
-  --icon: url("../icons/alert.svg");
+  --icon: var(--kfw-icon-alert);
 }
 
 .icon--arrow-down {
-  --icon: url("../icons/arrow-down.svg");
+  --icon: var(--kfw-icon-arrow-down);
 }
 
 .icon--arrow-left {
-  --icon: url("../icons/arrow-left.svg");
+  --icon: var(--kfw-icon-arrow-left);
 }
 
 .icon--arrow-right {
-  --icon: url("../icons/arrow-right.svg");
+  --icon: var(--kfw-icon-arrow-right);
 }
 
 .icon--arrow-up {
-  --icon: url("../icons/arrow-up.svg");
+  --icon: var(--kfw-icon-arrow-up);
 }
 
 .icon--bullet-point-empty {
-  --icon: url("../icons/bullet-point-empty.svg");
+  --icon: var(--kfw-icon-bullet-point-empty);
 }
 
 .icon--bullet-point {
-  --icon: url("../icons/bullet-point.svg");
+  --icon: var(--kfw-icon-bullet-point);
 }
 
 .icon--calendar {
-  --icon: url("../icons/calendar.svg");
+  --icon: var(--kfw-icon-calendar);
 }
 
 .icon--checked {
-  --icon: url("../icons/checked.svg");
+  --icon: var(--kfw-icon-checked);
 }
 
 .icon--delete {
-  --icon: url("../icons/delete.svg");
+  --icon: var(--kfw-icon-delete);
 }
 
 .icon--dialogue {
-  --icon: url("../icons/dialogue.svg");
+  --icon: var(--kfw-icon-dialogue);
 }
 
 .icon--exclamation-mark-filled {
-  --icon: url("../icons/exclamation-mark-filled.svg");
+  --icon: var(--kfw-icon-exclamation-mark-filled);
 }
 
 .icon--home {
-  --icon: url("../icons/home.svg");
+  --icon: var(--kfw-icon-home);
 }
 
 .icon--lock {
-  --icon: url("../icons/lock.svg");
+  --icon: var(--kfw-icon-lock);
 }
 
 .icon--login {
-  --icon: url("../icons/login.svg");
+  --icon: var(--kfw-icon-login);
 }
 
 .icon--personal-settings {
-  --icon: url("../icons/personal-settings.svg");
+  --icon: var(--kfw-icon-personal-settings);
 }
 
 .icon--plus {
-  --icon: url("../icons/plus.svg");
+  --icon: var(--kfw-icon-plus);
 }
 
 .icon--search {
-  --icon: url("../icons/search.svg");
+  --icon: var(--kfw-icon-search);
 }
 
 .icon--time {
-  --icon: url("../icons/time.svg");
+  --icon: var(--kfw-icon-time);
 }
 
 .icon--upload {
-  --icon: url("../icons/upload.svg");
+  --icon: var(--kfw-icon-upload);
 }
