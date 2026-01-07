@@ -283,9 +283,9 @@
 
     /* Bullet Lists */
     .list--bullets > .list-item {
-      --icon-size: 0.5rem;
+      --icon-size: 0.6rem;
 
-      padding-inline-start: calc(var(--icon-size) + 10px);
+      padding-inline-start: calc(var(--icon-size) + 1rem);
     }
 
     .list--bullets > .list-item::before {
