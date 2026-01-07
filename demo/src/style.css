@@ -64,10 +64,10 @@
     :root,
     :host {
       /* Base64 icons, used for elements without their own element or pseudo-elements (::before, ::after) like <select>, <input> */
-      --kfw-icon-base64-arrow-down: svg-load("icons/arrow-down.svg", "var(--kfw-color-text)");
-      --kfw-icon-base64-arrow-down-fn: svg-load("icons/arrow-down.svg", "var(--kfw-color-fn)");
-      --kfw-icon-base64-calendar-fn: svg-load("icons/calendar.svg", "var(--kfw-color-fn)");
-      --kfw-icon-base64-time-fn: svg-load("icons/time.svg", "var(--kfw-color-fn)");
+      --kfw-icon-select-disabled: svg-load("icons/arrow-down.svg", "var(--kfw-color-text)");
+      --kfw-icon-select: svg-load("icons/arrow-down.svg", "var(--kfw-color-fn)");
+      --kfw-icon-input-datepicker: svg-load("icons/calendar.svg", "var(--kfw-color-fn)");
+      --kfw-icon-input-timepicker: svg-load("icons/time.svg", "var(--kfw-color-fn)");
 
       /* fluid shorthands */
       --kfw-safezone: clamp(var(--kfw-safezone-min), var(--kfw-safezone-val), var(--kfw-safezone-max));
@@ -539,11 +539,11 @@
       padding-block: 0;
       background-position: center right 1.5rem;
       background-size: 2.4rem auto;
-      background-image: var(--kfw-icon-base64-arrow-down-fn);
+      background-image: var(--kfw-icon-select);
     }
 
     select.form-control:disabled {
-      background-image: var(--kfw-icon-base64-arrow-down);
+      background-image: var(--kfw-icon-select-disabled);
     }
 
     textarea.form-control {
@@ -751,11 +751,11 @@
     }
 
     [type="date"]::-webkit-calendar-picker-indicator {
-      content: var(--kfw-icon-base64-calendar-fn);
+      content: var(--kfw-icon-input-datepicker);
     }
 
     [type="time"]::-webkit-calendar-picker-indicator {
-      content: var(--kfw-icon-base64-time-fn);
+      content: var(--kfw-icon-input-timepicker);
     }
 
     :where(a:not([role="button"]), [role="link"]) {
