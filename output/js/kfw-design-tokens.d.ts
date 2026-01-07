@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.1 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.2 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100: {
