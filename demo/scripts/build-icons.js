@@ -9,14 +9,18 @@ const SVG_EXTENSION = ".svg"
 async function buildIconsCSS() {
   try {
     const files = await fs.readdir(iconsFolder)
-    const svgFiles = files.filter((file) => path.extname(file) === ".svg")
+    const svgFiles = files.filter((file) => path.extname(file) === SVG_EXTENSION)
 
-    const rootVariables = svgFiles
-      .map((file) => {
+    const rootVariables = await Promise.all(
+      svgFiles.map(async (file) => {
         const iconName = path.basename(file, SVG_EXTENSION)
-        return `  --kfw-icon-${iconName}: url("../icons/${file}");`
+        const svgPath = path.join(iconsFolder, file)
+        let svgContent = await fs.readFile(svgPath, "utf8")
+        const encodedSvg = encodeURIComponent(svgContent).replace(/'/g, "%27").replace(/"/g, "%22")
+        const dataUrl = `url("data:image/svg+xml,${encodedSvg}")`
+        return `  --kfw-icon-${iconName}: ${dataUrl};`
       })
-      .join("\n")
+    )
 
     const iconClasses = svgFiles
       .map((file) => {
@@ -25,7 +29,7 @@ async function buildIconsCSS() {
       })
       .join("\n\n")
 
-    const cssContent = `/* Auto-generated icon classes */\n\n:root,\n:host {\n${rootVariables}\n}\n\n${iconClasses}\n`
+    const cssContent = `/* Auto-generated icon classes */\n\n:root,\n:host {\n${rootVariables.join("\n")}\n}\n\n${iconClasses}\n`
 
     await fs.writeFile(outputFile, cssContent)
     console.log(`✅ Icons CSS file generated at ${outputFile}`)

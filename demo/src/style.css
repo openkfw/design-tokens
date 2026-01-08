@@ -63,6 +63,8 @@
   @layer tokens {
     :root,
     :host {
+      --kfw-icon-alert: svg-load("icons/alert.svg");
+
       /* Base64 icons for mask-image workaround on elements without pseudo-elements (::before, ::after), e.g., <select>, <input> */
       --kfw-icon-select-disabled: svg-load("icons/arrow-down.svg", "var(--kfw-color-text)");
       --kfw-icon-select: svg-load("icons/arrow-down.svg", "var(--kfw-color-fn)");
