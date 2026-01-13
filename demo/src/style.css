@@ -774,7 +774,7 @@
       vertical-align: top;
     }
 
-    :where(a:not([role="button"]), [role="link"]):where(:hover, :focus, :active) {
+    :where(a:not([role="button"]), [role="link"]):where(:hover, :focus) {
       color: var(--link-color-hover);
       text-decoration: underline;
     }
@@ -827,11 +827,20 @@
       border-color: var(--button-border-color);
     }
 
+    :where([type="submit"], .button--primary):where(:hover, :focus, :active) {
+      text-decoration: underline;
+    }
+
     :where([type="submit"], .button--primary):where(:hover, :focus) {
       color: var(--button-color-hover);
       background-color: var(--button-bg-hover);
       border-color: var(--button-border-color-hover);
-      text-decoration: underline;
+    }
+
+    :where([type="submit"], .button--primary):where(:active) {
+      background-color: var(--button-color);
+      color: var(--button-bg-hover);
+      border-color: var(--button-bg-hover);
     }
 
     [type="file"]::file-selector-button,
@@ -848,12 +857,23 @@
       border-color: var(--button-border-color);
     }
 
+    [type="file"]::file-selector-button:where(:hover, :focus, :active),
+    :where([type="reset"], .button--secondary):where(:hover, :focus, :active) {
+      text-decoration: underline;
+    }
+
     [type="file"]::file-selector-button:where(:hover, :focus),
     :where([type="reset"], .button--secondary):where(:hover, :focus) {
       color: var(--button-color-hover);
       background-color: var(--button-bg-hover);
       border-color: var(--button-border-color-hover);
-      text-decoration: underline;
+    }
+
+    [type="file"]::file-selector-button:where(:active),
+    :where([type="reset"], .button--secondary):where(:active) {
+      color: var(--button-bg-hover);
+      background-color: var(--button-color-hover);
+      border-color: var(--button-bg-hover);
     }
 
     :where(.button--primary, .button--secondary):has(.icon--left) {
@@ -1330,7 +1350,7 @@
       --button-color: var(--kfw-color-text-on-dark-bg);
       --button-border-color: var(--kfw-color-text-on-dark-bg);
       --button-bg-hover: var(--kfw-color-text-on-dark-bg);
-      --button-color-hover: var(--kfw-color-text);
+      --button-color-hover: var(--kfw-color-fn-active);
       --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
     }
 
