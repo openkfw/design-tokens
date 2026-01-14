@@ -773,7 +773,7 @@
       border-radius: var(--kfw-borderradius);
       display: inline-flex;
       vertical-align: top;
-      padding: 2px;
+      padding: var(--kfw-borderwidth-large);
     }
 
     :where(a:not([role="button"]), [role="link"]):where(:hover, :focus, :active) {
@@ -898,7 +898,7 @@
 
       background-color: var(--button-bg);
       color: var(--button-color);
-      padding: 2px;
+      padding: var(--kfw-borderwidth-large);
       text-decoration: none;
     }
 
