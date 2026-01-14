@@ -909,7 +909,6 @@
 
     .button--tertiary:where(:active) {
       box-shadow: inset 0 0 0 var(--kfw-borderwidth) var(--button-color-hover);
-      border-radius: var(--kfw-borderradius);
     }
 
     .button--small {
@@ -1110,7 +1109,7 @@
     }
 
     .header__menu .icon {
-      margin: 1.2rem 0.8rem;
+      margin: 0 0.8rem;
     }
 
     :where(.header-logo-mobile, .header-logo-desktop img) {
