@@ -898,6 +898,7 @@
       color: var(--button-color);
       padding-block: 0;
       padding-inline: var(--kfw-borderwidth-large);
+      border: 0;
       text-decoration: none;
     }
 
