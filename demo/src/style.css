@@ -769,14 +769,19 @@
 
       color: var(--link-color);
       text-decoration: none;
+      border: 1px solid transparent;
       border-radius: var(--kfw-borderradius);
       display: inline-flex;
       vertical-align: top;
     }
 
-    :where(a:not([role="button"]), [role="link"]):where(:hover, :focus) {
+    :where(a:not([role="button"]), [role="link"]):where(:hover, :focus, :active) {
       color: var(--link-color-hover);
       text-decoration: underline;
+    }
+
+    :where(a:not([role="button"]), [role="link"]):where(:active) {
+      border-color: var(--link-color-hover);
     }
 
     :where(a:not([role="button"]), [role="link"]):has(.icon) {
@@ -893,13 +898,17 @@
       background-color: var(--button-bg);
       color: var(--button-color);
       padding: 0;
-      border: 0;
       text-decoration: none;
     }
 
-    .button--tertiary:where(:hover, :focus) {
+    .button--tertiary:where(:hover, :focus, :active) {
       color: var(--button-color-hover);
       text-decoration: underline;
+    }
+
+    .button--tertiary:where(:active) {
+      border-color: var(--button-color-hover);
+      border-radius: var(--kfw-borderradius);
     }
 
     .button--small {
