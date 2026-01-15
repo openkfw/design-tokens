@@ -23,6 +23,7 @@ async function buildCustomMediaCSS() {
         const name = match[1]
         const value = decl.value.trim()
         customMediaCSS += `@custom-media --kfw-breakpoint-${name} (min-width: ${value});\n`
+        customMediaCSS += `@custom-media --kfw-breakpoint-${name}-max (max-width: ${value});\n`
       }
     })
 

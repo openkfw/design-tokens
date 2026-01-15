@@ -544,45 +544,6 @@
           ]
         }
       },
-      "black": {
-        "key": "{base.color.black}",
-        "$value": {
-          "colorSpace": "srgb",
-          "components": [
-            0,
-            0,
-            0
-          ],
-          "hex": "#000000"
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "color",
-        "original": {
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0,
-              0
-            ],
-            "hex": "#000000"
-          },
-          "$type": "color",
-          "key": "{base.color.black}"
-        },
-        "name": "kfw-base-color-black",
-        "attributes": {
-          "category": "base",
-          "type": "color",
-          "item": "black"
-        },
-        "path": [
-          "base",
-          "color",
-          "black"
-        ]
-      },
       "gray": {
         "50": {
           "key": "{base.color.gray.50}",
@@ -4005,9 +3966,183 @@
         }
       },
       "safezone": {
+        "sm": {
+          "key": "{base.layout.safezone.sm}",
+          "$value": "5.625vi",
+          "$fluid": {
+            "unit": "vi"
+          },
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "number",
+          "original": {
+            "$value": 5.625,
+            "$fluid": {
+              "unit": "vi"
+            },
+            "$type": "number",
+            "key": "{base.layout.safezone.sm}"
+          },
+          "name": "kfw-base-layout-safezone-sm",
+          "attributes": {
+            "category": "base",
+            "type": "layout",
+            "item": "safezone",
+            "subitem": "sm"
+          },
+          "path": [
+            "base",
+            "layout",
+            "safezone",
+            "sm"
+          ]
+        },
+        "md": {
+          "key": "{base.layout.safezone.md}",
+          "$value": "6.667vi",
+          "$fluid": {
+            "unit": "vi"
+          },
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "number",
+          "original": {
+            "$value": 6.667,
+            "$fluid": {
+              "unit": "vi"
+            },
+            "$type": "number",
+            "key": "{base.layout.safezone.md}"
+          },
+          "name": "kfw-base-layout-safezone-md",
+          "attributes": {
+            "category": "base",
+            "type": "layout",
+            "item": "safezone",
+            "subitem": "md"
+          },
+          "path": [
+            "base",
+            "layout",
+            "safezone",
+            "md"
+          ]
+        },
+        "lg": {
+          "key": "{base.layout.safezone.lg}",
+          "$value": "7.5vi",
+          "$fluid": {
+            "unit": "vi"
+          },
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "number",
+          "original": {
+            "$value": 7.5,
+            "$fluid": {
+              "unit": "vi"
+            },
+            "$type": "number",
+            "key": "{base.layout.safezone.lg}"
+          },
+          "name": "kfw-base-layout-safezone-lg",
+          "attributes": {
+            "category": "base",
+            "type": "layout",
+            "item": "safezone",
+            "subitem": "lg"
+          },
+          "path": [
+            "base",
+            "layout",
+            "safezone",
+            "lg"
+          ]
+        },
+        "xl": {
+          "key": "{base.layout.safezone.xl}",
+          "$value": 0,
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "number",
+          "original": {
+            "$value": 0,
+            "$type": "number",
+            "key": "{base.layout.safezone.xl}"
+          },
+          "name": "kfw-base-layout-safezone-xl",
+          "attributes": {
+            "category": "base",
+            "type": "layout",
+            "item": "safezone",
+            "subitem": "xl"
+          },
+          "path": [
+            "base",
+            "layout",
+            "safezone",
+            "xl"
+          ]
+        }
+      },
+      "gridgap": {
         "static": {
+          "xs": {
+            "key": "{base.layout.gridgap.static.xs}",
+            "$value": {
+              "unit": "px",
+              "value": 12
+            },
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": {
+                "unit": "px",
+                "value": 12
+              },
+              "$type": "dimension",
+              "key": "{base.layout.gridgap.static.xs}"
+            },
+            "name": "xs",
+            "attributes": {},
+            "path": [
+              "base",
+              "layout",
+              "gridgap",
+              "static",
+              "xs"
+            ]
+          },
+          "sm": {
+            "key": "{base.layout.gridgap.static.sm}",
+            "$value": {
+              "unit": "px",
+              "value": 18
+            },
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": {
+                "unit": "px",
+                "value": 18
+              },
+              "$type": "dimension",
+              "key": "{base.layout.gridgap.static.sm}"
+            },
+            "name": "sm",
+            "attributes": {},
+            "path": [
+              "base",
+              "layout",
+              "gridgap",
+              "static",
+              "sm"
+            ]
+          },
           "md": {
-            "key": "{base.layout.safezone.static.md}",
+            "key": "{base.layout.gridgap.static.md}",
             "$value": {
               "unit": "px",
               "value": 20
@@ -4021,20 +4156,101 @@
                 "value": 20
               },
               "$type": "dimension",
-              "key": "{base.layout.safezone.static.md}"
+              "key": "{base.layout.gridgap.static.md}"
             },
             "name": "md",
             "attributes": {},
             "path": [
               "base",
               "layout",
-              "safezone",
+              "gridgap",
               "static",
               "md"
             ]
           },
           "lg": {
-            "key": "{base.layout.safezone.static.lg}",
+            "key": "{base.layout.gridgap.static.lg}",
+            "$value": {
+              "unit": "px",
+              "value": 22
+            },
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": {
+                "unit": "px",
+                "value": 22
+              },
+              "$type": "dimension",
+              "key": "{base.layout.gridgap.static.lg}"
+            },
+            "name": "lg",
+            "attributes": {},
+            "path": [
+              "base",
+              "layout",
+              "gridgap",
+              "static",
+              "lg"
+            ]
+          },
+          "xl": {
+            "key": "{base.layout.gridgap.static.xl}",
+            "$value": {
+              "unit": "px",
+              "value": 26
+            },
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": {
+                "unit": "px",
+                "value": 26
+              },
+              "$type": "dimension",
+              "key": "{base.layout.gridgap.static.xl}"
+            },
+            "name": "xl",
+            "attributes": {},
+            "path": [
+              "base",
+              "layout",
+              "gridgap",
+              "static",
+              "xl"
+            ]
+          },
+          "2xl": {
+            "key": "{base.layout.gridgap.static.2xl}",
+            "$value": {
+              "unit": "px",
+              "value": 36
+            },
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": {
+                "unit": "px",
+                "value": 36
+              },
+              "$type": "dimension",
+              "key": "{base.layout.gridgap.static.2xl}"
+            },
+            "name": "2xl",
+            "attributes": {},
+            "path": [
+              "base",
+              "layout",
+              "gridgap",
+              "static",
+              "2xl"
+            ]
+          },
+          "3xl": {
+            "key": "{base.layout.gridgap.static.3xl}",
             "$value": {
               "unit": "px",
               "value": 40
@@ -4048,82 +4264,161 @@
                 "value": 40
               },
               "$type": "dimension",
-              "key": "{base.layout.safezone.static.lg}"
+              "key": "{base.layout.gridgap.static.3xl}"
             },
-            "name": "lg",
+            "name": "3xl",
             "attributes": {},
             "path": [
               "base",
               "layout",
-              "safezone",
+              "gridgap",
               "static",
-              "lg"
+              "3xl"
             ]
           }
         },
         "fluid": {
-          "min": {
-            "key": "{base.layout.safezone.fluid.min}",
-            "$value": {
-              "unit": "px",
-              "value": 20
-            },
-            "filePath": "tokens/tokens.json",
-            "isSource": true,
-            "$type": "dimension",
-            "original": {
-              "$value": "{base.layout.safezone.static.md}",
+          "basic": {
+            "min": {
+              "key": "{base.layout.gridgap.fluid.basic.min}",
+              "$value": {
+                "unit": "px",
+                "value": 12
+              },
+              "filePath": "tokens/tokens.json",
+              "isSource": true,
               "$type": "dimension",
-              "key": "{base.layout.safezone.fluid.min}"
+              "original": {
+                "$value": "{base.layout.gridgap.static.xs}",
+                "$type": "dimension",
+                "key": "{base.layout.gridgap.fluid.basic.min}"
+              },
+              "name": "min",
+              "attributes": {},
+              "path": [
+                "base",
+                "layout",
+                "gridgap",
+                "fluid",
+                "basic",
+                "min"
+              ]
             },
-            "name": "min",
-            "attributes": {},
-            "path": [
-              "base",
-              "layout",
-              "safezone",
-              "fluid",
-              "min"
-            ]
-          },
-          "max": {
-            "key": "{base.layout.safezone.fluid.max}",
-            "$value": {
-              "unit": "px",
-              "value": 40
-            },
-            "filePath": "tokens/tokens.json",
-            "isSource": true,
-            "$type": "dimension",
-            "original": {
-              "$value": "{base.layout.safezone.static.lg}",
+            "max": {
+              "key": "{base.layout.gridgap.fluid.basic.max}",
+              "$value": {
+                "unit": "px",
+                "value": 36
+              },
+              "filePath": "tokens/tokens.json",
+              "isSource": true,
               "$type": "dimension",
-              "key": "{base.layout.safezone.fluid.max}"
+              "original": {
+                "$value": "{base.layout.gridgap.static.2xl}",
+                "$type": "dimension",
+                "key": "{base.layout.gridgap.fluid.basic.max}"
+              },
+              "name": "max",
+              "attributes": {},
+              "path": [
+                "base",
+                "layout",
+                "gridgap",
+                "fluid",
+                "basic",
+                "max"
+              ]
             },
-            "name": "max",
-            "attributes": {},
-            "path": [
-              "base",
-              "layout",
-              "safezone",
-              "fluid",
-              "max"
-            ]
+            "val": {
+              "key": "{base.layout.gridgap.fluid.basic.val}",
+              "$value": {
+                "unit": "px",
+                "value": -9.176
+              },
+              "$fluid": {
+                "unit": "vi",
+                "value": 3.529
+              },
+              "filePath": "tokens/tokens.json",
+              "isSource": true,
+              "$type": "dimension",
+              "original": {
+                "$value": {
+                  "unit": "px",
+                  "value": -9.176
+                },
+                "$fluid": {
+                  "unit": "vi",
+                  "value": 3.529
+                },
+                "$type": "dimension",
+                "key": "{base.layout.gridgap.fluid.basic.val}"
+              },
+              "name": "val",
+              "attributes": {},
+              "path": [
+                "base",
+                "layout",
+                "gridgap",
+                "fluid",
+                "basic",
+                "val"
+              ]
+            }
           },
-          "val": {
-            "key": "{base.layout.safezone.fluid.val}",
-            "$value": {
-              "unit": "px",
-              "value": 2.353
+          "large": {
+            "min": {
+              "key": "{base.layout.gridgap.fluid.large.min}",
+              "$value": {
+                "unit": "px",
+                "value": 20
+              },
+              "filePath": "tokens/tokens.json",
+              "isSource": true,
+              "$type": "dimension",
+              "original": {
+                "$value": "{base.layout.gridgap.static.md}",
+                "$type": "dimension",
+                "key": "{base.layout.gridgap.fluid.large.min}"
+              },
+              "name": "min",
+              "attributes": {},
+              "path": [
+                "base",
+                "layout",
+                "gridgap",
+                "fluid",
+                "large",
+                "min"
+              ]
             },
-            "$fluid": {
-              "unit": "vi",
-              "value": 2.941
+            "max": {
+              "key": "{base.layout.gridgap.fluid.large.max}",
+              "$value": {
+                "unit": "px",
+                "value": 40
+              },
+              "filePath": "tokens/tokens.json",
+              "isSource": true,
+              "$type": "dimension",
+              "original": {
+                "$value": "{base.layout.gridgap.static.3xl}",
+                "$type": "dimension",
+                "key": "{base.layout.gridgap.fluid.large.max}"
+              },
+              "name": "max",
+              "attributes": {},
+              "path": [
+                "base",
+                "layout",
+                "gridgap",
+                "fluid",
+                "large",
+                "max"
+              ]
             },
-            "filePath": "tokens/tokens.json",
-            "isSource": true,
-            "$type": "dimension",
-            "original": {
+            "val": {
+              "key": "{base.layout.gridgap.fluid.large.val}",
               "$value": {
                 "unit": "px",
                 "value": 2.353
@@ -4132,18 +4427,32 @@
                 "unit": "vi",
                 "value": 2.941
               },
+              "filePath": "tokens/tokens.json",
+              "isSource": true,
               "$type": "dimension",
-              "key": "{base.layout.safezone.fluid.val}"
-            },
-            "name": "val",
-            "attributes": {},
-            "path": [
-              "base",
-              "layout",
-              "safezone",
-              "fluid",
-              "val"
-            ]
+              "original": {
+                "$value": {
+                  "unit": "px",
+                  "value": 2.353
+                },
+                "$fluid": {
+                  "unit": "vi",
+                  "value": 2.941
+                },
+                "$type": "dimension",
+                "key": "{base.layout.gridgap.fluid.large.val}"
+              },
+              "name": "val",
+              "attributes": {},
+              "path": [
+                "base",
+                "layout",
+                "gridgap",
+                "fluid",
+                "large",
+                "val"
+              ]
+            }
           }
         }
       },
@@ -4322,230 +4631,6 @@
             "gridcolumn",
             "12"
           ]
-        }
-      },
-      "gridgap": {
-        "static": {
-          "xs": {
-            "key": "{base.layout.gridgap.static.xs}",
-            "$value": {
-              "unit": "px",
-              "value": 12
-            },
-            "filePath": "tokens/tokens.json",
-            "isSource": true,
-            "$type": "dimension",
-            "original": {
-              "$value": {
-                "unit": "px",
-                "value": 12
-              },
-              "$type": "dimension",
-              "key": "{base.layout.gridgap.static.xs}"
-            },
-            "name": "xs",
-            "attributes": {},
-            "path": [
-              "base",
-              "layout",
-              "gridgap",
-              "static",
-              "xs"
-            ]
-          },
-          "sm": {
-            "key": "{base.layout.gridgap.static.sm}",
-            "$value": {
-              "unit": "px",
-              "value": 18
-            },
-            "filePath": "tokens/tokens.json",
-            "isSource": true,
-            "$type": "dimension",
-            "original": {
-              "$value": {
-                "unit": "px",
-                "value": 18
-              },
-              "$type": "dimension",
-              "key": "{base.layout.gridgap.static.sm}"
-            },
-            "name": "sm",
-            "attributes": {},
-            "path": [
-              "base",
-              "layout",
-              "gridgap",
-              "static",
-              "sm"
-            ]
-          },
-          "md": {
-            "key": "{base.layout.gridgap.static.md}",
-            "$value": {
-              "unit": "px",
-              "value": 22
-            },
-            "filePath": "tokens/tokens.json",
-            "isSource": true,
-            "$type": "dimension",
-            "original": {
-              "$value": {
-                "unit": "px",
-                "value": 22
-              },
-              "$type": "dimension",
-              "key": "{base.layout.gridgap.static.md}"
-            },
-            "name": "md",
-            "attributes": {},
-            "path": [
-              "base",
-              "layout",
-              "gridgap",
-              "static",
-              "md"
-            ]
-          },
-          "lg": {
-            "key": "{base.layout.gridgap.static.lg}",
-            "$value": {
-              "unit": "px",
-              "value": 26
-            },
-            "filePath": "tokens/tokens.json",
-            "isSource": true,
-            "$type": "dimension",
-            "original": {
-              "$value": {
-                "unit": "px",
-                "value": 26
-              },
-              "$type": "dimension",
-              "key": "{base.layout.gridgap.static.lg}"
-            },
-            "name": "lg",
-            "attributes": {},
-            "path": [
-              "base",
-              "layout",
-              "gridgap",
-              "static",
-              "lg"
-            ]
-          },
-          "xl": {
-            "key": "{base.layout.gridgap.static.xl}",
-            "$value": {
-              "unit": "px",
-              "value": 36
-            },
-            "filePath": "tokens/tokens.json",
-            "isSource": true,
-            "$type": "dimension",
-            "original": {
-              "$value": {
-                "unit": "px",
-                "value": 36
-              },
-              "$type": "dimension",
-              "key": "{base.layout.gridgap.static.xl}"
-            },
-            "name": "xl",
-            "attributes": {},
-            "path": [
-              "base",
-              "layout",
-              "gridgap",
-              "static",
-              "xl"
-            ]
-          }
-        },
-        "fluid": {
-          "min": {
-            "key": "{base.layout.gridgap.fluid.min}",
-            "$value": {
-              "unit": "px",
-              "value": 12
-            },
-            "filePath": "tokens/tokens.json",
-            "isSource": true,
-            "$type": "dimension",
-            "original": {
-              "$value": "{base.layout.gridgap.static.xs}",
-              "$type": "dimension",
-              "key": "{base.layout.gridgap.fluid.min}"
-            },
-            "name": "min",
-            "attributes": {},
-            "path": [
-              "base",
-              "layout",
-              "gridgap",
-              "fluid",
-              "min"
-            ]
-          },
-          "max": {
-            "key": "{base.layout.gridgap.fluid.max}",
-            "$value": {
-              "unit": "px",
-              "value": 36
-            },
-            "filePath": "tokens/tokens.json",
-            "isSource": true,
-            "$type": "dimension",
-            "original": {
-              "$value": "{base.layout.gridgap.static.xl}",
-              "$type": "dimension",
-              "key": "{base.layout.gridgap.fluid.max}"
-            },
-            "name": "max",
-            "attributes": {},
-            "path": [
-              "base",
-              "layout",
-              "gridgap",
-              "fluid",
-              "max"
-            ]
-          },
-          "val": {
-            "key": "{base.layout.gridgap.fluid.val}",
-            "$value": {
-              "unit": "px",
-              "value": -9.176
-            },
-            "$fluid": {
-              "unit": "vi",
-              "value": 3.529
-            },
-            "filePath": "tokens/tokens.json",
-            "isSource": true,
-            "$type": "dimension",
-            "original": {
-              "$value": {
-                "unit": "px",
-                "value": -9.176
-              },
-              "$fluid": {
-                "unit": "vi",
-                "value": 3.529
-              },
-              "$type": "dimension",
-              "key": "{base.layout.gridgap.fluid.val}"
-            },
-            "name": "val",
-            "attributes": {},
-            "path": [
-              "base",
-              "layout",
-              "gridgap",
-              "fluid",
-              "val"
-            ]
-          }
         }
       }
     }
@@ -4800,8 +4885,8 @@
             "on-dark-bg"
           ]
         },
-        "on-white-bg": {
-          "key": "{semantic.color.text.on-white-bg}",
+        "headline-on-dark-bg": {
+          "key": "{semantic.color.text.headline-on-dark-bg}",
           "$value": {
             "colorSpace": "srgb",
             "components": [
@@ -4811,63 +4896,28 @@
             ],
             "hex": "#b7f9aa"
           },
-          "$description": "Text color on white background (Green 300)",
+          "$description": "Headline text color on dark background (Green 300)",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "color",
           "original": {
             "$value": "{base.color.green.300}",
-            "$description": "Text color on white background (Green 300)",
+            "$description": "Headline text color on dark background (Green 300)",
             "$type": "color",
-            "key": "{semantic.color.text.on-white-bg}"
+            "key": "{semantic.color.text.headline-on-dark-bg}"
           },
-          "name": "kfw-color-text-on-white-bg",
+          "name": "kfw-color-text-headline-on-dark-bg",
           "attributes": {
             "category": "semantic",
             "type": "color",
             "item": "text",
-            "subitem": "on-white-bg"
+            "subitem": "headline-on-dark-bg"
           },
           "path": [
             "semantic",
             "color",
             "text",
-            "on-white-bg"
-          ]
-        },
-        "on-colored-bg": {
-          "key": "{semantic.color.text.on-colored-bg}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0,
-              0.2157,
-              0.3588
-            ],
-            "hex": "#00375b"
-          },
-          "$description": "Text color on colored background (Blue 800)",
-          "filePath": "tokens/tokens.json",
-          "isSource": true,
-          "$type": "color",
-          "original": {
-            "$value": "{base.color.blue.800}",
-            "$description": "Text color on colored background (Blue 800)",
-            "$type": "color",
-            "key": "{semantic.color.text.on-colored-bg}"
-          },
-          "name": "kfw-color-text-on-colored-bg",
-          "attributes": {
-            "category": "semantic",
-            "type": "color",
-            "item": "text",
-            "subitem": "on-colored-bg"
-          },
-          "path": [
-            "semantic",
-            "color",
-            "text",
-            "on-colored-bg"
+            "headline-on-dark-bg"
           ]
         },
         "on-disabled": {
@@ -4903,41 +4953,6 @@
             "color",
             "text",
             "on-disabled"
-          ]
-        },
-        "headline-on-dark-bg": {
-          "key": "{semantic.color.text.headline-on-dark-bg}",
-          "$value": {
-            "colorSpace": "srgb",
-            "components": [
-              0.7176,
-              0.9765,
-              0.6667
-            ],
-            "hex": "#b7f9aa"
-          },
-          "$description": "Headline text color on dark background (Green 300)",
-          "filePath": "tokens/tokens.json",
-          "isSource": true,
-          "$type": "color",
-          "original": {
-            "$value": "{base.color.green.300}",
-            "$description": "Headline text color on dark background (Green 300)",
-            "$type": "color",
-            "key": "{semantic.color.text.headline-on-dark-bg}"
-          },
-          "name": "kfw-color-text-headline-on-dark-bg",
-          "attributes": {
-            "category": "semantic",
-            "type": "color",
-            "item": "text",
-            "subitem": "headline-on-dark-bg"
-          },
-          "path": [
-            "semantic",
-            "color",
-            "text",
-            "headline-on-dark-bg"
           ]
         }
       },
@@ -5115,6 +5130,41 @@
             "color",
             "background",
             "light-green"
+          ]
+        },
+        "medium-green": {
+          "key": "{semantic.color.background.medium-green}",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.7176,
+              0.9765,
+              0.6667
+            ],
+            "hex": "#b7f9aa"
+          },
+          "$description": "Green Medium (Green 300)",
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "color",
+          "original": {
+            "$value": "{base.color.green.300}",
+            "$description": "Green Medium (Green 300)",
+            "$type": "color",
+            "key": "{semantic.color.background.medium-green}"
+          },
+          "name": "kfw-color-background-medium-green",
+          "attributes": {
+            "category": "semantic",
+            "type": "color",
+            "item": "background",
+            "subitem": "medium-green"
+          },
+          "path": [
+            "semantic",
+            "color",
+            "background",
+            "medium-green"
           ]
         },
         "dark-blue": {
@@ -7074,29 +7124,6 @@
           "lightspeech"
         ]
       },
-      "list": {
-        "key": "{semantic.lineheight.list}",
-        "$value": 1.5,
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "number",
-        "original": {
-          "$value": "{base.lineheight.lg}",
-          "$type": "number",
-          "key": "{semantic.lineheight.list}"
-        },
-        "name": "kfw-lineheight-list",
-        "attributes": {
-          "category": "semantic",
-          "type": "lineheight",
-          "item": "list"
-        },
-        "path": [
-          "semantic",
-          "lineheight",
-          "list"
-        ]
-      },
       "heading": {
         "key": "{semantic.lineheight.heading}",
         "$value": 1.3,
@@ -7167,28 +7194,6 @@
           "default"
         ]
       },
-      "large": {
-        "key": "{semantic.borderradius.large}",
-        "$value": {
-          "unit": "px",
-          "value": 20
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.borderradius.lg}",
-          "$type": "dimension",
-          "key": "{semantic.borderradius.large}"
-        },
-        "name": "large",
-        "attributes": {},
-        "path": [
-          "semantic",
-          "borderradius",
-          "large"
-        ]
-      },
       "small": {
         "key": "{semantic.borderradius.small}",
         "$value": {
@@ -7209,6 +7214,28 @@
           "semantic",
           "borderradius",
           "small"
+        ]
+      },
+      "large": {
+        "key": "{semantic.borderradius.large}",
+        "$value": {
+          "unit": "px",
+          "value": 20
+        },
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "dimension",
+        "original": {
+          "$value": "{base.borderradius.lg}",
+          "$type": "dimension",
+          "key": "{semantic.borderradius.large}"
+        },
+        "name": "large",
+        "attributes": {},
+        "path": [
+          "semantic",
+          "borderradius",
+          "large"
         ]
       },
       "circle": {
@@ -7601,71 +7628,241 @@
       }
     },
     "safezone": {
-      "min": {
-        "key": "{semantic.safezone.min}",
-        "$value": {
-          "unit": "px",
-          "value": 20
-        },
+      "mobile": {
+        "key": "{semantic.safezone.mobile}",
+        "$value": "5.625vi",
         "filePath": "tokens/tokens.json",
         "isSource": true,
-        "$type": "dimension",
+        "$type": "number",
         "original": {
-          "$value": "{base.layout.safezone.fluid.min}",
-          "$type": "dimension",
-          "key": "{semantic.safezone.min}"
+          "$value": "{base.layout.safezone.sm}",
+          "$type": "number",
+          "key": "{semantic.safezone.mobile}"
         },
-        "name": "min",
-        "attributes": {},
+        "name": "kfw-safezone-mobile",
+        "attributes": {
+          "category": "semantic",
+          "type": "safezone",
+          "item": "mobile"
+        },
         "path": [
           "semantic",
           "safezone",
-          "min"
+          "mobile"
         ]
       },
-      "max": {
-        "key": "{semantic.safezone.max}",
-        "$value": {
-          "unit": "px",
-          "value": 40
-        },
+      "tablet": {
+        "key": "{semantic.safezone.tablet}",
+        "$value": "6.667vi",
         "filePath": "tokens/tokens.json",
         "isSource": true,
-        "$type": "dimension",
+        "$type": "number",
         "original": {
-          "$value": "{base.layout.safezone.fluid.max}",
-          "$type": "dimension",
-          "key": "{semantic.safezone.max}"
+          "$value": "{base.layout.safezone.md}",
+          "$type": "number",
+          "key": "{semantic.safezone.tablet}"
         },
-        "name": "max",
-        "attributes": {},
+        "name": "kfw-safezone-tablet",
+        "attributes": {
+          "category": "semantic",
+          "type": "safezone",
+          "item": "tablet"
+        },
         "path": [
           "semantic",
           "safezone",
-          "max"
+          "tablet"
         ]
       },
-      "val": {
-        "key": "{semantic.safezone.val}",
-        "$value": {
-          "unit": "px",
-          "value": 2.353
-        },
+      "desktop": {
+        "key": "{semantic.safezone.desktop}",
+        "$value": "7.5vi",
         "filePath": "tokens/tokens.json",
         "isSource": true,
-        "$type": "dimension",
+        "$type": "number",
         "original": {
-          "$value": "{base.layout.safezone.fluid.val}",
-          "$type": "dimension",
-          "key": "{semantic.safezone.val}"
+          "$value": "{base.layout.safezone.lg}",
+          "$type": "number",
+          "key": "{semantic.safezone.desktop}"
         },
-        "name": "val",
-        "attributes": {},
+        "name": "kfw-safezone-desktop",
+        "attributes": {
+          "category": "semantic",
+          "type": "safezone",
+          "item": "desktop"
+        },
         "path": [
           "semantic",
           "safezone",
-          "val"
+          "desktop"
         ]
+      },
+      "desktop-large": {
+        "key": "{semantic.safezone.desktop-large}",
+        "$value": 0,
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "number",
+        "original": {
+          "$value": "{base.layout.safezone.xl}",
+          "$type": "number",
+          "key": "{semantic.safezone.desktop-large}"
+        },
+        "name": "kfw-safezone-desktop-large",
+        "attributes": {
+          "category": "semantic",
+          "type": "safezone",
+          "item": "desktop-large"
+        },
+        "path": [
+          "semantic",
+          "safezone",
+          "desktop-large"
+        ]
+      }
+    },
+    "gridgap": {
+      "basic": {
+        "min": {
+          "key": "{semantic.gridgap.basic.min}",
+          "$value": {
+            "unit": "px",
+            "value": 12
+          },
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "dimension",
+          "original": {
+            "$value": "{base.layout.gridgap.fluid.basic.min}",
+            "$type": "dimension",
+            "key": "{semantic.gridgap.basic.min}"
+          },
+          "name": "min",
+          "attributes": {},
+          "path": [
+            "semantic",
+            "gridgap",
+            "basic",
+            "min"
+          ]
+        },
+        "max": {
+          "key": "{semantic.gridgap.basic.max}",
+          "$value": {
+            "unit": "px",
+            "value": 36
+          },
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "dimension",
+          "original": {
+            "$value": "{base.layout.gridgap.fluid.basic.max}",
+            "$type": "dimension",
+            "key": "{semantic.gridgap.basic.max}"
+          },
+          "name": "max",
+          "attributes": {},
+          "path": [
+            "semantic",
+            "gridgap",
+            "basic",
+            "max"
+          ]
+        },
+        "val": {
+          "key": "{semantic.gridgap.basic.val}",
+          "$value": {
+            "unit": "px",
+            "value": -9.176
+          },
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "dimension",
+          "original": {
+            "$value": "{base.layout.gridgap.fluid.basic.val}",
+            "$type": "dimension",
+            "key": "{semantic.gridgap.basic.val}"
+          },
+          "name": "val",
+          "attributes": {},
+          "path": [
+            "semantic",
+            "gridgap",
+            "basic",
+            "val"
+          ]
+        }
+      },
+      "large": {
+        "min": {
+          "key": "{semantic.gridgap.large.min}",
+          "$value": {
+            "unit": "px",
+            "value": 20
+          },
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "dimension",
+          "original": {
+            "$value": "{base.layout.gridgap.fluid.large.min}",
+            "$type": "dimension",
+            "key": "{semantic.gridgap.large.min}"
+          },
+          "name": "min",
+          "attributes": {},
+          "path": [
+            "semantic",
+            "gridgap",
+            "large",
+            "min"
+          ]
+        },
+        "max": {
+          "key": "{semantic.gridgap.large.max}",
+          "$value": {
+            "unit": "px",
+            "value": 40
+          },
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "dimension",
+          "original": {
+            "$value": "{base.layout.gridgap.fluid.large.max}",
+            "$type": "dimension",
+            "key": "{semantic.gridgap.large.max}"
+          },
+          "name": "max",
+          "attributes": {},
+          "path": [
+            "semantic",
+            "gridgap",
+            "large",
+            "max"
+          ]
+        },
+        "val": {
+          "key": "{semantic.gridgap.large.val}",
+          "$value": {
+            "unit": "px",
+            "value": 2.353
+          },
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "dimension",
+          "original": {
+            "$value": "{base.layout.gridgap.fluid.large.val}",
+            "$type": "dimension",
+            "key": "{semantic.gridgap.large.val}"
+          },
+          "name": "val",
+          "attributes": {},
+          "path": [
+            "semantic",
+            "gridgap",
+            "large",
+            "val"
+          ]
+        }
       }
     }
   }

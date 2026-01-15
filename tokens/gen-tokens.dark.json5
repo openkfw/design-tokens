@@ -158,17 +158,6 @@
           },
         },
       },
-      black: {
-        $value: {
-          colorSpace: "srgb",
-          components: [
-            0,
-            0,
-            0,
-          ],
-          hex: "#000000",
-        },
-      },
       gray: {
         "50": {
           $value: {
@@ -981,8 +970,44 @@
         },
       },
       safezone: {
+        $type: "number",
+        sm: {
+          $value: 5.625,
+          $fluid: {
+            unit: "vi",
+          },
+        },
+        md: {
+          $value: 6.667,
+          $fluid: {
+            unit: "vi",
+          },
+        },
+        lg: {
+          $value: 7.5,
+          $fluid: {
+            unit: "vi",
+          },
+        },
+        xl: {
+          $value: 0,
+        },
+      },
+      gridgap: {
         $type: "dimension",
         static: {
+          xs: {
+            $value: {
+              unit: "px",
+              value: 12,
+            },
+          },
+          sm: {
+            $value: {
+              unit: "px",
+              value: 18,
+            },
+          },
           md: {
             $value: {
               unit: "px",
@@ -992,25 +1017,63 @@
           lg: {
             $value: {
               unit: "px",
+              value: 22,
+            },
+          },
+          xl: {
+            $value: {
+              unit: "px",
+              value: 26,
+            },
+          },
+          "2xl": {
+            $value: {
+              unit: "px",
+              value: 36,
+            },
+          },
+          "3xl": {
+            $value: {
+              unit: "px",
               value: 40,
             },
           },
         },
         fluid: {
-          min: {
-            $value: "{base.layout.safezone.static.md}",
-          },
-          max: {
-            $value: "{base.layout.safezone.static.lg}",
-          },
-          val: {
-            $value: {
-              unit: "px",
-              value: 2.353,
+          basic: {
+            min: {
+              $value: "{base.layout.gridgap.static.xs}",
             },
-            $fluid: {
-              unit: "vi",
-              value: 2.941,
+            max: {
+              $value: "{base.layout.gridgap.static.2xl}",
+            },
+            val: {
+              $value: {
+                unit: "px",
+                value: -9.176,
+              },
+              $fluid: {
+                unit: "vi",
+                value: 3.529,
+              },
+            },
+          },
+          large: {
+            min: {
+              $value: "{base.layout.gridgap.static.md}",
+            },
+            max: {
+              $value: "{base.layout.gridgap.static.3xl}",
+            },
+            val: {
+              $value: {
+                unit: "px",
+                value: 2.353,
+              },
+              $fluid: {
+                unit: "vi",
+                value: 2.941,
+              },
             },
           },
         },
@@ -1038,59 +1101,6 @@
           $value: 12,
         },
         $type: "number",
-      },
-      gridgap: {
-        $type: "dimension",
-        static: {
-          xs: {
-            $value: {
-              unit: "px",
-              value: 12,
-            },
-          },
-          sm: {
-            $value: {
-              unit: "px",
-              value: 18,
-            },
-          },
-          md: {
-            $value: {
-              unit: "px",
-              value: 22,
-            },
-          },
-          lg: {
-            $value: {
-              unit: "px",
-              value: 26,
-            },
-          },
-          xl: {
-            $value: {
-              unit: "px",
-              value: 36,
-            },
-          },
-        },
-        fluid: {
-          min: {
-            $value: "{base.layout.gridgap.static.xs}",
-          },
-          max: {
-            $value: "{base.layout.gridgap.static.xl}",
-          },
-          val: {
-            $value: {
-              unit: "px",
-              value: -9.176,
-            },
-            $fluid: {
-              unit: "vi",
-              value: 3.529,
-            },
-          },
-        },
       },
     },
   },
@@ -1128,21 +1138,13 @@
           $value: "{base.color.white.default}",
           $description: "Main text color on dark background (White)",
         },
-        "on-white-bg": {
+        "headline-on-dark-bg": {
           $value: "{base.color.green.300}",
-          $description: "Text color on white background (Green 300)",
-        },
-        "on-colored-bg": {
-          $value: "{base.color.blue.800}",
-          $description: "Text color on colored background (Blue 800)",
+          $description: "Headline text color on dark background (Green 300)",
         },
         "on-disabled": {
           $value: "{base.color.white.default}",
           $description: "Text color on disabled (White)",
-        },
-        "headline-on-dark-bg": {
-          $value: "{base.color.green.300}",
-          $description: "Headline text color on dark background (Green 300)",
         },
       },
       background: {
@@ -1165,6 +1167,10 @@
         "light-green": {
           $value: "{base.color.green.100}",
           $description: "Light green (Green 100)",
+        },
+        "medium-green": {
+          $value: "{base.color.green.300}",
+          $description: "Green Medium (Green 300)",
         },
         "dark-blue": {
           $value: "{base.color.blue.800}",
@@ -1427,9 +1433,6 @@
       lightspeech: {
         $value: "{base.lineheight.lg}",
       },
-      list: {
-        $value: "{base.lineheight.lg}",
-      },
       heading: {
         $value: "{base.lineheight.xs}",
       },
@@ -1442,11 +1445,11 @@
       default: {
         $value: "{base.borderradius.md}",
       },
-      large: {
-        $value: "{base.borderradius.lg}",
-      },
       small: {
         $value: "{base.borderradius.sm}",
+      },
+      large: {
+        $value: "{base.borderradius.lg}",
       },
       circle: {
         $value: "{base.borderradius.circle}",
@@ -1522,15 +1525,43 @@
       },
     },
     safezone: {
+      $type: "number",
+      mobile: {
+        $value: "{base.layout.safezone.sm}",
+      },
+      tablet: {
+        $value: "{base.layout.safezone.md}",
+      },
+      desktop: {
+        $value: "{base.layout.safezone.lg}",
+      },
+      "desktop-large": {
+        $value: "{base.layout.safezone.xl}",
+      },
+    },
+    gridgap: {
       $type: "dimension",
-      min: {
-        $value: "{base.layout.safezone.fluid.min}",
+      basic: {
+        min: {
+          $value: "{base.layout.gridgap.fluid.basic.min}",
+        },
+        max: {
+          $value: "{base.layout.gridgap.fluid.basic.max}",
+        },
+        val: {
+          $value: "{base.layout.gridgap.fluid.basic.val}",
+        },
       },
-      max: {
-        $value: "{base.layout.safezone.fluid.max}",
-      },
-      val: {
-        $value: "{base.layout.safezone.fluid.val}",
+      large: {
+        min: {
+          $value: "{base.layout.gridgap.fluid.large.min}",
+        },
+        max: {
+          $value: "{base.layout.gridgap.fluid.large.max}",
+        },
+        val: {
+          $value: "{base.layout.gridgap.fluid.large.val}",
+        },
       },
     },
   },

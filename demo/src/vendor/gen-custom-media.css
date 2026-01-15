@@ -1,8 +1,12 @@
-/* Custom Media Queries generated from KfW Design Tokens v0.5.4 */
+/* Custom Media Queries generated from KfW Design Tokens v0.6.3 */
 
 /* See: https://www.w3.org/TR/mediaqueries-5/#at-ruledef-custom-media */
 
 @custom-media --kfw-breakpoint-mobile (min-width: 600px);
+@custom-media --kfw-breakpoint-mobile-max (max-width: 600px);
 @custom-media --kfw-breakpoint-tablet (min-width: 840px);
+@custom-media --kfw-breakpoint-tablet-max (max-width: 840px);
 @custom-media --kfw-breakpoint-desktop (min-width: 960px);
+@custom-media --kfw-breakpoint-desktop-max (max-width: 960px);
 @custom-media --kfw-breakpoint-desktop-large (min-width: 1280px);
+@custom-media --kfw-breakpoint-desktop-large-max (max-width: 1280px);

@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.3 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.4 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100 = {
@@ -68,11 +68,6 @@ export const KfwBaseColorWhite = {
   colorSpace: "srgb",
   components: [1, 1, 1],
   hex: "#ffffff",
-};
-export const KfwBaseColorBlack = {
-  colorSpace: "srgb",
-  components: [0, 0, 0],
-  hex: "#000000",
 };
 export const KfwBaseColorGray50 = {
   colorSpace: "srgb",
@@ -232,9 +227,9 @@ export const KfwBaseLineheightSm = 1.333;
 export const KfwBaseLineheightMd = 1.4;
 export const KfwBaseLineheightLg = 1.5;
 export const KfwBaseBorderradiusSm = "2px";
-export const KfwBaseBorderradiusMd = "0.25rem";
-export const KfwBaseBorderradiusLg = "1.25rem";
-export const KfwBaseBorderradiusCircle = "624.9375rem";
+export const KfwBaseBorderradiusMd = "4px";
+export const KfwBaseBorderradiusLg = "20px";
+export const KfwBaseBorderradiusCircle = "9999px";
 export const KfwBaseBorderwidthMd = "1px";
 export const KfwBaseBorderwidthLg = "2px";
 export const KfwBaseFontweightRegular = 400;
@@ -253,11 +248,23 @@ export const KfwBaseLayoutBreakpointXl = "1280px";
 export const KfwBaseLayoutContainerSm = "56rem";
 export const KfwBaseLayoutContainerMd = "67.5rem";
 export const KfwBaseLayoutContainerLg = "80rem";
-export const KfwBaseLayoutSafezoneStaticMd = "1.25rem";
-export const KfwBaseLayoutSafezoneStaticLg = "2.5rem";
-export const KfwBaseLayoutSafezoneFluidMin = "1.25rem";
-export const KfwBaseLayoutSafezoneFluidMax = "2.5rem";
-export const KfwBaseLayoutSafezoneFluidVal = "2.941vi + 0.1470625rem";
+export const KfwBaseLayoutSafezoneSm = "5.625vi";
+export const KfwBaseLayoutSafezoneMd = "6.667vi";
+export const KfwBaseLayoutSafezoneLg = "7.5vi";
+export const KfwBaseLayoutSafezoneXl = 0;
+export const KfwBaseLayoutGridgapStaticXs = "0.75rem";
+export const KfwBaseLayoutGridgapStaticSm = "1.125rem";
+export const KfwBaseLayoutGridgapStaticMd = "1.25rem";
+export const KfwBaseLayoutGridgapStaticLg = "1.375rem";
+export const KfwBaseLayoutGridgapStaticXl = "1.625rem";
+export const KfwBaseLayoutGridgapStatic2xl = "2.25rem";
+export const KfwBaseLayoutGridgapStatic3xl = "2.5rem";
+export const KfwBaseLayoutGridgapFluidBasicMin = "0.75rem";
+export const KfwBaseLayoutGridgapFluidBasicMax = "2.25rem";
+export const KfwBaseLayoutGridgapFluidBasicVal = "3.529vi - 0.5735rem";
+export const KfwBaseLayoutGridgapFluidLargeMin = "1.25rem";
+export const KfwBaseLayoutGridgapFluidLargeMax = "2.5rem";
+export const KfwBaseLayoutGridgapFluidLargeVal = "2.941vi + 0.1470625rem";
 export const KfwBaseLayoutGridcolumn1 = 1;
 export const KfwBaseLayoutGridcolumn2 = 2;
 export const KfwBaseLayoutGridcolumn3 = 3;
@@ -265,14 +272,6 @@ export const KfwBaseLayoutGridcolumn4 = 4;
 export const KfwBaseLayoutGridcolumn6 = 6;
 export const KfwBaseLayoutGridcolumn8 = 8;
 export const KfwBaseLayoutGridcolumn12 = 12;
-export const KfwBaseLayoutGridgapStaticXs = "0.75rem";
-export const KfwBaseLayoutGridgapStaticSm = "1.125rem";
-export const KfwBaseLayoutGridgapStaticMd = "1.375rem";
-export const KfwBaseLayoutGridgapStaticLg = "1.625rem";
-export const KfwBaseLayoutGridgapStaticXl = "2.25rem";
-export const KfwBaseLayoutGridgapFluidMin = "0.75rem";
-export const KfwBaseLayoutGridgapFluidMax = "2.25rem";
-export const KfwBaseLayoutGridgapFluidVal = "3.529vi - 0.5735rem";
 export const KfwColorFn = {
   colorSpace: "srgb",
   components: [0, 0.3529, 0.549],
@@ -308,26 +307,16 @@ export const KfwColorTextOnDarkBg = {
   components: [1, 1, 1],
   hex: "#ffffff",
 }; // Main text color on dark background (White)
-export const KfwColorTextOnWhiteBg = {
-  colorSpace: "srgb",
-  components: [0.7176, 0.9765, 0.6667],
-  hex: "#b7f9aa",
-}; // Text color on white background (Green 300)
-export const KfwColorTextOnColoredBg = {
-  colorSpace: "srgb",
-  components: [0, 0.2157, 0.3588],
-  hex: "#00375b",
-}; // Text color on colored background (Blue 800)
-export const KfwColorTextOnDisabled = {
-  colorSpace: "srgb",
-  components: [1, 1, 1],
-  hex: "#ffffff",
-}; // Text color on disabled (White)
 export const KfwColorTextHeadlineOnDarkBg = {
   colorSpace: "srgb",
   components: [0.7176, 0.9765, 0.6667],
   hex: "#b7f9aa",
 }; // Headline text color on dark background (Green 300)
+export const KfwColorTextOnDisabled = {
+  colorSpace: "srgb",
+  components: [1, 1, 1],
+  hex: "#ffffff",
+}; // Text color on disabled (White)
 export const KfwColorBackground = {
   colorSpace: "srgb",
   components: [1, 1, 1],
@@ -353,6 +342,11 @@ export const KfwColorBackgroundLightGreen = {
   components: [0.9255, 0.9922, 0.9294],
   hex: "#ecfded",
 }; // Light green (Green 100)
+export const KfwColorBackgroundMediumGreen = {
+  colorSpace: "srgb",
+  components: [0.7176, 0.9765, 0.6667],
+  hex: "#b7f9aa",
+}; // Green Medium (Green 300)
 export const KfwColorBackgroundDarkBlue = {
   colorSpace: "srgb",
   components: [0, 0.2157, 0.3588],
@@ -547,13 +541,12 @@ export const KfwFontsizeHeading5 = "1.125rem";
 export const KfwFontsizeHeading6 = "1rem";
 export const KfwLineheight = 1.4;
 export const KfwLineheightLightspeech = 1.5;
-export const KfwLineheightList = 1.5;
 export const KfwLineheightHeading = 1.3;
 export const KfwLineheightHeading5 = 1.333;
-export const KfwBorderradius = "0.25rem";
-export const KfwBorderradiusLarge = "1.25rem";
+export const KfwBorderradius = "4px";
 export const KfwBorderradiusSmall = "2px";
-export const KfwBorderradiusCircle = "624.9375rem";
+export const KfwBorderradiusLarge = "20px";
+export const KfwBorderradiusCircle = "9999px";
 export const KfwBorderwidth = "1px";
 export const KfwBorderwidthLarge = "2px";
 export const KfwBorderstyle = "solid";
@@ -570,6 +563,13 @@ export const KfwBreakpointDesktopLarge = "1280px";
 export const KfwContentwrapperNarrow = "56rem";
 export const KfwContentwrapperBasic = "67.5rem";
 export const KfwContentwrapperExtended = "80rem";
-export const KfwSafezoneMin = "1.25rem";
-export const KfwSafezoneMax = "2.5rem";
-export const KfwSafezoneVal = "2.941vi + 0.1470625rem";
+export const KfwSafezoneMobile = "5.625vi";
+export const KfwSafezoneTablet = "6.667vi";
+export const KfwSafezoneDesktop = "7.5vi";
+export const KfwSafezoneDesktopLarge = 0;
+export const KfwGridgapBasicMin = "0.75rem";
+export const KfwGridgapBasicMax = "2.25rem";
+export const KfwGridgapBasicVal = "3.529vi - 0.5735rem";
+export const KfwGridgapLargeMin = "1.25rem";
+export const KfwGridgapLargeMax = "2.5rem";
+export const KfwGridgapLargeVal = "2.941vi + 0.1470625rem";

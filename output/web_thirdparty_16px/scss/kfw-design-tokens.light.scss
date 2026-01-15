@@ -1,5 +1,5 @@
 
-// KfW Design Tokens v0.6.3 | MPL-2.0 | https://github.com/openkfw/design-tokens
+// KfW Design Tokens v0.6.4 | MPL-2.0 | https://github.com/openkfw/design-tokens
 
 $kfw-base-color-blue-100: #e9f5fb;
 $kfw-base-color-blue-400: #54b3e2;
@@ -14,7 +14,6 @@ $kfw-base-color-green-700: #398357;
 $kfw-base-color-white-90: #ffffffe6;
 $kfw-base-color-white-95: #fffffff2;
 $kfw-base-color-white: #fff;
-$kfw-base-color-black: #000;
 $kfw-base-color-gray-50: #f6f7f8;
 $kfw-base-color-gray-100: #eef0f2;
 $kfw-base-color-gray-200: #d8dfe3;
@@ -112,9 +111,9 @@ $kfw-base-lineheight-sm: 1.333;
 $kfw-base-lineheight-md: 1.4;
 $kfw-base-lineheight-lg: 1.5;
 $kfw-base-borderradius-sm: 2px;
-$kfw-base-borderradius-md: 0.25rem;
-$kfw-base-borderradius-lg: 1.25rem;
-$kfw-base-borderradius-circle: 624.9375rem;
+$kfw-base-borderradius-md: 4px;
+$kfw-base-borderradius-lg: 20px;
+$kfw-base-borderradius-circle: 9999px;
 $kfw-base-borderwidth-md: 1px;
 $kfw-base-borderwidth-lg: 2px;
 $kfw-base-fontweight-regular: 400;
@@ -133,11 +132,23 @@ $kfw-base-layout-breakpoint-xl: 1280px;
 $kfw-base-layout-container-sm: 56rem;
 $kfw-base-layout-container-md: 67.5rem;
 $kfw-base-layout-container-lg: 80rem;
-$kfw-base-layout-safezone-static-md: 1.25rem;
-$kfw-base-layout-safezone-static-lg: 2.5rem;
-$kfw-base-layout-safezone-fluid-min: 1.25rem;
-$kfw-base-layout-safezone-fluid-max: 2.5rem;
-$kfw-base-layout-safezone-fluid-val: 2.941vi + 0.1470625rem;
+$kfw-base-layout-safezone-sm: 5.625vi;
+$kfw-base-layout-safezone-md: 6.667vi;
+$kfw-base-layout-safezone-lg: 7.5vi;
+$kfw-base-layout-safezone-xl: 0;
+$kfw-base-layout-gridgap-static-xs: 0.75rem;
+$kfw-base-layout-gridgap-static-sm: 1.125rem;
+$kfw-base-layout-gridgap-static-md: 1.25rem;
+$kfw-base-layout-gridgap-static-lg: 1.375rem;
+$kfw-base-layout-gridgap-static-xl: 1.625rem;
+$kfw-base-layout-gridgap-static-2xl: 2.25rem;
+$kfw-base-layout-gridgap-static-3xl: 2.5rem;
+$kfw-base-layout-gridgap-fluid-basic-min: 0.75rem;
+$kfw-base-layout-gridgap-fluid-basic-max: 2.25rem;
+$kfw-base-layout-gridgap-fluid-basic-val: 3.529vi - 0.5735rem;
+$kfw-base-layout-gridgap-fluid-large-min: 1.25rem;
+$kfw-base-layout-gridgap-fluid-large-max: 2.5rem;
+$kfw-base-layout-gridgap-fluid-large-val: 2.941vi + 0.1470625rem;
 $kfw-base-layout-gridcolumn-1: 1;
 $kfw-base-layout-gridcolumn-2: 2;
 $kfw-base-layout-gridcolumn-3: 3;
@@ -145,14 +156,6 @@ $kfw-base-layout-gridcolumn-4: 4;
 $kfw-base-layout-gridcolumn-6: 6;
 $kfw-base-layout-gridcolumn-8: 8;
 $kfw-base-layout-gridcolumn-12: 12;
-$kfw-base-layout-gridgap-static-xs: 0.75rem;
-$kfw-base-layout-gridgap-static-sm: 1.125rem;
-$kfw-base-layout-gridgap-static-md: 1.375rem;
-$kfw-base-layout-gridgap-static-lg: 1.625rem;
-$kfw-base-layout-gridgap-static-xl: 2.25rem;
-$kfw-base-layout-gridgap-fluid-min: 0.75rem;
-$kfw-base-layout-gridgap-fluid-max: 2.25rem;
-$kfw-base-layout-gridgap-fluid-val: 3.529vi - 0.5735rem;
 $kfw-color-fn: #005a8c; // Main interaction color for buttons and links (Blue 600)
 $kfw-color-fn-active: #00446e; // Main interaction color when active (e.g., hover, Blue 700)
 $kfw-color-fn-inactive: #a1adb5; // Interaction color when inactive (Gray 300)
@@ -160,15 +163,14 @@ $kfw-color-fn-border: #2d3134; // Interaction border color (Gray 600)
 $kfw-color-fn-label: #2d3134; // Interaction label color (Gray 600)
 $kfw-color-text: #2d3134; // Main text color for body (Gray 600)
 $kfw-color-text-on-dark-bg: #fff; // Main text color on dark background (White)
-$kfw-color-text-on-white-bg: #b7f9aa; // Text color on white background (Green 300)
-$kfw-color-text-on-colored-bg: #00375b; // Text color on colored background (Blue 800)
-$kfw-color-text-on-disabled: #fff; // Text color on disabled (White)
 $kfw-color-text-headline-on-dark-bg: #b7f9aa; // Headline text color on dark background (Green 300)
+$kfw-color-text-on-disabled: #fff; // Text color on disabled (White)
 $kfw-color-background: #fff; // Main background color for body (White)
 $kfw-color-background-subtle: #f6f7f8; // Neutral (Gray 50)
 $kfw-color-background-disabled: #a1adb5; // Disabled (Gray 300)
 $kfw-color-background-light-blue: #e9f5fb; // Light blue (Blue 100)
 $kfw-color-background-light-green: #ecfded; // Light green (Green 100)
+$kfw-color-background-medium-green: #b7f9aa; // Green Medium (Green 300)
 $kfw-color-background-dark-blue: #00375b; // Dark blue (Blue 800)
 $kfw-color-background-dark-green: #398357; // Dark green (Green 700)
 $kfw-color-opaque-white-90: #ffffffe6; // White 90%
@@ -240,13 +242,12 @@ $kfw-fontsize-heading-5: 1.125rem;
 $kfw-fontsize-heading-6: 1rem;
 $kfw-lineheight: 1.4;
 $kfw-lineheight-lightspeech: 1.5;
-$kfw-lineheight-list: 1.5;
 $kfw-lineheight-heading: 1.3;
 $kfw-lineheight-heading-5: 1.333;
-$kfw-borderradius: 0.25rem;
-$kfw-borderradius-large: 1.25rem;
+$kfw-borderradius: 4px;
 $kfw-borderradius-small: 2px;
-$kfw-borderradius-circle: 624.9375rem;
+$kfw-borderradius-large: 20px;
+$kfw-borderradius-circle: 9999px;
 $kfw-borderwidth: 1px;
 $kfw-borderwidth-large: 2px;
 $kfw-borderstyle: solid;
@@ -263,6 +264,13 @@ $kfw-breakpoint-desktop-large: 1280px;
 $kfw-contentwrapper-narrow: 56rem;
 $kfw-contentwrapper-basic: 67.5rem;
 $kfw-contentwrapper-extended: 80rem;
-$kfw-safezone-min: 1.25rem;
-$kfw-safezone-max: 2.5rem;
-$kfw-safezone-val: 2.941vi + 0.1470625rem;
+$kfw-safezone-mobile: 5.625vi;
+$kfw-safezone-tablet: 6.667vi;
+$kfw-safezone-desktop: 7.5vi;
+$kfw-safezone-desktop-large: 0;
+$kfw-gridgap-basic-min: 0.75rem;
+$kfw-gridgap-basic-max: 2.25rem;
+$kfw-gridgap-basic-val: 3.529vi - 0.5735rem;
+$kfw-gridgap-large-min: 1.25rem;
+$kfw-gridgap-large-max: 2.5rem;
+$kfw-gridgap-large-val: 2.941vi + 0.1470625rem;

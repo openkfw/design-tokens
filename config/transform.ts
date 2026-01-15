@@ -25,8 +25,8 @@ export function RegisterTransforms(PREFIX: string) {
     transitive: true,
     filter: (token) => {
       const { $value, path } = token
-      if (path.includes("breakpoint"))
-        return false /* 💡 Reason: Media queries use the browser's default root font size (not your custom setting, like 1rem = 10px) */
+      if (path.includes("breakpoint") || path.includes("borderradius"))
+        return false /* 💡 Reason: Media queries use the browser's default root font size (not our custom setting, like 1rem = 10px) and borderradius should be always px */
       const numericValue = parseFloat($value)
       return typeof $value === "string" && $value.endsWith("px") && (numericValue < -2 || numericValue > 2 || numericValue === 0)
     }
@@ -36,27 +36,27 @@ export function RegisterTransforms(PREFIX: string) {
     name: "size/fluid",
     type: transformTypes.value,
     transitive: false,
-    filter: (token) => token.$type === "dimension" && typeof token.$fluid === "object",
+    filter: (token) => typeof token.$fluid === "object" && (token.$type === "dimension" || token.$type === "number"),
     transform: (token) => {
-      const {
-        name,
-        $value,
-        $fluid: { value, unit }
-      } = token
-
+      const { $type, $value, $fluid, name } = token
       const validUnits = new Set(["px", "rem", "em", "vw", "vi", "vh", "vmin", "vmax", "pt", "dp", "%", "cm", "mm", "in", "pc"])
 
-      if (validUnits.has(unit)) {
-        const numericValue = parseFloat($value)
-        const valueUnit = $value.replace(numericValue, "").trim()
-        const sign = numericValue > 0 ? "+" : "-"
+      if (validUnits.has($fluid.unit)) {
+        if ($type === "dimension") {
+          const numericValue = parseFloat($value)
+          const valueUnit = $value.replace(numericValue, "").trim()
+          const sign = numericValue > 0 ? "+" : "-"
+          return `${$fluid.value}${$fluid.unit} ${sign} ${Math.abs(numericValue)}${valueUnit}`
+        }
 
-        return `${value}${unit} ${sign} ${Math.abs(numericValue)}${valueUnit}`
+        if ($type === "number") {
+          return `${$value}${$fluid.unit}`
+        }
+      } else {
+        console.error(`Invalid Number Unit: ${$fluid.unit} at ${name}. Please use one of the following: ${Array.from(validUnits).join(", ")}.`)
       }
 
-      console.error(
-        `Invalid Number Unit: '${name}: ${value}${unit} + ${$value}' has an invalid unit. Please use one of the following: ${Array.from(validUnits).join(", ")}.`
-      )
+      return $value
     }
   })
 

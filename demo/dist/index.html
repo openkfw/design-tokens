@@ -1,6 +1,3 @@
-<!--
-  Simple demo for a clear presentation of the KfW Design Tokens in action.
--->
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,16 +12,16 @@
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
-    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/assets/main-Cn6L7kzs.js"></script>
+    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/assets/main-BcqmchoU.js"></script>
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/fonts-DEpxAef5.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/style-1TjR91w4.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/style-BS6em-fY.min.css">
   </head>
   <body>
     <div id="top"></div>
     <header id="header" class="header">
-      <div class="container-extended">
+      <div class="container">
         <div>
-          <button type="button" class="button--tertiary">Nav</button>
+          <button type="button" role="link">Nav</button>
         </div>
         <div>
           <a class="d-block" href="#" onclick="event.preventDefault()">
@@ -36,31 +33,29 @@
           </a>
         </div>
         <nav class="header__menu" aria-label="Sekundäre Navigation" data-testid="right-header-menu">
-          <a class="button--tertiary" role="button" href="#" onclick="event.preventDefault()">
-            <i aria-hidden="true" class="icon icon--large icon--login"></i> Login
-          </a>
+          <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--large icon--login"></i> Login </a>
         </nav>
       </div>
     </header>
     <main>
       <section class="hero">
-        <div class="container-extended-fullwidth">
-          <img class="hero__bars" src="https://openkfw.github.io/design-tokens/sb-tbalken-s-600x20.svg" alt="" aria-hidden="true" />
+        <img class="hero__bars" src="https://openkfw.github.io/design-tokens/sb-tbalken-s-600x20.svg" alt="" aria-hidden="true" />
+        <img
+          class="hero__image"
+          src="https://openkfw.github.io/design-tokens/welcome_image.jpeg"
+          alt="Luftaufnahme der Zentrale der KfW Bankengruppe in Frankfurt am Main"
+          width="1280"
+          height="427"
+        />
+        <div class="container hero__container">
           <img class="hero__bars-desktop" src="https://openkfw.github.io/design-tokens/sb-tbalken-xl-429x25.svg" alt="" aria-hidden="true" />
-          <img
-            class="hero__image"
-            src="https://openkfw.github.io/design-tokens/welcome_image.jpeg"
-            alt="Luftaufnahme der Zentrale der KfW Bankengruppe in Frankfurt am Main"
-            width="1280"
-            height="427"
-          />
           <div class="hero__title">
             <span class="hl--sb" role="presentation">Welcome to KfW!</span>
           </div>
         </div>
       </section>
 
-      <div class="container-extended">
+      <div class="container">
         <section>
           <h1>Important Usage Notice</h1>
 
@@ -114,19 +109,11 @@
               <div class="color-palette__container"></div>
             </div>
             <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="text.on-white-bg"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="text.on-colored-bg"></span>
+              <span class="color-palette__color" data-token-key="text.headline-on-dark-bg"></span>
               <div class="color-palette__container"></div>
             </div>
             <div class="color-palette__item">
               <span class="color-palette__color" data-token-key="text.on-disabled"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="text.headline-on-dark-bg"></span>
               <div class="color-palette__container"></div>
             </div>
           </div>
@@ -150,6 +137,10 @@
             </div>
             <div class="color-palette__item">
               <span class="color-palette__color" data-token-key="background.light-green"></span>
+              <div class="color-palette__container"></div>
+            </div>
+            <div class="color-palette__item">
+              <span class="color-palette__color" data-token-key="background.medium-green"></span>
               <div class="color-palette__container"></div>
             </div>
             <div class="color-palette__item">
@@ -296,13 +287,6 @@
               <div class="color-palette__container"></div>
             </div>
           </div>
-          <h3>Black</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="black" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
           <h3>Blue</h3>
           <div class="color-palette">
             <div class="color-palette__item">
@@ -405,7 +389,7 @@
               <div class="color-palette__container"></div>
             </div>
           </div>
-          <h3>Transparent</h3>
+          <h3>Opaque</h3>
           <div class="color-palette">
             <div class="color-palette__item">
               <span class="color-palette__color" data-token-key="white.90" data-token-group="base"></span>
@@ -449,7 +433,7 @@
 
                 const btn = document.createElement("button")
                 btn.type = "button"
-                btn.className = "button--tertiary"
+                btn.role = "link"
                 btn.addEventListener("click", () => {
                   navigator.clipboard.writeText(`var(--${btn.textContent})`).then(() => alert("Copied!"))
                 })
@@ -495,25 +479,27 @@
           </blockquote>
 
           <h3>Lists</h3>
-          <div class="mb-sm">
-            <span class="smk--1">BP, BP2</span>
-            <h4>Bullet list</h4>
-            <ul class="list--bullets">
-              <li class="list-item">Lorem ipsum dolor sit amet</li>
-              <li class="list-item">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</li>
-              <li class="list-item">
-                Lorem ipsum dolor sit amet
-                <ul class="list--bullets list--bullets-empty">
-                  <li class="list-item">Lorem ipsum dolor sit amet</li>
-                  <li class="list-item">Lorem ipsum dolor sit amet</li>
-                  <li class="list-item">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</li>
-                </ul>
-              </li>
-              <li class="list-item">Lorem ipsum dolor sit amet.</li>
-            </ul>
+          <div class="grid">
+            <div class="grid__item">
+              <span class="smk--1">BP, BP2</span>
+              <h4>Bullet list</h4>
+              <ul class="list--bullets">
+                <li class="list-item">Lorem ipsum dolor sit amet</li>
+                <li class="list-item">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</li>
+                <li class="list-item">
+                  Lorem ipsum dolor sit amet
+                  <ul class="list--bullets list--bullets-empty">
+                    <li class="list-item">Lorem ipsum dolor sit amet</li>
+                    <li class="list-item">Lorem ipsum dolor sit amet</li>
+                    <li class="list-item">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</li>
+                  </ul>
+                </li>
+                <li class="list-item">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
           </div>
           <div class="grid">
-            <div class="mb-sm">
+            <div class="grid__item">
               <span class="smk--1">LIST_0</span>
               <h4>Default</h4>
               <ul>
@@ -545,8 +531,7 @@
                 </li>
               </ul>
             </div>
-
-            <div class="mb-sm">
+            <div class="grid__item">
               <span class="smk--1">LIST_1</span>
               <h4>Numbered list</h4>
               <ol class="list--numbers">
@@ -568,8 +553,7 @@
                 <li class="list-item">Lorem ipsum dolor sit amet.</li>
               </ol>
             </div>
-
-            <div class="mb-sm">
+            <div class="grid__item">
               <span class="smk--1">LIST_2</span>
               <h4>Alphabetical list</h4>
               <ol class="list--letters">
@@ -593,7 +577,7 @@
             </div>
           </div>
           <div class="grid">
-            <div class="mb-sm">
+            <div class="grid__item">
               <span class="smk--1">LIST_3</span>
               <h4>Checklist</h4>
               <ul class="list--checks">
@@ -616,7 +600,7 @@
                 <li class="list-item">Lorem ipsum dolor sit amet.</li>
               </ul>
             </div>
-            <div class="mb-sm">
+            <div class="grid__item">
               <span class="smk--1">LIST_4</span>
               <h4>Alphabetical caps list</h4>
               <ol class="list--caps">
@@ -639,7 +623,7 @@
                 <li class="list-item">Lorem ipsum dolor sit amet.</li>
               </ol>
             </div>
-            <div class="mb-sm">
+            <div class="grid__item">
               <span class="smk--1">LIST_5</span>
               <h4>Checklist big</h4>
               <ul class="list--big-checks">
@@ -657,7 +641,7 @@
                 </li>
               </ul>
             </div>
-            <div class="mb-sm">
+            <div class="grid__item">
               <span class="smk--1">LIST_6</span>
               <h4>Icon list</h4>
               <ul class="list--icon">
@@ -666,15 +650,15 @@
                 <li class="list-item icon--dialogue">
                   Lorem ipsum door sit amet
                   <ul class="list--bullets">
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
+                    <li class="list-item">Lorem ipsum dolor sit</li>
+                    <li class="list-item">Lorem ipsum dolor sit</li>
                   </ul>
                 </li>
                 <li class="list-item icon--home">
                   Lorem ipsum door sit amet
                   <ul>
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
+                    <li class="list-item">Lorem ipsum dolor sit</li>
+                    <li class="list-item">Lorem ipsum dolor sit</li>
                   </ul>
                 </li>
                 <li class="list-item icon--exclamation-mark-filled">Lorem ipsum door sit amet</li>
@@ -684,29 +668,35 @@
 
           <h3>Inline text elements</h3>
           <div class="grid">
-            <p>
+            <div class="grid__item">
               <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--arrow-right"></i> Link </a>
-            </p>
-            <p>
+            </div>
+            <div class="grid__item">
               <a href="#" class="tx--2" onclick="event.preventDefault()">Small Link</a>
-            </p>
-            <p>
+            </div>
+            <div class="grid__item">
               <a href="#" class="tx--4" onclick="event.preventDefault()">Large Link</a>
-            </p>
+            </div>
           </div>
           <div class="grid">
-            <p><strong>Bold</strong></p>
-            <p><em>Italic</em></p>
-            <p><u>Underline</u></p>
+            <div class="grid__item">
+              <strong>Bold</strong>
+            </div>
+            <div class="grid__item">
+              <u>Underline</u>
+            </div>
+            <div class="grid__item"></div>
           </div>
           <div class="grid">
-            <p>
+            <div class="grid__item">
               <del>Deleted</del>
-            </p>
-            <p>
+            </div>
+            <div class="grid__item">
               <ins>Inserted</ins>
-            </p>
-            <p><s>Strikethrough</s></p>
+            </div>
+            <div class="grid__item">
+              <s>Strikethrough</s>
+            </div>
           </div>
           <div class="grid">
             <p><small>Small </small></p>
@@ -773,23 +763,17 @@
         <section>
           <h1>Buttons</h1>
           <div class="grid">
-            <p>
+            <div class="grid__item">
               <button type="button" class="button--primary">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Primary Button
               </button>
-            </p>
-            <p>
+            </div>
+            <div class="grid__item">
               <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Secondary Button
                 <i aria-hidden="true" class="icon icon--right icon--lock"></i>
               </a>
-            </p>
-            <p>
-              <a href="#" onclick="event.preventDefault()" class="button--tertiary" role="button">
-                <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Tertiary Button
-                <i aria-hidden="true" class="icon icon--right icon--lock"></i>
-              </a>
-            </p>
+            </div>
           </div>
         </section>
 
@@ -811,12 +795,6 @@
             <p>
               <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Secondary Button
-                <i aria-hidden="true" class="icon icon--right icon--lock"></i>
-              </a>
-            </p>
-            <p>
-              <a href="#" onclick="event.preventDefault()" class="button--tertiary" role="button">
-                <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Tertiary Button
                 <i aria-hidden="true" class="icon icon--right icon--lock"></i>
               </a>
             </p>
@@ -877,7 +855,7 @@
                         <td class="file-upload-table__filename">Uploading.jpeg</td>
                         <td>1.35 MB</td>
                         <td>
-                          <button type="button" class="button--tertiary">
+                          <button type="button" role="link">
                             <i aria-hidden="true" class="icon icon--delete"></i>
                             Delete
                           </button>
@@ -887,7 +865,7 @@
                         <td class="file-upload-table__filename">Successfully_Uploaded.jpeg</td>
                         <td>765.82 KB</td>
                         <td>
-                          <button type="button" class="button--tertiary">
+                          <button type="button" role="link">
                             <i aria-hidden="true" class="icon icon--delete"></i>
                             Delete
                           </button>
@@ -905,7 +883,7 @@
                         <td class="file-upload-table__filename">Successfully_Uploaded-final-final2.jpeg</td>
                         <td>765.82 KB</td>
                         <td>
-                          <button type="button" class="button--tertiary">
+                          <button type="button" role="link">
                             <i aria-hidden="true" class="icon icon--delete"></i>
                             Delete
                           </button>
@@ -916,10 +894,6 @@
                 </div>
               </div>
             </div>
-            <div class="form-group">
-              <label for="range">Range slider</label>
-              <input type="range" min="0" max="100" value="50" id="range" name="range" />
-            </div>
             <div class="grid">
               <div class="form-group">
                 <label for="valid">Valid</label>
@@ -928,7 +902,10 @@
               <div class="form-group">
                 <label for="invalid">Invalid</label>
                 <input class="form-control" type="text" id="invalid" name="invalid" placeholder="Invalid" aria-invalid="true" />
-                <small role="alert" class="invalid-feedback">Please fill out this field.</small>
+                <small role="alert" class="invalid-feedback">
+                  <i aria-hidden="true" class="icon icon--alert"></i>
+                  Please fill out this field.
+                </small>
               </div>
               <div class="form-group">
                 <label for="disabled">Disabled</label>
@@ -1010,7 +987,10 @@
                   <label for="radioButton10">Disabled</label>
                 </li>
               </ul>
-              <small role="alert" class="invalid-feedback">Please fill out this field.</small>
+              <small role="alert" class="invalid-feedback">
+                <i aria-hidden="true" class="icon icon--alert"></i>
+                Please fill out this field.
+              </small>
             </fieldset>
 
             <fieldset class="form-group">
@@ -1075,14 +1055,11 @@
                   <label for="checkButton10">Disabled</label>
                 </li>
               </ul>
-              <small role="alert" class="invalid-feedback">Please fill out this field.</small>
+              <small role="alert" class="invalid-feedback">
+                <i aria-hidden="true" class="icon icon--alert"></i>
+                Please fill out this field.
+              </small>
             </fieldset>
-            <div class="form-group">
-              <input class="button--full" type="reset" value="Reset" onclick="event.preventDefault()" />
-            </div>
-            <div class="form-group">
-              <input class="button--full" type="submit" value="Submit" onclick="event.preventDefault()" />
-            </div>
           </form>
         </section>
 
@@ -1092,7 +1069,7 @@
             <table class="striped">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col"></th>
                   <th scope="col">Heading</th>
                   <th scope="col">Heading</th>
                   <th scope="col">Heading</th>
@@ -1160,7 +1137,7 @@
       </div>
     </main>
     <footer class="footer">
-      <nav class="container-extended">
+      <nav class="container">
         <span class="footer__copyright">2025 KfW, Frankfurt am Main</span>
         <ul class="footer__list">
           <li>

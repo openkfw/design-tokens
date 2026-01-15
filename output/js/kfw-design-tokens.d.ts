@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.3 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.4 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100: {
@@ -65,11 +65,6 @@ export const KfwBaseColorWhite95: {
   alpha: number;
 };
 export const KfwBaseColorWhite: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorBlack: {
   colorSpace: string;
   components: number[];
   hex: string;
@@ -251,11 +246,23 @@ export const KfwBaseLayoutBreakpointXl: string;
 export const KfwBaseLayoutContainerSm: string;
 export const KfwBaseLayoutContainerMd: string;
 export const KfwBaseLayoutContainerLg: string;
-export const KfwBaseLayoutSafezoneStaticMd: string;
-export const KfwBaseLayoutSafezoneStaticLg: string;
-export const KfwBaseLayoutSafezoneFluidMin: string;
-export const KfwBaseLayoutSafezoneFluidMax: string;
-export const KfwBaseLayoutSafezoneFluidVal: string;
+export const KfwBaseLayoutSafezoneSm: string;
+export const KfwBaseLayoutSafezoneMd: string;
+export const KfwBaseLayoutSafezoneLg: string;
+export const KfwBaseLayoutSafezoneXl: number;
+export const KfwBaseLayoutGridgapStaticXs: string;
+export const KfwBaseLayoutGridgapStaticSm: string;
+export const KfwBaseLayoutGridgapStaticMd: string;
+export const KfwBaseLayoutGridgapStaticLg: string;
+export const KfwBaseLayoutGridgapStaticXl: string;
+export const KfwBaseLayoutGridgapStatic2xl: string;
+export const KfwBaseLayoutGridgapStatic3xl: string;
+export const KfwBaseLayoutGridgapFluidBasicMin: string;
+export const KfwBaseLayoutGridgapFluidBasicMax: string;
+export const KfwBaseLayoutGridgapFluidBasicVal: string;
+export const KfwBaseLayoutGridgapFluidLargeMin: string;
+export const KfwBaseLayoutGridgapFluidLargeMax: string;
+export const KfwBaseLayoutGridgapFluidLargeVal: string;
 export const KfwBaseLayoutGridcolumn1: number;
 export const KfwBaseLayoutGridcolumn2: number;
 export const KfwBaseLayoutGridcolumn3: number;
@@ -263,14 +270,6 @@ export const KfwBaseLayoutGridcolumn4: number;
 export const KfwBaseLayoutGridcolumn6: number;
 export const KfwBaseLayoutGridcolumn8: number;
 export const KfwBaseLayoutGridcolumn12: number;
-export const KfwBaseLayoutGridgapStaticXs: string;
-export const KfwBaseLayoutGridgapStaticSm: string;
-export const KfwBaseLayoutGridgapStaticMd: string;
-export const KfwBaseLayoutGridgapStaticLg: string;
-export const KfwBaseLayoutGridgapStaticXl: string;
-export const KfwBaseLayoutGridgapFluidMin: string;
-export const KfwBaseLayoutGridgapFluidMax: string;
-export const KfwBaseLayoutGridgapFluidVal: string;
 /** Main interaction color for buttons and links (Blue 600) */
 export const KfwColorFn: {
   colorSpace: string;
@@ -313,26 +312,14 @@ export const KfwColorTextOnDarkBg: {
   components: number[];
   hex: string;
 };
-/** Text color on white background (Green 300) */
-export const KfwColorTextOnWhiteBg: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-/** Text color on colored background (Blue 800) */
-export const KfwColorTextOnColoredBg: {
+/** Headline text color on dark background (Green 300) */
+export const KfwColorTextHeadlineOnDarkBg: {
   colorSpace: string;
   components: number[];
   hex: string;
 };
 /** Text color on disabled (White) */
 export const KfwColorTextOnDisabled: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-/** Headline text color on dark background (Green 300) */
-export const KfwColorTextHeadlineOnDarkBg: {
   colorSpace: string;
   components: number[];
   hex: string;
@@ -363,6 +350,12 @@ export const KfwColorBackgroundLightBlue: {
 };
 /** Light green (Green 100) */
 export const KfwColorBackgroundLightGreen: {
+  colorSpace: string;
+  components: number[];
+  hex: string;
+};
+/** Green Medium (Green 300) */
+export const KfwColorBackgroundMediumGreen: {
   colorSpace: string;
   components: number[];
   hex: string;
@@ -566,12 +559,11 @@ export const KfwFontsizeHeading5: string;
 export const KfwFontsizeHeading6: string;
 export const KfwLineheight: number;
 export const KfwLineheightLightspeech: number;
-export const KfwLineheightList: number;
 export const KfwLineheightHeading: number;
 export const KfwLineheightHeading5: number;
 export const KfwBorderradius: string;
-export const KfwBorderradiusLarge: string;
 export const KfwBorderradiusSmall: string;
+export const KfwBorderradiusLarge: string;
 export const KfwBorderradiusCircle: string;
 export const KfwBorderwidth: string;
 export const KfwBorderwidthLarge: string;
@@ -589,6 +581,13 @@ export const KfwBreakpointDesktopLarge: string;
 export const KfwContentwrapperNarrow: string;
 export const KfwContentwrapperBasic: string;
 export const KfwContentwrapperExtended: string;
-export const KfwSafezoneMin: string;
-export const KfwSafezoneMax: string;
-export const KfwSafezoneVal: string;
+export const KfwSafezoneMobile: string;
+export const KfwSafezoneTablet: string;
+export const KfwSafezoneDesktop: string;
+export const KfwSafezoneDesktopLarge: number;
+export const KfwGridgapBasicMin: string;
+export const KfwGridgapBasicMax: string;
+export const KfwGridgapBasicVal: string;
+export const KfwGridgapLargeMin: string;
+export const KfwGridgapLargeMax: string;
+export const KfwGridgapLargeVal: string;

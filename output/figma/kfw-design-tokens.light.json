@@ -59,10 +59,6 @@
           "$type": "color"
         }
       },
-      "Black": {
-        "$value": "#000",
-        "$type": "color"
-      },
       "Gray": {
         "50": {
           "$value": "#f6f7f8",
@@ -350,20 +346,12 @@
           "$value": "#fff",
           "$type": "color"
         },
-        "On-white-bg": {
+        "Headline-on-dark-bg": {
           "$value": "#b7f9aa",
-          "$type": "color"
-        },
-        "On-colored-bg": {
-          "$value": "#00375b",
           "$type": "color"
         },
         "On-disabled": {
           "$value": "#fff",
-          "$type": "color"
-        },
-        "Headline-on-dark-bg": {
-          "$value": "#b7f9aa",
           "$type": "color"
         }
       },
@@ -386,6 +374,10 @@
         },
         "Light-green": {
           "$value": "#ecfded",
+          "$type": "color"
+        },
+        "Medium-green": {
+          "$value": "#b7f9aa",
           "$type": "color"
         },
         "Dark-blue": {
@@ -683,10 +675,6 @@
         "$value": "150%",
         "$type": "lineHeights"
       },
-      "List": {
-        "$value": "150%",
-        "$type": "lineHeights"
-      },
       "Heading": {
         "$value": "130%",
         "$type": "lineHeights"
@@ -701,12 +689,12 @@
         "$value": "4px",
         "$type": "borderRadius"
       },
-      "Large": {
-        "$value": "20px",
-        "$type": "borderRadius"
-      },
       "Small": {
         "$value": "2px",
+        "$type": "borderRadius"
+      },
+      "Large": {
+        "$value": "20px",
         "$type": "borderRadius"
       },
       "Circle": {
@@ -742,6 +730,28 @@
       "Lightspeech": {
         "$value": "1.6px",
         "$type": "dimension"
+      }
+    },
+    "Gridgap": {
+      "Basic": {
+        "Mobile": {
+          "$value": "12px",
+          "$type": "dimension"
+        },
+        "Desktop": {
+          "$value": "36px",
+          "$type": "dimension"
+        }
+      },
+      "Large": {
+        "Mobile": {
+          "$value": "20px",
+          "$type": "dimension"
+        },
+        "Desktop": {
+          "$value": "40px",
+          "$type": "dimension"
+        }
       }
     }
   },
