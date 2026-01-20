@@ -19,11 +19,12 @@
 
 @layer icons.base {
   :root {
-    --icon-size: 1.6rem;
-    --icon-size-lg: 2.4rem;
-    --icon-size-xl: 2.8rem;
-    --icon-size-2xl: 3.2rem;
-    --icon-size-3xl: 4rem;
+    --icon-size-sm: 1.6rem;
+    --icon-size: 2.4rem;
+    --icon-size-lg: 2.8rem;
+    --icon-size-xl: 3.2rem;
+    --icon-size-2xl: 4rem;
+    --icon-size-3xl: 4.8rem;
   }
 
   .icon {
@@ -42,6 +43,10 @@
     min-height: var(--size);
   }
 
+  .icon--small {
+    --size: var(--icon-size-sm);
+  }
+
   .icon--large {
     --size: var(--icon-size-lg);
   }
@@ -57,6 +62,29 @@
   .icon--3xl {
     --size: var(--icon-size-3xl);
   }
+
+  .has-icon {
+    --size: 3.6rem;
+
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    width: var(--size);
+    height: var(--size);
+  }
+}
+
+.has-icon--large {
+  --size: 4rem;
+}
+
+.has-icon--xlarge {
+  --size: 5.8rem;
+}
+
+:where(.has-icon):has(.icon--menu) {
+  width: var(--icon-size-3xl);
+  height: var(--icon-size-3xl);
 }
 
 @layer core {
@@ -160,8 +188,33 @@
     mark {
       padding: 0.125rem 0.25rem;
       vertical-align: baseline;
+      background-color: var(--kfw-color-background-medium-green);
+      color: var(--kfw-color-text);
+    }
+
+    mark::selection {
+      background-color: var(--kfw-color-background);
+      color: var(--kfw-color-text);
+    }
+
+    .bg-dark mark {
+      background-color: var(--kfw-color-background);
+      color: var(--kfw-color-text);
+    }
+
+    .bg-light mark {
       background-color: var(--kfw-color-background-dark-blue);
       color: var(--kfw-color-text-on-dark-bg);
+    }
+
+    .bg-dark mark::selection {
+      background-color: var(--kfw-color-background-dark-blue);
+      color: var(--kfw-color-text-on-dark-bg);
+    }
+
+    .bg-light mark::selection {
+      background-color: var(--kfw-color-background);
+      color: var(--kfw-color-text);
     }
 
     blockquote {
@@ -416,7 +469,8 @@
     }
 
     figure figcaption {
-      padding: var(--kfw-space-xsmall);
+      padding: var(--kfw-space-xsmall) var(--kfw-space-xsmall) var(--kfw-space-xsmall) 0;
+      font-size: var(--kfw-fontsize-small);
     }
 
     code,
@@ -799,6 +853,7 @@
       vertical-align: top;
       padding-inline: var(--kfw-borderwidth-large);
       border: 0;
+      cursor: pointer;
       background-color: transparent;
     }
 
@@ -809,6 +864,19 @@
 
     :where(a:not([role="button"]), [role="link"]):where(:active) {
       box-shadow: inset 0 0 0 var(--kfw-borderwidth) var(--link-color-hover);
+    }
+
+    :where(a:not([role="button"]), [role="link"]):where(:hover):not(:active) {
+      color: var(--kfw-base-color-blue-700);
+      border: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--kfw-base-color-blue-700);
+      border-radius: var(--kfw-borderradius);
+    }
+
+    :where(a:not([role="button"]), [role="link"]):has(.icon--menu):hover:not(:active) {
+      color: var(--kfw-color-text-on-dark-bg);
+      background-color: var(--kfw-color-fn-active);
+
+      /* Todo height/width wird überschrieben von .has-icon, muss fixed werden */
     }
 
     :where(a:not([role="button"]), [role="link"]):has(.icon) {
@@ -854,7 +922,7 @@
       background-color: transparent;
     }
 
-    :where([type="submit"], .button--primary) {
+    :where([type="submit"], .button-primary) {
       --button-border-color: var(--kfw-color-fn);
       --button-bg: var(--kfw-color-fn);
       --button-color: var(--kfw-color-text-on-dark-bg);
@@ -867,24 +935,35 @@
       border-color: var(--button-border-color);
     }
 
-    :where([type="submit"], .button--primary):where(:hover, :focus, :active) {
+    :where([type="submit"], .button-primary):where(:hover, :focus, :active) {
       text-decoration: underline;
     }
 
-    :where([type="submit"], .button--primary):where(:hover, :focus) {
+    :where([type="submit"], .button-primary):where(:hover, :focus) {
       color: var(--button-color-hover);
       background-color: var(--button-bg-hover);
       border-color: var(--button-border-color-hover);
     }
 
-    :where([type="submit"], .button--primary):where(:active) {
+    :where([type="submit"], .button-primary):where(:active) {
       background-color: var(--button-color);
       color: var(--button-bg-hover);
       border-color: var(--button-bg-hover);
     }
 
+    :where([type="submit"], .button-primary.icon--only):where(:hover, :focus-visible) {
+      color: var(--kfw-base-color-blue-700);
+      background-color: var(--kfw-color-background);
+      border: var(--kfw-base-borderwidth-lg) var(--kfw-borderstyle) var(--kfw-base-color-blue-700);
+      border-radius: var(--kfw-base-borderradius-md);
+    }
+
+    :where([type="submit"], .button-primary.icon--only):where(:active) {
+      border: var(--kfw-base-borderwidth-md) var(--kfw-borderstyle) var(--kfw-base-color-blue-700);
+    }
+
     [type="file"]::file-selector-button,
-    :where([type="reset"], .button--secondary) {
+    :where([type="reset"], .button-secondary) {
       --button-border-color: var(--kfw-color-fn);
       --button-bg: transparent;
       --button-color: var(--kfw-color-fn);
@@ -898,29 +977,44 @@
     }
 
     [type="file"]::file-selector-button:where(:hover, :focus, :active),
-    :where([type="reset"], .button--secondary):where(:hover, :focus, :active) {
+    :where([type="reset"], .button-secondary):where(:hover, :focus, :active) {
       text-decoration: underline;
     }
 
     [type="file"]::file-selector-button:where(:hover, :focus),
-    :where([type="reset"], .button--secondary):where(:hover, :focus) {
+    :where([type="reset"], .button-secondary):where(:hover, :focus) {
       color: var(--button-color-hover);
       background-color: var(--button-bg-hover);
       border-color: var(--button-border-color-hover);
     }
 
     [type="file"]::file-selector-button:where(:active),
-    :where([type="reset"], .button--secondary):where(:active) {
+    :where([type="reset"], .button-secondary):where(:active) {
       color: var(--button-bg-hover);
       background-color: var(--button-color-hover);
       border-color: var(--button-bg-hover);
     }
 
-    :where(.button--primary, .button--secondary):has(.icon--left) {
+    [type="file"]::file-selector-button,
+    :where([type="reset"], .button-secondary.icon--only):where(:hover, :focus) {
+      background-color: var(--kfw-color-background);
+      color: var(--kfw-base-color-blue-700);
+      border: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--kfw-base-color-blue-700);
+      border-radius: var(--kfw-base-borderradius-md);
+    }
+
+    [type="file"]::file-selector-button,
+    :where([type="reset"], .button-secondary.icon--only):where(:active) {
+      color: var(--kfw-color-text-on-dark-bg);
+      background-color: var(--kfw-base-color-blue-700);
+      border: var(--kfw-base-borderwidth-md) var(--kfw-borderstyle) var(--kfw-color-background);
+    }
+
+    :where(.button-primary, .button-secondary):has(.icon--left) {
       padding-inline-start: 2rem;
     }
 
-    :where(.button--primary, .button--secondary):has(.icon--right) {
+    :where(.button-primary, .button-secondary):has(.icon--right) {
       padding-inline-end: 2rem;
     }
 
@@ -1192,13 +1286,11 @@
       display: grid;
       grid-template-columns: 1fr;
       column-gap: var(--kfw-gridgap-large);
-      margin-block-end: var(--kfw-fontspace);
     }
 
     @media (--kfw-breakpoint-tablet) {
       .grid {
         grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-        margin-block-end: 0;
       }
     }
 
@@ -1334,6 +1426,10 @@
   }
 
   @layer variations {
+    .bg-light {
+      background-color: var(--kfw-base-color-blue-100);
+    }
+
     :where(.bg-dark, .footer) {
       --headline-color: var(--kfw-color-text-headline-on-dark-bg);
       --kfw-focusring-outline-color: var(--kfw-color-background);
@@ -1347,8 +1443,8 @@
       --link-color-hover: var(--kfw-color-text-on-dark-bg);
     }
 
-    :where(.bg-dark, .footer) :where(.button--primary, [type="submit"]) {
-      --button-color: var(--kfw-color-fn);
+    :where(.bg-dark, .footer) :where(.button-primary, [type="submit"]) {
+      --button-color: var(--kfw-color-fn-active);
       --button-bg: var(--kfw-color-text-on-dark-bg);
       --button-border-color: var(--kfw-color-text-on-dark-bg);
       --button-bg-hover: var(--kfw-color-text-on-dark-bg);
@@ -1356,12 +1452,26 @@
       --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
     }
 
-    :where(.bg-dark, .footer) :where(.button--secondary, [type="reset"]) {
+    :where(.bg-dark, .footer) :where(.button-secondary, [type="reset"]) {
       --button-color: var(--kfw-color-text-on-dark-bg);
       --button-border-color: var(--kfw-color-text-on-dark-bg);
       --button-bg-hover: var(--kfw-color-text-on-dark-bg);
       --button-color-hover: var(--kfw-color-fn-active);
       --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
+    }
+
+    :where(.bg-dark, .footer) :where(.button-primary.icon--only):where(:hover, :focus-visible),
+    :where(.bg-dark, .footer) :where(.button-secondary.icon--only):where(:hover, :focus-visible) {
+      color: var(--kfw-color-text-on-dark-bg);
+      background-color: var(--kfw-color-fn-active);
+      border-color: var(--kfw-color-text-on-dark-bg);
+      border-radius: var(--kfw-borderradius-small);
+    }
+
+    :where(.bg-dark) :where(a:not([role="button"]), [role="link"]):where(:hover):not(:active) {
+      border: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--kfw-color-background);
+      color: var(--kfw-color-text-on-dark-bg);
+      border-radius: var(--kfw-borderradius);
     }
 
     .bg-subtle {

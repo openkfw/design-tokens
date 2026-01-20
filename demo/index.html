@@ -24,7 +24,9 @@
     <header id="header" class="header">
       <div class="container">
         <div>
-          <button type="button" role="link">Nav</button>
+          <button type="button" role="link" class="has-icon">
+            <i aria-hidden="true" class="icon icon--3xl icon--menu"></i>
+          </button>
         </div>
         <div>
           <a class="d-block" href="#" onclick="event.preventDefault()">
@@ -36,7 +38,7 @@
           </a>
         </div>
         <nav class="header__menu" aria-label="Sekundäre Navigation" data-testid="right-header-menu">
-          <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--large icon--login"></i> Login </a>
+          <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--login"></i> Login </a>
         </nav>
       </div>
     </header>
@@ -481,6 +483,29 @@
             </footer>
           </blockquote>
 
+          <h3>Highlighting</h3>
+          <div class="mb-sm">
+            <p>
+              Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+              aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
+              dolore magna aliquyam erat.
+            </p>
+          </div>
+          <div class="bg-light mb-sm">
+            <p>
+              Lorem ipsum dolor sit amet, <mark>consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+              aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
+              dolore magna aliquyam erat.
+            </p>
+          </div>
+          <div class="bg-dark p-sm mb-sm">
+            <h3 class="hl-3">Variant Negative</h3>
+            <p>
+              Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+              aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
+              dolore magna aliquyam erat.
+            </p>
+          </div>
           <h3>Lists</h3>
           <div class="grid">
             <div class="grid__item">
@@ -672,7 +697,7 @@
           <h3>Inline text elements</h3>
           <div class="grid">
             <div class="grid__item">
-              <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--arrow-right"></i> Link </a>
+              <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--small icon--arrow-right"></i> Link </a>
             </div>
             <div class="grid__item">
               <a href="#" class="tx--2" onclick="event.preventDefault()">Small Link</a>
@@ -767,15 +792,34 @@
           <h1>Buttons</h1>
           <div class="grid">
             <div class="grid__item">
-              <button type="button" class="button--primary">
+              <button type="button" class="button-primary">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Primary Button
               </button>
             </div>
             <div class="grid__item">
-              <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">
+              <a href="#" onclick="event.preventDefault()" class="button-secondary" role="button">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Secondary Button
                 <i aria-hidden="true" class="icon icon--right icon--lock"></i>
               </a>
+            </div>
+          </div>
+
+          <h3>Nav Icon</h3>
+          <div class="grid">
+            <div class="grid__item">
+              <button type="button" class="button-primary has-icon">
+                <i aria-hidden="true" class="icon icon--arrow-right"></i>
+              </button>
+            </div>
+            <div class="grid__item">
+              <button type="button" class="button-secondary has-icon">
+                <i aria-hidden="true" class="icon icon--arrow-right"></i>
+              </button>
+            </div>
+            <div class="grid__item">
+              <button role="link" type="button" class="has-icon">
+                <i aria-hidden="true" class="icon icon--arrow-right"></i>
+              </button>
             </div>
           </div>
         </section>
@@ -784,23 +828,46 @@
           <h3 class="hl-3">Variant Negative</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
-            <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i>similique </a>
+            <a href="#" onclick="event.preventDefault()">similique </a>
             At enim exercitationem, explicabo labore magnam modi quod, repellat reprehenderit sed sunt totam. Lorem ipsum dolor sit amet, consectetur
             adipisicing elit.
           </p>
           <div class="grid">
             <p>
-              <a href="#" onclick="event.preventDefault()" class="button--primary" role="button">
+              <a href="#" onclick="event.preventDefault()" class="button-primary" role="button">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i>
                 Primary Button
               </a>
             </p>
             <p>
-              <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">
+              <a href="#" onclick="event.preventDefault()" class="button-secondary" role="button">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Secondary Button
                 <i aria-hidden="true" class="icon icon--right icon--lock"></i>
               </a>
             </p>
+          </div>
+          <div class="grid">
+            <div class="grid__item">
+              <p>
+                <a href="#" onclick="event.preventDefault()" class="button-primary has-icon" role="button">
+                  <i aria-hidden="true" class="icon icon--arrow-right"></i>
+                </a>
+              </p>
+            </div>
+            <div class="grid__item">
+              <p>
+                <a href="#" onclick="event.preventDefault()" class="button-secondary has-icon" role="button">
+                  <i aria-hidden="true" class="icon icon--arrow-right"></i>
+                </a>
+              </p>
+            </div>
+            <div class="grid__item">
+              <p>
+                <button role="link" type="button" class="has-icon">
+                  <i aria-hidden="true" class="icon icon--arrow-right"></i>
+                </button>
+              </p>
+            </div>
           </div>
         </section>
 
@@ -812,7 +879,7 @@
               <div class="searchfield">
                 <input id="searchfield" type="search" class="searchfield__input form-control" placeholder="Search…" />
                 <button type="button" class="searchfield__button" aria-label="Search">
-                  <i aria-hidden="true" class="icon icon--large icon--search"></i>
+                  <i aria-hidden="true" class="icon icon--search"></i>
                 </button>
               </div>
             </div>
@@ -836,10 +903,10 @@
               <label for="file-upload2">File browser with title</label>
               <div class="file-upload">
                 <div class="file-upload__inner">
-                  <i aria-hidden="true" class="icon icon--3xl icon--upload file-upload__icon"></i>
+                  <i aria-hidden="true" class="icon icon--2xl icon--upload file-upload__icon"></i>
                   <label for="file-upload2" class="file-upload__title">Choose the files you want to upload</label>
-                  <button type="button" class="button--secondary">
-                    <i aria-hidden="true" class="icon icon--left icon--large icon--plus"></i>
+                  <button type="button" class="button-secondary">
+                    <i aria-hidden="true" class="icon icon--left icon--plus"></i>
                     Choose files
                   </button>
                   <input class="file-upload__input" type="file" id="file-upload2" multiple />
@@ -1148,7 +1215,7 @@
           </li>
         </ul>
         <div class="footer__top-button">
-          <a class="button--secondary" href="#top" role="button">
+          <a class="button-secondary" href="#top" role="button">
             <i aria-hidden="true" class="icon icon--left icon--arrow-up"></i>
             Scroll to the top
           </a>
