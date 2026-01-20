@@ -63,7 +63,7 @@
     --size: var(--icon-size-3xl);
   }
 
-  .has-icon {
+  .has-icononly {
     --size: 3.6rem;
 
     padding: 0;
@@ -74,15 +74,15 @@
   }
 }
 
-.has-icon--large {
+.has-icononly--large {
   --size: 4rem;
 }
 
-.has-icon--xlarge {
+.has-icononly--xlarge {
   --size: 5.8rem;
 }
 
-:where(.has-icon):has(.icon--menu) {
+:where(.has-icononly):has(.icon--menu) {
   width: var(--icon-size-3xl);
   height: var(--icon-size-3xl);
 }
@@ -307,8 +307,8 @@
     }
 
     .list--checks > .list-item::before {
-      min-width: var(--icon-size);
-      min-height: var(--icon-size);
+      min-width: var(--icon-size-sm);
+      min-height: var(--icon-size-sm);
       top: 0.3rem;
       mask-image: var(--icon);
       background-color: var(--kfw-color-background-dark-green);
@@ -866,7 +866,8 @@
       box-shadow: inset 0 0 0 var(--kfw-borderwidth) var(--link-color-hover);
     }
 
-    :where(a:not([role="button"]), [role="link"]):where(:hover):not(:active) {
+
+      :where(button[type="button"][role="link"].has-icononly):hover:not(:active) {
       color: var(--kfw-base-color-blue-700);
       border: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--kfw-base-color-blue-700);
       border-radius: var(--kfw-borderradius);
@@ -875,8 +876,6 @@
     :where(a:not([role="button"]), [role="link"]):has(.icon--menu):hover:not(:active) {
       color: var(--kfw-color-text-on-dark-bg);
       background-color: var(--kfw-color-fn-active);
-
-      /* Todo height/width wird überschrieben von .has-icon, muss fixed werden */
     }
 
     :where(a:not([role="button"]), [role="link"]):has(.icon) {
