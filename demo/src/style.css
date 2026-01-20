@@ -39,19 +39,19 @@
     mask-repeat: no-repeat;
     background-color: currentcolor;
     mask-image: var(--icon);
-    width: var(--size);
-    height: var(--size);
+    min-width: var(--size);
+    min-height: var(--size);
   }
 
-  .icon--small {
+  .icon--sm {
     --size: var(--icon-size-sm);
   }
 
-  .icon--large {
+  .icon--lg {
     --size: var(--icon-size-lg);
   }
 
-  .icon--xlarge {
+  .icon--xl {
     --size: var(--icon-size-xl);
   }
 
@@ -63,28 +63,23 @@
     --size: var(--icon-size-3xl);
   }
 
-  .has-icon {
-    --size: 3.6rem;
+  .has-icononly {
+    --outer-size: 3.6rem;
 
     padding: 0;
     align-items: center;
     justify-content: center;
-    width: var(--size);
-    height: var(--size);
+    width: var(--outer-size);
+    height: var(--outer-size);
   }
-}
 
-.has-icon--large {
-  --size: 4rem;
-}
+  .has-icononly--lg {
+    --outer-size: 4rem;
+  }
 
-.has-icon--xlarge {
-  --size: 5.8rem;
-}
-
-:where(.has-icon):has(.icon--menu) {
-  width: var(--icon-size-3xl);
-  height: var(--icon-size-3xl);
+  .has-icononly--xl {
+    --outer-size: 5.8rem;
+  }
 }
 
 @layer core {
@@ -96,6 +91,8 @@
       --kfw-icon-select: svg-load("icons/arrow-down.svg", "var(--kfw-color-fn)");
       --kfw-icon-input-datepicker: svg-load("icons/calendar.svg", "var(--kfw-color-fn)");
       --kfw-icon-input-timepicker: svg-load("icons/time.svg", "var(--kfw-color-fn)");
+      --kfw-icon-input-upload: svg-load("icons/upload.svg", "var(--kfw-color-fn)");
+      --kfw-icon-input-upload-white: svg-load("icons/upload.svg", "var(--kfw-color-background)");
 
       /* fluid shorthands */
       --kfw-space-large: clamp(var(--kfw-space-large-min), var(--kfw-space-large-val), var(--kfw-space-large-max));
@@ -307,8 +304,8 @@
     }
 
     .list--checks > .list-item::before {
-      min-width: var(--icon-size);
-      min-height: var(--icon-size);
+      min-width: var(--icon-size-sm);
+      min-height: var(--icon-size-sm);
       top: 0.3rem;
       mask-image: var(--icon);
       background-color: var(--kfw-color-background-dark-green);
@@ -643,6 +640,11 @@
       box-shadow: 0 0 0 var(--kfw-borderwidth) var(--borderhover);
     }
 
+    .form-control[aria-invalid="true"]:focus-visible {
+      outline: var(--kfw-focusring-outline-width) var(--kfw-focusring-outline-style) var(--kfw-color-state-danger);
+      outline-offset: var(--kfw-focusring-outline-offset);
+    }
+
     :where(progress, [type="checkbox"], [type="radio"], [type="range"]) {
       accent-color: var(--kfw-color-fn);
     }
@@ -668,7 +670,7 @@
       margin-inline-end: var(--kfw-space-xsmall);
     }
 
-    :where(.form-text, .invalid-feedback) {
+    :where(.form-text, .invalid-feedback, .valid-feedback) {
       --space-between: 0.8rem;
 
       gap: var(--space-between);
@@ -680,18 +682,12 @@
       letter-spacing: var(--kfw-base-letterspacing-normal);
     }
 
-    .invalid-feedback {
-      color: var(--kfw-color-state-danger);
+    .valid-feedback {
+      color: var(--kfw-color-state-success);
     }
 
-    .invalid-feedback::before {
-      content: "";
-      display: block;
-      width: var(--icon-size);
-      height: var(--icon-size);
-      color: inherit;
-      background-color: currentcolor;
-      mask-image: var(--kfw-icon-alert);
+    .invalid-feedback {
+      color: var(--kfw-color-state-danger);
     }
 
     :where(label, .form-label) {
@@ -858,7 +854,9 @@
       display: inline-flex;
       vertical-align: top;
       padding-inline: var(--kfw-borderwidth-large);
-      border: 0;
+      border-style: var(--kfw-borderstyle);
+      border-width: 0;
+      border-color: transparent;
       cursor: pointer;
       background-color: transparent;
     }
@@ -872,17 +870,15 @@
       box-shadow: inset 0 0 0 var(--kfw-borderwidth) var(--link-color-hover);
     }
 
-    :where(a:not([role="button"]), [role="link"]):where(:hover):not(:active) {
-      color: var(--kfw-base-color-blue-700);
-      border: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--kfw-base-color-blue-700);
-      border-radius: var(--kfw-borderradius);
+    :where(a:not([role="button"]), [role="link"]).has-icononly:where(:hover) {
+      border-color: var(--link-color-hover);
+      border-width: var(--kfw-borderwidth-large);
     }
 
-    :where(a:not([role="button"]), [role="link"]):has(.icon--menu):hover:not(:active) {
-      color: var(--kfw-color-text-on-dark-bg);
-      background-color: var(--kfw-color-fn-active);
-
-      /* Todo height/width wird überschrieben von .has-icon, muss fixed werden */
+    :where(a:not([role="button"]), [role="link"]).has-icononly:where(:active) {
+      box-shadow: none;
+      border-color: var(--link-color-hover);
+      border-width: var(--kfw-borderwidth);
     }
 
     :where(a:not([role="button"]), [role="link"]):has(.icon) {
@@ -916,10 +912,10 @@
       padding-block: 1.2rem;
       padding-inline: 2.5rem;
       justify-content: center;
-      max-width: 100%;
       vertical-align: middle;
       white-space: nowrap;
       cursor: pointer;
+      max-width: 100%;
       align-items: center;
       border-width: var(--kfw-borderwidth);
       border-style: solid;
@@ -1001,28 +997,13 @@
       border-color: var(--button-bg-hover);
     }
 
-    [type="file"]::file-selector-button,
-    :where([type="reset"], .button-secondary.icon--only):where(:hover, :focus) {
-      background-color: var(--kfw-color-background);
-      color: var(--kfw-base-color-blue-700);
-      border: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--kfw-base-color-blue-700);
-      border-radius: var(--kfw-base-borderradius-md);
+    :where(.button-primary, .button-secondary):has(.icon--left) {
+      padding-inline-start: 2rem;
     }
 
-    [type="file"]::file-selector-button,
-    :where([type="reset"], .button-secondary.icon--only):where(:active) {
-      color: var(--kfw-color-text-on-dark-bg);
-      background-color: var(--kfw-base-color-blue-700);
-      border: var(--kfw-base-borderwidth-md) var(--kfw-borderstyle) var(--kfw-color-background);
+    :where(.button-primary, .button-secondary):has(.icon--right) {
+      padding-inline-end: 2rem;
     }
-
-      :where([type="submit"], [type="reset"], [type="file"]::file-selector-button, .button--primary, .button--secondary):has(.icon--left) {
-          padding-inline-start: 2rem;
-      }
-
-      :where([type="submit"], [type="reset"], [type="file"]::file-selector-button, .button--primary, .button--secondary):has(.icon--right) {
-          padding-inline-end: 2rem;
-      }
 
     .button--small {
       padding: 0.8rem 1.6rem;
@@ -1192,18 +1173,37 @@
   @layer base {
     .header {
       background-color: var(--kfw-color-background);
-      border-bottom: var(--kfw-borderwidth) solid var(--kfw-color-line-11);
       position: sticky;
       top: 0;
       z-index: 1000;
+    }
+
+    .header::before {
+      content: "";
+      border-bottom: var(--kfw-borderwidth) solid var(--kfw-color-line-11);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      pointer-events: none;
     }
 
     .header > div {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      min-height: 6.4rem;
+      min-height: 5.8rem;
       gap: var(--kfw-space-medium);
+    }
+
+    .header__hamburger {
+      --outer-size: 4.8rem;
+    }
+
+    .header__hamburger:hover {
+      color: var(--kfw-color-text-on-dark-bg);
+      background-color: var(--kfw-color-fn-active);
+      border-width: 0;
     }
 
     .header__menu {
@@ -1616,3 +1616,17 @@
     position: absolute;
   }
 }
+
+/* @todo add base64 icons to file-upload native */
+[type="file"]::file-selector-button {
+    background-image: var(--kfw-icon-input-upload);
+    background-repeat: no-repeat;
+    background-position: left 8px center;
+    background-size: 24px 24px;
+    padding-left: 5rem;
+}
+
+[type="file"]::file-selector-button:hover {
+    background-image: var(--kfw-icon-input-upload-white);
+}
+
