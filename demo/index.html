@@ -24,7 +24,7 @@
     <header id="header" class="header">
       <div class="container">
         <div>
-          <button type="button" role="link" class="has-icononly">
+          <button type="button" role="link" class="has-icononly has-icononly--xlarge header__hamburger">
             <i aria-hidden="true" class="icon icon--3xl icon--menu"></i>
           </button>
         </div>
@@ -605,7 +605,7 @@
               <span class="smk--1">LIST_3</span>
               <h4>Checklist</h4>
               <ul class="list--checks">
-                <li class="list-item ">Lorem ipsum dolor sit amet</li>
+                <li class="list-item">Lorem ipsum dolor sit amet</li>
                 <li class="list-item">Lorem ipsum dolor sit amet</li>
                 <li class="list-item">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
@@ -693,7 +693,7 @@
           <h3>Inline text elements</h3>
           <div class="grid">
             <div class="grid__item">
-              <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--small icon--arrow-right"></i> Link </a>
+              <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--sm icon--arrow-right"></i> Link </a>
             </div>
             <div class="grid__item">
               <a href="#" class="tx--2" onclick="event.preventDefault()">Small Link</a>
@@ -892,6 +892,11 @@
               </select>
             </div>
             <div class="form-group">
+              <button type="button" class="button-secondary" aria-label="Search">
+                <i aria-hidden="true" class="icon icon--left icon--upload"></i> Dateien auswählen
+              </button>
+            </div>
+            <div class="form-group">
               <label for="file-upload">File browser</label>
               <input type="file" id="file-upload" multiple />
             </div>
@@ -902,7 +907,7 @@
                   <i aria-hidden="true" class="icon icon--2xl icon--upload file-upload__icon"></i>
                   <label for="file-upload2" class="file-upload__title">Choose the files you want to upload</label>
                   <button type="button" class="button-secondary">
-                    <i aria-hidden="true" class="icon icon--left icon--small icon--plus"></i>
+                    <i aria-hidden="true" class="icon icon--left icon--sm icon--plus"></i>
                     Choose files
                   </button>
                   <input class="file-upload__input" type="file" id="file-upload2" multiple />
