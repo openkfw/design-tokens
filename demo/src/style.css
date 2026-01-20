@@ -38,8 +38,8 @@
     mask-repeat: no-repeat;
     background-color: currentcolor;
     mask-image: var(--icon);
-    min-width: var(--size);
-    min-height: var(--size);
+    width: var(--size);
+    height: var(--size);
   }
 
   .icon--large {
@@ -614,7 +614,7 @@
       margin-inline-end: var(--kfw-space-xsmall);
     }
 
-    :where(.form-text, .invalid-feedback, .valid-feedback) {
+    :where(.form-text, .invalid-feedback) {
       --space-between: 0.8rem;
 
       gap: var(--space-between);
@@ -626,12 +626,18 @@
       letter-spacing: var(--kfw-base-letterspacing-normal);
     }
 
-    .valid-feedback {
-      color: var(--kfw-color-state-success);
-    }
-
     .invalid-feedback {
       color: var(--kfw-color-state-danger);
+    }
+
+    .invalid-feedback::before {
+      content: "";
+      display: block;
+      width: var(--icon-size);
+      height: var(--icon-size);
+      color: inherit;
+      background-color: currentcolor;
+      mask-image: var(--kfw-icon-alert);
     }
 
     :where(label, .form-label) {
@@ -800,6 +806,7 @@
       padding-inline: var(--kfw-borderwidth-large);
       border: 0;
       background-color: transparent;
+      cursor: pointer;
     }
 
     :where(a:not([role="button"]), [role="link"]):where(:hover, :focus, :active) {
@@ -916,11 +923,11 @@
       border-color: var(--button-bg-hover);
     }
 
-    :where(.button--primary, .button--secondary):has(.icon--left) {
+    :where([type="submit"], [type="reset"], [type="file"]::file-selector-button, .button--primary, .button--secondary):has(.icon--left) {
       padding-inline-start: 2rem;
     }
 
-    :where(.button--primary, .button--secondary):has(.icon--right) {
+    :where([type="submit"], [type="reset"], [type="file"]::file-selector-button, .button--primary, .button--secondary):has(.icon--right) {
       padding-inline-end: 2rem;
     }
 
