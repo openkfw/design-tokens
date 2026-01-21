@@ -733,7 +733,7 @@
       width: var(--field-size);
       height: var(--field-size);
       margin: 0;
-      border: var(--kfw-borderwidth) solid var(--kfw-color-fn-active);
+      border: var(--kfw-borderwidth) solid var(--kfw-color-text);
       color: var(--kfw-color-fn-active);
       vertical-align: middle;
       position: relative;
