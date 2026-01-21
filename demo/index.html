@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" href="/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
     <script type="module" defer>
-      import 'what-input'
+      import "what-input"
     </script>
     <script type="module" defer>
       import allTokens from "@openkfw/design-tokens/output/json/kfw-design-tokens.json" with { type: "json" }
@@ -822,7 +822,7 @@
             <div class="form-group">
               <label for="text">Text</label>
               <input type="text" id="text" name="text" placeholder="Text" class="form-control" />
-              <small>Curabitur consequat lacus at lacus porta finibus.</small>
+              <small class="form-text">Curabitur consequat lacus at lacus porta finibus.</small>
             </div>
             <div class="form-group">
               <label for="select">Select</label>
@@ -830,6 +830,18 @@
                 <option value="" selected>Select…</option>
                 <option>…</option>
               </select>
+            </div>
+            <div class="form-group">
+              <label for="file-upload">Submit</label>
+              <div class="d-block">
+                <input type="submit" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="file-upload">Reset</label>
+              <div class="d-block">
+                <input type="reset" />
+              </div>
             </div>
             <div class="form-group">
               <label for="file-upload">File browser</label>

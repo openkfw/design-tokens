@@ -834,6 +834,12 @@
       text-decoration: none;
     }
 
+    .button-group {
+      display: flex;
+      align-items: center;
+      gap: var(--kfw-space-small);
+    }
+
     [type="file"]::file-selector-button,
     :where(button:not([role="link"]), [type="submit"], [type="reset"], [role="button"]) {
       --space-between: 0.8rem;
