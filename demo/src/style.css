@@ -789,6 +789,12 @@
       content: var(--kfw-icon-input-timepicker);
     }
 
+    .button-group {
+      display: flex;
+      align-items: center;
+      gap: var(--kfw-space-small);
+    }
+
     :where(a:not([role="button"]), [role="link"]) {
       --link-color: var(--kfw-color-fn);
       --link-color-hover: var(--kfw-color-fn-active);
