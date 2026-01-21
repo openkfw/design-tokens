@@ -79,7 +79,7 @@
       outline: none;
     }
 
-    [data-whatinput="keyboard"] *:focus {
+    [data-whatinput="keyboard"] *:focus-visible {
       outline: var(--kfw-focusring-outline-width) var(--kfw-focusring-outline-style) var(--kfw-focusring-outline-color);
       outline-offset: var(--kfw-focusring-outline-offset);
     }
