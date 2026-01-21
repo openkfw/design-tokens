@@ -747,7 +747,7 @@
     .list-group-form :where([type="checkbox"], [type="radio"])[aria-invalid="true"] {
       border-color: var(--kfw-color-state-danger);
       border-width: var(--kfw-borderwidth-large);
-      color: var(--kfw-color-state-danger);
+      color: var(--kfw-color-fn-active);
     }
 
     .list-group-form [type="radio"] {
