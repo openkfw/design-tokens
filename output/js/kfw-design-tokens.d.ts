@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.4 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.5 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100: {
@@ -558,7 +558,7 @@ export const KfwFontsizeHeading4Val: string;
 export const KfwFontsizeHeading5: string;
 export const KfwFontsizeHeading6: string;
 export const KfwLineheight: number;
-export const KfwLineheightLightspeech: number;
+export const KfwLineheightLarge: number;
 export const KfwLineheightHeading: number;
 export const KfwLineheightHeading5: number;
 export const KfwBorderradius: string;

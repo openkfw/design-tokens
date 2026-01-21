@@ -1430,7 +1430,7 @@
       default: {
         $value: "{base.lineheight.md}",
       },
-      lightspeech: {
+      large: {
         $value: "{base.lineheight.lg}",
       },
       heading: {

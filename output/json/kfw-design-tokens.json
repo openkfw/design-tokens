@@ -7101,8 +7101,8 @@
           "default"
         ]
       },
-      "lightspeech": {
-        "key": "{semantic.lineheight.lightspeech}",
+      "large": {
+        "key": "{semantic.lineheight.large}",
         "$value": 1.5,
         "filePath": "tokens/tokens.json",
         "isSource": true,
@@ -7110,18 +7110,18 @@
         "original": {
           "$value": "{base.lineheight.lg}",
           "$type": "number",
-          "key": "{semantic.lineheight.lightspeech}"
+          "key": "{semantic.lineheight.large}"
         },
-        "name": "kfw-lineheight-lightspeech",
+        "name": "kfw-lineheight-large",
         "attributes": {
           "category": "semantic",
           "type": "lineheight",
-          "item": "lightspeech"
+          "item": "large"
         },
         "path": [
           "semantic",
           "lineheight",
-          "lightspeech"
+          "large"
         ]
       },
       "heading": {
