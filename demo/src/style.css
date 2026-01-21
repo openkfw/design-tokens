@@ -84,16 +84,6 @@
       outline-offset: var(--kfw-focusring-outline-offset);
     }
 
-    /*
-    *:focus {
-      outline: none;
-    }
-
-    [data-whatinput="keyboard"] *:focus-visible {
-      outline: var(--kfw-focusring-outline-width) var(--kfw-focusring-outline-style) var(--kfw-focusring-outline-color);
-      outline-offset: var(--kfw-focusring-outline-offset);
-    } */
-
     body {
       margin: 0;
       font-size: 1.6rem; /* Set 16px as default */
@@ -578,10 +568,8 @@
       box-shadow: 0 0 0 var(--kfw-borderwidth) var(--borderhover);
     }
 
-    /* @todo */
-    .form-control[aria-invalid="true"]:focus-visible {
-      outline: var(--kfw-focusring-outline-width) var(--kfw-focusring-outline-style) var(--kfw-color-state-danger);
-      outline-offset: var(--kfw-focusring-outline-offset);
+    [data-whatinput="keyboard"] .form-control[aria-invalid="true"]:focus-visible {
+      outline-color: var(--kfw-color-state-danger);
     }
 
     :where(progress, [type="checkbox"], [type="radio"], [type="range"]) {
@@ -798,6 +786,8 @@
     :where(a:not([role="button"]), [role="link"]) {
       --link-color: var(--kfw-color-fn);
       --link-color-hover: var(--kfw-color-fn-active);
+      --link-background: transparent;
+      --link-border: transparent;
 
       color: var(--link-color);
       text-decoration: none;
@@ -807,9 +797,9 @@
       padding-inline: var(--kfw-borderwidth-large);
       border-style: var(--kfw-borderstyle);
       border-width: 0;
-      border-color: transparent;
+      border-color: var(--link-border);
       cursor: pointer;
-      background-color: transparent;
+      background-color: var(--link-background);
     }
 
     :where(a:not([role="button"]), [role="link"]):where(:hover, :focus, :active) {
@@ -821,15 +811,17 @@
       box-shadow: inset 0 0 0 var(--kfw-borderwidth) var(--link-color-hover);
     }
 
-    :where(a:not([role="button"]), [role="link"]).has-icononly:where(:hover) {
+    :where(a:not([role="button"]), [role="link"]).has-icononly:where(:hover, :active) {
       border-color: var(--link-color-hover);
+    }
+
+    :where(a:not([role="button"]), [role="link"]).has-icononly:where(:hover) {
       border-width: var(--kfw-borderwidth-large);
     }
 
     :where(a:not([role="button"]), [role="link"]).has-icononly:where(:active) {
-      box-shadow: none;
-      border-color: var(--link-color-hover);
       border-width: var(--kfw-borderwidth);
+      box-shadow: none;
     }
 
     :where(a:not([role="button"]), [role="link"]):has(.icon) {
@@ -849,7 +841,7 @@
     }
 
     [type="file"]::file-selector-button,
-    :where(button:not([role="link"]), [type="submit"], [type="reset"], [role="button"]) {
+    :where(button:not([role="link"]), [role="button"]) {
       --space-between: 0.8rem;
 
       font-family: var(--kfw-fontfamily);
@@ -875,7 +867,7 @@
       background-color: transparent;
     }
 
-    :where([type="submit"], .button-primary) {
+    .button-primary {
       --button-border-color: var(--kfw-color-fn);
       --button-bg: var(--kfw-color-fn);
       --button-color: var(--kfw-color-text-on-dark-bg);
@@ -888,24 +880,24 @@
       border-color: var(--button-border-color);
     }
 
-    :where([type="submit"], .button-primary):where(:hover, :focus, :active) {
+    .button-primary:where(:hover, :focus, :active) {
       text-decoration: underline;
     }
 
-    :where([type="submit"], .button-primary):where(:hover, :focus) {
+    .button-primary:where(:hover, :focus) {
       color: var(--button-color-hover);
       background-color: var(--button-bg-hover);
       border-color: var(--button-border-color-hover);
     }
 
-    :where([type="submit"], .button-primary):where(:active) {
+    .button-primary:where(:active) {
       background-color: var(--button-color);
       color: var(--button-bg-hover);
       border-color: var(--button-bg-hover);
     }
 
     [type="file"]::file-selector-button,
-    :where([type="reset"], .button-secondary) {
+    .button-secondary {
       --button-border-color: var(--kfw-color-fn);
       --button-bg: transparent;
       --button-color: var(--kfw-color-fn);
@@ -918,53 +910,37 @@
       border-color: var(--button-border-color);
     }
 
+
     [type="file"]::file-selector-button:where(:hover, :focus, :active),
-    :where([type="reset"], .button-secondary):where(:hover, :focus, :active) {
+    .button-secondary:where(:hover, :focus, :active) {
       text-decoration: underline;
     }
 
     [type="file"]::file-selector-button:where(:hover, :focus),
-    :where([type="reset"], .button-secondary):where(:hover, :focus) {
+    .button-secondary:where(:hover, :focus) {
       color: var(--button-color-hover);
       background-color: var(--button-bg-hover);
       border-color: var(--button-border-color-hover);
     }
-    :where([type="submit"], .button-primary).has-icononly:where(:hover, :focus-visible),
-    :where([type="reset"], .button-secondary).has-icononly:where(:hover, :focus-visible) {
-      color: var(--kfw-color-fn-active);
-      background-color: var(--kfw-color-background);
-      border: var(--kfw-base-borderwidth-lg) var(--kfw-borderstyle) var(--kfw-color-fn-active);
-      border-radius: var(--kfw-base-borderradius-md);
-    }
 
-    :where([type="submit"], .button-primary).has-icononly:where(:active) {
-      border: var(--kfw-base-borderwidth-md) var(--kfw-borderstyle) var(--kfw-color-fn-active);
-    }
-
-    [type="file"]::file-selector-button:where(:active),
-    :where([type="reset"], .button-secondary):where(:active) {
+    [type=file]::file-selector-button:where(:active),
+    .button-secondary:where(:active) {
       color: var(--button-bg-hover);
       background-color: var(--button-color-hover);
-      border: var(--kfw-borderwidth) var(--kfw-borderstyle) var(--button-bg-hover);
-    }
-    [type="file"]::file-selector-button:where(:active),
-    :where([type="reset"], .button-secondary.has-icononly):where(:active) {
-      color: var(--button-color-hover);
-      background-color: var(--button-bg-hover);
-      border: var(--kfw-borderwidth) var(--kfw-borderstyle) var(--button-color-hover);
-    }
-
-    :where([type="submit"], [type="reset"], [type="file"]::file-selector-button, .button--primary, .button--secondary):has(.icon--left) {
-      padding-inline-start: 2rem;
-    }
-
-    :where([type="submit"], [type="reset"], [type="file"]::file-selector-button, .button--primary, .button--secondary):has(.icon--right) {
-      padding-inline-end: 2rem;
+      border-color: var(--button-bg-hover);
     }
 
     .button--small {
       padding: 0.8rem 1.6rem;
       font-size: var(--kfw-fontsize-small);
+    }
+
+    .button--iconleft {
+      padding-inline-start: 2rem;
+    }
+
+    .button--iconright {
+      padding-inline-end: 2rem;
     }
 
     input:not([type="submit"], [type="button"], [type="reset"])[disabled],
@@ -1341,7 +1317,7 @@
     }
 
     .color-palette [type="file"]::file-selector-button,
-    .color-palette :where(button, [type="submit"], [type="reset"], [type="button"], [role="button"]) {
+    .color-palette :where(button, [role="button"]) {
       white-space: normal;
     }
 
@@ -1389,6 +1365,10 @@
   }
 
   @layer variations {
+    .bg-subtle {
+      background-color: var(--kfw-color-background-subtle);
+    }
+
     .bg-light {
       background-color: var(--kfw-color-background-light-blue);
     }
@@ -1406,7 +1386,11 @@
       --link-color-hover: var(--kfw-color-text-on-dark-bg);
     }
 
-    :where(.bg-dark, .footer) :where(.button-primary, [type="submit"]) {
+    :where(.bg-dark, .footer) :where(a:not([role="button"]), [role="link"]):where(:active) {
+      --link-background: var(--kfw-color-fn-active);
+    }
+
+    :where(.bg-dark, .footer) :where(.button-primary) {
       --button-color: var(--kfw-color-fn-active); /* @todo check before without active here */
       --button-bg: var(--kfw-color-text-on-dark-bg);
       --button-border-color: var(--kfw-color-text-on-dark-bg);
@@ -1415,33 +1399,12 @@
       --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
     }
 
-    :where(.bg-dark, .footer) :where(.button-secondary, [type="reset"]) {
+    :where(.bg-dark, .footer) :where(.button-secondary) {
       --button-color: var(--kfw-color-text-on-dark-bg);
       --button-border-color: var(--kfw-color-text-on-dark-bg);
       --button-bg-hover: var(--kfw-color-text-on-dark-bg);
       --button-color-hover: var(--kfw-color-fn-active);
       --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
-    }
-
-    :where(.bg-dark, .footer) :where(.button-primary.has-icononly):where(:hover, :focus-visible),
-    :where(.bg-dark, .footer) :where(.button-secondary.has-icononly):where(:hover, :focus-visible) {
-      color: var(--kfw-color-text-on-dark-bg);
-      background-color: var(--kfw-color-fn-active);
-      border-color: var(--kfw-color-text-on-dark-bg);
-      border-radius: var(--kfw-borderradius-small);
-    }
-
-    :where(.bg-dark) :where(a:not([role="button"]), [role="link"]):has(.has-icononly):where(:hover):not(:active) {
-      border: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--kfw-color-background);
-      color: var(--kfw-color-text-on-dark-bg);
-      border-radius: var(--kfw-borderradius);
-    }
-    :where(.bg-dark) :where(a:not([role="button"]), [role="link"]):where(:active) {
-      background-color: var(--kfw-color-fn-active);
-    }
-
-    .bg-subtle {
-      background-color: var(--kfw-color-background-subtle);
     }
 
     .hl--sb {
