@@ -1627,11 +1627,15 @@
 
 /* @todo add base64 icons to file-upload native */
 [type="file"]::file-selector-button {
+  --background-image-width: 24px;
+  --background-image-height: 24px;
+  --background-image-padding-left: 2rem;
   background-image: var(--kfw-icon-input-upload);
   background-repeat: no-repeat;
-  background-position: left 8px center;
-  background-size: 24px 24px;
-  padding-left: 5rem;
+  background-position: left var(--background-image-padding-left) center;
+  background-size: var(--background-image-width) var(--background-image-height);
+  padding-inline-end: 2.5rem;
+  padding-inline-start: calc(var(--background-image-padding-left) + var(--background-image-width) + var(--space-between));
 }
 
 [type="file"]::file-selector-button:hover {
