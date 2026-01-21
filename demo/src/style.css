@@ -906,7 +906,7 @@
       border-radius: var(--kfw-borderradius);
       display: inline-flex;
       gap: var(--space-between);
-      text-align: center;
+      text-align: left;
       text-decoration: none;
       line-height: var(--kfw-lineheight);
       padding-block: 1.2rem;
@@ -915,7 +915,6 @@
       vertical-align: middle;
       white-space: nowrap;
       cursor: pointer;
-      max-width: 100%;
       align-items: center;
       border-width: var(--kfw-borderwidth);
       border-style: solid;
