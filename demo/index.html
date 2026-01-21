@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en" data-whatpersist="false">
   <head>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KfW Design Tokens Demo</title>
@@ -54,6 +53,8 @@
           alt="Luftaufnahme der Zentrale der KfW Bankengruppe in Frankfurt am Main"
           width="1280"
           height="427"
+          loading="eager"
+          fetchpriority="high"
         />
         <div class="container hero__container">
           <img class="hero__bars-desktop" src="/sb-tbalken-xl-429x25.svg" alt="" aria-hidden="true" />
@@ -83,343 +84,146 @@
           <h1>Color</h1>
 
           <h2>Functional colors</h2>
+
           <h3>Interaction state</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="fn.default"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="fn.active"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="fn.inactive"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="fn.border"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="fn.label"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="semantic" data-name="fn">
+            <span data-token="default"></span>
+            <span data-token="active"></span>
+            <span data-token="inactive"></span>
+            <span data-token="border"></span>
+            <span data-token="label"></span>
           </div>
+
           <h3>Text</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="text.default"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="text.on-dark-bg"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="text.headline-on-dark-bg"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="text.on-disabled"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="semantic" data-name="text">
+            <span data-token="default"></span>
+            <span data-token="on-dark-bg"></span>
+            <span data-token="headline-on-dark-bg"></span>
+            <span data-token="on-disabled"></span>
           </div>
+
           <h3>Background</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.default"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.subtle"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.disabled"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.light-blue"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.light-green"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.medium-green"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.dark-blue"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.dark-green"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="semantic" data-name="background">
+            <span data-token="default"></span>
+            <span data-token="subtle"></span>
+            <span data-token="disabled"></span>
+            <span data-token="light-blue"></span>
+            <span data-token="light-green"></span>
+            <span data-token="medium-green"></span>
+            <span data-token="dark-blue"></span>
+            <span data-token="dark-green"></span>
           </div>
+
           <h3>Opaque</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="opaque.white-90"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="opaque.white-95"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="opaque.gray-500-10"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="opaque.gray-500-30"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="opaque.gray-500-90"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="semantic" data-name="opaque">
+            <span data-token="white-90"></span>
+            <span data-token="white-95"></span>
+            <span data-token="gray-500-10"></span>
+            <span data-token="gray-500-30"></span>
+            <span data-token="gray-500-90"></span>
           </div>
+
           <h3>State</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="state.danger"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="state.warning"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="state.success"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="semantic" data-name="state">
+            <span data-token="danger"></span>
+            <span data-token="warning"></span>
+            <span data-token="success"></span>
           </div>
+
           <h3>Status</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="status.red"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="status.yellow"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="status.green"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="semantic" data-name="status">
+            <span data-token="red"></span>
+            <span data-token="yellow"></span>
+            <span data-token="green"></span>
           </div>
+
           <h3>Line</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.6"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.7"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.8"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.9"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.10"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.11"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.12"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="semantic" data-name="line">
+            <span data-token="6"></span>
+            <span data-token="7"></span>
+            <span data-token="8"></span>
+            <span data-token="9"></span>
+            <span data-token="10"></span>
+            <span data-token="11"></span>
+            <span data-token="12"></span>
           </div>
+
           <h3>Product</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="product.container"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="product.benefit"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="product.credit"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="product.cooperation"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="product.credit-benefit"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="semantic" data-name="product">
+            <span data-token="container"></span>
+            <span data-token="benefit"></span>
+            <span data-token="credit"></span>
+            <span data-token="cooperation"></span>
+            <span data-token="credit-benefit"></span>
           </div>
+
           <h3>Icon</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="icon.default"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="icon.secondary"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="icon.disabled"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="icon.disabled-secondary"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="semantic" data-name="icon">
+            <span data-token="default"></span>
+            <span data-token="secondary"></span>
+            <span data-token="disabled"></span>
+            <span data-token="disabled-secondary"></span>
           </div>
 
           <h2>Base colors</h2>
           <h3>White</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="white.default" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="base" data-name="white">
+            <span data-token="default"></span>
           </div>
+
           <h3>Blue</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="blue.100" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="blue.400" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="blue.500" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="blue.600" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="blue.700" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="blue.800" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="base" data-name="blue">
+            <span data-token="100"></span>
+            <span data-token="400"></span>
+            <span data-token="500"></span>
+            <span data-token="600"></span>
+            <span data-token="700"></span>
+            <span data-token="800"></span>
           </div>
+
           <h3>Green</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="green.100" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="green.300" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="green.400" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="green.700" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="base" data-name="green">
+            <span data-token="100"></span>
+            <span data-token="300"></span>
+            <span data-token="400"></span>
+            <span data-token="700"></span>
           </div>
+
           <h3>Gray</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.50" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.100" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.200" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.300" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.400" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.500.default" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.600" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="base" data-name="gray">
+            <span data-token="50"></span>
+            <span data-token="100"></span>
+            <span data-token="200"></span>
+            <span data-token="300"></span>
+            <span data-token="400"></span>
+            <span data-token="500.default"></span>
+            <span data-token="600"></span>
           </div>
+
           <h3>Yellow</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="yellow.500" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="base" data-name="yellow">
+            <span data-token="500"></span>
           </div>
+
           <h3>Red</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="red.400" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="base" data-name="red">
+            <span data-token="400"></span>
           </div>
           <h3>Violet</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="violet.400" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="violet.500" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="base" data-name="violet">
+            <span data-token="400"></span>
+            <span data-token="500"></span>
           </div>
+
           <h3>Opaque</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="white.90" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="white.95" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.500.10" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.500.30" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.500.90" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
+          <div class="color-palette" data-group="base">
+            <span data-token="white.90"></span>
+            <span data-token="white.95"></span>
+            <span data-token="gray.500.10"></span>
+            <span data-token="gray.500.30"></span>
+            <span data-token="gray.500.90"></span>
           </div>
+
           <script>
             function getByPath(obj, path) {
               return path.split(".").reduce((o, k) => (o ? o[k] : undefined), obj)
@@ -428,39 +232,58 @@
             const convertToRgb = (color) => Math.min(255, Math.max(0, Math.round(color * 255)))
 
             document.addEventListener("DOMContentLoaded", () => {
-              document.querySelectorAll(".color-palette__color").forEach((color) => {
-                const key = color.dataset.tokenKey
-                const tokenGroup = color.dataset.tokenGroup || "semantic"
-                const group = color.closest(".color-palette__item")
+              document.querySelectorAll(".color-palette").forEach((palette) => {
+                const tokenGroup = palette.dataset.group || "semantic"
+                const tokenName = palette.dataset.name || undefined
 
-                const desc = document.createElement("span")
-                desc.className = "color-palette__label form-label"
+                palette.querySelectorAll("span[data-token]").forEach((colorEl) => {
+                  colorEl.classList.add("color-palette__color")
 
-                const tCenter = group.querySelector(".color-palette__container")
-                tCenter.innerHTML = ""
+                  const tokenKey = colorEl.dataset.token
 
-                const btn = document.createElement("button")
-                btn.type = "button"
-                btn.role = "link"
-                btn.addEventListener("click", () => {
-                  navigator.clipboard.writeText(`var(--${btn.textContent})`).then(() => alert("Copied!"))
+                  const wrapper = document.createElement("div")
+                  wrapper.className = "color-palette__item"
+
+                  const container = document.createElement("div")
+                  container.className = "color-palette__container"
+
+                  const desc = document.createElement("span")
+                  desc.className = "color-palette__label form-label"
+
+                  const btn = document.createElement("button")
+                  btn.type = "button"
+                  btn.role = "link"
+
+                  btn.addEventListener("click", () => {
+                    navigator.clipboard.writeText(`var(--${btn.textContent})`).then(() => alert("Copied!"))
+                  })
+
+                  const tokenColorPath = tokenName !== undefined ? window.allTokens[tokenGroup].color[tokenName] : window.allTokens[tokenGroup].color
+                  const token = getByPath(tokenColorPath, tokenKey)
+
+                  desc.textContent = token?.$description || ""
+                  btn.textContent = token ? token.name : "var(--kfw-color-fn)"
+
+                  if (token?.$value?.alpha) {
+                    const [r, g, b] = token.$value.components
+                    colorEl.style.backgroundColor = `rgba(
+                      ${convertToRgb(r)},
+                      ${convertToRgb(g)},
+                      ${convertToRgb(b)},
+                      ${token.$value.alpha}
+                    )`
+                  } else {
+                    colorEl.style.backgroundColor = token?.$value?.hex
+                  }
+
+                  colorEl.replaceWith(wrapper)
+                  wrapper.appendChild(colorEl)
+
+                  wrapper.appendChild(container)
+
+                  container.appendChild(desc)
+                  container.appendChild(btn)
                 })
-
-                tCenter.appendChild(desc)
-                tCenter.appendChild(btn)
-
-                const tokenColorPath = window.allTokens[tokenGroup].color
-                const token = getByPath(tokenColorPath, key)
-                desc.textContent = token?.$description || ""
-                btn.textContent = token ? token.name : "var(--kfw-color-fn)"
-
-                if (token?.$value?.alpha) {
-                  const [r, g, b] = token?.$value?.components
-
-                  color.style.backgroundColor = `rgba(${convertToRgb(r)}, ${convertToRgb(g)}, ${convertToRgb(b)}, ${token?.$value?.alpha})`
-                } else {
-                  color.style.backgroundColor = token?.$value?.hex
-                }
               })
             })
           </script>
@@ -802,20 +625,20 @@
           </div>
           <h3>Icon Only</h3>
           <div class="button-group mb-sm">
-            <button type="button" class="button-primary has-icononly">
+            <button type="button" class="button-primary has-icon-only" aria-label="Next">
               <i aria-hidden="true" class="icon icon--arrow-right"></i>
             </button>
-            <button type="button" class="button-secondary has-icononly">
+            <button type="button" class="button-secondary has-icon-only" aria-label="Next">
               <i aria-hidden="true" class="icon icon--arrow-right"></i>
             </button>
-            <button role="link" type="button" class="has-icononly">
+            <button role="link" type="button" class="has-icon-only" aria-label="Next">
               <i aria-hidden="true" class="icon icon--arrow-right"></i>
             </button>
           </div>
         </section>
 
         <section class="bg-dark p-sm">
-          <h3 class="hl-3">Variant Negative</h3>
+          <h3 class="hl-3">On Dark</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
             <a href="#" onclick="event.preventDefault()">similique </a>
@@ -838,13 +661,13 @@
           </div>
           <h3>Icon Only</h3>
           <div class="button-group mb-sm">
-            <button type="button" class="button-primary has-icononly">
+            <button type="button" class="button-primary has-icon-only" aria-label="Next">
               <i aria-hidden="true" class="icon icon--arrow-right"></i>
             </button>
-            <button type="button" class="button-secondary has-icononly">
+            <button type="button" class="button-secondary has-icon-only" aria-label="Next">
               <i aria-hidden="true" class="icon icon--arrow-right"></i>
             </button>
-            <button role="link" type="button" class="has-icononly">
+            <button role="link" type="button" class="has-icon-only" aria-label="Next">
               <i aria-hidden="true" class="icon icon--arrow-right"></i>
             </button>
           </div>
@@ -876,7 +699,7 @@
             </div>
             <div class="form-group">
               <label for="file-upload">File browser</label>
-              <input type="file" id="file-upload" multiple />
+              <input type="file" id="file-upload" name="files" multiple />
             </div>
             <div class="form-group">
               <label for="file-upload2">File browser with title</label>
@@ -888,7 +711,7 @@
                     <i aria-hidden="true" class="icon icon--sm icon--plus"></i>
                     Choose files
                   </button>
-                  <input class="file-upload__input" type="file" id="file-upload2" multiple />
+                  <input class="file-upload__input" type="file" id="file-upload2" name="files2" multiple />
                 </div>
                 <div class="overflow-auto">
                   <table class="file-upload-table">

@@ -250,7 +250,7 @@
     }
 
     .list--big-checks > .list-item {
-      --size: var(--icon-size-xl);
+      --size: var(--icon-size-lg);
       --space: 1.5rem;
 
       padding-inline-start: calc(var(--size) + var(--space));
@@ -266,7 +266,7 @@
 
     @media (--kfw-breakpoint-desktop-large) {
       .list--big-checks > .list-item {
-        --size: var(--icon-size-2xl);
+        --size: var(--icon-size-xl);
         --space: 1rem;
       }
 
@@ -277,7 +277,7 @@
 
     /* Icon Lists */
     .list--icon > .list-item {
-      --size: var(--icon-size-lg);
+      --size: var(--icon-size-md);
       --space: 1.5rem;
       --icon: var(--kfw-icon-checked);
 
@@ -545,9 +545,9 @@
 
       padding-block: 0;
       background-position: center right var(--form-control-space);
-      background-size: var(--icon-size-lg) auto;
+      background-size: var(--icon-size-md) auto;
       background-image: var(--kfw-icon-select);
-      padding-inline-end: calc(var(--icon-size-lg) + var(--form-control-space) * 2);
+      padding-inline-end: calc(var(--icon-size-md) + var(--form-control-space) * 2);
     }
 
     select.form-control:disabled {

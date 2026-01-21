@@ -47,7 +47,7 @@
   --size: var(--icon-size-3xl);
 }
 
-.has-icononly {
+.has-icon-only {
   --outer-size: 3.6rem;
 
   display: inline-flex;
@@ -58,14 +58,14 @@
   height: var(--outer-size);
 }
 
-.has-icononly .icon {
+.has-icon-only .icon {
   --size: var(--icon-size-md);
 }
 
-.has-icononly--lg {
+.has-icon-only--lg {
   --outer-size: 4rem;
 }
 
-.has-icononly--xl {
+.has-icon-only--xl {
   --outer-size: 5.8rem;
 }
