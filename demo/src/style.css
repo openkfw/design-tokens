@@ -89,13 +89,12 @@
       font-size: 1.6rem; /* Set 16px as default */
     }
 
-    strong,
-    b {
+    :where(strong, b) {
       font-weight: var(--kfw-fontweight-bold);
     }
 
-    small {
-      font-size: 80%;
+    :where(small) {
+      font-size: var(--kfw-fontsize-small); /* overwrite  user-agent font-size: smaller; */
     }
 
     :where(sub, sup) {
@@ -593,14 +592,11 @@
       width: 100%;
     }
 
-    [type="file"]::file-selector-button {
-      margin-inline-end: var(--kfw-space-xsmall);
-    }
-
     :where(.form-text, .invalid-feedback) {
       --space-between: 0.8rem;
 
       gap: var(--space-between);
+      align-items: center;
       display: flex;
       width: 100%;
       margin-block-start: 0.8rem;
@@ -644,7 +640,7 @@
       gap: var(--kfw-space-small) var(--kfw-space-medium);
     }
 
-    .list-group-form > * {
+    .list-group-form > li {
       align-items: flex-start;
       display: flex;
       margin-bottom: 0;
@@ -739,15 +735,15 @@
       font-weight: var(--kfw-fontweight-bold);
     }
 
-    .list-group-form--with-description label > * {
+    .list-group-form--with-description label > span {
       font-weight: var(--kfw-fontweight);
     }
 
-    .list-group-form > *:has(input:not(:disabled)) label {
+    .list-group-form > li:has(input:not(:disabled)) label {
       cursor: pointer;
     }
 
-    .list-group-form > *:has(.list-group-form--subgroup) {
+    .list-group-form > li:has(.list-group-form--subgroup) {
       flex-wrap: wrap;
     }
 
@@ -910,7 +906,6 @@
       border-color: var(--button-border-color);
     }
 
-
     [type="file"]::file-selector-button:where(:hover, :focus, :active),
     .button-secondary:where(:hover, :focus, :active) {
       text-decoration: underline;
@@ -923,7 +918,7 @@
       border-color: var(--button-border-color-hover);
     }
 
-    [type=file]::file-selector-button:where(:active),
+    [type="file"]::file-selector-button:where(:active),
     .button-secondary:where(:active) {
       color: var(--button-bg-hover);
       background-color: var(--button-color-hover);
@@ -935,11 +930,11 @@
       font-size: var(--kfw-fontsize-small);
     }
 
-    .button--iconleft {
+    .button--icon-position-left {
       padding-inline-start: 2rem;
     }
 
-    .button--iconright {
+    .button--icon-position-right {
       padding-inline-end: 2rem;
     }
 
@@ -949,6 +944,27 @@
     label[aria-disabled="true"],
     :where(fieldset[disabled]) :where(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {
       pointer-events: none;
+    }
+
+    [type="file"]::file-selector-button {
+      --background-image-width: 24px;
+      --background-image-height: 24px;
+      --background-image-padding-left: 2rem;
+
+      margin-inline-end: var(--kfw-space-xsmall);
+      background-image: var(--kfw-icon-input-upload);
+      background-repeat: no-repeat;
+      background-position: left var(--background-image-padding-left) center;
+      background-size: var(--background-image-width) var(--background-image-height);
+      padding-inline: calc(var(--background-image-padding-left) + var(--background-image-width) + var(--space-between)) 2.5rem;
+    }
+
+    [type="file"]::file-selector-button:where(:hover, :focus) {
+      background-image: var(--kfw-icon-input-upload-white);
+    }
+
+    [type="file"]::file-selector-button:where(:active) {
+      background-image: var(--kfw-icon-input-upload);
     }
 
     /**
@@ -1131,9 +1147,15 @@
 
     .header__hamburger {
       --outer-size: 4.8rem;
+
+      width: var(--outer-size);
+      height: var(--outer-size);
+      padding: 0;
+      justify-content: center;
+      align-items: center;
     }
 
-    .header__hamburger:hover:not(:active) {
+    .header__hamburger:where(:hover, :focus):not(:active) {
       color: var(--kfw-color-text-on-dark-bg);
       background-color: var(--kfw-color-fn-active);
       border-width: 0;
@@ -1538,25 +1560,4 @@
   .absolute {
     position: absolute;
   }
-}
-
-/* @todo add base64 icons to file-upload native */
-[type="file"]::file-selector-button {
-  --background-image-width: 24px;
-  --background-image-height: 24px;
-  --background-image-padding-left: 2rem;
-  background-image: var(--kfw-icon-input-upload);
-  background-repeat: no-repeat;
-  background-position: left var(--background-image-padding-left) center;
-  background-size: var(--background-image-width) var(--background-image-height);
-  padding-inline-end: 2.5rem;
-  padding-inline-start: calc(var(--background-image-padding-left) + var(--background-image-width) + var(--space-between));
-}
-
-[type="file"]::file-selector-button:where(:hover, :focus) {
-  background-image: var(--kfw-icon-input-upload-white);
-}
-
-[type="file"]:active::file-selector-button {
-  background: red;
 }

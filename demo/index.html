@@ -27,7 +27,7 @@
     <header id="header" class="header">
       <div class="container">
         <div>
-          <button type="button" role="link" class="has-icononly has-icononly--xlarge header__hamburger">
+          <button type="button" class="header__hamburger">
             <i aria-hidden="true" class="icon icon--3xl icon--menu"></i>
           </button>
         </div>
@@ -41,7 +41,7 @@
           </a>
         </div>
         <nav class="header__menu" aria-label="Sekundäre Navigation" data-testid="right-header-menu">
-          <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--login"></i> Login </a>
+          <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--md icon--login"></i> Login </a>
         </nav>
       </div>
     </header>
@@ -490,25 +490,25 @@
             <h3>Highlighting</h3>
             <div class="mb-sm">
               <p>
-                Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
-                dolore magna aliquyam erat.
+                Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat.
               </p>
             </div>
             <div class="bg-light p-sm mb-sm">
               <h3 class="hl-3">On Light</h3>
               <p>
                 Lorem ipsum dolor sit amet, <mark>consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
-                dolore magna aliquyam erat.
+                aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore
+                et dolore magna aliquyam erat.
               </p>
             </div>
             <div class="bg-dark p-sm mb-sm">
               <h3 class="hl-3">On Dark</h3>
               <p>
-                Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
-                dolore magna aliquyam erat.
+                Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat.
               </p>
             </div>
           </div>
@@ -787,10 +787,15 @@
         <section>
           <h1>Buttons</h1>
           <div class="button-group mb-sm">
-            <button type="button" class="button-primary button--iconleft">
+            <button type="button" class="button-primary button--icon-position-left">
               <i aria-hidden="true" class="icon icon--arrow-right"></i> Primary Button
             </button>
-            <a href="#" onclick="event.preventDefault()" class="button-secondary button--iconleft button--iconright" role="button">
+            <a
+              href="#"
+              onclick="event.preventDefault()"
+              class="button-secondary button--icon-position-left button--icon-position-right"
+              role="button"
+            >
               <i aria-hidden="true" class="icon icon--arrow-right"></i> Secondary Button
               <i aria-hidden="true" class="icon icon--lock"></i>
             </a>
@@ -818,10 +823,15 @@
             adipisicing elit.
           </p>
           <div class="button-group mb-sm">
-            <button type="button" class="button-primary button--iconleftbutton--iconleft">
+            <button type="button" class="button-primary button--icon-position-left">
               <i aria-hidden="true" class="icon icon--arrow-right"></i> Primary Button
             </button>
-            <a href="#" onclick="event.preventDefault()" class="button-secondary button--iconright button--iconleft" role="button">
+            <a
+              href="#"
+              onclick="event.preventDefault()"
+              class="button-secondary button--icon-position-left button--icon-position-right"
+              role="button"
+            >
               <i aria-hidden="true" class="icon icon--arrow-right"></i> Secondary Button
               <i aria-hidden="true" class="icon icon--lock"></i>
             </a>
@@ -865,22 +875,6 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="file-upload">Submit</label>
-              <div class="d-block">
-                <button type="submit" class="button-primary button--iconleft">
-                  <i aria-hidden="true" class="icon icon--arrow-right"></i> Reset Button
-                </button>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="file-upload">Reset</label>
-              <div class="d-block">
-                <button type="reset" class="button-secondary button--iconleft">
-                  <i aria-hidden="true" class="icon icon--arrow-right"></i> Reset Button
-                </button>
-              </div>
-            </div>
-            <div class="form-group">
               <label for="file-upload">File browser</label>
               <input type="file" id="file-upload" multiple />
             </div>
@@ -890,7 +884,7 @@
                 <div class="file-upload__inner">
                   <i aria-hidden="true" class="icon icon--2xl icon--upload file-upload__icon"></i>
                   <label for="file-upload2" class="file-upload__title">Choose the files you want to upload</label>
-                  <button type="button" class="button-secondary button--iconleft">
+                  <button type="button" class="button-secondary button--icon-position-left">
                     <i aria-hidden="true" class="icon icon--sm icon--plus"></i>
                     Choose files
                   </button>
@@ -1187,7 +1181,7 @@
           </li>
         </ul>
         <div class="footer__top-button">
-          <a class="button-secondary button--iconleft" href="#top" role="button">
+          <a class="button-secondary button--icon-position-left" href="#top" role="button">
             <i aria-hidden="true" class="icon icon--arrow-up"></i>
             Scroll to the top
           </a>

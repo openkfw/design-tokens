@@ -11,19 +11,16 @@
 }
 
 .icon {
-  --size: var(--icon-size-md);
+  --size: var(--icon-size-sm);
 
   display: inline-block;
   flex-shrink: 0;
   vertical-align: top;
   pointer-events: none;
-  mask-size: contain;
-  mask-position: center;
-  mask-repeat: no-repeat;
   background-color: currentcolor;
-  mask-image: var(--icon);
   width: var(--size);
   height: var(--size);
+  mask: var(--icon) center / contain no-repeat;
 }
 
 .icon--sm {
@@ -53,11 +50,16 @@
 .has-icononly {
   --outer-size: 3.6rem;
 
+  display: inline-flex;
   padding: 0;
   align-items: center;
   justify-content: center;
   width: var(--outer-size);
   height: var(--outer-size);
+}
+
+.has-icononly .icon {
+  --size: var(--icon-size-md);
 }
 
 .has-icononly--lg {
