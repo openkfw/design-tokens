@@ -1,27 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-whatpersist="false">
   <head>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KfW Design Tokens Demo</title>
     <link rel="preload" href="https://openkfw.github.io/design-tokens/fonts/KFWCentroSans-Regular..woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="https://openkfw.github.io/design-tokens/fonts/KFWCentroSans-Medium..woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="https://openkfw.github.io/design-tokens/fonts/KFWCentroSans-Medium..woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="apple-touch-icon" href="https://openkfw.github.io/design-tokens/favicons/KfW_Logo_180x180px.png" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Favicon_Pfeil_16x16px.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
-    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/assets/main-ByVmzCBK.js"></script>
+    <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
+    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/assets/main-BT0s18eT.js"></script>
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/fonts-DEpxAef5.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/style-CSnjiFgk.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/style-CPWv6TqV.min.css">
   </head>
   <body>
     <div id="top"></div>
     <header id="header" class="header">
       <div class="container">
         <div>
-          <button type="button" role="link">Nav</button>
+          <button type="button" role="link" class="has-icononly has-icononly--xlarge header__hamburger">
+            <i aria-hidden="true" class="icon icon--3xl icon--menu"></i>
+          </button>
         </div>
         <div>
           <a class="d-block" href="#" onclick="event.preventDefault()">
@@ -33,7 +35,7 @@
           </a>
         </div>
         <nav class="header__menu" aria-label="Sekundäre Navigation" data-testid="right-header-menu">
-          <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--large icon--login"></i> Login </a>
+          <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--login"></i> Login </a>
         </nav>
       </div>
     </header>
@@ -461,22 +463,98 @@
         <section>
           <h1>Typography</h1>
 
-          <p class="tx--4">
-            Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat
-            turpis pretium. Quisque sed tristique felis. Aliquam lobortis vitae nibh nec rhoncus.
-          </p>
+          <div>
+            <p class="tx--4">
+              Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat
+              turpis pretium. Quisque sed tristique felis. Aliquam lobortis vitae nibh nec rhoncus.
+            </p>
 
-          <p>
-            Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat
-            turpis pretium. Quisque sed tristique felis.
-          </p>
+            <p>
+              Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat
+              turpis pretium. Quisque sed tristique felis.
+            </p>
 
-          <blockquote>
-            "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. Nam at dui sit amet ipsum cursus ornare."
-            <footer>
-              <cite>- Phasellus eget lacinia</cite>
-            </footer>
-          </blockquote>
+            <blockquote>
+              "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. Nam at dui sit amet ipsum cursus ornare."
+              <footer>
+                <cite>- Phasellus eget lacinia</cite>
+              </footer>
+            </blockquote>
+
+            <h3>Highlighting</h3>
+            <div class="mb-sm">
+              <p>
+                Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
+                dolore magna aliquyam erat.
+              </p>
+            </div>
+            <div class="bg-light p-sm mb-sm">
+              <h3 class="hl-3">On Light</h3>
+              <p>
+                Lorem ipsum dolor sit amet, <mark>consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
+                dolore magna aliquyam erat.
+              </p>
+            </div>
+            <div class="bg-dark p-sm mb-sm">
+              <h3 class="hl-3">On Dark</h3>
+              <p>
+                Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
+                dolore magna aliquyam erat.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h3>Inline text elements</h3>
+            <div class="grid">
+              <div class="grid__item">
+                <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--sm icon--arrow-right"></i> Link </a>
+              </div>
+              <div class="grid__item">
+                <a href="#" class="tx--2" onclick="event.preventDefault()">Small Link</a>
+              </div>
+              <div class="grid__item">
+                <a href="#" class="tx--4" onclick="event.preventDefault()">Large Link</a>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="grid__item">
+                <strong>Bold</strong>
+              </div>
+              <div class="grid__item">
+                <u>Underline</u>
+              </div>
+              <div class="grid__item"></div>
+            </div>
+            <div class="grid">
+              <div class="grid__item">
+                <del>Deleted</del>
+              </div>
+              <div class="grid__item">
+                <ins>Inserted</ins>
+              </div>
+              <div class="grid__item">
+                <s>Strikethrough</s>
+              </div>
+            </div>
+            <div class="grid">
+              <p><small>Small </small></p>
+              <p>Text <sub>Sub</sub></p>
+              <p>Text <sup>Sup</sup></p>
+            </div>
+            <div class="grid">
+              <p>
+                <abbr title="Abbreviation">Abbr.</abbr>
+              </p>
+              <p><kbd>Kbd</kbd></p>
+              <p>
+                <mark>Highlighted</mark>
+              </p>
+            </div>
+          </div>
 
           <h3>Lists</h3>
           <div class="grid">
@@ -524,10 +602,6 @@
                       aliquyam erat.
                     </li>
                   </ul>
-                </li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                  erat.
                 </li>
               </ul>
             </div>
@@ -666,55 +740,6 @@
             </div>
           </div>
 
-          <h3>Inline text elements</h3>
-          <div class="grid">
-            <div class="grid__item">
-              <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--arrow-right"></i> Link </a>
-            </div>
-            <div class="grid__item">
-              <a href="#" class="tx--2" onclick="event.preventDefault()">Small Link</a>
-            </div>
-            <div class="grid__item">
-              <a href="#" class="tx--4" onclick="event.preventDefault()">Large Link</a>
-            </div>
-          </div>
-          <div class="grid">
-            <div class="grid__item">
-              <strong>Bold</strong>
-            </div>
-            <div class="grid__item">
-              <u>Underline</u>
-            </div>
-            <div class="grid__item"></div>
-          </div>
-          <div class="grid">
-            <div class="grid__item">
-              <del>Deleted</del>
-            </div>
-            <div class="grid__item">
-              <ins>Inserted</ins>
-            </div>
-            <div class="grid__item">
-              <s>Strikethrough</s>
-            </div>
-          </div>
-          <div class="grid">
-            <p><small>Small </small></p>
-            <p>Text <sub>Sub</sub></p>
-            <p>Text <sup>Sup</sup></p>
-          </div>
-          <div class="grid">
-            <p>
-              <abbr title="Abbreviation">Abbr.</abbr>
-            </p>
-            <p><kbd>Kbd</kbd></p>
-            <p>
-              <mark>Highlighted</mark>
-            </p>
-          </div>
-
-          <br />
-
           <span class="smk--1">Tagline</span>
           <h1>Headline 1</h1>
           <p class="tx--4">
@@ -751,28 +776,40 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
             possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
           </p>
-          <figure>
-            <img alt="Luftaufnahme der Zentrale der KfW Bankengruppe in Frankfurt am Main" width="1280" height="427" src="https://openkfw.github.io/design-tokens/welcome_image.jpeg" />
-            <figcaption>
-              Image from
-              <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank" rel="noopener">unsplash.com</a>
-            </figcaption>
-          </figure>
         </section>
 
         <section>
           <h1>Buttons</h1>
           <div class="grid">
             <div class="grid__item">
-              <button type="button" class="button--primary">
+              <button type="button" class="button-primary">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Primary Button
               </button>
             </div>
             <div class="grid__item">
-              <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">
+              <a href="#" onclick="event.preventDefault()" class="button-secondary" role="button">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Secondary Button
                 <i aria-hidden="true" class="icon icon--right icon--lock"></i>
               </a>
+            </div>
+          </div>
+
+          <h3>Nav Icon</h3>
+          <div class="grid">
+            <div class="grid__item">
+              <button type="button" class="button-primary has-icononly">
+                <i aria-hidden="true" class="icon icon--arrow-right"></i>
+              </button>
+            </div>
+            <div class="grid__item">
+              <button type="button" class="button-secondary has-icononly">
+                <i aria-hidden="true" class="icon icon--arrow-right"></i>
+              </button>
+            </div>
+            <div class="grid__item">
+              <button role="link" type="button" class="has-icononly">
+                <i aria-hidden="true" class="icon icon--arrow-right"></i>
+              </button>
             </div>
           </div>
         </section>
@@ -781,23 +818,46 @@
           <h3 class="hl-3">Variant Negative</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
-            <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i>similique </a>
+            <a href="#" onclick="event.preventDefault()">similique </a>
             At enim exercitationem, explicabo labore magnam modi quod, repellat reprehenderit sed sunt totam. Lorem ipsum dolor sit amet, consectetur
             adipisicing elit.
           </p>
           <div class="grid">
             <p>
-              <a href="#" onclick="event.preventDefault()" class="button--primary" role="button">
+              <a href="#" onclick="event.preventDefault()" class="button-primary" role="button">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i>
                 Primary Button
               </a>
             </p>
             <p>
-              <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">
+              <a href="#" onclick="event.preventDefault()" class="button-secondary" role="button">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Secondary Button
                 <i aria-hidden="true" class="icon icon--right icon--lock"></i>
               </a>
             </p>
+          </div>
+          <div class="grid">
+            <div class="grid__item">
+              <p>
+                <a href="#" onclick="event.preventDefault()" class="button-primary has-icononly" role="button">
+                  <i aria-hidden="true" class="icon icon--arrow-right"></i>
+                </a>
+              </p>
+            </div>
+            <div class="grid__item">
+              <p>
+                <a href="#" onclick="event.preventDefault()" class="button-secondary has-icononly" role="button">
+                  <i aria-hidden="true" class="icon icon--arrow-right"></i>
+                </a>
+              </p>
+            </div>
+            <div class="grid__item">
+              <p>
+                <button role="link" type="button" class="has-icononly">
+                  <i aria-hidden="true" class="icon icon--arrow-right"></i>
+                </button>
+              </p>
+            </div>
           </div>
         </section>
 
@@ -809,14 +869,14 @@
               <div class="searchfield">
                 <input id="searchfield" type="search" class="searchfield__input form-control" placeholder="Search…" />
                 <button type="button" class="searchfield__button" aria-label="Search">
-                  <i aria-hidden="true" class="icon icon--large icon--search"></i>
+                  <i aria-hidden="true" class="icon icon--search"></i>
                 </button>
               </div>
             </div>
             <div class="form-group">
               <label for="text">Text</label>
               <input type="text" id="text" name="text" placeholder="Text" class="form-control" />
-              <small>Curabitur consequat lacus at lacus porta finibus.</small>
+              <small class="form-text">Curabitur consequat lacus at lacus porta finibus.</small>
             </div>
             <div class="form-group">
               <label for="select">Select</label>
@@ -826,6 +886,18 @@
               </select>
             </div>
             <div class="form-group">
+              <label for="file-upload">Submit</label>
+              <div class="d-block">
+                <input type="submit" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="file-upload">Reset</label>
+              <div class="d-block">
+                <input type="reset" />
+              </div>
+            </div>
+            <div class="form-group">
               <label for="file-upload">File browser</label>
               <input type="file" id="file-upload" multiple />
             </div>
@@ -833,10 +905,10 @@
               <label for="file-upload2">File browser with title</label>
               <div class="file-upload">
                 <div class="file-upload__inner">
-                  <i aria-hidden="true" class="icon icon--3xl icon--upload file-upload__icon"></i>
+                  <i aria-hidden="true" class="icon icon--2xl icon--upload file-upload__icon"></i>
                   <label for="file-upload2" class="file-upload__title">Choose the files you want to upload</label>
-                  <button type="button" class="button--secondary">
-                    <i aria-hidden="true" class="icon icon--left icon--large icon--plus"></i>
+                  <button type="button" class="button-secondary">
+                    <i aria-hidden="true" class="icon icon--left icon--sm icon--plus"></i>
                     Choose files
                   </button>
                   <input class="file-upload__input" type="file" id="file-upload2" multiple />
@@ -856,7 +928,7 @@
                         <td>1.35 MB</td>
                         <td>
                           <button type="button" role="link">
-                            <i aria-hidden="true" class="icon icon--delete"></i>
+                            <i aria-hidden="true" class="icon icon--sm icon--delete"></i>
                             Delete
                           </button>
                         </td>
@@ -866,7 +938,7 @@
                         <td>765.82 KB</td>
                         <td>
                           <button type="button" role="link">
-                            <i aria-hidden="true" class="icon icon--delete"></i>
+                            <i aria-hidden="true" class="icon icon--sm icon--delete"></i>
                             Delete
                           </button>
                         </td>
@@ -881,7 +953,7 @@
                         <td>765.82 KB</td>
                         <td>
                           <button type="button" role="link">
-                            <i aria-hidden="true" class="icon icon--delete"></i>
+                            <i aria-hidden="true" class="icon icon--sm icon--delete"></i>
                             Delete
                           </button>
                         </td>
@@ -1050,7 +1122,6 @@
             </fieldset>
           </form>
         </section>
-
         <section id="tables">
           <h2>Table</h2>
           <div class="overflow-auto">
@@ -1133,7 +1204,7 @@
           </li>
         </ul>
         <div class="footer__top-button">
-          <a class="button--secondary" href="#top" role="button">
+          <a class="button-secondary" href="#top" role="button">
             <i aria-hidden="true" class="icon icon--left icon--arrow-up"></i>
             Scroll to the top
           </a>
