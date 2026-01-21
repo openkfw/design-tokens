@@ -644,7 +644,7 @@
       box-shadow: 0 0 0 var(--kfw-borderwidth) var(--borderhover);
     }
 
-    .form-control[aria-invalid="true"]:focus-visible {
+    [data-whatinput="keyboard"] .form-control[aria-invalid="true"]:focus-visible {
       outline: var(--kfw-focusring-outline-width) var(--kfw-focusring-outline-style) var(--kfw-color-state-danger);
       outline-offset: var(--kfw-focusring-outline-offset);
     }
