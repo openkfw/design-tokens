@@ -1,0 +1,69 @@
+@import url("vendor/gen-icons.css");
+
+:root,
+:host {
+  --icon-size-sm: 1.6rem;
+  --icon-size-md: 2.4rem;
+  --icon-size-lg: 2.8rem;
+  --icon-size-xl: 3.2rem;
+  --icon-size-2xl: 4rem;
+  --icon-size-3xl: 4.8rem;
+}
+
+.icon {
+  --size: var(--icon-size-md);
+
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: top;
+  pointer-events: none;
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: currentcolor;
+  mask-image: var(--icon);
+  width: var(--size);
+  height: var(--size);
+}
+
+.icon--sm {
+  --size: var(--icon-size-sm);
+}
+
+.icon--md {
+  --size: var(--icon-size-md);
+}
+
+.icon--lg {
+  --size: var(--icon-size-lg);
+}
+
+.icon--xl {
+  --size: var(--icon-size-xl);
+}
+
+.icon--2xl {
+  --size: var(--icon-size-2xl);
+}
+
+.icon--3xl {
+  --size: var(--icon-size-3xl);
+}
+
+.has-icononly {
+  --outer-size: 3.6rem;
+
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--outer-size);
+  height: var(--outer-size);
+}
+
+.has-icononly--lg {
+  --outer-size: 4rem;
+}
+
+.has-icononly--xl {
+  --outer-size: 5.8rem;
+}

@@ -542,7 +542,7 @@
 
 @layer icons.base {
     :root {
-        --icon-size: 1.6rem;
+        --icon-size-md: 1.6rem;
         --icon-size-lg: 2.4rem;
         --icon-size-xl: 2.8rem;
         --icon-size-2xl: 3.2rem;
@@ -550,7 +550,7 @@
     }
 
     .icon {
-        --size: var(--icon-size);
+        --size: var(--icon-size-md);
         display: inline-block;
         flex-shrink: 0;
         vertical-align: top;
@@ -757,8 +757,8 @@
     }
 
     .list--checks > .list-item:before {
-        min-width: var(--icon-size);
-        min-height: var(--icon-size);
+        min-width: var(--icon-size-md);
+        min-height: var(--icon-size-md);
         top: .3rem;
         -webkit-mask-image: var(--icon);
         mask-image: var(--icon);
@@ -809,13 +809,13 @@
     }
 
     .list--bullets > .list-item {
-        --icon-size: .7rem;
-        padding-inline-start: calc(var(--icon-size) + 1rem)
+        --icon-size-md: .7rem;
+        padding-inline-start: calc(var(--icon-size-md) + 1rem)
     }
 
     .list--bullets > .list-item:before {
-        min-width: var(--icon-size);
-        min-height: var(--icon-size);
+        min-width: var(--icon-size-md);
+        min-height: var(--icon-size-md);
         top: .8rem;
         -webkit-mask-image: var(--kfw-icon-bullet-point);
         mask-image: var(--kfw-icon-bullet-point);
@@ -1100,8 +1100,8 @@
     .invalid-feedback:before {
         content: "";
         display: block;
-        width: var(--icon-size);
-        height: var(--icon-size);
+        width: var(--icon-size-md);
+        height: var(--icon-size-md);
         color: inherit;
         background-color: currentcolor;
         -webkit-mask-image: var(--kfw-icon-alert);
