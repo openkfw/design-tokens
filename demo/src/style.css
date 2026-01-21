@@ -1480,7 +1480,7 @@
       border-radius: var(--kfw-borderradius-small);
     }
 
-    :where(.bg-dark) :where(a:not([role="button"]), [role="link"]):where(:hover):not(:active) {
+    :where(.bg-dark) :where(a:not([role="button"]), [role="link"]):has(.has-icononly):where(:hover):not(:active) {
       border: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--kfw-color-background);
       color: var(--kfw-color-text-on-dark-bg);
       border-radius: var(--kfw-borderradius);
