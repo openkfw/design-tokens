@@ -586,7 +586,7 @@
       color: var(--kfw-color-fn);
       border-radius: var(--kfw-borderradius);
       margin-block-start: 0;
-      border: var(--kfw-borderwidth) solid var(--kfw-base-color-gray-500);
+      border: var(--kfw-borderwidth) solid var(--kfw-base-color-gray-600);
       padding-inline: 1.5rem;
       padding-block: 1rem;
       background-color: var(--kfw-color-background);
