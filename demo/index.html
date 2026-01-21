@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-whatpersist="false">
   <head>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'" />
     <meta charset="UTF-8" />
@@ -14,6 +14,9 @@
     <link rel="icon" type="image/png" href="/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
+    <script type="module" defer>
+      import 'what-input'
+    </script>
     <script type="module" defer>
       import allTokens from "@openkfw/design-tokens/output/json/kfw-design-tokens.json" with { type: "json" }
       window.allTokens = allTokens
