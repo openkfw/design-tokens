@@ -1644,5 +1644,8 @@
 }
 
 [type="file"]:active::file-selector-button {
-  background: red;
+  color: var(--button-bg-hover);
+  background-color: var(--button-color-hover);
+  border: var(--kfw-borderwidth) var(--kfw-borderstyle) var(--button-bg-hover);
+  background-image: var(--kfw-icon-input-upload);
 }
