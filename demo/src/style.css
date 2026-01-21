@@ -141,10 +141,10 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-      *:focus {
-          outline: none;
-      }
-     [data-whatinput="keyboard"] *:focus-visible {
+    *:focus {
+      outline: none;
+    }
+    [data-whatinput="keyboard"] *:focus-visible {
       outline: var(--kfw-focusring-outline-width) var(--kfw-focusring-outline-style) var(--kfw-focusring-outline-color);
       outline-offset: var(--kfw-focusring-outline-offset);
     }
@@ -1644,5 +1644,5 @@
 }
 
 [type="file"]:active::file-selector-button {
-    background: red;
+  background: red;
 }
