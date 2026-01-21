@@ -27,9 +27,7 @@
     <header id="header" class="header">
       <div class="container">
         <div>
-          <button type="button" role="link" class="has-icononly has-icononly--xlarge header__hamburger">
-            <i aria-hidden="true" class="icon icon--3xl icon--menu"></i>
-          </button>
+          <button type="button" role="link">Nav</button>
         </div>
         <div>
           <a class="d-block" href="#" onclick="event.preventDefault()">
@@ -41,7 +39,7 @@
           </a>
         </div>
         <nav class="header__menu" aria-label="Sekundäre Navigation" data-testid="right-header-menu">
-          <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--login"></i> Login </a>
+          <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--large icon--login"></i> Login </a>
         </nav>
       </div>
     </header>
@@ -486,29 +484,6 @@
             </footer>
           </blockquote>
 
-          <h3>Highlighting</h3>
-          <div class="mb-sm">
-            <p>
-              Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-              aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
-              dolore magna aliquyam erat.
-            </p>
-          </div>
-          <div class="bg-light mb-sm">
-            <p>
-              Lorem ipsum dolor sit amet, <mark>consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-              aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
-              dolore magna aliquyam erat.
-            </p>
-          </div>
-          <div class="bg-dark p-sm mb-sm">
-            <h3 class="hl-3">Variant Negative</h3>
-            <p>
-              Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-              aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
-              dolore magna aliquyam erat.
-            </p>
-          </div>
           <h3>Lists</h3>
           <div class="grid">
             <div class="grid__item">
@@ -555,6 +530,10 @@
                       aliquyam erat.
                     </li>
                   </ul>
+                </li>
+                <li class="list-item">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                  erat.
                 </li>
               </ul>
             </div>
@@ -696,7 +675,7 @@
           <h3>Inline text elements</h3>
           <div class="grid">
             <div class="grid__item">
-              <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--sm icon--arrow-right"></i> Link </a>
+              <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--arrow-right"></i> Link </a>
             </div>
             <div class="grid__item">
               <a href="#" class="tx--2" onclick="event.preventDefault()">Small Link</a>
@@ -778,40 +757,28 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
             possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
           </p>
+          <figure>
+            <img alt="Luftaufnahme der Zentrale der KfW Bankengruppe in Frankfurt am Main" width="1280" height="427" src="/welcome_image.jpeg" />
+            <figcaption>
+              Image from
+              <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank" rel="noopener">unsplash.com</a>
+            </figcaption>
+          </figure>
         </section>
 
         <section>
           <h1>Buttons</h1>
           <div class="grid">
             <div class="grid__item">
-              <button type="button" class="button-primary">
+              <button type="button" class="button--primary">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Primary Button
               </button>
             </div>
             <div class="grid__item">
-              <a href="#" onclick="event.preventDefault()" class="button-secondary" role="button">
+              <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Secondary Button
                 <i aria-hidden="true" class="icon icon--right icon--lock"></i>
               </a>
-            </div>
-          </div>
-
-          <h3>Nav Icon</h3>
-          <div class="grid">
-            <div class="grid__item">
-              <button type="button" class="button-primary has-icononly">
-                <i aria-hidden="true" class="icon icon--arrow-right"></i>
-              </button>
-            </div>
-            <div class="grid__item">
-              <button type="button" class="button-secondary has-icononly">
-                <i aria-hidden="true" class="icon icon--arrow-right"></i>
-              </button>
-            </div>
-            <div class="grid__item">
-              <button role="link" type="button" class="has-icononly">
-                <i aria-hidden="true" class="icon icon--arrow-right"></i>
-              </button>
             </div>
           </div>
         </section>
@@ -820,46 +787,23 @@
           <h3 class="hl-3">Variant Negative</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
-            <a href="#" onclick="event.preventDefault()">similique </a>
+            <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i>similique </a>
             At enim exercitationem, explicabo labore magnam modi quod, repellat reprehenderit sed sunt totam. Lorem ipsum dolor sit amet, consectetur
             adipisicing elit.
           </p>
           <div class="grid">
             <p>
-              <a href="#" onclick="event.preventDefault()" class="button-primary" role="button">
+              <a href="#" onclick="event.preventDefault()" class="button--primary" role="button">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i>
                 Primary Button
               </a>
             </p>
             <p>
-              <a href="#" onclick="event.preventDefault()" class="button-secondary" role="button">
+              <a href="#" onclick="event.preventDefault()" class="button--secondary" role="button">
                 <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Secondary Button
                 <i aria-hidden="true" class="icon icon--right icon--lock"></i>
               </a>
             </p>
-          </div>
-          <div class="grid">
-            <div class="grid__item">
-              <p>
-                <a href="#" onclick="event.preventDefault()" class="button-primary has-icononly" role="button">
-                  <i aria-hidden="true" class="icon icon--arrow-right"></i>
-                </a>
-              </p>
-            </div>
-            <div class="grid__item">
-              <p>
-                <a href="#" onclick="event.preventDefault()" class="button-secondary has-icononly" role="button">
-                  <i aria-hidden="true" class="icon icon--arrow-right"></i>
-                </a>
-              </p>
-            </div>
-            <div class="grid__item">
-              <p>
-                <button role="link" type="button" class="has-icononly">
-                  <i aria-hidden="true" class="icon icon--arrow-right"></i>
-                </button>
-              </p>
-            </div>
           </div>
         </section>
 
@@ -871,14 +815,14 @@
               <div class="searchfield">
                 <input id="searchfield" type="search" class="searchfield__input form-control" placeholder="Search…" />
                 <button type="button" class="searchfield__button" aria-label="Search">
-                  <i aria-hidden="true" class="icon icon--search"></i>
+                  <i aria-hidden="true" class="icon icon--large icon--search"></i>
                 </button>
               </div>
             </div>
             <div class="form-group">
               <label for="text">Text</label>
               <input type="text" id="text" name="text" placeholder="Text" class="form-control" />
-              <small>Curabitur consequat lacus at lacus porta finibus.</small>
+              <small class="form-text">Curabitur consequat lacus at lacus porta finibus.</small>
             </div>
             <div class="form-group">
               <label for="select">Select</label>
@@ -888,9 +832,16 @@
               </select>
             </div>
             <div class="form-group">
-              <button type="button" class="button-secondary" aria-label="Search">
-                <i aria-hidden="true" class="icon icon--left icon--upload"></i> Dateien auswählen
-              </button>
+              <label for="file-upload">Submit</label>
+              <div class="d-block">
+                <input type="submit" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="file-upload">Reset</label>
+              <div class="d-block">
+                <input type="reset" />
+              </div>
             </div>
             <div class="form-group">
               <label for="file-upload">File browser</label>
@@ -900,10 +851,10 @@
               <label for="file-upload2">File browser with title</label>
               <div class="file-upload">
                 <div class="file-upload__inner">
-                  <i aria-hidden="true" class="icon icon--2xl icon--upload file-upload__icon"></i>
+                  <i aria-hidden="true" class="icon icon--3xl icon--upload file-upload__icon"></i>
                   <label for="file-upload2" class="file-upload__title">Choose the files you want to upload</label>
-                  <button type="button" class="button-secondary">
-                    <i aria-hidden="true" class="icon icon--left icon--sm icon--plus"></i>
+                  <button type="button" class="button--secondary">
+                    <i aria-hidden="true" class="icon icon--left icon--large icon--plus"></i>
                     Choose files
                   </button>
                   <input class="file-upload__input" type="file" id="file-upload2" multiple />
@@ -1117,7 +1068,6 @@
             </fieldset>
           </form>
         </section>
-        <input type="reset" />
 
         <section id="tables">
           <h2>Table</h2>
@@ -1201,7 +1151,7 @@
           </li>
         </ul>
         <div class="footer__top-button">
-          <a class="button-secondary" href="#top" role="button">
+          <a class="button--secondary" href="#top" role="button">
             <i aria-hidden="true" class="icon icon--left icon--arrow-up"></i>
             Scroll to the top
           </a>
