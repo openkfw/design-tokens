@@ -103,6 +103,7 @@
       /* global color.tokens prepared for overwrites by parent selector (bg-dark) */
       --headline-color: var(--kfw-color-text);
       --kfw-focusring-outline-color: var(--kfw-color-fn-active);
+      --kfw-lineheight-large: 1.5; /* @todo use design token here */
     }
 
     @media (--kfw-breakpoint-mobile) {
@@ -586,7 +587,7 @@
       color: var(--kfw-color-fn);
       border-radius: var(--kfw-borderradius);
       margin-block-start: 0;
-      border: var(--kfw-borderwidth) solid var(--kfw-base-color-gray-500);
+      border: var(--kfw-borderwidth) solid var(--kfw-base-color-gray-600);
       padding-inline: 1.5rem;
       padding-block: 1rem;
       background-color: var(--kfw-color-background);
@@ -729,7 +730,7 @@
       width: var(--field-size);
       height: var(--field-size);
       margin: 0;
-      border: var(--kfw-borderwidth) solid var(--kfw-color-fn-active);
+      border: var(--kfw-borderwidth) solid var(--kfw-color-text);
       color: var(--kfw-color-fn-active);
       vertical-align: middle;
       position: relative;
@@ -743,7 +744,7 @@
     .list-group-form :where([type="checkbox"], [type="radio"])[aria-invalid="true"] {
       border-color: var(--kfw-color-state-danger);
       border-width: var(--kfw-borderwidth-large);
-      color: var(--kfw-color-state-danger);
+      color: var(--kfw-color-fn-active);
     }
 
     .list-group-form [type="radio"] {
@@ -949,17 +950,6 @@
       border-color: var(--button-bg-hover);
     }
 
-    :where([type="submit"], .button-primary.icon--only):where(:hover, :focus-visible) {
-      color: var(--kfw-base-color-blue-700);
-      background-color: var(--kfw-color-background);
-      border: var(--kfw-base-borderwidth-lg) var(--kfw-borderstyle) var(--kfw-base-color-blue-700);
-      border-radius: var(--kfw-base-borderradius-md);
-    }
-
-    :where([type="submit"], .button-primary.icon--only):where(:active) {
-      border: var(--kfw-base-borderwidth-md) var(--kfw-borderstyle) var(--kfw-base-color-blue-700);
-    }
-
     [type="file"]::file-selector-button,
     :where([type="reset"], .button-secondary) {
       --button-border-color: var(--kfw-color-fn);
@@ -985,12 +975,29 @@
       background-color: var(--button-bg-hover);
       border-color: var(--button-border-color-hover);
     }
+    :where([type="submit"], .button-primary.has-icononly):where(:hover, :focus-visible),
+    :where([type="reset"], .button-secondary.has-icononly):where(:hover, :focus-visible) {
+      color: var(--kfw-base-color-blue-700);
+      background-color: var(--kfw-color-background);
+      border: var(--kfw-base-borderwidth-lg) var(--kfw-borderstyle) var(--kfw-base-color-blue-700);
+      border-radius: var(--kfw-base-borderradius-md);
+    }
+
+    :where([type="submit"], .button-primary.has-icononly):where(:active) {
+      border: var(--kfw-base-borderwidth-md) var(--kfw-borderstyle) var(--kfw-base-color-blue-700);
+    }
 
     [type="file"]::file-selector-button:where(:active),
     :where([type="reset"], .button-secondary):where(:active) {
       color: var(--button-bg-hover);
       background-color: var(--button-color-hover);
-      border-color: var(--button-bg-hover);
+      border: var(--kfw-borderwidth) var(--kfw-borderstyle) var(--button-bg-hover);
+    }
+    [type="file"]::file-selector-button:where(:active),
+    :where([type="reset"], .button-secondary.has-icononly):where(:active) {
+      color: var(--button-color-hover);
+      background-color: var(--button-bg-hover);
+      border: var(--kfw-borderwidth) var(--kfw-borderstyle) var(--button-color-hover);
     }
 
     :where(.button-primary, .button-secondary):has(.icon--left) {
@@ -1196,7 +1203,7 @@
       --outer-size: 4.8rem;
     }
 
-    .header__hamburger:hover {
+    .header__hamburger:hover:not(:active) {
       color: var(--kfw-color-text-on-dark-bg);
       background-color: var(--kfw-color-fn-active);
       border-width: 0;
@@ -1462,18 +1469,21 @@
       --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
     }
 
-    :where(.bg-dark, .footer) :where(.button-primary.icon--only):where(:hover, :focus-visible),
-    :where(.bg-dark, .footer) :where(.button-secondary.icon--only):where(:hover, :focus-visible) {
+    :where(.bg-dark, .footer) :where(.button-primary.has-icononly):where(:hover, :focus-visible),
+    :where(.bg-dark, .footer) :where(.button-secondary.has-icononly):where(:hover, :focus-visible) {
       color: var(--kfw-color-text-on-dark-bg);
       background-color: var(--kfw-color-fn-active);
       border-color: var(--kfw-color-text-on-dark-bg);
       border-radius: var(--kfw-borderradius-small);
     }
 
-    :where(.bg-dark) :where(a:not([role="button"]), [role="link"]):where(:hover):not(:active) {
+    :where(.bg-dark) :where(a:not([role="button"]), [role="link"]):has(.has-icononly):where(:hover):not(:active) {
       border: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--kfw-color-background);
       color: var(--kfw-color-text-on-dark-bg);
       border-radius: var(--kfw-borderradius);
+    }
+    :where(.bg-dark) :where(a:not([role="button"]), [role="link"]):where(:active) {
+      background-color: var(--kfw-color-fn-active);
     }
 
     .bg-subtle {
@@ -1615,14 +1625,21 @@
 
 /* @todo add base64 icons to file-upload native */
 [type="file"]::file-selector-button {
-    background-image: var(--kfw-icon-input-upload);
-    background-repeat: no-repeat;
-    background-position: left 8px center;
-    background-size: 24px 24px;
-    padding-left: 5rem;
+  --background-image-width: 24px;
+  --background-image-height: 24px;
+  --background-image-padding-left: 2rem;
+  background-image: var(--kfw-icon-input-upload);
+  background-repeat: no-repeat;
+  background-position: left var(--background-image-padding-left) center;
+  background-size: var(--background-image-width) var(--background-image-height);
+  padding-inline-end: 2.5rem;
+  padding-inline-start: calc(var(--background-image-padding-left) + var(--background-image-width) + var(--space-between));
 }
 
-[type="file"]::file-selector-button:hover {
-    background-image: var(--kfw-icon-input-upload-white);
+[type="file"]::file-selector-button:where(:hover, :focus) {
+  background-image: var(--kfw-icon-input-upload-white);
 }
 
+[type="file"]:active::file-selector-button {
+    background: red;
+}
