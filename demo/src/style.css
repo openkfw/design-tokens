@@ -39,8 +39,8 @@
     mask-repeat: no-repeat;
     background-color: currentcolor;
     mask-image: var(--icon);
-    min-width: var(--size);
-    min-height: var(--size);
+    width: var(--size);
+    height: var(--size);
   }
 
   .icon--sm {
@@ -670,7 +670,7 @@
       margin-inline-end: var(--kfw-space-xsmall);
     }
 
-    :where(.form-text, .invalid-feedback, .valid-feedback) {
+    :where(.form-text, .invalid-feedback) {
       --space-between: 0.8rem;
 
       gap: var(--space-between);
@@ -680,10 +680,6 @@
       font-size: var(--kfw-fontsize-small);
       line-height: var(--kfw-lineheight);
       letter-spacing: var(--kfw-base-letterspacing-normal);
-    }
-
-    .valid-feedback {
-      color: var(--kfw-color-state-success);
     }
 
     .invalid-feedback {
