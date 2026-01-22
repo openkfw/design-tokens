@@ -23,11 +23,10 @@
   </head>
   <body>
     <div id="top"></div>
-
-    <header id="header" class="header">
+    <header id="sticky-header" class="header">
       <div class="container header__inner">
-        <button type="button" class="header__hamburger" aria-label="To the homepage" aria-controls="main-nav" aria-expanded="false" data-nav-toggle>
-          <i aria-hidden="true" class="icon icon--3xl icon--menu"></i>
+        <button type="button" class="header__hamburger" aria-controls="main-nav" aria-label="Open main nav" aria-expanded="false">
+          <i aria-hidden="true" class="icon icon--menu"></i>
         </button>
 
         <a class="header__logo" href="/" aria-label="Go to homepage">
@@ -38,7 +37,7 @@
           </picture>
         </a>
 
-        <nav class="header__menu" aria-label="Sekundäre Navigation">
+        <nav class="header__secondary-nav" aria-label="Secondary nav">
           <a href="/login">
             <i aria-hidden="true" class="icon icon--md icon--login"></i>
             <span>Login</span>
@@ -69,7 +68,7 @@
 
       <div class="container">
         <section>
-          <h1>Important Usage Notice</h1>
+          <h1 id="disclaimer">Important Usage Notice</h1>
 
           <p class="tx--4">
             KfW Design Tokens, along with all related documentation, components, support, and assets (e.g., fonts, icons, images), are intended for
@@ -84,7 +83,7 @@
         </section>
 
         <section>
-          <h1>Color</h1>
+          <h1 id="color">Color</h1>
 
           <h2>Functional colors</h2>
 
@@ -293,7 +292,7 @@
         </section>
 
         <section>
-          <h1>Typography</h1>
+          <h1 id="typography">Typography</h1>
 
           <div>
             <p class="tx--4">
@@ -316,25 +315,31 @@
             <h3>Highlighting</h3>
             <div class="mb-sm">
               <p>
-                Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat.
+                Lorem ipsum dolor sit amet,
+                <mark> consetetur sadipscing elitr,</mark>
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark>
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
               </p>
             </div>
             <div class="bg-light p-sm mb-sm">
               <h3 class="hl-3">On Light</h3>
               <p>
-                Lorem ipsum dolor sit amet, <mark>consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat.
+                Lorem ipsum dolor sit amet,
+                <mark>consetetur sadipscing elitr,</mark>
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark>
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
               </p>
             </div>
             <div class="bg-dark p-sm mb-sm">
               <h3 class="hl-3">On Dark</h3>
               <p>
-                Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat.
+                Lorem ipsum dolor sit amet,
+                <mark> consetetur sadipscing elitr,</mark>
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark>
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
               </p>
             </div>
           </div>
@@ -611,7 +616,7 @@
         </section>
 
         <section>
-          <h1>Buttons</h1>
+          <h1 id="buttons">Buttons</h1>
           <div class="button-group mb-sm">
             <button type="button" class="button-primary button--icon-position-left">
               <i aria-hidden="true" class="icon icon--arrow-right"></i> Primary Button
@@ -678,7 +683,7 @@
 
         <section>
           <form>
-            <h1>Form elements</h1>
+            <h1 id="form-elements">Form elements</h1>
             <div class="form-group">
               <label for="searchfield">Search</label>
               <div class="searchfield">
@@ -1014,8 +1019,70 @@
         </div>
       </nav>
     </footer>
+
+    <dialog id="main-nav" class="navigation" aria-modal="true">
+      <button autofocus type="button" class="button-primary has-icon-only has-icon-only--xl navigation__close" aria-label="Close">
+        <i aria-hidden="true" class="icon icon--close"></i>
+      </button>
+      <div class="navigation__container">
+        <div class="bg-white" data-dialog-content>
+          <h2 class="navigation__title">KfW Design Tokens</h2>
+          <div class="bg-light navigation__content">
+            <span class="navigation__subtitle">Demo Portal</span>
+            <nav aria-label="Hauptnavigation">
+              <ul>
+                <li class="list-item">
+                  <a href="#disclaimer">
+                    <i aria-hidden="true" class="icon icon--menu"></i>
+                    Disclaimer
+                  </a>
+                </li>
+                <li class="list-item"><a href="#color">Color</a></li>
+                <li class="list-item"><a href="#typography">Typography</a></li>
+                <li class="list-item"><a href="#buttons">Buttons</a></li>
+                <li class="list-item"><a href="#form-elements">Form elements</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
     <script>
-      const header = document.getElementById("header")
+      const body = document.body
+      const hamburger = document.querySelector(".header__hamburger")
+      const mainNavDialog = document.getElementById("main-nav")
+      const mainNavDialogContent = mainNavDialog.querySelector("[data-dialog-content]")
+
+      function closeDialog() {
+        mainNavDialog.close()
+        body.classList.remove("no-scroll")
+        hamburger?.setAttribute("aria-expanded", "false")
+      }
+
+      hamburger?.addEventListener("click", () => {
+        const expanded = hamburger.getAttribute("aria-expanded") === "true"
+        hamburger.setAttribute("aria-expanded", String(!expanded))
+        body?.classList.add("no-scroll")
+        mainNavDialog.showModal()
+      })
+
+      mainNavDialog.addEventListener("click", (event) => {
+        const target = event.target
+
+        if (target.closest("a")) {
+          closeDialog()
+          return
+        }
+
+        if (!mainNavDialogContent.contains(target)) {
+          closeDialog()
+        }
+      })
+    </script>
+
+    <script>
+      const header = document.getElementById("sticky-header")
       const stickyClass = "header--sticky"
       let ticking = false
 

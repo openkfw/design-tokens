@@ -6,8 +6,9 @@
   --icon-size-md: 2.4rem;
   --icon-size-lg: 2.8rem;
   --icon-size-xl: 3.2rem;
-  --icon-size-2xl: 4rem;
-  --icon-size-3xl: 4.8rem;
+  --icon-size-2xl: 3.6rem;
+  --icon-size-3xl: 4rem;
+  --icon-size-4xl: 4.8rem;
 }
 
 .icon {
@@ -67,5 +68,13 @@
 }
 
 .has-icon-only--xl {
+  --outer-size: 5.4rem;
+}
+
+.has-icon-only--2xl {
   --outer-size: 5.8rem;
+}
+
+.has-icon-only--square {
+  border-radius: 0;
 }
