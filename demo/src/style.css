@@ -1121,27 +1121,33 @@
 @layer components {
   @layer base {
     .header {
-      background-color: var(--kfw-color-background);
       position: sticky;
       top: 0;
       z-index: 1000;
+      background-color: var(--kfw-color-background);
     }
 
-    .header::before {
+    .header::after {
       content: "";
-      border-bottom: var(--kfw-borderwidth) solid var(--kfw-color-line-11);
       position: absolute;
-      bottom: 0;
       left: 0;
       right: 0;
+      bottom: 0;
+      border-bottom: var(--kfw-borderwidth) solid var(--kfw-color-line-11);
       pointer-events: none;
     }
 
-    .header > div {
+    @media (--kfw-breakpoint-desktop) {
+      .header :where(a, button) {
+        font-size: var(--kfw-fontsize-large);
+      }
+    }
+
+    .header__inner {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      min-height: 5.8rem;
+      min-height: 6.4rem;
       gap: var(--kfw-space-medium);
     }
 
@@ -1150,12 +1156,15 @@
 
       width: var(--outer-size);
       height: var(--outer-size);
+      display: grid;
+      place-items: center;
+
       padding: 0;
       justify-content: center;
       align-items: center;
     }
 
-    .header__hamburger:where(:hover, :focus):not(:active) {
+    .header__hamburger:where(:hover, :focus-visible):not(:active) {
       color: var(--kfw-color-text-on-dark-bg);
       background-color: var(--kfw-color-fn-active);
       border-width: 0;
@@ -1166,43 +1175,43 @@
     }
 
     .header__menu .icon {
-      margin: 0 0.8rem;
+      margin-inline-end: 0.8rem;
     }
 
-    :where(.header-logo-mobile, .header-logo-desktop img) {
+    .header__logo {
+      display: block;
+      margin: 0 auto;
+    }
+
+    :where(.header__logo-small, .header__logo-large img) {
       width: auto;
     }
 
-    .header-logo-mobile {
+    .header__logo-small {
       height: 2.8rem;
     }
 
-    .header-logo-desktop {
+    .header__logo-large {
       display: none;
-    }
-
-    .header--sticky .header-logo-mobile {
-      display: block;
-    }
-
-    .header--sticky .header-logo-desktop {
-      display: none;
+      height: 6rem;
+      margin-block: 3rem;
     }
 
     @media (--kfw-breakpoint-desktop) {
-      .header :where(button, a) {
-        font-size: var(--kfw-fontsize-large);
-      }
-
-      .header-logo-mobile {
+      .header__logo-small {
         display: none;
       }
-
-      .header-logo-desktop {
+      .header__logo-large {
         display: block;
-        height: 6rem;
-        margin-block: 3rem;
       }
+    }
+
+    .header--sticky .header__logo-small {
+      display: block;
+    }
+
+    .header--sticky .header__logo-large {
+      display: none;
     }
 
     .footer {

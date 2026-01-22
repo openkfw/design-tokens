@@ -23,27 +23,30 @@
   </head>
   <body>
     <div id="top"></div>
+
     <header id="header" class="header">
-      <div class="container">
-        <div>
-          <button type="button" class="header__hamburger">
-            <i aria-hidden="true" class="icon icon--3xl icon--menu"></i>
-          </button>
-        </div>
-        <div>
-          <a class="d-block" href="#" onclick="event.preventDefault()">
-            <img width="200" height="60" class="header-logo-mobile" src="/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
-            <picture class="header-logo-desktop">
-              <source media="(min-width: 960px)" srcset="/kfw_logo_large.png" type="image/svg+xml" />
-              <img width="232" height="120" src="/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
-            </picture>
+      <div class="container header__inner">
+        <button type="button" class="header__hamburger" aria-label="To the homepage" aria-controls="main-nav" aria-expanded="false" data-nav-toggle>
+          <i aria-hidden="true" class="icon icon--3xl icon--menu"></i>
+        </button>
+
+        <a class="header__logo" href="/" aria-label="Go to homepage">
+          <img width="200" height="60" class="header__logo-small" src="/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
+          <picture class="header__logo-large">
+            <source media="(min-width: 960px)" srcset="/kfw_logo_large.png" type="image/svg+xml" />
+            <img width="232" height="120" src="/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
+          </picture>
+        </a>
+
+        <nav class="header__menu" aria-label="Sekundäre Navigation">
+          <a href="/login">
+            <i aria-hidden="true" class="icon icon--md icon--login"></i>
+            <span>Login</span>
           </a>
-        </div>
-        <nav class="header__menu" aria-label="Sekundäre Navigation" data-testid="right-header-menu">
-          <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--md icon--login"></i> Login </a>
         </nav>
       </div>
     </header>
+
     <main>
       <section class="hero">
         <img class="hero__bars" src="/sb-tbalken-s-600x20.svg" alt="" aria-hidden="true" />
