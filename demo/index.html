@@ -688,8 +688,8 @@
               <label for="searchfield">Search</label>
               <div class="searchfield">
                 <input id="searchfield" type="search" class="searchfield__input form-control" placeholder="Search…" />
-                <button type="button" class="searchfield__button" aria-label="Search">
-                  <i aria-hidden="true" class="icon icon--search icon--md"></i>
+                <button role="link" type="button" class="searchfield__button has-icon-only" aria-label="Search">
+                  <i aria-hidden="true" class="icon icon--search"></i>
                 </button>
               </div>
             </div>
@@ -1030,12 +1030,15 @@
           <div class="bg-light navigation__content">
             <span class="navigation__subtitle">Demo Portal</span>
             <nav aria-label="Hauptnavigation">
-              <ul>
+              <ul class="navigation__list">
                 <li class="list-item">
-                  <a href="#disclaimer">
-                    <i aria-hidden="true" class="icon icon--menu"></i>
-                    Disclaimer
+                  <a href="/" aria-label="Go to homepage">
+                    <i aria-hidden="true" class="icon icon--home"></i>
+                    Home
                   </a>
+                </li>
+                <li class="list-item">
+                  <a href="#disclaimer"> Disclaimer </a>
                 </li>
                 <li class="list-item"><a href="#color">Color</a></li>
                 <li class="list-item"><a href="#typography">Typography</a></li>
