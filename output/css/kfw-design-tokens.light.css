@@ -91,9 +91,11 @@
   --kfw-base-fontsize-fluid-lg-min: 1.8rem;
   --kfw-base-fontsize-fluid-lg-max: 2rem;
   --kfw-base-fontsize-fluid-lg-val: 0.294vi + 1.6235rem;
+
   --kfw-base-fontsize-fluid-xl-min: 2rem;
   --kfw-base-fontsize-fluid-xl-max: 2.2rem;
   --kfw-base-fontsize-fluid-xl-val: 0.294vi + 1.8235rem;
+
   --kfw-base-fontsize-fluid-2xl-min: 2.2rem;
   --kfw-base-fontsize-fluid-2xl-max: 2.4rem;
   --kfw-base-fontsize-fluid-2xl-val: 0.294vi + 2.0235rem;
@@ -128,6 +130,7 @@
   --kfw-base-letterspacing-normal: 0;
   --kfw-base-letterspacing-wide: 0.5px;
   --kfw-base-letterspacing-wider: 1px;
+  --kfw-base-offset: 0.3rem;
   --kfw-base-layout-breakpoint-xs: 320px;
   --kfw-base-layout-breakpoint-sm: 600px;
   --kfw-base-layout-breakpoint-md: 840px;
@@ -256,8 +259,10 @@
   --kfw-borderwidth-large: 2px;
   --kfw-borderstyle: solid;
   --kfw-focusring-outline-width: 2px;
-  --kfw-focusring-outline-offset: 2px;
+  --kfw-focusring-outline-offset: 0.3rem;
   --kfw-focusring-outline-style: dashed;
+  --kfw-focusring-outline-color: #00446e;
+  --kfw-focusring-outline-radius: 4px;
   --kfw-fontweight: 400;
   --kfw-fontweight-bold: 500;
   --kfw-wordspacing-lightspeech: 1.6px;

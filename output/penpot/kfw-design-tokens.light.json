@@ -311,6 +311,10 @@
         "$value": "1px",
         "$type": "letterSpacing"
       }
+    },
+    "Offset": {
+      "$value": "3px",
+      "$type": "dimension"
     }
   },
   "Semantic": {

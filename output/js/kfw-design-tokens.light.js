@@ -240,6 +240,7 @@ export const KfwBaseLetterspacingTight = "-0.5px";
 export const KfwBaseLetterspacingNormal = "0";
 export const KfwBaseLetterspacingWide = "0.5px";
 export const KfwBaseLetterspacingWider = "1px";
+export const KfwBaseOffset = "0.3rem";
 export const KfwBaseLayoutBreakpointXs = "320px";
 export const KfwBaseLayoutBreakpointSm = "600px";
 export const KfwBaseLayoutBreakpointMd = "840px";
@@ -551,8 +552,14 @@ export const KfwBorderwidth = "1px";
 export const KfwBorderwidthLarge = "2px";
 export const KfwBorderstyle = "solid";
 export const KfwFocusringOutlineWidth = "2px";
-export const KfwFocusringOutlineOffset = "2px";
+export const KfwFocusringOutlineOffset = "0.3rem";
 export const KfwFocusringOutlineStyle = "dashed";
+export const KfwFocusringOutlineColor = {
+  colorSpace: "srgb",
+  components: [0, 0.2667, 0.4314],
+  hex: "#00446e",
+};
+export const KfwFocusringOutlineRadius = "4px";
 export const KfwFontweight = 400;
 export const KfwFontweightBold = 500;
 export const KfwWordspacingLightspeech = "1.6px";

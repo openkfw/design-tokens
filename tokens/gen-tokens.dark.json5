@@ -914,6 +914,13 @@
         },
       },
     },
+    offset: {
+      $type: "dimension",
+      $value: {
+        unit: "px",
+        value: 3,
+      },
+    },
     layout: {
       breakpoint: {
         $type: "dimension",
@@ -1475,11 +1482,19 @@
       },
       "outline-offset": {
         $type: "dimension",
-        $value: "{base.borderwidth.lg}",
+        $value: "{base.offset}",
       },
       "outline-style": {
         $type: "strokeStyle",
         $value: "dashed",
+      },
+      "outline-color": {
+        $type: "color",
+        $value: "{base.color.blue.700}",
+      },
+      "outline-radius": {
+        $type: "dimension",
+        $value: "{base.borderradius.md}",
       },
     },
     fontweight: {

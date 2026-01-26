@@ -25,7 +25,7 @@ export function RegisterTransforms(PREFIX: string) {
     transitive: true,
     filter: (token) => {
       const { $value, path } = token
-      if (path.includes("breakpoint") || path.includes("borderradius"))
+      if (path.includes("breakpoint") || path.includes("borderradius") || path.includes("outline-radius"))
         return false /* 💡 Reason: Media queries use the browser's default root font size (not our custom setting, like 1rem = 10px) and borderradius should be always px */
       const numericValue = parseFloat($value)
       return typeof $value === "string" && $value.endsWith("px") && (numericValue < -2 || numericValue > 2 || numericValue === 0)
