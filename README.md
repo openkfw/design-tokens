@@ -66,7 +66,9 @@ See the full MPL-2.0 license in [LICENSE](./LICENSE).
 
 ### How to use fluid typography with design tokens?
 
-Fluid typography allows font sizes to scale dynamically based on the viewport size, creating a responsive and adaptable user experience. KfW Design Tokens include predefined fluid typography settings that you can directly use in your projects.
+Fluid typography allows font sizes to scale dynamically based on the viewport size, creating a responsive and adaptable user experience. 
+
+KfW Design Tokens include predefined fluid typography settings that you can directly use in your projects.
 
 For example, you can apply the following CSS variables with clamp:
 
@@ -77,6 +79,29 @@ h1 {
 ```
 
 This ensures that the `h1` font size adjusts fluidly between the minimum and maximum values defined in the design tokens, depending on the viewport width — the minimum value on mobile, scaling up to the maximum value on desktop.
+
+In certain situations, min and max values are not sufficient—for example, if you need fixed font sizes for mobile, tablet, and desktop (i.e., more than two breakpoints), or when using relative properties like word-spacing, letter-spacing or line-height that do not work well with clamp. In these cases, use traditional media queries:
+
+```css
+h1 {
+    font-size: var(--kfw-base-fontsize-sm);
+    line-height: var(--kfw-lineheight);
+}
+
+@media (--kfw-breakpoint-tablet) {
+    h1 {
+        font-size: var(--kfw-base-fontsize-md);
+    }
+}
+
+@media (--kfw-breakpoint-desktop) {
+    h1 {
+        font-size: var(--kfw-base-fontsize-lg);
+    }
+}
+```
+
+The fluid values are calculated using the [Fluid Type Scale Calculator](https://www.fluid-type-scale.com/calculate?minFontSize=20&minWidth=320&minRatio=0.999999&maxFontSize=25&maxWidth=1280&maxRatio=1&steps=base&baseStep=base&prefix=fs&useContainerWidth=false&includeFallbacks=true&useRems=false&remValue=16&decimals=2&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=1280) based on the KfW breakpoints.
 
 ### How to use breakpoint design tokens with @media and CSS?
 

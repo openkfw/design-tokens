@@ -621,6 +621,7 @@
   :where(.form-text, .invalid-feedback) {
     --space-between: 0.8rem;
 
+    white-space: pre-line;
     column-gap: var(--space-between);
     width: 100%;
     margin-block-start: 0.8rem;
@@ -629,6 +630,10 @@
     letter-spacing: var(--kfw-base-letterspacing-normal);
     display: inline-grid;
     grid-template-columns: auto 1fr;
+  }
+
+  :where(.form-text--standalone, .invalid-feedback--standalone) {
+    margin-block-start: 0;
   }
 
   .invalid-feedback {
