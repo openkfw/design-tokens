@@ -1,6 +1,6 @@
 {
   "name": "@openkfw/design-tokens",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "description": "The source of truth for KfW-branded digital products.",
   "files": [
     "README.md",
@@ -50,12 +50,12 @@
     "eslint": "^9.39.2",
     "json5": "^2.2.3",
     "jsoneditor-cli": "^1.1.0",
-    "lodash": "4.17.21",
-    "prettier": "^3.8.0",
-    "style-dictionary": "^5.1.4",
+    "lodash": "4.17.23",
+    "prettier": "^3.8.1",
+    "style-dictionary": "^5.2.0",
     "style-dictionary-utils": "^6.0.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.53.0"
+    "typescript-eslint": "^8.54.0"
   }
 }

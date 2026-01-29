@@ -3803,12 +3803,12 @@
       },
       "lg": {
         "key": "{base.lineheight.lg}",
-        "$value": 1.5,
+        "$value": 1.45,
         "$type": "number",
         "filePath": "tokens/tokens.json",
         "isSource": true,
         "original": {
-          "$value": 1.5,
+          "$value": 1.45,
           "$type": "number",
           "key": "{base.lineheight.lg}"
         },
@@ -3822,6 +3822,29 @@
           "base",
           "lineheight",
           "lg"
+        ]
+      },
+      "xl": {
+        "key": "{base.lineheight.xl}",
+        "$value": 1.5,
+        "$type": "number",
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": 1.5,
+          "$type": "number",
+          "key": "{base.lineheight.xl}"
+        },
+        "name": "kfw-base-lineheight-xl",
+        "attributes": {
+          "category": "base",
+          "type": "lineheight",
+          "item": "xl"
+        },
+        "path": [
+          "base",
+          "lineheight",
+          "xl"
         ]
       }
     },
@@ -6828,6 +6851,32 @@
       }
     },
     "space": {
+      "tiny": {
+        "key": "{semantic.space.tiny}",
+        "$value": {
+          "unit": "px",
+          "value": 5
+        },
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "dimension",
+        "original": {
+          "$value": "{base.space.static.5}",
+          "$type": "dimension",
+          "key": "{semantic.space.tiny}"
+        },
+        "name": "kfw-space-tiny",
+        "attributes": {
+          "category": "semantic",
+          "type": "space",
+          "item": "tiny"
+        },
+        "path": [
+          "semantic",
+          "space",
+          "tiny"
+        ]
+      },
       "xsmall": {
         "key": "{semantic.space.xsmall}",
         "$value": {
@@ -6852,6 +6901,32 @@
           "semantic",
           "space",
           "xsmall"
+        ]
+      },
+      "midSmall": {
+        "key": "{semantic.space.midSmall}",
+        "$value": {
+          "unit": "px",
+          "value": 15
+        },
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "dimension",
+        "original": {
+          "$value": "{base.space.static.15}",
+          "$type": "dimension",
+          "key": "{semantic.space.midSmall}"
+        },
+        "name": "kfw-space-midSmall",
+        "attributes": {
+          "category": "semantic",
+          "type": "space",
+          "item": "midSmall"
+        },
+        "path": [
+          "semantic",
+          "space",
+          "midSmall"
         ]
       },
       "small": {
@@ -7077,294 +7152,6 @@
             "val"
           ]
         }
-      }
-    },
-    "fontspace": {
-      "default": {
-        "key": "{semantic.fontspace.default}",
-        "$value": {
-          "unit": "px",
-          "value": 20
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.space.static.20}",
-          "$type": "dimension",
-          "key": "{semantic.fontspace.default}"
-        },
-        "name": "kfw-fontspace",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontspace",
-          "item": "default"
-        },
-        "path": [
-          "semantic",
-          "fontspace",
-          "default"
-        ]
-      },
-      "2xsmall": {
-        "key": "{semantic.fontspace.2xsmall}",
-        "$value": {
-          "unit": "px",
-          "value": 5
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.space.static.5}",
-          "$type": "dimension",
-          "key": "{semantic.fontspace.2xsmall}"
-        },
-        "name": "kfw-fontspace-2xsmall",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontspace",
-          "item": "2xsmall"
-        },
-        "path": [
-          "semantic",
-          "fontspace",
-          "2xsmall"
-        ]
-      },
-      "xsmall": {
-        "key": "{semantic.fontspace.xsmall}",
-        "$value": {
-          "unit": "px",
-          "value": 10
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.space.static.10}",
-          "$type": "dimension",
-          "key": "{semantic.fontspace.xsmall}"
-        },
-        "name": "kfw-fontspace-xsmall",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontspace",
-          "item": "xsmall"
-        },
-        "path": [
-          "semantic",
-          "fontspace",
-          "xsmall"
-        ]
-      },
-      "small": {
-        "key": "{semantic.fontspace.small}",
-        "$value": {
-          "unit": "px",
-          "value": 15
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.space.static.15}",
-          "$type": "dimension",
-          "key": "{semantic.fontspace.small}"
-        },
-        "name": "kfw-fontspace-small",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontspace",
-          "item": "small"
-        },
-        "path": [
-          "semantic",
-          "fontspace",
-          "small"
-        ]
-      },
-      "large": {
-        "key": "{semantic.fontspace.large}",
-        "$value": {
-          "unit": "px",
-          "value": 30
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.space.static.30}",
-          "$type": "dimension",
-          "key": "{semantic.fontspace.large}"
-        },
-        "name": "kfw-fontspace-large",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontspace",
-          "item": "large"
-        },
-        "path": [
-          "semantic",
-          "fontspace",
-          "large"
-        ]
-      },
-      "heading-1": {
-        "key": "{semantic.fontspace.heading-1}",
-        "$value": {
-          "unit": "px",
-          "value": 20
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.space.static.20}",
-          "$type": "dimension",
-          "key": "{semantic.fontspace.heading-1}"
-        },
-        "name": "kfw-fontspace-heading-1",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontspace",
-          "item": "heading-1"
-        },
-        "path": [
-          "semantic",
-          "fontspace",
-          "heading-1"
-        ]
-      },
-      "heading-2": {
-        "key": "{semantic.fontspace.heading-2}",
-        "$value": {
-          "unit": "px",
-          "value": 20
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.space.static.20}",
-          "$type": "dimension",
-          "key": "{semantic.fontspace.heading-2}"
-        },
-        "name": "kfw-fontspace-heading-2",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontspace",
-          "item": "heading-2"
-        },
-        "path": [
-          "semantic",
-          "fontspace",
-          "heading-2"
-        ]
-      },
-      "heading-3": {
-        "key": "{semantic.fontspace.heading-3}",
-        "$value": {
-          "unit": "px",
-          "value": 10
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.space.static.10}",
-          "$type": "dimension",
-          "key": "{semantic.fontspace.heading-3}"
-        },
-        "name": "kfw-fontspace-heading-3",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontspace",
-          "item": "heading-3"
-        },
-        "path": [
-          "semantic",
-          "fontspace",
-          "heading-3"
-        ]
-      },
-      "heading-4": {
-        "key": "{semantic.fontspace.heading-4}",
-        "$value": {
-          "unit": "px",
-          "value": 10
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.space.static.10}",
-          "$type": "dimension",
-          "key": "{semantic.fontspace.heading-4}"
-        },
-        "name": "kfw-fontspace-heading-4",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontspace",
-          "item": "heading-4"
-        },
-        "path": [
-          "semantic",
-          "fontspace",
-          "heading-4"
-        ]
-      },
-      "heading-5": {
-        "key": "{semantic.fontspace.heading-5}",
-        "$value": {
-          "unit": "px",
-          "value": 10
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.space.static.10}",
-          "$type": "dimension",
-          "key": "{semantic.fontspace.heading-5}"
-        },
-        "name": "kfw-fontspace-heading-5",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontspace",
-          "item": "heading-5"
-        },
-        "path": [
-          "semantic",
-          "fontspace",
-          "heading-5"
-        ]
-      },
-      "heading-6": {
-        "key": "{semantic.fontspace.heading-6}",
-        "$value": {
-          "unit": "px",
-          "value": 10
-        },
-        "filePath": "tokens/tokens.json",
-        "isSource": true,
-        "$type": "dimension",
-        "original": {
-          "$value": "{base.space.static.10}",
-          "$type": "dimension",
-          "key": "{semantic.fontspace.heading-6}"
-        },
-        "name": "kfw-fontspace-heading-6",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontspace",
-          "item": "heading-6"
-        },
-        "path": [
-          "semantic",
-          "fontspace",
-          "heading-6"
-        ]
       }
     },
     "fontsize": {
@@ -7895,7 +7682,7 @@
       },
       "large": {
         "key": "{semantic.lineheight.large}",
-        "$value": 1.5,
+        "$value": 1.45,
         "filePath": "tokens/tokens.json",
         "isSource": true,
         "$type": "number",
@@ -7914,6 +7701,29 @@
           "semantic",
           "lineheight",
           "large"
+        ]
+      },
+      "lightspeech": {
+        "key": "{semantic.lineheight.lightspeech}",
+        "$value": 1.5,
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "number",
+        "original": {
+          "$value": "{base.lineheight.xl}",
+          "$type": "number",
+          "key": "{semantic.lineheight.lightspeech}"
+        },
+        "name": "kfw-lineheight-lightspeech",
+        "attributes": {
+          "category": "semantic",
+          "type": "lineheight",
+          "item": "lightspeech"
+        },
+        "path": [
+          "semantic",
+          "lineheight",
+          "lightspeech"
         ]
       },
       "heading": {
@@ -7960,6 +7770,29 @@
           "semantic",
           "lineheight",
           "heading-5"
+        ]
+      },
+      "small": {
+        "key": "{semantic.lineheight.small}",
+        "$value": 1.2,
+        "filePath": "tokens/tokens.json",
+        "isSource": true,
+        "$type": "number",
+        "original": {
+          "$value": "{base.lineheight.2xs}",
+          "$type": "number",
+          "key": "{semantic.lineheight.small}"
+        },
+        "name": "kfw-lineheight-small",
+        "attributes": {
+          "category": "semantic",
+          "type": "lineheight",
+          "item": "small"
+        },
+        "path": [
+          "semantic",
+          "lineheight",
+          "small"
         ]
       }
     },

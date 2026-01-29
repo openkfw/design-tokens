@@ -134,7 +134,7 @@
   }
 
   :where(address, blockquote, dl, ol, p, pre, table, ul) {
-    margin-block: 0 var(--kfw-fontspace);
+    margin-block: 0 var(--kfw-space-small);
   }
 
   :where(address, blockquote, dl, ol, p, pre, table, ul):last-child {
@@ -178,7 +178,7 @@
   }
 
   blockquote footer {
-    margin-block-start: var(--kfw-fontspace-2xsmall);
+    margin-block-start: 5px; /* todo use it later => --kfw-space-2xsmall */
   }
 
   :where(cite, i, em) {
@@ -434,7 +434,7 @@
 
   pre {
     display: block;
-    margin-block: 0 var(--kfw-fontspace);
+    margin-block: 0 var(--kfw-space-small);
     overflow: auto;
     -ms-overflow-style: scrollbar;
   }
@@ -461,65 +461,56 @@
     display: block;
   }
 
-  h1,
-  .hl--1 {
+  :where(h1, .hl--1) {
     font-size: clamp(var(--kfw-fontsize-heading-1-min), var(--kfw-fontsize-heading-1-val), var(--kfw-fontsize-heading-1-max));
-    margin-block-end: var(--kfw-fontspace-heading-1);
+    margin-block-end: var(--kfw-space-small);
   }
 
   @media (--kfw-breakpoint-desktop-large) {
-    h1,
-    .hl--1 {
+    :where(h1, .hl--1) {
       letter-spacing: var(--kfw-base-letterspacing-tight);
     }
   }
 
-  h2,
-  .hl--2 {
+  :where(h2, .hl--2) {
     font-size: clamp(var(--kfw-fontsize-heading-2-min), var(--kfw-fontsize-heading-2-val), var(--kfw-fontsize-heading-2-max));
-    margin-block-end: var(--kfw-fontspace-heading-2);
+    margin-block-end: var(--kfw-space-small);
     letter-spacing: var(--kfw-base-letterspacing-tight);
   }
 
-  h3,
-  .hl--3 {
+  :where(h3, .hl--3) {
     font-size: clamp(var(--kfw-fontsize-heading-3-min), var(--kfw-fontsize-heading-3-val), var(--kfw-fontsize-heading-3-max));
-    margin-block-end: var(--kfw-fontspace-heading-3);
+    margin-block-end: var(--kfw-space-xsmall);
     letter-spacing: var(--kfw-base-letterspacing-tight);
   }
 
   @media (--kfw-breakpoint-desktop-large) {
-    h3,
-    .hl--3 {
+    :where(h3, .hl--3) {
       letter-spacing: var(--kfw-base-letterspacing-normal);
     }
   }
 
-  h4,
-  .hl--4 {
+  :where(h4, .hl--4) {
     font-size: var(--kfw-fontsize-heading-4);
-    margin-block-end: var(--kfw-fontspace-heading-4);
+    margin-block-end: var(--kfw-space-xsmall);
   }
 
-  h5,
-  .hl--5 {
+  :where(h5, .hl--5) {
     font-size: var(--kfw-fontsize-heading-5);
-    margin-block-end: var(--kfw-fontspace-heading-5);
+    margin-block-end: var(--kfw-space-xsmall);
     line-height: var(--kfw-lineheight-heading-5);
     letter-spacing: var(--kfw-base-letterspacing-normal);
   }
 
   @media (--kfw-breakpoint-desktop-large) {
-    h5,
-    .hl--5 {
+    :where(h5, .hl--5) {
       letter-spacing: var(--kfw-base-letterspacing-wide);
     }
   }
 
-  h6,
-  .hl--6 {
+  :where(h6, .hl--6) {
     font-size: var(--kfw-fontsize-heading-6);
-    margin-block-end: var(--kfw-fontspace-heading-6);
+    margin-block-end: var(--kfw-space-xsmall);
     letter-spacing: var(--kfw-base-letterspacing-wide);
     line-height: var(--kfw-lineheight);
   }
@@ -527,7 +518,7 @@
   /**
   * Form
   */
-  .form-control {
+  :where(.form-control, .form-select) {
     --borderhover: var(--kfw-color-fn-active);
     --placeholder-color: var(--kfw-color-fn);
 
@@ -547,11 +538,11 @@
     background-repeat: no-repeat;
   }
 
-  .form-control::placeholder {
+  :where(.form-control::placeholder, .form-select::placeholder) {
     color: var(--placeholder-color);
   }
 
-  .form-control:disabled {
+  :where(.form-control:disabled, .form-select:disabled) {
     --placeholder-color: var(--kfw-color-text);
 
     background-color: transparent;
@@ -559,33 +550,16 @@
     border-color: var(--kfw-color-fn-inactive);
   }
 
-  .form-control:hover:not(:disabled) {
+  /* Hover effect when not disabled */
+  :where(.form-control, .form-select):hover:not(:disabled) {
     box-shadow: 0 0 0 var(--kfw-borderwidth) var(--borderhover);
   }
 
-  :where([type="checkbox"], [type="radio"], select.form-control):not(:disabled) {
+  :where([type="checkbox"], [type="radio"], .form-select):not(:disabled) {
     cursor: pointer;
   }
 
-  select.form-control {
-    --form-control-space: 1.5rem;
-
-    padding-block: 0;
-    background-position: center right var(--form-control-space);
-    background-size: var(--icon-size-md) auto;
-    background-image: var(--kfw-icon-select);
-    padding-inline-end: calc(var(--icon-size-md) + var(--form-control-space) * 2);
-  }
-
-  select.form-control:disabled {
-    background-image: var(--kfw-icon-select-disabled);
-  }
-
-  textarea.form-control {
-    height: auto;
-  }
-
-  .form-control[aria-invalid="true"] {
+  :where(.form-control, .form-select)[aria-invalid="true"] {
     --borderhover: var(--kfw-color-state-danger);
     --placeholder-color: var(--kfw-color-state-danger);
 
@@ -594,8 +568,21 @@
     box-shadow: 0 0 0 var(--kfw-borderwidth) var(--borderhover);
   }
 
-  [data-whatinput="keyboard"] .form-control[aria-invalid="true"]:focus-visible {
-    outline-color: var(--kfw-color-state-danger);
+  /**
+  * Select
+  */
+  .form-select {
+    --form-control-space: 1.5rem;
+
+    padding-block: 0;
+    padding-inline: var(--form-control-space) calc(var(--icon-size-md) + var(--form-control-space) * 2);
+    background-position: center right var(--form-control-space);
+    background-size: var(--icon-size-md) auto;
+    background-image: var(--kfw-icon-select);
+  }
+
+  .form-select:disabled {
+    background-image: var(--kfw-icon-select-disabled);
   }
 
   :where(progress, [type="checkbox"], [type="radio"], [type="range"]) {
@@ -706,6 +693,7 @@
     background-color: var(--kfw-color-background);
   }
 
+  /* Focus styling for invalid states, keyboard users */
   .list-group-form :where([type="checkbox"], [type="radio"])[aria-invalid="true"] {
     border-color: var(--kfw-color-state-danger);
     border-width: var(--kfw-borderwidth-large);
@@ -790,6 +778,11 @@
     .list-group-form--inline {
       flex-flow: row wrap;
     }
+  }
+
+  /* Focus styling for invalid states, keyboard users */
+  [data-whatinput="keyboard"] :where(.form-control, .form-select)[aria-invalid="true"]:focus-visible {
+    outline-color: var(--kfw-color-state-danger);
   }
 
   :where([type="date"], [type="time"])::-webkit-calendar-picker-indicator {
@@ -930,8 +923,8 @@
   .button-secondary.has-icon-only:where(:hover, :focus-visible) {
     color: var(--kfw-color-fn-active);
     background-color: var(--kfw-color-background);
-    border: var(--kfw-base-borderwidth-lg) var(--kfw-borderstyle) var(--kfw-color-fn-active);
-    border-radius: var(--kfw-base-borderradius-md);
+    border: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--kfw-color-fn-active);
+    border-radius: var(--kfw-borderradius);
   }
 
   .button-primary.has-icon-only:where(:focus-visible),
@@ -941,7 +934,7 @@
   }
 
   .button-primary.has-icon-only:where(:active) {
-    border-width: var(--kfw-base-borderwidth-md);
+    border-width: var(--kfw-borderwidth);
   }
 
   .button-secondary.has-icon-only:where(:active) {
@@ -1270,7 +1263,7 @@
   }
 
   .header__hamburger:where(:active) {
-    border-width: var(--kfw-base-borderwidth-md);
+    border-width: var(--kfw-borderwidth);
     border-color: var(--kfw-color-fn-active);
   }
 
@@ -1340,7 +1333,7 @@
   .footer {
     --kfw-focusring-outline-color: var(--kfw-color-background);
 
-    border-top: var(--kfw-base-borderwidth-md) solid var(--kfw-color-line-11);
+    border-top: var(--kfw-borderwidth) solid var(--kfw-color-line-11);
     line-height: var(--kfw-lineheight);
     padding-block: var(--kfw-space-medium) var(--kfw-space-large);
   }
@@ -1390,7 +1383,7 @@
   }
 
   .navigation::backdrop {
-    background-color: color-mix(in oklab, #000 30%, transparent); /* @todo use kfw color variable when available */
+    background-color: color-mix(in oklab, black 30%, transparent); /* todo ask for design token */
   }
 
   .navigation__close {
@@ -1400,20 +1393,29 @@
     border-radius: 0;
   }
 
+  .navigation__close:focus-visible {
+    outline-color: color-mix(in oklab, black 50%, transparent); /* todo ask for design token */
+    outline-style: dashed;
+    outline-offset: 3px;
+  }
+
   .navigation__container {
     --min-width: 28rem;
 
     margin-block: 0;
     min-width: calc(var(--min-width) + var(--icon-only-xl));
-    padding-right: 5.4rem;
+    padding-right: var(--icon-only-xl);
     padding-left: 0;
     width: 100%;
     max-height: 100%;
     display: flex;
     flex-direction: column;
+    top: 0.6rem;
+    right: 0.6rem;
+    position: relative;
   }
 
-  .navigation__container__inner {
+  .navigation__content {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -1424,15 +1426,17 @@
     flex: 1;
     min-height: 0;
     overflow-y: auto;
+    padding: calc(var(--kfw-focusring-outline-width) + var(--kfw-focusring-outline-offset));
+    margin: calc(-1 * (var(--kfw-focusring-outline-width) + var(--kfw-focusring-outline-offset)));
   }
 
-  .navigation__content {
+  .navigation__scroll-area {
     flex: 1;
     min-height: 0;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    padding-inline: 4rem 1.4rem;
+    padding-inline: var(--kfw-base-space-static-40) var(--kfw-base-space-static-20);
     padding-block: 0 var(--kfw-base-space-static-50);
   }
 
@@ -1443,8 +1447,8 @@
     padding-inline: 4rem 2rem;
     padding-block: 1.4rem;
     position: relative;
-    font-size: var(--fontsize);
     color: inherit;
+    font-size: var(--fontsize);
   }
 
   @media (--kfw-breakpoint-desktop-large) {
@@ -1480,9 +1484,13 @@
   }
 
   .navigation__list > li {
-    border-bottom: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--kfw-base-color-gray-300);
+    border-bottom: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--kfw-color-line-8);
     margin-block-end: 0;
     padding-block: var(--kfw-space-small);
+  }
+
+  .navigation__list > li a {
+    width: 100%;
   }
 
   .auto-grid {
@@ -1717,12 +1725,12 @@
     color: var(--kfw-color-text-on-dark-bg);
     background-color: var(--kfw-color-fn-active);
     border-color: var(--kfw-color-text-on-dark-bg);
-    border-width: var(--kfw-base-borderradius-sm);
+    border-width: var(--kfw-borderradius-small);
   }
 
   :where(.bg-dark) :where(.button-primary.has-icon-only:where(:active)),
   :where(.bg-dark) :where(.button-secondary.has-icon-only:where(:active)) {
-    border-width: var(--kfw-base-borderwidth-md);
+    border-width: var(--kfw-borderwidth);
   }
 
   .bg-subtle {

@@ -817,6 +817,10 @@
         $type: "number",
       },
       lg: {
+        $value: 1.45,
+        $type: "number",
+      },
+      xl: {
         $value: 1.5,
         $type: "number",
       },
@@ -1299,8 +1303,14 @@
     },
     space: {
       $type: "dimension",
+      tiny: {
+        $value: "{base.space.static.5}",
+      },
       xsmall: {
         $value: "{base.space.static.10}",
+      },
+      midSmall: {
+        $value: "{base.space.static.15}",
       },
       small: {
         $value: "{base.space.static.20}",
@@ -1329,42 +1339,6 @@
         val: {
           $value: "{base.space.fluid.50.val}",
         },
-      },
-    },
-    fontspace: {
-      $type: "dimension",
-      default: {
-        $value: "{base.space.static.20}",
-      },
-      "2xsmall": {
-        $value: "{base.space.static.5}",
-      },
-      xsmall: {
-        $value: "{base.space.static.10}",
-      },
-      small: {
-        $value: "{base.space.static.15}",
-      },
-      large: {
-        $value: "{base.space.static.30}",
-      },
-      "heading-1": {
-        $value: "{base.space.static.20}",
-      },
-      "heading-2": {
-        $value: "{base.space.static.20}",
-      },
-      "heading-3": {
-        $value: "{base.space.static.10}",
-      },
-      "heading-4": {
-        $value: "{base.space.static.10}",
-      },
-      "heading-5": {
-        $value: "{base.space.static.10}",
-      },
-      "heading-6": {
-        $value: "{base.space.static.10}",
       },
     },
     fontsize: {
@@ -1440,11 +1414,17 @@
       large: {
         $value: "{base.lineheight.lg}",
       },
+      lightspeech: {
+        $value: "{base.lineheight.xl}",
+      },
       heading: {
         $value: "{base.lineheight.xs}",
       },
       "heading-5": {
         $value: "{base.lineheight.sm}",
+      },
+      small: {
+        $value: "{base.lineheight.2xs}",
       },
     },
     borderradius: {

@@ -242,6 +242,10 @@
         "$type": "lineHeights"
       },
       "Lg": {
+        "$value": "145%",
+        "$type": "lineHeights"
+      },
+      "Xl": {
         "$value": "150%",
         "$type": "lineHeights"
       }
@@ -525,8 +529,16 @@
       }
     },
     "Space": {
+      "Tiny": {
+        "$value": "5px",
+        "$type": "spacing"
+      },
       "Xsmall": {
         "$value": "10px",
+        "$type": "spacing"
+      },
+      "Midsmall": {
+        "$value": "15px",
         "$type": "spacing"
       },
       "Small": {
@@ -556,52 +568,6 @@
           "$value": "60px",
           "$type": "spacing"
         }
-      }
-    },
-    "Fontspace": {
-      "Default": {
-        "$value": "20px",
-        "$type": "dimension"
-      },
-      "2xsmall": {
-        "$value": "5px",
-        "$type": "dimension"
-      },
-      "Xsmall": {
-        "$value": "10px",
-        "$type": "dimension"
-      },
-      "Small": {
-        "$value": "15px",
-        "$type": "dimension"
-      },
-      "Large": {
-        "$value": "30px",
-        "$type": "dimension"
-      },
-      "Heading-1": {
-        "$value": "20px",
-        "$type": "dimension"
-      },
-      "Heading-2": {
-        "$value": "20px",
-        "$type": "dimension"
-      },
-      "Heading-3": {
-        "$value": "10px",
-        "$type": "dimension"
-      },
-      "Heading-4": {
-        "$value": "10px",
-        "$type": "dimension"
-      },
-      "Heading-5": {
-        "$value": "10px",
-        "$type": "dimension"
-      },
-      "Heading-6": {
-        "$value": "10px",
-        "$type": "dimension"
       }
     },
     "Fontsize": {
@@ -676,6 +642,10 @@
         "$type": "lineHeights"
       },
       "Large": {
+        "$value": "145%",
+        "$type": "lineHeights"
+      },
+      "Lightspeech": {
         "$value": "150%",
         "$type": "lineHeights"
       },
@@ -685,6 +655,10 @@
       },
       "Heading-5": {
         "$value": "133.3%",
+        "$type": "lineHeights"
+      },
+      "Small": {
+        "$value": "120%",
         "$type": "lineHeights"
       }
     },

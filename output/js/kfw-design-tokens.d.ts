@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.5 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.6 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100: {
@@ -224,6 +224,7 @@ export const KfwBaseLineheightXs: number;
 export const KfwBaseLineheightSm: number;
 export const KfwBaseLineheightMd: number;
 export const KfwBaseLineheightLg: number;
+export const KfwBaseLineheightXl: number;
 export const KfwBaseBorderradiusSm: string;
 export const KfwBaseBorderradiusMd: string;
 export const KfwBaseBorderradiusLg: string;
@@ -520,7 +521,9 @@ export const KfwColorIconDisabledSecondary: {
 };
 export const KfwFontfamily: string;
 export const KfwFontfamilyCode: string;
+export const KfwSpaceTiny: string;
 export const KfwSpaceXsmall: string;
+export const KfwSpaceMidsmall: string;
 export const KfwSpaceSmall: string;
 export const KfwSpaceMedium: string;
 export const KfwSpaceLargeMin: string;
@@ -529,17 +532,6 @@ export const KfwSpaceLargeVal: string;
 export const KfwSpaceBigMin: string;
 export const KfwSpaceBigMax: string;
 export const KfwSpaceBigVal: string;
-export const KfwFontspace: string;
-export const KfwFontspace2xsmall: string;
-export const KfwFontspaceXsmall: string;
-export const KfwFontspaceSmall: string;
-export const KfwFontspaceLarge: string;
-export const KfwFontspaceHeading1: string;
-export const KfwFontspaceHeading2: string;
-export const KfwFontspaceHeading3: string;
-export const KfwFontspaceHeading4: string;
-export const KfwFontspaceHeading5: string;
-export const KfwFontspaceHeading6: string;
 export const KfwFontsize: string;
 export const KfwFontsizeIntroduction: string;
 export const KfwFontsizeLarge: string;
@@ -560,8 +552,10 @@ export const KfwFontsizeHeading5: string;
 export const KfwFontsizeHeading6: string;
 export const KfwLineheight: number;
 export const KfwLineheightLarge: number;
+export const KfwLineheightLightspeech: number;
 export const KfwLineheightHeading: number;
 export const KfwLineheightHeading5: number;
+export const KfwLineheightSmall: number;
 export const KfwBorderradius: string;
 export const KfwBorderradiusSmall: string;
 export const KfwBorderradiusLarge: string;

@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.5 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.6 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100 = {
@@ -225,7 +225,8 @@ export const KfwBaseLineheight2xs = 1.2;
 export const KfwBaseLineheightXs = 1.3;
 export const KfwBaseLineheightSm = 1.333;
 export const KfwBaseLineheightMd = 1.4;
-export const KfwBaseLineheightLg = 1.5;
+export const KfwBaseLineheightLg = 1.45;
+export const KfwBaseLineheightXl = 1.5;
 export const KfwBaseBorderradiusSm = "2px";
 export const KfwBaseBorderradiusMd = "4px";
 export const KfwBaseBorderradiusLg = "20px";
@@ -502,7 +503,9 @@ export const KfwFontfamily =
   '"KfW Centro Sans", Arial, "Helvetica Neue", Helvetica, sans-serif';
 export const KfwFontfamilyCode =
   "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace";
+export const KfwSpaceTiny = "0.5rem";
 export const KfwSpaceXsmall = "1rem";
+export const KfwSpaceMidsmall = "1.5rem";
 export const KfwSpaceSmall = "2rem";
 export const KfwSpaceMedium = "3rem";
 export const KfwSpaceLargeMin = "3.5rem";
@@ -511,17 +514,6 @@ export const KfwSpaceLargeVal = "0.735vi + 3.0588rem";
 export const KfwSpaceBigMin = "5rem";
 export const KfwSpaceBigMax = "6rem";
 export const KfwSpaceBigVal = "1.471vi + 4.1176rem";
-export const KfwFontspace = "2rem";
-export const KfwFontspace2xsmall = "0.5rem";
-export const KfwFontspaceXsmall = "1rem";
-export const KfwFontspaceSmall = "1.5rem";
-export const KfwFontspaceLarge = "3rem";
-export const KfwFontspaceHeading1 = "2rem";
-export const KfwFontspaceHeading2 = "2rem";
-export const KfwFontspaceHeading3 = "1rem";
-export const KfwFontspaceHeading4 = "1rem";
-export const KfwFontspaceHeading5 = "1rem";
-export const KfwFontspaceHeading6 = "1rem";
 export const KfwFontsize = "1.6rem";
 export const KfwFontsizeIntroduction = "2rem";
 export const KfwFontsizeLarge = "1.8rem";
@@ -541,9 +533,11 @@ export const KfwFontsizeHeading4Val = "0.294vi + 1.8235rem";
 export const KfwFontsizeHeading5 = "1.8rem";
 export const KfwFontsizeHeading6 = "1.6rem";
 export const KfwLineheight = 1.4;
-export const KfwLineheightLarge = 1.5;
+export const KfwLineheightLarge = 1.45;
+export const KfwLineheightLightspeech = 1.5;
 export const KfwLineheightHeading = 1.3;
 export const KfwLineheightHeading5 = 1.333;
+export const KfwLineheightSmall = 1.2;
 export const KfwBorderradius = "4px";
 export const KfwBorderradiusSmall = "2px";
 export const KfwBorderradiusLarge = "20px";

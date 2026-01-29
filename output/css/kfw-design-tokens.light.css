@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.5 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.6 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 :root, :host { color-scheme: light; }
@@ -91,11 +91,9 @@
   --kfw-base-fontsize-fluid-lg-min: 1.8rem;
   --kfw-base-fontsize-fluid-lg-max: 2rem;
   --kfw-base-fontsize-fluid-lg-val: 0.294vi + 1.6235rem;
-
   --kfw-base-fontsize-fluid-xl-min: 2rem;
   --kfw-base-fontsize-fluid-xl-max: 2.2rem;
   --kfw-base-fontsize-fluid-xl-val: 0.294vi + 1.8235rem;
-
   --kfw-base-fontsize-fluid-2xl-min: 2.2rem;
   --kfw-base-fontsize-fluid-2xl-max: 2.4rem;
   --kfw-base-fontsize-fluid-2xl-val: 0.294vi + 2.0235rem;
@@ -115,7 +113,8 @@
   --kfw-base-lineheight-xs: 1.3;
   --kfw-base-lineheight-sm: 1.333;
   --kfw-base-lineheight-md: 1.4;
-  --kfw-base-lineheight-lg: 1.5;
+  --kfw-base-lineheight-lg: 1.45;
+  --kfw-base-lineheight-xl: 1.5;
   --kfw-base-borderradius-sm: 2px;
   --kfw-base-borderradius-md: 4px;
   --kfw-base-borderradius-lg: 20px;
@@ -209,7 +208,9 @@
   --kfw-color-icon-disabled-secondary: #94eb90;
   --kfw-fontfamily: "KfW Centro Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   --kfw-fontfamily-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --kfw-space-tiny: 0.5rem;
   --kfw-space-xsmall: 1rem;
+  --kfw-space-midSmall: 1.5rem;
   --kfw-space-small: 2rem;
   --kfw-space-medium: 3rem;
   --kfw-space-large-min: 3.5rem;
@@ -218,17 +219,6 @@
   --kfw-space-big-min: 5rem;
   --kfw-space-big-max: 6rem;
   --kfw-space-big-val: 1.471vi + 4.1176rem;
-  --kfw-fontspace: 2rem;
-  --kfw-fontspace-2xsmall: 0.5rem;
-  --kfw-fontspace-xsmall: 1rem;
-  --kfw-fontspace-small: 1.5rem;
-  --kfw-fontspace-large: 3rem;
-  --kfw-fontspace-heading-1: 2rem;
-  --kfw-fontspace-heading-2: 2rem;
-  --kfw-fontspace-heading-3: 1rem;
-  --kfw-fontspace-heading-4: 1rem;
-  --kfw-fontspace-heading-5: 1rem;
-  --kfw-fontspace-heading-6: 1rem;
   --kfw-fontsize: 1.6rem;
   --kfw-fontsize-introduction: 2rem;
   --kfw-fontsize-large: 1.8rem;
@@ -248,9 +238,11 @@
   --kfw-fontsize-heading-5: 1.8rem;
   --kfw-fontsize-heading-6: 1.6rem;
   --kfw-lineheight: 1.4;
-  --kfw-lineheight-large: 1.5;
+  --kfw-lineheight-large: 1.45;
+  --kfw-lineheight-lightspeech: 1.5;
   --kfw-lineheight-heading: 1.3;
   --kfw-lineheight-heading-5: 1.333;
+  --kfw-lineheight-small: 1.2;
   --kfw-borderradius: 4px;
   --kfw-borderradius-small: 2px;
   --kfw-borderradius-large: 20px;
