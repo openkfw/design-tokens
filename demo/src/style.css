@@ -550,7 +550,6 @@
     border-color: var(--kfw-color-fn-inactive);
   }
 
-  /* Hover effect when not disabled */
   :where(.form-control, .form-select):hover:not(:disabled) {
     box-shadow: 0 0 0 var(--kfw-borderwidth) var(--borderhover);
   }
@@ -566,6 +565,10 @@
     border-color: var(--kfw-color-state-danger);
     color: var(--kfw-color-state-danger);
     box-shadow: 0 0 0 var(--kfw-borderwidth) var(--borderhover);
+  }
+
+  textarea.form-control {
+    height: auto;
   }
 
   /**
