@@ -1,44 +1,45 @@
 <!doctype html>
 <html lang="en" data-whatpersist="false">
   <head>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KfW Design Tokens Demo</title>
     <link rel="preload" href="https://openkfw.github.io/design-tokens/fonts/KFWCentroSans-Regular..woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="https://openkfw.github.io/design-tokens/fonts/KFWCentroSans-Medium..woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="https://openkfw.github.io/design-tokens/fonts/KFWCentroSans-Medium..woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="apple-touch-icon" href="https://openkfw.github.io/design-tokens/favicons/KfW_Logo_180x180px.png" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Favicon_Pfeil_16x16px.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
-    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/assets/main-BT0s18eT.js"></script>
+    <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
+    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/assets/main-CELmII9e.js"></script>
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/fonts-DEpxAef5.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/style-CPWv6TqV.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/style-CvQiy5m0.min.css">
   </head>
   <body>
     <div id="top"></div>
-    <header id="header" class="header">
-      <div class="container">
-        <div>
-          <button type="button" role="link" class="has-icononly has-icononly--xlarge header__hamburger">
-            <i aria-hidden="true" class="icon icon--3xl icon--menu"></i>
-          </button>
-        </div>
-        <div>
-          <a class="d-block" href="#" onclick="event.preventDefault()">
-            <img width="200" height="60" class="header-logo-mobile" src="https://openkfw.github.io/design-tokens/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
-            <picture class="header-logo-desktop">
-              <source media="(min-width: 960px)" srcset="https://openkfw.github.io/design-tokens/kfw_logo_large.png" type="image/svg+xml" />
-              <img width="232" height="120" src="https://openkfw.github.io/design-tokens/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
-            </picture>
+    <header id="sticky-header" class="header">
+      <div class="container header__inner">
+        <button type="button" class="header__hamburger" aria-controls="main-nav" aria-label="Open main nav" aria-expanded="false">
+          <i aria-hidden="true" class="icon icon--menu"></i>
+        </button>
+
+        <a class="header__logo" href="/" aria-label="Go to homepage">
+          <img width="200" height="60" class="header__logo-small" src="https://openkfw.github.io/design-tokens/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
+          <picture class="header__logo-large">
+            <source media="(min-width: 960px)" srcset="https://openkfw.github.io/design-tokens/kfw_logo_large.png" type="image/svg+xml" />
+            <img width="232" height="120" src="https://openkfw.github.io/design-tokens/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
+          </picture>
+        </a>
+
+        <nav class="header__secondary-nav" aria-label="Secondary nav">
+          <a href="/login">
+            <i aria-hidden="true" class="icon icon--md icon--login"></i>
+            <span>Login</span>
           </a>
-        </div>
-        <nav class="header__menu" aria-label="Sekundäre Navigation" data-testid="right-header-menu">
-          <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--login"></i> Login </a>
         </nav>
       </div>
     </header>
+
     <main>
       <section class="hero">
         <img class="hero__bars" src="https://openkfw.github.io/design-tokens/sb-tbalken-s-600x20.svg" alt="" aria-hidden="true" />
@@ -48,18 +49,20 @@
           alt="Luftaufnahme der Zentrale der KfW Bankengruppe in Frankfurt am Main"
           width="1280"
           height="427"
+          loading="eager"
+          fetchpriority="high"
         />
         <div class="container hero__container">
           <img class="hero__bars-desktop" src="https://openkfw.github.io/design-tokens/sb-tbalken-xl-429x25.svg" alt="" aria-hidden="true" />
           <div class="hero__title">
-            <span class="hl--sb" role="presentation">Welcome to KfW!</span>
+            <span class="hl--sb mb-0" role="presentation">Welcome to KfW!</span>
           </div>
         </div>
       </section>
 
       <div class="container">
-        <section>
-          <h1>Important Usage Notice</h1>
+        <section class="my-lg">
+          <h1 id="disclaimer">Important Usage Notice</h1>
 
           <p class="tx--4">
             KfW Design Tokens, along with all related documentation, components, support, and assets (e.g., fonts, icons, images), are intended for
@@ -73,347 +76,154 @@
           </p>
         </section>
 
-        <section>
-          <h1>Color</h1>
+        <section class="my-lg">
+          <h1 id="color">Color</h1>
 
-          <h2>Functional colors</h2>
-          <h3>Interaction state</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="fn.default"></span>
-              <div class="color-palette__container"></div>
+          <div class="mb-lg">
+            <h2>Functional colors</h2>
+
+            <h3>Interaction state</h3>
+            <div class="color-palette" data-group="semantic" data-name="fn">
+              <span data-token="default"></span>
+              <span data-token="active"></span>
+              <span data-token="inactive"></span>
+              <span data-token="border"></span>
+              <span data-token="label"></span>
             </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="fn.active"></span>
-              <div class="color-palette__container"></div>
+
+            <h3>Text</h3>
+            <div class="color-palette" data-group="semantic" data-name="text">
+              <span data-token="default"></span>
+              <span data-token="on-dark-bg"></span>
+              <span data-token="headline-on-dark-bg"></span>
+              <span data-token="on-disabled"></span>
             </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="fn.inactive"></span>
-              <div class="color-palette__container"></div>
+
+            <h3>Background</h3>
+            <div class="color-palette" data-group="semantic" data-name="background">
+              <span data-token="default"></span>
+              <span data-token="subtle"></span>
+              <span data-token="disabled"></span>
+              <span data-token="light-blue"></span>
+              <span data-token="light-green"></span>
+              <span data-token="medium-green"></span>
+              <span data-token="dark-blue"></span>
+              <span data-token="dark-green"></span>
             </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="fn.border"></span>
-              <div class="color-palette__container"></div>
+
+            <h3>Opaque</h3>
+            <div class="color-palette" data-group="semantic" data-name="opaque">
+              <span data-token="white-90"></span>
+              <span data-token="white-95"></span>
+              <span data-token="gray-500-10"></span>
+              <span data-token="gray-500-30"></span>
+              <span data-token="gray-500-90"></span>
             </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="fn.label"></span>
-              <div class="color-palette__container"></div>
+
+            <h3>State</h3>
+            <div class="color-palette" data-group="semantic" data-name="state">
+              <span data-token="danger"></span>
+              <span data-token="warning"></span>
+              <span data-token="success"></span>
             </div>
-          </div>
-          <h3>Text</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="text.default"></span>
-              <div class="color-palette__container"></div>
+
+            <h3>Status</h3>
+            <div class="color-palette" data-group="semantic" data-name="status">
+              <span data-token="red"></span>
+              <span data-token="yellow"></span>
+              <span data-token="green"></span>
             </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="text.on-dark-bg"></span>
-              <div class="color-palette__container"></div>
+
+            <h3>Line</h3>
+            <div class="color-palette" data-group="semantic" data-name="line">
+              <span data-token="6"></span>
+              <span data-token="7"></span>
+              <span data-token="8"></span>
+              <span data-token="9"></span>
+              <span data-token="10"></span>
+              <span data-token="11"></span>
+              <span data-token="12"></span>
             </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="text.headline-on-dark-bg"></span>
-              <div class="color-palette__container"></div>
+
+            <h3>Product</h3>
+            <div class="color-palette" data-group="semantic" data-name="product">
+              <span data-token="container"></span>
+              <span data-token="benefit"></span>
+              <span data-token="credit"></span>
+              <span data-token="cooperation"></span>
+              <span data-token="credit-benefit"></span>
             </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="text.on-disabled"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>Background</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.default"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.subtle"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.disabled"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.light-blue"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.light-green"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.medium-green"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.dark-blue"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="background.dark-green"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>Opaque</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="opaque.white-90"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="opaque.white-95"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="opaque.gray-500-10"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="opaque.gray-500-30"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="opaque.gray-500-90"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>State</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="state.danger"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="state.warning"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="state.success"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>Status</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="status.red"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="status.yellow"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="status.green"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>Line</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.6"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.7"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.8"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.9"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.10"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.11"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="line.12"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>Product</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="product.container"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="product.benefit"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="product.credit"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="product.cooperation"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="product.credit-benefit"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>Icon</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="icon.default"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="icon.secondary"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="icon.disabled"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="icon.disabled-secondary"></span>
-              <div class="color-palette__container"></div>
+
+            <h3>Icon</h3>
+            <div class="color-palette" data-group="semantic" data-name="icon">
+              <span data-token="default"></span>
+              <span data-token="secondary"></span>
+              <span data-token="disabled"></span>
+              <span data-token="disabled-secondary"></span>
             </div>
           </div>
 
-          <h2>Base colors</h2>
-          <h3>White</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="white.default" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
+          <div class="mb-lg">
+            <h2>Base colors</h2>
+            <h3>White</h3>
+            <div class="color-palette" data-group="base" data-name="white">
+              <span data-token="default"></span>
+            </div>
+
+            <h3>Blue</h3>
+            <div class="color-palette" data-group="base" data-name="blue">
+              <span data-token="100"></span>
+              <span data-token="400"></span>
+              <span data-token="500"></span>
+              <span data-token="600"></span>
+              <span data-token="700"></span>
+              <span data-token="800"></span>
+            </div>
+
+            <h3>Green</h3>
+            <div class="color-palette" data-group="base" data-name="green">
+              <span data-token="100"></span>
+              <span data-token="300"></span>
+              <span data-token="400"></span>
+              <span data-token="700"></span>
+            </div>
+
+            <h3>Gray</h3>
+            <div class="color-palette" data-group="base" data-name="gray">
+              <span data-token="50"></span>
+              <span data-token="100"></span>
+              <span data-token="200"></span>
+              <span data-token="300"></span>
+              <span data-token="400"></span>
+              <span data-token="500.default"></span>
+              <span data-token="600"></span>
+            </div>
+
+            <h3>Yellow</h3>
+            <div class="color-palette" data-group="base" data-name="yellow">
+              <span data-token="500"></span>
+            </div>
+
+            <h3>Red</h3>
+            <div class="color-palette" data-group="base" data-name="red">
+              <span data-token="400"></span>
+            </div>
+            <h3>Violet</h3>
+            <div class="color-palette" data-group="base" data-name="violet">
+              <span data-token="400"></span>
+              <span data-token="500"></span>
+            </div>
+
+            <h3>Opaque</h3>
+            <div class="color-palette" data-group="base">
+              <span data-token="white.90"></span>
+              <span data-token="white.95"></span>
+              <span data-token="gray.500.10"></span>
+              <span data-token="gray.500.30"></span>
+              <span data-token="gray.500.90"></span>
             </div>
           </div>
-          <h3>Blue</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="blue.100" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="blue.400" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="blue.500" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="blue.600" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="blue.700" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="blue.800" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>Green</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="green.100" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="green.300" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="green.400" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="green.700" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>Gray</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.50" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.100" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.200" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.300" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.400" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.500.default" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.600" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>Yellow</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="yellow.500" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>Red</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="red.400" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>Violet</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="violet.400" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="violet.500" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
-          <h3>Opaque</h3>
-          <div class="color-palette">
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="white.90" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="white.95" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.500.10" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.500.30" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-            <div class="color-palette__item">
-              <span class="color-palette__color" data-token-key="gray.500.90" data-token-group="base"></span>
-              <div class="color-palette__container"></div>
-            </div>
-          </div>
+
           <script>
             function getByPath(obj, path) {
               return path.split(".").reduce((o, k) => (o ? o[k] : undefined), obj)
@@ -422,48 +232,67 @@
             const convertToRgb = (color) => Math.min(255, Math.max(0, Math.round(color * 255)))
 
             document.addEventListener("DOMContentLoaded", () => {
-              document.querySelectorAll(".color-palette__color").forEach((color) => {
-                const key = color.dataset.tokenKey
-                const tokenGroup = color.dataset.tokenGroup || "semantic"
-                const group = color.closest(".color-palette__item")
+              document.querySelectorAll(".color-palette").forEach((palette) => {
+                const tokenGroup = palette.dataset.group || "semantic"
+                const tokenName = palette.dataset.name || undefined
 
-                const desc = document.createElement("span")
-                desc.className = "color-palette__label form-label"
+                palette.querySelectorAll("span[data-token]").forEach((colorEl) => {
+                  colorEl.classList.add("color-palette__color")
 
-                const tCenter = group.querySelector(".color-palette__container")
-                tCenter.innerHTML = ""
+                  const tokenKey = colorEl.dataset.token
 
-                const btn = document.createElement("button")
-                btn.type = "button"
-                btn.role = "link"
-                btn.addEventListener("click", () => {
-                  navigator.clipboard.writeText(`var(--${btn.textContent})`).then(() => alert("Copied!"))
+                  const wrapper = document.createElement("div")
+                  wrapper.className = "color-palette__item"
+
+                  const container = document.createElement("div")
+                  container.className = "color-palette__container"
+
+                  const desc = document.createElement("span")
+                  desc.className = "color-palette__label form-label"
+
+                  const btn = document.createElement("button")
+                  btn.type = "button"
+                  btn.role = "link"
+
+                  btn.addEventListener("click", () => {
+                    navigator.clipboard.writeText(`var(--${btn.textContent})`).then(() => alert("Copied!"))
+                  })
+
+                  const tokenColorPath = tokenName !== undefined ? window.allTokens[tokenGroup].color[tokenName] : window.allTokens[tokenGroup].color
+                  const token = getByPath(tokenColorPath, tokenKey)
+
+                  desc.textContent = token?.$description || ""
+                  btn.textContent = token ? token.name : "var(--kfw-color-fn)"
+
+                  if (token?.$value?.alpha) {
+                    const [r, g, b] = token.$value.components
+                    colorEl.style.backgroundColor = `rgba(
+                      ${convertToRgb(r)},
+                      ${convertToRgb(g)},
+                      ${convertToRgb(b)},
+                      ${token.$value.alpha}
+                    )`
+                  } else {
+                    colorEl.style.backgroundColor = token?.$value?.hex
+                  }
+
+                  colorEl.replaceWith(wrapper)
+                  wrapper.appendChild(colorEl)
+
+                  wrapper.appendChild(container)
+
+                  container.appendChild(desc)
+                  container.appendChild(btn)
                 })
-
-                tCenter.appendChild(desc)
-                tCenter.appendChild(btn)
-
-                const tokenColorPath = window.allTokens[tokenGroup].color
-                const token = getByPath(tokenColorPath, key)
-                desc.textContent = token?.$description || ""
-                btn.textContent = token ? token.name : "var(--kfw-color-fn)"
-
-                if (token?.$value?.alpha) {
-                  const [r, g, b] = token?.$value?.components
-
-                  color.style.backgroundColor = `rgba(${convertToRgb(r)}, ${convertToRgb(g)}, ${convertToRgb(b)}, ${token?.$value?.alpha})`
-                } else {
-                  color.style.backgroundColor = token?.$value?.hex
-                }
               })
             })
           </script>
         </section>
 
-        <section>
-          <h1>Typography</h1>
+        <section class="my-lg">
+          <h1 id="typography">Typography</h1>
 
-          <div>
+          <div class="mb-lg">
             <p class="tx--4">
               Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat
               turpis pretium. Quisque sed tristique felis. Aliquam lobortis vitae nibh nec rhoncus.
@@ -480,72 +309,80 @@
                 <cite>- Phasellus eget lacinia</cite>
               </footer>
             </blockquote>
+          </div>
 
+          <div class="mb-lg">
             <h3>Highlighting</h3>
             <div class="mb-sm">
               <p>
-                Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
-                dolore magna aliquyam erat.
+                Lorem ipsum dolor sit amet,
+                <mark> consetetur sadipscing elitr,</mark>
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark>
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
               </p>
             </div>
             <div class="bg-light p-sm mb-sm">
               <h3 class="hl-3">On Light</h3>
               <p>
-                Lorem ipsum dolor sit amet, <mark>consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
-                dolore magna aliquyam erat.
+                Lorem ipsum dolor sit amet,
+                <mark>consetetur sadipscing elitr,</mark>
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark>
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
               </p>
             </div>
             <div class="bg-dark p-sm mb-sm">
               <h3 class="hl-3">On Dark</h3>
               <p>
-                Lorem ipsum dolor sit amet, <mark> consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat. <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark> sed diam nonumy eirmod tempor invidunt ut labore et
-                dolore magna aliquyam erat.
+                Lorem ipsum dolor sit amet,
+                <mark> consetetur sadipscing elitr,</mark>
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                <mark>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</mark>
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
               </p>
             </div>
           </div>
 
-          <div>
+          <div class="mb-lg">
             <h3>Inline text elements</h3>
-            <div class="grid">
-              <div class="grid__item">
+            <div class="auto-grid">
+              <div class="auto-grid__item">
                 <a href="#" onclick="event.preventDefault()"> <i aria-hidden="true" class="icon icon--sm icon--arrow-right"></i> Link </a>
               </div>
-              <div class="grid__item">
+              <div class="auto-grid__item">
                 <a href="#" class="tx--2" onclick="event.preventDefault()">Small Link</a>
               </div>
-              <div class="grid__item">
+              <div class="auto-grid__item">
                 <a href="#" class="tx--4" onclick="event.preventDefault()">Large Link</a>
               </div>
             </div>
-            <div class="grid">
-              <div class="grid__item">
+            <div class="auto-grid">
+              <div class="auto-grid__item">
                 <strong>Bold</strong>
               </div>
-              <div class="grid__item">
+              <div class="auto-grid__item">
                 <u>Underline</u>
               </div>
-              <div class="grid__item"></div>
+              <div class="auto-grid__item"></div>
             </div>
-            <div class="grid">
-              <div class="grid__item">
+            <div class="auto-grid">
+              <div class="auto-grid__item">
                 <del>Deleted</del>
               </div>
-              <div class="grid__item">
+              <div class="auto-grid__item">
                 <ins>Inserted</ins>
               </div>
-              <div class="grid__item">
+              <div class="auto-grid__item">
                 <s>Strikethrough</s>
               </div>
             </div>
-            <div class="grid">
+            <div class="auto-grid">
               <p><small>Small </small></p>
               <p>Text <sub>Sub</sub></p>
               <p>Text <sup>Sup</sup></p>
             </div>
-            <div class="grid">
+            <div class="auto-grid">
               <p>
                 <abbr title="Abbreviation">Abbr.</abbr>
               </p>
@@ -556,319 +393,330 @@
             </div>
           </div>
 
-          <h3>Lists</h3>
-          <div class="grid">
-            <div class="grid__item">
-              <span class="smk--1">BP, BP2</span>
-              <h4>Bullet list</h4>
-              <ul class="list--bullets">
-                <li class="list-item">Lorem ipsum dolor sit amet</li>
-                <li class="list-item">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet
-                  <ul class="list--bullets list--bullets-empty">
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</li>
-                  </ul>
-                </li>
-                <li class="list-item">Lorem ipsum dolor sit amet.</li>
-              </ul>
+          <div class="mb-lg">
+            <h3>Lists</h3>
+            <div class="auto-grid">
+              <div class="auto-grid__item">
+                <span class="smk--1">BP, BP2</span>
+                <h4>Bullet list</h4>
+                <ul class="list--bullets">
+                  <li class="list-item">Lorem ipsum dolor sit amet</li>
+                  <li class="list-item">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet
+                    <ul class="list--bullets list--bullets-empty">
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</li>
+                    </ul>
+                  </li>
+                  <li class="list-item">Lorem ipsum dolor sit amet.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="auto-grid">
+              <div class="auto-grid__item">
+                <span class="smk--1">LIST_0</span>
+                <h4>Default</h4>
+                <ul>
+                  <li class="list-item">Lorem ipsum dolor sit amet</li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet
+                    <ul>
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                        aliquyam erat.
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet
+                    <ul>
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                        aliquyam erat.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="auto-grid__item">
+                <span class="smk--1">LIST_1</span>
+                <h4>Numbered list</h4>
+                <ol class="list--numbers">
+                  <li class="list-item">Lorem ipsum dolor sit amet</li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
+                  </li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet
+                    <ol class="list--numbers">
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                        aliquyam erat.
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="list-item">Lorem ipsum dolor sit amet.</li>
+                </ol>
+              </div>
+              <div class="auto-grid__item">
+                <span class="smk--1">LIST_2</span>
+                <h4>Alphabetical list</h4>
+                <ol class="list--letters">
+                  <li class="list-item">Lorem ipsum dolor sit amet</li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
+                  </li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet
+                    <ol class="list--letters">
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                        aliquyam erat.
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="list-item">Lorem ipsum dolor sit amet.</li>
+                </ol>
+              </div>
+            </div>
+            <div class="auto-grid">
+              <div class="auto-grid__item">
+                <span class="smk--1">LIST_3</span>
+                <h4>Checklist</h4>
+                <ul class="list--checks">
+                  <li class="list-item">Lorem ipsum dolor sit amet</li>
+                  <li class="list-item">Lorem ipsum dolor sit amet</li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
+                  </li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet
+                    <ul class="list--checks">
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                        aliquyam erat.
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list-item">Lorem ipsum dolor sit amet.</li>
+                </ul>
+              </div>
+              <div class="auto-grid__item">
+                <span class="smk--1">LIST_4</span>
+                <h4>Alphabetical caps list</h4>
+                <ol class="list--caps">
+                  <li class="list-item">Lorem ipsum dolor sit amet</li>
+                  <li class="list-item">Lorem ipsum dolor sit amet</li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
+                  </li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet
+                    <ol class="list--caps">
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">Lorem ipsum dolor sit amet</li>
+                      <li class="list-item">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                        aliquyam erat.
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="list-item">Lorem ipsum dolor sit amet.</li>
+                </ol>
+              </div>
+              <div class="auto-grid__item">
+                <span class="smk--1">LIST_5</span>
+                <h4>Checklist big</h4>
+                <ul class="list--big-checks">
+                  <li class="list-item">Lorem ipsum dolor sit amet</li>
+                  <li class="list-item">Lorem ipsum dolor sit amet</li>
+                  <li class="list-item">Lorem ipsum dolor sit amet</li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
+                  </li>
+                  <li class="list-item">Lorem ipsum dolor sit amet</li>
+                  <li class="list-item">Lorem ipsum dolor sit amet.</li>
+                  <li class="list-item">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                    erat.
+                  </li>
+                </ul>
+              </div>
+              <div class="auto-grid__item">
+                <span class="smk--1">LIST_6</span>
+                <h4>Icon list</h4>
+                <ul class="list--icon">
+                  <li class="list-item icon--checked">Lorem ipsum door sit amet</li>
+                  <li class="list-item icon--personal-settings">Lorem ipsum door sit amet</li>
+                  <li class="list-item icon--dialogue">
+                    Lorem ipsum door sit amet
+                    <ul class="list--bullets">
+                      <li class="list-item">Lorem ipsum dolor sit</li>
+                      <li class="list-item">Lorem ipsum dolor sit</li>
+                    </ul>
+                  </li>
+                  <li class="list-item icon--home">
+                    Lorem ipsum door sit amet
+                    <ul>
+                      <li class="list-item">Lorem ipsum dolor sit</li>
+                      <li class="list-item">Lorem ipsum dolor sit</li>
+                    </ul>
+                  </li>
+                  <li class="list-item icon--exclamation-mark-filled">Lorem ipsum door sit amet</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="grid">
-            <div class="grid__item">
-              <span class="smk--1">LIST_0</span>
-              <h4>Default</h4>
-              <ul>
-                <li class="list-item">Lorem ipsum dolor sit amet</li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet
-                  <ul>
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                      aliquyam erat.
-                    </li>
-                  </ul>
-                </li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet
-                  <ul>
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                      aliquyam erat.
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="grid__item">
-              <span class="smk--1">LIST_1</span>
-              <h4>Numbered list</h4>
-              <ol class="list--numbers">
-                <li class="list-item">Lorem ipsum dolor sit amet</li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
-                </li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet
-                  <ol class="list--numbers">
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                      aliquyam erat.
-                    </li>
-                  </ol>
-                </li>
-                <li class="list-item">Lorem ipsum dolor sit amet.</li>
-              </ol>
-            </div>
-            <div class="grid__item">
-              <span class="smk--1">LIST_2</span>
-              <h4>Alphabetical list</h4>
-              <ol class="list--letters">
-                <li class="list-item">Lorem ipsum dolor sit amet</li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
-                </li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet
-                  <ol class="list--letters">
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                      aliquyam erat.
-                    </li>
-                  </ol>
-                </li>
-                <li class="list-item">Lorem ipsum dolor sit amet.</li>
-              </ol>
-            </div>
-          </div>
-          <div class="grid">
-            <div class="grid__item">
-              <span class="smk--1">LIST_3</span>
-              <h4>Checklist</h4>
-              <ul class="list--checks">
-                <li class="list-item">Lorem ipsum dolor sit amet</li>
-                <li class="list-item">Lorem ipsum dolor sit amet</li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
-                </li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet
-                  <ul class="list--checks">
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                      aliquyam erat.
-                    </li>
-                  </ul>
-                </li>
-                <li class="list-item">Lorem ipsum dolor sit amet.</li>
-              </ul>
-            </div>
-            <div class="grid__item">
-              <span class="smk--1">LIST_4</span>
-              <h4>Alphabetical caps list</h4>
-              <ol class="list--caps">
-                <li class="list-item">Lorem ipsum dolor sit amet</li>
-                <li class="list-item">Lorem ipsum dolor sit amet</li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
-                </li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet
-                  <ol class="list--caps">
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">Lorem ipsum dolor sit amet</li>
-                    <li class="list-item">
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                      aliquyam erat.
-                    </li>
-                  </ol>
-                </li>
-                <li class="list-item">Lorem ipsum dolor sit amet.</li>
-              </ol>
-            </div>
-            <div class="grid__item">
-              <span class="smk--1">LIST_5</span>
-              <h4>Checklist big</h4>
-              <ul class="list--big-checks">
-                <li class="list-item">Lorem ipsum dolor sit amet</li>
-                <li class="list-item">Lorem ipsum dolor sit amet</li>
-                <li class="list-item">Lorem ipsum dolor sit amet</li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
-                </li>
-                <li class="list-item">Lorem ipsum dolor sit amet</li>
-                <li class="list-item">Lorem ipsum dolor sit amet.</li>
-                <li class="list-item">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                  erat.
-                </li>
-              </ul>
-            </div>
-            <div class="grid__item">
-              <span class="smk--1">LIST_6</span>
-              <h4>Icon list</h4>
-              <ul class="list--icon">
-                <li class="list-item icon--checked">Lorem ipsum door sit amet</li>
-                <li class="list-item icon--personal-settings">Lorem ipsum door sit amet</li>
-                <li class="list-item icon--dialogue">
-                  Lorem ipsum door sit amet
-                  <ul class="list--bullets">
-                    <li class="list-item">Lorem ipsum dolor sit</li>
-                    <li class="list-item">Lorem ipsum dolor sit</li>
-                  </ul>
-                </li>
-                <li class="list-item icon--home">
-                  Lorem ipsum door sit amet
-                  <ul>
-                    <li class="list-item">Lorem ipsum dolor sit</li>
-                    <li class="list-item">Lorem ipsum dolor sit</li>
-                  </ul>
-                </li>
-                <li class="list-item icon--exclamation-mark-filled">Lorem ipsum door sit amet</li>
-              </ul>
-            </div>
+
+          <div class="mb-lg">
+            <h3>Headlines</h3>
+
+            <span class="smk--1">Tagline</span>
+            <h1>Headline 1</h1>
+            <p class="tx--4">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus, fuga natus nesciunt nisi odit, possimus repudiandae saepe
+              tempora totam voluptatem voluptates. Accusantium ducimus error hic officiis omnis reiciendis, veritatis.
+            </p>
+
+            <h2>Headline 2</h2>
+            <p class="tx--2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non
+              placeat possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
+            </p>
+
+            <h3>Headline 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non
+              placeat possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
+            </p>
+
+            <h4>Headline 4</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non
+              placeat possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
+            </p>
+
+            <h5>Headline 5</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non
+              placeat possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
+            </p>
+
+            <h6>Headline 6</h6>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non
+              placeat possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
+            </p>
           </div>
 
-          <span class="smk--1">Tagline</span>
-          <h1>Headline 1</h1>
-          <p class="tx--4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus, fuga natus nesciunt nisi odit, possimus repudiandae saepe
-            tempora totam voluptatem voluptates. Accusantium ducimus error hic officiis omnis reiciendis, veritatis.
-          </p>
-
-          <h2>Headline 2</h2>
-          <p class="tx--2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
-            possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
-          </p>
-
-          <h3>Headline 3</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
-            possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
-          </p>
-
-          <h4>Headline 4</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
-            possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
-          </p>
-
-          <h5>Headline 5</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
-            possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
-          </p>
-
-          <h6>Headline 6</h6>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore eligendi, explicabo, iure magnam molestiae natus non placeat
-            possimus quaerat, quam quia quo quod quos rerum saepe sequi tempora vero.
-          </p>
+          <div class="mb-lg">
+            <h3>Utility Helper Classes</h3>
+            <div class="auto-grid">
+              <div class="auto-grid__item">
+                <h4>For Headlines</h4>
+                <span class="hl--sb">HL_SB: Homepage Hero Section</span>
+                <span class="hl--tb">HL_TB: Thematic Section</span>
+                <span class="hl--hb">HL_HB: High-Impact Section</span>
+                <span class="hl--ms">HL_MS: Sidebar Teaser</span>
+                <span class="smk--1">SMK_1: Tagline</span>
+              </div>
+              <div class="auto-grid__item">
+                <h4>For Text</h4>
+                <p class="tx--1">TX_1: Body Text</p>
+                <p class="tx--1-medium">TX_1_medium: Medium Text</p>
+                <p class="tx--2">TX_2: Caption Text</p>
+                <p class="tx--4">TX_4: Introduction Text</p>
+                <p class="tx--8">TX_8: Tab Navigation</p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section>
-          <h1>Buttons</h1>
-          <div class="grid">
-            <div class="grid__item">
-              <button type="button" class="button-primary">
-                <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Primary Button
-              </button>
-            </div>
-            <div class="grid__item">
-              <a href="#" onclick="event.preventDefault()" class="button-secondary" role="button">
-                <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Secondary Button
-                <i aria-hidden="true" class="icon icon--right icon--lock"></i>
-              </a>
-            </div>
+        <section class="my-lg">
+          <h1 id="buttons">Buttons</h1>
+          <div class="button-group mb-sm">
+            <button type="button" class="button-primary button--icon-position-left">
+              <i aria-hidden="true" class="icon icon--arrow-right"></i> Primary Button
+            </button>
+            <a
+              href="#"
+              onclick="event.preventDefault()"
+              class="button-secondary button--icon-position-left button--icon-position-right"
+              role="button"
+            >
+              <i aria-hidden="true" class="icon icon--arrow-right"></i> Secondary Button
+              <i aria-hidden="true" class="icon icon--lock"></i>
+            </a>
           </div>
-
-          <h3>Nav Icon</h3>
-          <div class="grid">
-            <div class="grid__item">
-              <button type="button" class="button-primary has-icononly">
-                <i aria-hidden="true" class="icon icon--arrow-right"></i>
-              </button>
-            </div>
-            <div class="grid__item">
-              <button type="button" class="button-secondary has-icononly">
-                <i aria-hidden="true" class="icon icon--arrow-right"></i>
-              </button>
-            </div>
-            <div class="grid__item">
-              <button role="link" type="button" class="has-icononly">
-                <i aria-hidden="true" class="icon icon--arrow-right"></i>
-              </button>
-            </div>
+          <h3>Icon Only</h3>
+          <div class="button-group mb-sm">
+            <button type="button" class="button-primary has-icon-only" aria-label="Next">
+              <i aria-hidden="true" class="icon icon--arrow-right"></i>
+            </button>
+            <button type="button" class="button-secondary has-icon-only" aria-label="Next">
+              <i aria-hidden="true" class="icon icon--arrow-right"></i>
+            </button>
+            <button role="link" type="button" class="has-icon-only" aria-label="Next">
+              <i aria-hidden="true" class="icon icon--arrow-right"></i>
+            </button>
           </div>
         </section>
 
         <section class="bg-dark p-sm">
-          <h3 class="hl-3">Variant Negative</h3>
+          <h3 class="hl-3">On Dark</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
             <a href="#" onclick="event.preventDefault()">similique </a>
             At enim exercitationem, explicabo labore magnam modi quod, repellat reprehenderit sed sunt totam. Lorem ipsum dolor sit amet, consectetur
             adipisicing elit.
           </p>
-          <div class="grid">
-            <p>
-              <a href="#" onclick="event.preventDefault()" class="button-primary" role="button">
-                <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i>
-                Primary Button
-              </a>
-            </p>
-            <p>
-              <a href="#" onclick="event.preventDefault()" class="button-secondary" role="button">
-                <i aria-hidden="true" class="icon icon--left icon--arrow-right"></i> Secondary Button
-                <i aria-hidden="true" class="icon icon--right icon--lock"></i>
-              </a>
-            </p>
+          <div class="button-group mb-sm">
+            <button type="button" class="button-primary button--icon-position-left">
+              <i aria-hidden="true" class="icon icon--arrow-right"></i> Primary Button
+            </button>
+            <a
+              href="#"
+              onclick="event.preventDefault()"
+              class="button-secondary button--icon-position-left button--icon-position-right"
+              role="button"
+            >
+              <i aria-hidden="true" class="icon icon--arrow-right"></i> Secondary Button
+              <i aria-hidden="true" class="icon icon--lock"></i>
+            </a>
           </div>
-          <div class="grid">
-            <div class="grid__item">
-              <p>
-                <a href="#" onclick="event.preventDefault()" class="button-primary has-icononly" role="button">
-                  <i aria-hidden="true" class="icon icon--arrow-right"></i>
-                </a>
-              </p>
-            </div>
-            <div class="grid__item">
-              <p>
-                <a href="#" onclick="event.preventDefault()" class="button-secondary has-icononly" role="button">
-                  <i aria-hidden="true" class="icon icon--arrow-right"></i>
-                </a>
-              </p>
-            </div>
-            <div class="grid__item">
-              <p>
-                <button role="link" type="button" class="has-icononly">
-                  <i aria-hidden="true" class="icon icon--arrow-right"></i>
-                </button>
-              </p>
-            </div>
+          <h3>Icon Only</h3>
+          <div class="button-group mb-sm">
+            <button type="button" class="button-primary has-icon-only" aria-label="Next">
+              <i aria-hidden="true" class="icon icon--arrow-right"></i>
+            </button>
+            <button type="button" class="button-secondary has-icon-only" aria-label="Next">
+              <i aria-hidden="true" class="icon icon--arrow-right"></i>
+            </button>
+            <button role="link" type="button" class="has-icon-only" aria-label="Next">
+              <i aria-hidden="true" class="icon icon--arrow-right"></i>
+            </button>
           </div>
         </section>
 
-        <section>
+        <section class="my-lg">
           <form>
-            <h1>Form elements</h1>
+            <h1 id="form-elements">Form elements</h1>
             <div class="form-group">
               <label for="searchfield">Search</label>
               <div class="searchfield">
                 <input id="searchfield" type="search" class="searchfield__input form-control" placeholder="Search…" />
-                <button type="button" class="searchfield__button" aria-label="Search">
+                <button role="link" type="button" class="searchfield__button has-icon-only" aria-label="Search">
                   <i aria-hidden="true" class="icon icon--search"></i>
                 </button>
               </div>
@@ -880,26 +728,15 @@
             </div>
             <div class="form-group">
               <label for="select">Select</label>
-              <select aria-label="Select" class="form-control" id="select" name="select" required>
+              <select aria-label="Select" class="form-select" id="select" name="select" required>
+                <button><selectedcontent></selectedcontent></button>
                 <option value="" selected>Select…</option>
                 <option>…</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="file-upload">Submit</label>
-              <div class="d-block">
-                <input type="submit" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="file-upload">Reset</label>
-              <div class="d-block">
-                <input type="reset" />
-              </div>
-            </div>
-            <div class="form-group">
               <label for="file-upload">File browser</label>
-              <input type="file" id="file-upload" multiple />
+              <input type="file" id="file-upload" name="files" multiple />
             </div>
             <div class="form-group">
               <label for="file-upload2">File browser with title</label>
@@ -907,11 +744,11 @@
                 <div class="file-upload__inner">
                   <i aria-hidden="true" class="icon icon--2xl icon--upload file-upload__icon"></i>
                   <label for="file-upload2" class="file-upload__title">Choose the files you want to upload</label>
-                  <button type="button" class="button-secondary">
-                    <i aria-hidden="true" class="icon icon--left icon--sm icon--plus"></i>
+                  <button type="button" class="button-secondary button--icon-position-left">
+                    <i aria-hidden="true" class="icon icon--sm icon--plus"></i>
                     Choose files
                   </button>
-                  <input class="file-upload__input" type="file" id="file-upload2" multiple />
+                  <input class="file-upload__input" type="file" id="file-upload2" name="files2" multiple />
                 </div>
                 <div class="overflow-auto">
                   <table class="file-upload-table">
@@ -963,7 +800,7 @@
                 </div>
               </div>
             </div>
-            <div class="grid">
+            <div class="auto-grid">
               <div class="form-group">
                 <label for="valid">Valid</label>
                 <input class="form-control" type="text" id="valid" name="valid" placeholder="Valid" aria-invalid="false" />
@@ -1122,7 +959,7 @@
             </fieldset>
           </form>
         </section>
-        <section id="tables">
+        <section class="my-lg" id="tables">
           <h2>Table</h2>
           <div class="overflow-auto">
             <table class="striped">
@@ -1204,15 +1041,77 @@
           </li>
         </ul>
         <div class="footer__top-button">
-          <a class="button-secondary" href="#top" role="button">
-            <i aria-hidden="true" class="icon icon--left icon--arrow-up"></i>
+          <a class="button-secondary button--icon-position-left" href="#top" role="button">
+            <i aria-hidden="true" class="icon icon--arrow-up"></i>
             Scroll to the top
           </a>
         </div>
       </nav>
     </footer>
+
+    <dialog id="main-nav" class="navigation" aria-modal="true">
+      <div class="navigation__container">
+        <button autofocus type="button" class="button-primary has-icon-only has-icon-only--xl navigation__close" aria-label="Close">
+          <i aria-hidden="true" class="icon icon--close"></i>
+        </button>
+        <div class="navigation__content bg-white" data-dialog-content>
+          <h2 class="navigation__title">KfW Design Tokens</h2>
+          <div class="bg-light navigation__scroll-area">
+            <span class="navigation__subtitle">Demo Portal</span>
+            <nav class="navigation__nav" aria-label="Hauptnavigation">
+              <ul class="navigation__list">
+                <li class="list-item">
+                  <a href="/" aria-label="Go to homepage">
+                    <i aria-hidden="true" class="icon icon--home"></i>
+                    Home
+                  </a>
+                </li>
+                <li class="list-item"><a href="#color">Color</a></li>
+                <li class="list-item"><a href="#typography">Typography</a></li>
+                <li class="list-item"><a href="#buttons">Buttons</a></li>
+                <li class="list-item"><a href="#form-elements">Form elements</a></li>
+                <li class="list-item"><a href="#tables">Table</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
     <script>
-      const header = document.getElementById("header")
+      const body = document.body
+      const hamburger = document.querySelector(".header__hamburger")
+      const mainNavDialog = document.getElementById("main-nav")
+      const mainNavDialogContent = mainNavDialog.querySelector("[data-dialog-content]")
+
+      hamburger?.addEventListener("click", () => {
+        const expanded = hamburger.getAttribute("aria-expanded") === "true"
+        hamburger.setAttribute("aria-expanded", String(!expanded))
+        body?.classList.add("no-scroll")
+        mainNavDialog.showModal()
+      })
+
+      mainNavDialog.addEventListener("close", (event) => {
+        body.classList.remove("no-scroll")
+        hamburger?.setAttribute("aria-expanded", "false")
+      })
+
+      mainNavDialog.addEventListener("click", (event) => {
+        const target = event.target
+
+        if (target.closest("a")) {
+          mainNavDialog.close()
+          return
+        }
+
+        if (!mainNavDialogContent.contains(target)) {
+          mainNavDialog.close()
+        }
+      })
+    </script>
+
+    <script>
+      const header = document.getElementById("sticky-header")
       const stickyClass = "header--sticky"
       let ticking = false
 
