@@ -1210,13 +1210,8 @@
             "$type": "dimension",
             "key": "{base.space.static.5}"
           },
-          "name": "kfw-base-space-static-5",
-          "attributes": {
-            "category": "base",
-            "type": "space",
-            "item": "static",
-            "subitem": "5"
-          },
+          "name": "5",
+          "attributes": {},
           "path": [
             "base",
             "space",
@@ -1241,13 +1236,8 @@
             "$type": "dimension",
             "key": "{base.space.static.10}"
           },
-          "name": "kfw-base-space-static-10",
-          "attributes": {
-            "category": "base",
-            "type": "space",
-            "item": "static",
-            "subitem": "10"
-          },
+          "name": "10",
+          "attributes": {},
           "path": [
             "base",
             "space",
@@ -1272,13 +1262,8 @@
             "$type": "dimension",
             "key": "{base.space.static.15}"
           },
-          "name": "kfw-base-space-static-15",
-          "attributes": {
-            "category": "base",
-            "type": "space",
-            "item": "static",
-            "subitem": "15"
-          },
+          "name": "15",
+          "attributes": {},
           "path": [
             "base",
             "space",
@@ -1303,13 +1288,8 @@
             "$type": "dimension",
             "key": "{base.space.static.20}"
           },
-          "name": "kfw-base-space-static-20",
-          "attributes": {
-            "category": "base",
-            "type": "space",
-            "item": "static",
-            "subitem": "20"
-          },
+          "name": "20",
+          "attributes": {},
           "path": [
             "base",
             "space",
@@ -1334,13 +1314,8 @@
             "$type": "dimension",
             "key": "{base.space.static.25}"
           },
-          "name": "kfw-base-space-static-25",
-          "attributes": {
-            "category": "base",
-            "type": "space",
-            "item": "static",
-            "subitem": "25"
-          },
+          "name": "25",
+          "attributes": {},
           "path": [
             "base",
             "space",
@@ -1365,13 +1340,8 @@
             "$type": "dimension",
             "key": "{base.space.static.30}"
           },
-          "name": "kfw-base-space-static-30",
-          "attributes": {
-            "category": "base",
-            "type": "space",
-            "item": "static",
-            "subitem": "30"
-          },
+          "name": "30",
+          "attributes": {},
           "path": [
             "base",
             "space",
@@ -1396,13 +1366,8 @@
             "$type": "dimension",
             "key": "{base.space.static.35}"
           },
-          "name": "kfw-base-space-static-35",
-          "attributes": {
-            "category": "base",
-            "type": "space",
-            "item": "static",
-            "subitem": "35"
-          },
+          "name": "35",
+          "attributes": {},
           "path": [
             "base",
             "space",
@@ -1427,13 +1392,8 @@
             "$type": "dimension",
             "key": "{base.space.static.40}"
           },
-          "name": "kfw-base-space-static-40",
-          "attributes": {
-            "category": "base",
-            "type": "space",
-            "item": "static",
-            "subitem": "40"
-          },
+          "name": "40",
+          "attributes": {},
           "path": [
             "base",
             "space",
@@ -1458,13 +1418,8 @@
             "$type": "dimension",
             "key": "{base.space.static.50}"
           },
-          "name": "kfw-base-space-static-50",
-          "attributes": {
-            "category": "base",
-            "type": "space",
-            "item": "static",
-            "subitem": "50"
-          },
+          "name": "50",
+          "attributes": {},
           "path": [
             "base",
             "space",
@@ -1489,13 +1444,8 @@
             "$type": "dimension",
             "key": "{base.space.static.60}"
           },
-          "name": "kfw-base-space-static-60",
-          "attributes": {
-            "category": "base",
-            "type": "space",
-            "item": "static",
-            "subitem": "60"
-          },
+          "name": "60",
+          "attributes": {},
           "path": [
             "base",
             "space",
@@ -1520,14 +1470,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.5.min}"
             },
-            "name": "kfw-base-space-fluid-5-min",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "5",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1550,14 +1494,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.5.max}"
             },
-            "name": "kfw-base-space-fluid-5-max",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "5",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1591,14 +1529,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.5.val}"
             },
-            "name": "kfw-base-space-fluid-5-val",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "5",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1623,14 +1555,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.10.min}"
             },
-            "name": "kfw-base-space-fluid-10-min",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "10",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1653,14 +1579,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.10.max}"
             },
-            "name": "kfw-base-space-fluid-10-max",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "10",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1694,14 +1614,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.10.val}"
             },
-            "name": "kfw-base-space-fluid-10-val",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "10",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1726,14 +1640,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.15.min}"
             },
-            "name": "kfw-base-space-fluid-15-min",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "15",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1756,14 +1664,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.15.max}"
             },
-            "name": "kfw-base-space-fluid-15-max",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "15",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1797,14 +1699,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.15.val}"
             },
-            "name": "kfw-base-space-fluid-15-val",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "15",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1829,14 +1725,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.20.min}"
             },
-            "name": "kfw-base-space-fluid-20-min",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "20",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1859,14 +1749,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.20.max}"
             },
-            "name": "kfw-base-space-fluid-20-max",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "20",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1900,14 +1784,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.20.val}"
             },
-            "name": "kfw-base-space-fluid-20-val",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "20",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1932,14 +1810,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.25.min}"
             },
-            "name": "kfw-base-space-fluid-25-min",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "25",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -1962,14 +1834,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.25.max}"
             },
-            "name": "kfw-base-space-fluid-25-max",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "25",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2003,14 +1869,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.25.val}"
             },
-            "name": "kfw-base-space-fluid-25-val",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "25",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2035,14 +1895,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.30.min}"
             },
-            "name": "kfw-base-space-fluid-30-min",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "30",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2065,14 +1919,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.30.max}"
             },
-            "name": "kfw-base-space-fluid-30-max",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "30",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2106,14 +1954,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.30.val}"
             },
-            "name": "kfw-base-space-fluid-30-val",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "30",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2138,14 +1980,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.35.min}"
             },
-            "name": "kfw-base-space-fluid-35-min",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "35",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2168,14 +2004,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.35.max}"
             },
-            "name": "kfw-base-space-fluid-35-max",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "35",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2209,14 +2039,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.35.val}"
             },
-            "name": "kfw-base-space-fluid-35-val",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "35",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2241,14 +2065,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.40.min}"
             },
-            "name": "kfw-base-space-fluid-40-min",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "40",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2271,14 +2089,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.40.max}"
             },
-            "name": "kfw-base-space-fluid-40-max",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "40",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2312,14 +2124,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.40.val}"
             },
-            "name": "kfw-base-space-fluid-40-val",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "40",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2344,14 +2150,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.50.min}"
             },
-            "name": "kfw-base-space-fluid-50-min",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "50",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2374,14 +2174,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.50.max}"
             },
-            "name": "kfw-base-space-fluid-50-max",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "50",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2415,14 +2209,8 @@
               "$type": "dimension",
               "key": "{base.space.fluid.50.val}"
             },
-            "name": "kfw-base-space-fluid-50-val",
-            "attributes": {
-              "category": "base",
-              "type": "space",
-              "item": "fluid",
-              "subitem": "50",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "space",
@@ -2453,13 +2241,8 @@
             "$type": "dimension",
             "key": "{base.fontsize.static.sm}"
           },
-          "name": "kfw-base-fontsize-static-sm",
-          "attributes": {
-            "category": "base",
-            "type": "fontsize",
-            "item": "static",
-            "subitem": "sm"
-          },
+          "name": "sm",
+          "attributes": {},
           "path": [
             "base",
             "fontsize",
@@ -2484,13 +2267,8 @@
             "$type": "dimension",
             "key": "{base.fontsize.static.md}"
           },
-          "name": "kfw-base-fontsize-static-md",
-          "attributes": {
-            "category": "base",
-            "type": "fontsize",
-            "item": "static",
-            "subitem": "md"
-          },
+          "name": "md",
+          "attributes": {},
           "path": [
             "base",
             "fontsize",
@@ -2515,13 +2293,8 @@
             "$type": "dimension",
             "key": "{base.fontsize.static.lg}"
           },
-          "name": "kfw-base-fontsize-static-lg",
-          "attributes": {
-            "category": "base",
-            "type": "fontsize",
-            "item": "static",
-            "subitem": "lg"
-          },
+          "name": "lg",
+          "attributes": {},
           "path": [
             "base",
             "fontsize",
@@ -2546,13 +2319,8 @@
             "$type": "dimension",
             "key": "{base.fontsize.static.xl}"
           },
-          "name": "kfw-base-fontsize-static-xl",
-          "attributes": {
-            "category": "base",
-            "type": "fontsize",
-            "item": "static",
-            "subitem": "xl"
-          },
+          "name": "xl",
+          "attributes": {},
           "path": [
             "base",
             "fontsize",
@@ -2577,13 +2345,8 @@
             "$type": "dimension",
             "key": "{base.fontsize.static.2xl}"
           },
-          "name": "kfw-base-fontsize-static-2xl",
-          "attributes": {
-            "category": "base",
-            "type": "fontsize",
-            "item": "static",
-            "subitem": "2xl"
-          },
+          "name": "2xl",
+          "attributes": {},
           "path": [
             "base",
             "fontsize",
@@ -2608,13 +2371,8 @@
             "$type": "dimension",
             "key": "{base.fontsize.static.3xl}"
           },
-          "name": "kfw-base-fontsize-static-3xl",
-          "attributes": {
-            "category": "base",
-            "type": "fontsize",
-            "item": "static",
-            "subitem": "3xl"
-          },
+          "name": "3xl",
+          "attributes": {},
           "path": [
             "base",
             "fontsize",
@@ -2639,13 +2397,8 @@
             "$type": "dimension",
             "key": "{base.fontsize.static.4xl}"
           },
-          "name": "kfw-base-fontsize-static-4xl",
-          "attributes": {
-            "category": "base",
-            "type": "fontsize",
-            "item": "static",
-            "subitem": "4xl"
-          },
+          "name": "4xl",
+          "attributes": {},
           "path": [
             "base",
             "fontsize",
@@ -2670,13 +2423,8 @@
             "$type": "dimension",
             "key": "{base.fontsize.static.5xl}"
           },
-          "name": "kfw-base-fontsize-static-5xl",
-          "attributes": {
-            "category": "base",
-            "type": "fontsize",
-            "item": "static",
-            "subitem": "5xl"
-          },
+          "name": "5xl",
+          "attributes": {},
           "path": [
             "base",
             "fontsize",
@@ -2701,13 +2449,8 @@
             "$type": "dimension",
             "key": "{base.fontsize.static.6xl}"
           },
-          "name": "kfw-base-fontsize-static-6xl",
-          "attributes": {
-            "category": "base",
-            "type": "fontsize",
-            "item": "static",
-            "subitem": "6xl"
-          },
+          "name": "6xl",
+          "attributes": {},
           "path": [
             "base",
             "fontsize",
@@ -2732,13 +2475,8 @@
             "$type": "dimension",
             "key": "{base.fontsize.static.7xl}"
           },
-          "name": "kfw-base-fontsize-static-7xl",
-          "attributes": {
-            "category": "base",
-            "type": "fontsize",
-            "item": "static",
-            "subitem": "7xl"
-          },
+          "name": "7xl",
+          "attributes": {},
           "path": [
             "base",
             "fontsize",
@@ -2763,13 +2501,8 @@
             "$type": "dimension",
             "key": "{base.fontsize.static.8xl}"
           },
-          "name": "kfw-base-fontsize-static-8xl",
-          "attributes": {
-            "category": "base",
-            "type": "fontsize",
-            "item": "static",
-            "subitem": "8xl"
-          },
+          "name": "8xl",
+          "attributes": {},
           "path": [
             "base",
             "fontsize",
@@ -2794,14 +2527,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.sm.min}"
             },
-            "name": "kfw-base-fontsize-fluid-sm-min",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "sm",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -2824,14 +2551,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.sm.max}"
             },
-            "name": "kfw-base-fontsize-fluid-sm-max",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "sm",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -2865,14 +2586,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.sm.val}"
             },
-            "name": "kfw-base-fontsize-fluid-sm-val",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "sm",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -2897,14 +2612,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.md.min}"
             },
-            "name": "kfw-base-fontsize-fluid-md-min",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "md",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -2927,14 +2636,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.md.max}"
             },
-            "name": "kfw-base-fontsize-fluid-md-max",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "md",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -2968,14 +2671,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.md.val}"
             },
-            "name": "kfw-base-fontsize-fluid-md-val",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "md",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3000,14 +2697,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.lg.min}"
             },
-            "name": "kfw-base-fontsize-fluid-lg-min",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "lg",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3030,14 +2721,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.lg.max}"
             },
-            "name": "kfw-base-fontsize-fluid-lg-max",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "lg",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3071,14 +2756,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.lg.val}"
             },
-            "name": "kfw-base-fontsize-fluid-lg-val",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "lg",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3103,14 +2782,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.xl.min}"
             },
-            "name": "kfw-base-fontsize-fluid-xl-min",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "xl",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3133,14 +2806,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.xl.max}"
             },
-            "name": "kfw-base-fontsize-fluid-xl-max",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "xl",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3174,14 +2841,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.xl.val}"
             },
-            "name": "kfw-base-fontsize-fluid-xl-val",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "xl",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3206,14 +2867,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.2xl.min}"
             },
-            "name": "kfw-base-fontsize-fluid-2xl-min",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "2xl",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3236,14 +2891,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.2xl.max}"
             },
-            "name": "kfw-base-fontsize-fluid-2xl-max",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "2xl",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3277,14 +2926,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.2xl.val}"
             },
-            "name": "kfw-base-fontsize-fluid-2xl-val",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "2xl",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3309,14 +2952,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.3xl.min}"
             },
-            "name": "kfw-base-fontsize-fluid-3xl-min",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "3xl",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3339,14 +2976,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.3xl.max}"
             },
-            "name": "kfw-base-fontsize-fluid-3xl-max",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "3xl",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3380,14 +3011,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.3xl.val}"
             },
-            "name": "kfw-base-fontsize-fluid-3xl-val",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "3xl",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3412,14 +3037,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.4xl.min}"
             },
-            "name": "kfw-base-fontsize-fluid-4xl-min",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "4xl",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3442,14 +3061,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.4xl.max}"
             },
-            "name": "kfw-base-fontsize-fluid-4xl-max",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "4xl",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3483,14 +3096,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.4xl.val}"
             },
-            "name": "kfw-base-fontsize-fluid-4xl-val",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "4xl",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3515,14 +3122,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.5xl.min}"
             },
-            "name": "kfw-base-fontsize-fluid-5xl-min",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "5xl",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3545,14 +3146,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.5xl.max}"
             },
-            "name": "kfw-base-fontsize-fluid-5xl-max",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "5xl",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3586,14 +3181,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.5xl.val}"
             },
-            "name": "kfw-base-fontsize-fluid-5xl-val",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "5xl",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3618,14 +3207,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.6xl.min}"
             },
-            "name": "kfw-base-fontsize-fluid-6xl-min",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "6xl",
-              "state": "min"
-            },
+            "name": "min",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3648,14 +3231,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.6xl.max}"
             },
-            "name": "kfw-base-fontsize-fluid-6xl-max",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "6xl",
-              "state": "max"
-            },
+            "name": "max",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3689,14 +3266,8 @@
               "$type": "dimension",
               "key": "{base.fontsize.fluid.6xl.val}"
             },
-            "name": "kfw-base-fontsize-fluid-6xl-val",
-            "attributes": {
-              "category": "base",
-              "type": "fontsize",
-              "item": "fluid",
-              "subitem": "6xl",
-              "state": "val"
-            },
+            "name": "val",
+            "attributes": {},
             "path": [
               "base",
               "fontsize",
@@ -3866,12 +3437,8 @@
           "$type": "dimension",
           "key": "{base.borderradius.sm}"
         },
-        "name": "kfw-base-borderradius-sm",
-        "attributes": {
-          "category": "base",
-          "type": "borderradius",
-          "item": "sm"
-        },
+        "name": "sm",
+        "attributes": {},
         "path": [
           "base",
           "borderradius",
@@ -3895,12 +3462,8 @@
           "$type": "dimension",
           "key": "{base.borderradius.md}"
         },
-        "name": "kfw-base-borderradius-md",
-        "attributes": {
-          "category": "base",
-          "type": "borderradius",
-          "item": "md"
-        },
+        "name": "md",
+        "attributes": {},
         "path": [
           "base",
           "borderradius",
@@ -3924,12 +3487,8 @@
           "$type": "dimension",
           "key": "{base.borderradius.lg}"
         },
-        "name": "kfw-base-borderradius-lg",
-        "attributes": {
-          "category": "base",
-          "type": "borderradius",
-          "item": "lg"
-        },
+        "name": "lg",
+        "attributes": {},
         "path": [
           "base",
           "borderradius",
@@ -3953,12 +3512,8 @@
           "$type": "dimension",
           "key": "{base.borderradius.circle}"
         },
-        "name": "kfw-base-borderradius-circle",
-        "attributes": {
-          "category": "base",
-          "type": "borderradius",
-          "item": "circle"
-        },
+        "name": "circle",
+        "attributes": {},
         "path": [
           "base",
           "borderradius",
@@ -3984,12 +3539,8 @@
           "$type": "dimension",
           "key": "{base.borderwidth.md}"
         },
-        "name": "kfw-base-borderwidth-md",
-        "attributes": {
-          "category": "base",
-          "type": "borderwidth",
-          "item": "md"
-        },
+        "name": "md",
+        "attributes": {},
         "path": [
           "base",
           "borderwidth",
@@ -4013,12 +3564,8 @@
           "$type": "dimension",
           "key": "{base.borderwidth.lg}"
         },
-        "name": "kfw-base-borderwidth-lg",
-        "attributes": {
-          "category": "base",
-          "type": "borderwidth",
-          "item": "lg"
-        },
+        "name": "lg",
+        "attributes": {},
         "path": [
           "base",
           "borderwidth",
@@ -4092,12 +3639,8 @@
           "$type": "dimension",
           "key": "{base.wordspacing.normal}"
         },
-        "name": "kfw-base-wordspacing-normal",
-        "attributes": {
-          "category": "base",
-          "type": "wordspacing",
-          "item": "normal"
-        },
+        "name": "normal",
+        "attributes": {},
         "path": [
           "base",
           "wordspacing",
@@ -4121,12 +3664,8 @@
           "$type": "dimension",
           "key": "{base.wordspacing.wide}"
         },
-        "name": "kfw-base-wordspacing-wide",
-        "attributes": {
-          "category": "base",
-          "type": "wordspacing",
-          "item": "wide"
-        },
+        "name": "wide",
+        "attributes": {},
         "path": [
           "base",
           "wordspacing",
@@ -4152,12 +3691,8 @@
           "$type": "dimension",
           "key": "{base.letterspacing.tight}"
         },
-        "name": "kfw-base-letterspacing-tight",
-        "attributes": {
-          "category": "base",
-          "type": "letterspacing",
-          "item": "tight"
-        },
+        "name": "tight",
+        "attributes": {},
         "path": [
           "base",
           "letterspacing",
@@ -4181,12 +3716,8 @@
           "$type": "dimension",
           "key": "{base.letterspacing.normal}"
         },
-        "name": "kfw-base-letterspacing-normal",
-        "attributes": {
-          "category": "base",
-          "type": "letterspacing",
-          "item": "normal"
-        },
+        "name": "normal",
+        "attributes": {},
         "path": [
           "base",
           "letterspacing",
@@ -4210,12 +3741,8 @@
           "$type": "dimension",
           "key": "{base.letterspacing.wide}"
         },
-        "name": "kfw-base-letterspacing-wide",
-        "attributes": {
-          "category": "base",
-          "type": "letterspacing",
-          "item": "wide"
-        },
+        "name": "wide",
+        "attributes": {},
         "path": [
           "base",
           "letterspacing",
@@ -4239,12 +3766,8 @@
           "$type": "dimension",
           "key": "{base.letterspacing.wider}"
         },
-        "name": "kfw-base-letterspacing-wider",
-        "attributes": {
-          "category": "base",
-          "type": "letterspacing",
-          "item": "wider"
-        },
+        "name": "wider",
+        "attributes": {},
         "path": [
           "base",
           "letterspacing",
@@ -4269,11 +3792,8 @@
         },
         "key": "{base.offset}"
       },
-      "name": "kfw-base-offset",
-      "attributes": {
-        "category": "base",
-        "type": "offset"
-      },
+      "name": "offset",
+      "attributes": {},
       "path": [
         "base",
         "offset"
@@ -4298,13 +3818,8 @@
             "$type": "dimension",
             "key": "{base.layout.breakpoint.xs}"
           },
-          "name": "kfw-base-layout-breakpoint-xs",
-          "attributes": {
-            "category": "base",
-            "type": "layout",
-            "item": "breakpoint",
-            "subitem": "xs"
-          },
+          "name": "xs",
+          "attributes": {},
           "path": [
             "base",
             "layout",
@@ -4329,13 +3844,8 @@
             "$type": "dimension",
             "key": "{base.layout.breakpoint.sm}"
           },
-          "name": "kfw-base-layout-breakpoint-sm",
-          "attributes": {
-            "category": "base",
-            "type": "layout",
-            "item": "breakpoint",
-            "subitem": "sm"
-          },
+          "name": "sm",
+          "attributes": {},
           "path": [
             "base",
             "layout",
@@ -4360,13 +3870,8 @@
             "$type": "dimension",
             "key": "{base.layout.breakpoint.md}"
           },
-          "name": "kfw-base-layout-breakpoint-md",
-          "attributes": {
-            "category": "base",
-            "type": "layout",
-            "item": "breakpoint",
-            "subitem": "md"
-          },
+          "name": "md",
+          "attributes": {},
           "path": [
             "base",
             "layout",
@@ -4391,13 +3896,8 @@
             "$type": "dimension",
             "key": "{base.layout.breakpoint.lg}"
           },
-          "name": "kfw-base-layout-breakpoint-lg",
-          "attributes": {
-            "category": "base",
-            "type": "layout",
-            "item": "breakpoint",
-            "subitem": "lg"
-          },
+          "name": "lg",
+          "attributes": {},
           "path": [
             "base",
             "layout",
@@ -4422,13 +3922,8 @@
             "$type": "dimension",
             "key": "{base.layout.breakpoint.xl}"
           },
-          "name": "kfw-base-layout-breakpoint-xl",
-          "attributes": {
-            "category": "base",
-            "type": "layout",
-            "item": "breakpoint",
-            "subitem": "xl"
-          },
+          "name": "xl",
+          "attributes": {},
           "path": [
             "base",
             "layout",
@@ -4455,13 +3950,8 @@
             "$type": "dimension",
             "key": "{base.layout.container.sm}"
           },
-          "name": "kfw-base-layout-container-sm",
-          "attributes": {
-            "category": "base",
-            "type": "layout",
-            "item": "container",
-            "subitem": "sm"
-          },
+          "name": "sm",
+          "attributes": {},
           "path": [
             "base",
             "layout",
@@ -4486,13 +3976,8 @@
             "$type": "dimension",
             "key": "{base.layout.container.md}"
           },
-          "name": "kfw-base-layout-container-md",
-          "attributes": {
-            "category": "base",
-            "type": "layout",
-            "item": "container",
-            "subitem": "md"
-          },
+          "name": "md",
+          "attributes": {},
           "path": [
             "base",
             "layout",
@@ -4517,13 +4002,8 @@
             "$type": "dimension",
             "key": "{base.layout.container.lg}"
           },
-          "name": "kfw-base-layout-container-lg",
-          "attributes": {
-            "category": "base",
-            "type": "layout",
-            "item": "container",
-            "subitem": "lg"
-          },
+          "name": "lg",
+          "attributes": {},
           "path": [
             "base",
             "layout",
@@ -4671,14 +4151,8 @@
               "$type": "dimension",
               "key": "{base.layout.gridgap.static.xs}"
             },
-            "name": "kfw-base-layout-gridgap-static-xs",
-            "attributes": {
-              "category": "base",
-              "type": "layout",
-              "item": "gridgap",
-              "subitem": "static",
-              "state": "xs"
-            },
+            "name": "xs",
+            "attributes": {},
             "path": [
               "base",
               "layout",
@@ -4704,14 +4178,8 @@
               "$type": "dimension",
               "key": "{base.layout.gridgap.static.sm}"
             },
-            "name": "kfw-base-layout-gridgap-static-sm",
-            "attributes": {
-              "category": "base",
-              "type": "layout",
-              "item": "gridgap",
-              "subitem": "static",
-              "state": "sm"
-            },
+            "name": "sm",
+            "attributes": {},
             "path": [
               "base",
               "layout",
@@ -4737,14 +4205,8 @@
               "$type": "dimension",
               "key": "{base.layout.gridgap.static.md}"
             },
-            "name": "kfw-base-layout-gridgap-static-md",
-            "attributes": {
-              "category": "base",
-              "type": "layout",
-              "item": "gridgap",
-              "subitem": "static",
-              "state": "md"
-            },
+            "name": "md",
+            "attributes": {},
             "path": [
               "base",
               "layout",
@@ -4770,14 +4232,8 @@
               "$type": "dimension",
               "key": "{base.layout.gridgap.static.lg}"
             },
-            "name": "kfw-base-layout-gridgap-static-lg",
-            "attributes": {
-              "category": "base",
-              "type": "layout",
-              "item": "gridgap",
-              "subitem": "static",
-              "state": "lg"
-            },
+            "name": "lg",
+            "attributes": {},
             "path": [
               "base",
               "layout",
@@ -4803,14 +4259,8 @@
               "$type": "dimension",
               "key": "{base.layout.gridgap.static.xl}"
             },
-            "name": "kfw-base-layout-gridgap-static-xl",
-            "attributes": {
-              "category": "base",
-              "type": "layout",
-              "item": "gridgap",
-              "subitem": "static",
-              "state": "xl"
-            },
+            "name": "xl",
+            "attributes": {},
             "path": [
               "base",
               "layout",
@@ -4836,14 +4286,8 @@
               "$type": "dimension",
               "key": "{base.layout.gridgap.static.2xl}"
             },
-            "name": "kfw-base-layout-gridgap-static-2xl",
-            "attributes": {
-              "category": "base",
-              "type": "layout",
-              "item": "gridgap",
-              "subitem": "static",
-              "state": "2xl"
-            },
+            "name": "2xl",
+            "attributes": {},
             "path": [
               "base",
               "layout",
@@ -4869,14 +4313,8 @@
               "$type": "dimension",
               "key": "{base.layout.gridgap.static.3xl}"
             },
-            "name": "kfw-base-layout-gridgap-static-3xl",
-            "attributes": {
-              "category": "base",
-              "type": "layout",
-              "item": "gridgap",
-              "subitem": "static",
-              "state": "3xl"
-            },
+            "name": "3xl",
+            "attributes": {},
             "path": [
               "base",
               "layout",
@@ -4902,14 +4340,8 @@
                 "$type": "dimension",
                 "key": "{base.layout.gridgap.fluid.basic.min}"
               },
-              "name": "kfw-base-layout-gridgap-fluid-basic-min",
-              "attributes": {
-                "category": "base",
-                "type": "layout",
-                "item": "gridgap",
-                "subitem": "fluid",
-                "state": "basic"
-              },
+              "name": "min",
+              "attributes": {},
               "path": [
                 "base",
                 "layout",
@@ -4933,14 +4365,8 @@
                 "$type": "dimension",
                 "key": "{base.layout.gridgap.fluid.basic.max}"
               },
-              "name": "kfw-base-layout-gridgap-fluid-basic-max",
-              "attributes": {
-                "category": "base",
-                "type": "layout",
-                "item": "gridgap",
-                "subitem": "fluid",
-                "state": "basic"
-              },
+              "name": "max",
+              "attributes": {},
               "path": [
                 "base",
                 "layout",
@@ -4975,14 +4401,8 @@
                 "$type": "dimension",
                 "key": "{base.layout.gridgap.fluid.basic.val}"
               },
-              "name": "kfw-base-layout-gridgap-fluid-basic-val",
-              "attributes": {
-                "category": "base",
-                "type": "layout",
-                "item": "gridgap",
-                "subitem": "fluid",
-                "state": "basic"
-              },
+              "name": "val",
+              "attributes": {},
               "path": [
                 "base",
                 "layout",
@@ -5008,14 +4428,8 @@
                 "$type": "dimension",
                 "key": "{base.layout.gridgap.fluid.large.min}"
               },
-              "name": "kfw-base-layout-gridgap-fluid-large-min",
-              "attributes": {
-                "category": "base",
-                "type": "layout",
-                "item": "gridgap",
-                "subitem": "fluid",
-                "state": "large"
-              },
+              "name": "min",
+              "attributes": {},
               "path": [
                 "base",
                 "layout",
@@ -5039,14 +4453,8 @@
                 "$type": "dimension",
                 "key": "{base.layout.gridgap.fluid.large.max}"
               },
-              "name": "kfw-base-layout-gridgap-fluid-large-max",
-              "attributes": {
-                "category": "base",
-                "type": "layout",
-                "item": "gridgap",
-                "subitem": "fluid",
-                "state": "large"
-              },
+              "name": "max",
+              "attributes": {},
               "path": [
                 "base",
                 "layout",
@@ -5081,14 +4489,8 @@
                 "$type": "dimension",
                 "key": "{base.layout.gridgap.fluid.large.val}"
               },
-              "name": "kfw-base-layout-gridgap-fluid-large-val",
-              "attributes": {
-                "category": "base",
-                "type": "layout",
-                "item": "gridgap",
-                "subitem": "fluid",
-                "state": "large"
-              },
+              "name": "val",
+              "attributes": {},
               "path": [
                 "base",
                 "layout",
@@ -6865,12 +6267,8 @@
           "$type": "dimension",
           "key": "{semantic.space.tiny}"
         },
-        "name": "kfw-space-tiny",
-        "attributes": {
-          "category": "semantic",
-          "type": "space",
-          "item": "tiny"
-        },
+        "name": "tiny",
+        "attributes": {},
         "path": [
           "semantic",
           "space",
@@ -6891,12 +6289,8 @@
           "$type": "dimension",
           "key": "{semantic.space.xsmall}"
         },
-        "name": "kfw-space-xsmall",
-        "attributes": {
-          "category": "semantic",
-          "type": "space",
-          "item": "xsmall"
-        },
+        "name": "xsmall",
+        "attributes": {},
         "path": [
           "semantic",
           "space",
@@ -6917,12 +6311,8 @@
           "$type": "dimension",
           "key": "{semantic.space.midSmall}"
         },
-        "name": "kfw-space-midSmall",
-        "attributes": {
-          "category": "semantic",
-          "type": "space",
-          "item": "midSmall"
-        },
+        "name": "midSmall",
+        "attributes": {},
         "path": [
           "semantic",
           "space",
@@ -6943,12 +6333,8 @@
           "$type": "dimension",
           "key": "{semantic.space.small}"
         },
-        "name": "kfw-space-small",
-        "attributes": {
-          "category": "semantic",
-          "type": "space",
-          "item": "small"
-        },
+        "name": "small",
+        "attributes": {},
         "path": [
           "semantic",
           "space",
@@ -6969,12 +6355,8 @@
           "$type": "dimension",
           "key": "{semantic.space.medium}"
         },
-        "name": "kfw-space-medium",
-        "attributes": {
-          "category": "semantic",
-          "type": "space",
-          "item": "medium"
-        },
+        "name": "medium",
+        "attributes": {},
         "path": [
           "semantic",
           "space",
@@ -6996,13 +6378,8 @@
             "$type": "dimension",
             "key": "{semantic.space.large.min}"
           },
-          "name": "kfw-space-large-min",
-          "attributes": {
-            "category": "semantic",
-            "type": "space",
-            "item": "large",
-            "subitem": "min"
-          },
+          "name": "min",
+          "attributes": {},
           "path": [
             "semantic",
             "space",
@@ -7024,13 +6401,8 @@
             "$type": "dimension",
             "key": "{semantic.space.large.max}"
           },
-          "name": "kfw-space-large-max",
-          "attributes": {
-            "category": "semantic",
-            "type": "space",
-            "item": "large",
-            "subitem": "max"
-          },
+          "name": "max",
+          "attributes": {},
           "path": [
             "semantic",
             "space",
@@ -7052,13 +6424,8 @@
             "$type": "dimension",
             "key": "{semantic.space.large.val}"
           },
-          "name": "kfw-space-large-val",
-          "attributes": {
-            "category": "semantic",
-            "type": "space",
-            "item": "large",
-            "subitem": "val"
-          },
+          "name": "val",
+          "attributes": {},
           "path": [
             "semantic",
             "space",
@@ -7082,13 +6449,8 @@
             "$type": "dimension",
             "key": "{semantic.space.big.min}"
           },
-          "name": "kfw-space-big-min",
-          "attributes": {
-            "category": "semantic",
-            "type": "space",
-            "item": "big",
-            "subitem": "min"
-          },
+          "name": "min",
+          "attributes": {},
           "path": [
             "semantic",
             "space",
@@ -7110,13 +6472,8 @@
             "$type": "dimension",
             "key": "{semantic.space.big.max}"
           },
-          "name": "kfw-space-big-max",
-          "attributes": {
-            "category": "semantic",
-            "type": "space",
-            "item": "big",
-            "subitem": "max"
-          },
+          "name": "max",
+          "attributes": {},
           "path": [
             "semantic",
             "space",
@@ -7138,13 +6495,8 @@
             "$type": "dimension",
             "key": "{semantic.space.big.val}"
           },
-          "name": "kfw-space-big-val",
-          "attributes": {
-            "category": "semantic",
-            "type": "space",
-            "item": "big",
-            "subitem": "val"
-          },
+          "name": "val",
+          "attributes": {},
           "path": [
             "semantic",
             "space",
@@ -7169,12 +6521,8 @@
           "$type": "dimension",
           "key": "{semantic.fontsize.default}"
         },
-        "name": "kfw-fontsize",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontsize",
-          "item": "default"
-        },
+        "name": "default",
+        "attributes": {},
         "path": [
           "semantic",
           "fontsize",
@@ -7195,12 +6543,8 @@
           "$type": "dimension",
           "key": "{semantic.fontsize.introduction}"
         },
-        "name": "kfw-fontsize-introduction",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontsize",
-          "item": "introduction"
-        },
+        "name": "introduction",
+        "attributes": {},
         "path": [
           "semantic",
           "fontsize",
@@ -7221,12 +6565,8 @@
           "$type": "dimension",
           "key": "{semantic.fontsize.large}"
         },
-        "name": "kfw-fontsize-large",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontsize",
-          "item": "large"
-        },
+        "name": "large",
+        "attributes": {},
         "path": [
           "semantic",
           "fontsize",
@@ -7247,12 +6587,8 @@
           "$type": "dimension",
           "key": "{semantic.fontsize.small}"
         },
-        "name": "kfw-fontsize-small",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontsize",
-          "item": "small"
-        },
+        "name": "small",
+        "attributes": {},
         "path": [
           "semantic",
           "fontsize",
@@ -7274,13 +6610,8 @@
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-1.min}"
           },
-          "name": "kfw-fontsize-heading-1-min",
-          "attributes": {
-            "category": "semantic",
-            "type": "fontsize",
-            "item": "heading-1",
-            "subitem": "min"
-          },
+          "name": "min",
+          "attributes": {},
           "path": [
             "semantic",
             "fontsize",
@@ -7302,13 +6633,8 @@
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-1.max}"
           },
-          "name": "kfw-fontsize-heading-1-max",
-          "attributes": {
-            "category": "semantic",
-            "type": "fontsize",
-            "item": "heading-1",
-            "subitem": "max"
-          },
+          "name": "max",
+          "attributes": {},
           "path": [
             "semantic",
             "fontsize",
@@ -7330,13 +6656,8 @@
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-1.val}"
           },
-          "name": "kfw-fontsize-heading-1-val",
-          "attributes": {
-            "category": "semantic",
-            "type": "fontsize",
-            "item": "heading-1",
-            "subitem": "val"
-          },
+          "name": "val",
+          "attributes": {},
           "path": [
             "semantic",
             "fontsize",
@@ -7360,13 +6681,8 @@
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-2.min}"
           },
-          "name": "kfw-fontsize-heading-2-min",
-          "attributes": {
-            "category": "semantic",
-            "type": "fontsize",
-            "item": "heading-2",
-            "subitem": "min"
-          },
+          "name": "min",
+          "attributes": {},
           "path": [
             "semantic",
             "fontsize",
@@ -7388,13 +6704,8 @@
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-2.max}"
           },
-          "name": "kfw-fontsize-heading-2-max",
-          "attributes": {
-            "category": "semantic",
-            "type": "fontsize",
-            "item": "heading-2",
-            "subitem": "max"
-          },
+          "name": "max",
+          "attributes": {},
           "path": [
             "semantic",
             "fontsize",
@@ -7416,13 +6727,8 @@
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-2.val}"
           },
-          "name": "kfw-fontsize-heading-2-val",
-          "attributes": {
-            "category": "semantic",
-            "type": "fontsize",
-            "item": "heading-2",
-            "subitem": "val"
-          },
+          "name": "val",
+          "attributes": {},
           "path": [
             "semantic",
             "fontsize",
@@ -7446,13 +6752,8 @@
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-3.min}"
           },
-          "name": "kfw-fontsize-heading-3-min",
-          "attributes": {
-            "category": "semantic",
-            "type": "fontsize",
-            "item": "heading-3",
-            "subitem": "min"
-          },
+          "name": "min",
+          "attributes": {},
           "path": [
             "semantic",
             "fontsize",
@@ -7474,13 +6775,8 @@
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-3.max}"
           },
-          "name": "kfw-fontsize-heading-3-max",
-          "attributes": {
-            "category": "semantic",
-            "type": "fontsize",
-            "item": "heading-3",
-            "subitem": "max"
-          },
+          "name": "max",
+          "attributes": {},
           "path": [
             "semantic",
             "fontsize",
@@ -7502,13 +6798,8 @@
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-3.val}"
           },
-          "name": "kfw-fontsize-heading-3-val",
-          "attributes": {
-            "category": "semantic",
-            "type": "fontsize",
-            "item": "heading-3",
-            "subitem": "val"
-          },
+          "name": "val",
+          "attributes": {},
           "path": [
             "semantic",
             "fontsize",
@@ -7532,13 +6823,8 @@
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-4.min}"
           },
-          "name": "kfw-fontsize-heading-4-min",
-          "attributes": {
-            "category": "semantic",
-            "type": "fontsize",
-            "item": "heading-4",
-            "subitem": "min"
-          },
+          "name": "min",
+          "attributes": {},
           "path": [
             "semantic",
             "fontsize",
@@ -7560,13 +6846,8 @@
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-4.max}"
           },
-          "name": "kfw-fontsize-heading-4-max",
-          "attributes": {
-            "category": "semantic",
-            "type": "fontsize",
-            "item": "heading-4",
-            "subitem": "max"
-          },
+          "name": "max",
+          "attributes": {},
           "path": [
             "semantic",
             "fontsize",
@@ -7588,13 +6869,8 @@
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-4.val}"
           },
-          "name": "kfw-fontsize-heading-4-val",
-          "attributes": {
-            "category": "semantic",
-            "type": "fontsize",
-            "item": "heading-4",
-            "subitem": "val"
-          },
+          "name": "val",
+          "attributes": {},
           "path": [
             "semantic",
             "fontsize",
@@ -7617,12 +6893,8 @@
           "$type": "dimension",
           "key": "{semantic.fontsize.heading-5}"
         },
-        "name": "kfw-fontsize-heading-5",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontsize",
-          "item": "heading-5"
-        },
+        "name": "heading-5",
+        "attributes": {},
         "path": [
           "semantic",
           "fontsize",
@@ -7643,12 +6915,8 @@
           "$type": "dimension",
           "key": "{semantic.fontsize.heading-6}"
         },
-        "name": "kfw-fontsize-heading-6",
-        "attributes": {
-          "category": "semantic",
-          "type": "fontsize",
-          "item": "heading-6"
-        },
+        "name": "heading-6",
+        "attributes": {},
         "path": [
           "semantic",
           "fontsize",
@@ -7811,12 +7079,8 @@
           "$type": "dimension",
           "key": "{semantic.borderradius.default}"
         },
-        "name": "kfw-borderradius",
-        "attributes": {
-          "category": "semantic",
-          "type": "borderradius",
-          "item": "default"
-        },
+        "name": "default",
+        "attributes": {},
         "path": [
           "semantic",
           "borderradius",
@@ -7837,12 +7101,8 @@
           "$type": "dimension",
           "key": "{semantic.borderradius.small}"
         },
-        "name": "kfw-borderradius-small",
-        "attributes": {
-          "category": "semantic",
-          "type": "borderradius",
-          "item": "small"
-        },
+        "name": "small",
+        "attributes": {},
         "path": [
           "semantic",
           "borderradius",
@@ -7863,12 +7123,8 @@
           "$type": "dimension",
           "key": "{semantic.borderradius.large}"
         },
-        "name": "kfw-borderradius-large",
-        "attributes": {
-          "category": "semantic",
-          "type": "borderradius",
-          "item": "large"
-        },
+        "name": "large",
+        "attributes": {},
         "path": [
           "semantic",
           "borderradius",
@@ -7889,12 +7145,8 @@
           "$type": "dimension",
           "key": "{semantic.borderradius.circle}"
         },
-        "name": "kfw-borderradius-circle",
-        "attributes": {
-          "category": "semantic",
-          "type": "borderradius",
-          "item": "circle"
-        },
+        "name": "circle",
+        "attributes": {},
         "path": [
           "semantic",
           "borderradius",
@@ -7917,12 +7169,8 @@
           "$type": "dimension",
           "key": "{semantic.borderwidth.default}"
         },
-        "name": "kfw-borderwidth",
-        "attributes": {
-          "category": "semantic",
-          "type": "borderwidth",
-          "item": "default"
-        },
+        "name": "default",
+        "attributes": {},
         "path": [
           "semantic",
           "borderwidth",
@@ -7943,12 +7191,8 @@
           "$type": "dimension",
           "key": "{semantic.borderwidth.large}"
         },
-        "name": "kfw-borderwidth-large",
-        "attributes": {
-          "category": "semantic",
-          "type": "borderwidth",
-          "item": "large"
-        },
+        "name": "large",
+        "attributes": {},
         "path": [
           "semantic",
           "borderwidth",
@@ -7992,12 +7236,8 @@
           "$value": "{base.borderwidth.lg}",
           "key": "{semantic.focusring.outline-width}"
         },
-        "name": "kfw-focusring-outline-width",
-        "attributes": {
-          "category": "semantic",
-          "type": "focusring",
-          "item": "outline-width"
-        },
+        "name": "outline-width",
+        "attributes": {},
         "path": [
           "semantic",
           "focusring",
@@ -8018,12 +7258,8 @@
           "$value": "{base.offset}",
           "key": "{semantic.focusring.outline-offset}"
         },
-        "name": "kfw-focusring-outline-offset",
-        "attributes": {
-          "category": "semantic",
-          "type": "focusring",
-          "item": "outline-offset"
-        },
+        "name": "outline-offset",
+        "attributes": {},
         "path": [
           "semantic",
           "focusring",
@@ -8098,12 +7334,8 @@
           "$value": "{base.borderradius.md}",
           "key": "{semantic.focusring.outline-radius}"
         },
-        "name": "kfw-focusring-outline-radius",
-        "attributes": {
-          "category": "semantic",
-          "type": "focusring",
-          "item": "outline-radius"
-        },
+        "name": "outline-radius",
+        "attributes": {},
         "path": [
           "semantic",
           "focusring",
@@ -8174,12 +7406,8 @@
           "$type": "dimension",
           "key": "{semantic.wordspacing.lightspeech}"
         },
-        "name": "kfw-wordspacing-lightspeech",
-        "attributes": {
-          "category": "semantic",
-          "type": "wordspacing",
-          "item": "lightspeech"
-        },
+        "name": "lightspeech",
+        "attributes": {},
         "path": [
           "semantic",
           "wordspacing",
@@ -8202,12 +7430,8 @@
           "$type": "dimension",
           "key": "{semantic.breakpoint.mobile}"
         },
-        "name": "kfw-breakpoint-mobile",
-        "attributes": {
-          "category": "semantic",
-          "type": "breakpoint",
-          "item": "mobile"
-        },
+        "name": "mobile",
+        "attributes": {},
         "path": [
           "semantic",
           "breakpoint",
@@ -8228,12 +7452,8 @@
           "$type": "dimension",
           "key": "{semantic.breakpoint.tablet}"
         },
-        "name": "kfw-breakpoint-tablet",
-        "attributes": {
-          "category": "semantic",
-          "type": "breakpoint",
-          "item": "tablet"
-        },
+        "name": "tablet",
+        "attributes": {},
         "path": [
           "semantic",
           "breakpoint",
@@ -8254,12 +7474,8 @@
           "$type": "dimension",
           "key": "{semantic.breakpoint.desktop}"
         },
-        "name": "kfw-breakpoint-desktop",
-        "attributes": {
-          "category": "semantic",
-          "type": "breakpoint",
-          "item": "desktop"
-        },
+        "name": "desktop",
+        "attributes": {},
         "path": [
           "semantic",
           "breakpoint",
@@ -8280,12 +7496,8 @@
           "$type": "dimension",
           "key": "{semantic.breakpoint.desktop-large}"
         },
-        "name": "kfw-breakpoint-desktop-large",
-        "attributes": {
-          "category": "semantic",
-          "type": "breakpoint",
-          "item": "desktop-large"
-        },
+        "name": "desktop-large",
+        "attributes": {},
         "path": [
           "semantic",
           "breakpoint",
@@ -8308,12 +7520,8 @@
           "$type": "dimension",
           "key": "{semantic.contentwrapper.narrow}"
         },
-        "name": "kfw-contentwrapper-narrow",
-        "attributes": {
-          "category": "semantic",
-          "type": "contentwrapper",
-          "item": "narrow"
-        },
+        "name": "narrow",
+        "attributes": {},
         "path": [
           "semantic",
           "contentwrapper",
@@ -8334,12 +7542,8 @@
           "$type": "dimension",
           "key": "{semantic.contentwrapper.basic}"
         },
-        "name": "kfw-contentwrapper-basic",
-        "attributes": {
-          "category": "semantic",
-          "type": "contentwrapper",
-          "item": "basic"
-        },
+        "name": "basic",
+        "attributes": {},
         "path": [
           "semantic",
           "contentwrapper",
@@ -8360,12 +7564,8 @@
           "$type": "dimension",
           "key": "{semantic.contentwrapper.extended}"
         },
-        "name": "kfw-contentwrapper-extended",
-        "attributes": {
-          "category": "semantic",
-          "type": "contentwrapper",
-          "item": "extended"
-        },
+        "name": "extended",
+        "attributes": {},
         "path": [
           "semantic",
           "contentwrapper",
@@ -8483,13 +7683,8 @@
             "$type": "dimension",
             "key": "{semantic.gridgap.basic.min}"
           },
-          "name": "kfw-gridgap-basic-min",
-          "attributes": {
-            "category": "semantic",
-            "type": "gridgap",
-            "item": "basic",
-            "subitem": "min"
-          },
+          "name": "min",
+          "attributes": {},
           "path": [
             "semantic",
             "gridgap",
@@ -8511,13 +7706,8 @@
             "$type": "dimension",
             "key": "{semantic.gridgap.basic.max}"
           },
-          "name": "kfw-gridgap-basic-max",
-          "attributes": {
-            "category": "semantic",
-            "type": "gridgap",
-            "item": "basic",
-            "subitem": "max"
-          },
+          "name": "max",
+          "attributes": {},
           "path": [
             "semantic",
             "gridgap",
@@ -8539,13 +7729,8 @@
             "$type": "dimension",
             "key": "{semantic.gridgap.basic.val}"
           },
-          "name": "kfw-gridgap-basic-val",
-          "attributes": {
-            "category": "semantic",
-            "type": "gridgap",
-            "item": "basic",
-            "subitem": "val"
-          },
+          "name": "val",
+          "attributes": {},
           "path": [
             "semantic",
             "gridgap",
@@ -8569,13 +7754,8 @@
             "$type": "dimension",
             "key": "{semantic.gridgap.large.min}"
           },
-          "name": "kfw-gridgap-large-min",
-          "attributes": {
-            "category": "semantic",
-            "type": "gridgap",
-            "item": "large",
-            "subitem": "min"
-          },
+          "name": "min",
+          "attributes": {},
           "path": [
             "semantic",
             "gridgap",
@@ -8597,13 +7777,8 @@
             "$type": "dimension",
             "key": "{semantic.gridgap.large.max}"
           },
-          "name": "kfw-gridgap-large-max",
-          "attributes": {
-            "category": "semantic",
-            "type": "gridgap",
-            "item": "large",
-            "subitem": "max"
-          },
+          "name": "max",
+          "attributes": {},
           "path": [
             "semantic",
             "gridgap",
@@ -8625,13 +7800,8 @@
             "$type": "dimension",
             "key": "{semantic.gridgap.large.val}"
           },
-          "name": "kfw-gridgap-large-val",
-          "attributes": {
-            "category": "semantic",
-            "type": "gridgap",
-            "item": "large",
-            "subitem": "val"
-          },
+          "name": "val",
+          "attributes": {},
           "path": [
             "semantic",
             "gridgap",

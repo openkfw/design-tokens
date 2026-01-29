@@ -37,7 +37,6 @@
     --kfw-safezone: var(--kfw-safezone-mobile);
     --headline-color: var(--kfw-color-text);
     --kfw-focusring-outline-color: var(--kfw-color-fn-active);
-    --kfw-lineheight-large: 1.5; /* @todo use design token here */
     --kfw-fontsize-heading-4: clamp(var(--kfw-fontsize-heading-4-min), var(--kfw-fontsize-heading-4-val), var(--kfw-fontsize-heading-4-max));
   }
 
@@ -178,7 +177,7 @@
   }
 
   blockquote footer {
-    margin-block-start: 5px; /* todo use it later => --kfw-space-2xsmall */
+    margin-block-start: var(--kfw-space-tiny);
   }
 
   :where(cite, i, em) {
@@ -1707,7 +1706,7 @@
   }
 
   :where(.bg-dark, .footer) :where(.button-primary) {
-    --button-color: var(--kfw-color-fn-active); /* @todo check before without active here */
+    --button-color: var(--kfw-color-fn-active);
     --button-bg: var(--kfw-color-text-on-dark-bg);
     --button-border-color: var(--kfw-color-text-on-dark-bg);
     --button-bg-hover: var(--kfw-color-text-on-dark-bg);
@@ -1762,7 +1761,7 @@
   @media (--kfw-breakpoint-desktop-large) {
     .hl--sb {
       font-size: var(--kfw-base-fontsize-static-5xl);
-      line-height: var(--kfw-base-lineheight-2xs); /* @todo token für heading mit 1.2 erstellen? => lineheight.small */
+      line-height: var(--kfw-lineheight-small);
     }
   }
 
@@ -1772,7 +1771,7 @@
 
   @media (--kfw-breakpoint-desktop-large) {
     .hl--tb {
-      line-height: 1.45; /* @todo use token here => lineheight.large */
+      line-height: var(--kfw-lineheight-large);
     }
   }
 
@@ -1790,7 +1789,7 @@
   @media (--kfw-breakpoint-desktop-large) {
     .hl--hb {
       font-size: var(--kfw-base-fontsize-static-5xl);
-      line-height: var(--kfw-base-lineheight-2xs); /* @todo use design token here lineheight.small */
+      line-height: var(--kfw-lineheight-small);
       letter-spacing: 0;
     }
   }
@@ -1842,7 +1841,7 @@
   }
 
   .tx--8 {
-    line-height: 1.3; /* @todo use token lineheight large */
+    line-height: var(--kfw-lineheight-heading);
     letter-spacing: var(--kfw-base-letterspacing-normal);
     font-size: var(--kfw-fontsize-large);
   }
