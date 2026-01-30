@@ -29,7 +29,7 @@
           <i aria-hidden="true" class="icon icon--menu"></i>
         </button>
 
-        <a class="header__logo" href="/" aria-label="Go to homepage">
+        <a class="header__logo" href="%BASE_URL%" aria-label="Go to homepage">
           <img width="200" height="60" class="header__logo-small" src="/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
           <picture class="header__logo-large">
             <source media="(min-width: 960px)" srcset="/kfw_logo_large.png" type="image/svg+xml" />
@@ -38,7 +38,7 @@
         </a>
 
         <nav class="header__secondary-nav" aria-label="Secondary nav">
-          <a href="/login">
+          <a href="/login" onclick="event.preventDefault()">
             <i aria-hidden="true" class="icon icon--md icon--login"></i>
             <span>Login</span>
           </a>
@@ -261,7 +261,7 @@
                   btn.role = "link"
 
                   btn.addEventListener("click", () => {
-                    navigator.clipboard.writeText(`var(--${btn.textContent})`).then(() => alert("Copied!"))
+                    navigator.clipboard.writeText(`var(--${btn.textContent})`)
                   })
 
                   const tokenColorPath = tokenName !== undefined ? window.allTokens[tokenGroup].color[tokenName] : window.allTokens[tokenGroup].color
@@ -735,7 +735,6 @@
             <div class="form-group">
               <label for="select">Select</label>
               <select aria-label="Select" class="form-select" id="select" name="select" required>
-                <button><selectedcontent></selectedcontent></button>
                 <option value="" selected>Select…</option>
                 <option>…</option>
               </select>
@@ -1055,19 +1054,19 @@
       </nav>
     </footer>
 
-    <dialog id="main-nav" class="navigation" aria-modal="true">
+    <dialog id="main-nav" class="navigation" aria-modal="true" aria-labelledby="navigation-title">
       <div class="navigation__container">
         <button autofocus type="button" class="button-primary has-icon-only has-icon-only--xl navigation__close" aria-label="Close">
           <i aria-hidden="true" class="icon icon--close"></i>
         </button>
         <div class="navigation__content bg-white" data-dialog-content>
-          <h2 class="navigation__title">KfW Design Tokens</h2>
+          <h2 id="navigation-title" class="navigation__title">KfW Design Tokens</h2>
           <div class="bg-light navigation__scroll-area">
             <span class="navigation__subtitle">Demo Portal</span>
             <nav class="navigation__nav" aria-label="Hauptnavigation">
               <ul class="navigation__list">
                 <li class="list-item">
-                  <a href="/" aria-label="Go to homepage">
+                  <a href="%BASE_URL%" aria-label="Go to homepage">
                     <i aria-hidden="true" class="icon icon--home"></i>
                     Home
                   </a>
@@ -1084,70 +1083,7 @@
       </div>
     </dialog>
 
-    <script>
-      const body = document.body
-      const hamburger = document.querySelector(".header__hamburger")
-      const mainNavDialog = document.getElementById("main-nav")
-      const mainNavDialogContent = mainNavDialog.querySelector("[data-dialog-content]")
+    <script type="module" src="/src/main.ts"></script>
 
-      hamburger?.addEventListener("click", () => {
-        const expanded = hamburger.getAttribute("aria-expanded") === "true"
-        hamburger.setAttribute("aria-expanded", String(!expanded))
-        body?.classList.add("no-scroll")
-        mainNavDialog.showModal()
-      })
-
-      mainNavDialog.addEventListener("close", (event) => {
-        body.classList.remove("no-scroll")
-        hamburger?.setAttribute("aria-expanded", "false")
-      })
-
-      mainNavDialog.addEventListener("click", (event) => {
-        const target = event.target
-
-        if (target.closest("a")) {
-          mainNavDialog.close()
-          return
-        }
-
-        if (!mainNavDialogContent.contains(target)) {
-          mainNavDialog.close()
-        }
-      })
-    </script>
-
-    <script>
-      const header = document.getElementById("sticky-header")
-      const stickyClass = "header--sticky"
-      let ticking = false
-
-      const update = () => {
-        const y = window.scrollY
-        const isSticky = header.classList.contains(stickyClass)
-
-        // Minimum hysteresis
-        if (y >= 128 && !isSticky) {
-          header.classList.add(stickyClass)
-        } else if (y < 64 && isSticky) {
-          header.classList.remove(stickyClass)
-        }
-      }
-
-      window.addEventListener(
-        "scroll",
-        () => {
-          if (!ticking) {
-            requestAnimationFrame(() => {
-              update()
-              ticking = false
-            })
-            ticking = true
-          }
-        },
-        { passive: true }
-      )
-
-      update()
-    </script>
   </body>
 </html>

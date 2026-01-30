@@ -1395,7 +1395,7 @@
     border-radius: 0;
   }
 
-  .navigation__close:focus-visible {
+  [data-whatinput="keyboard"] .navigation__close:focus-visible {
     outline-color: color-mix(in oklab, black 50%, transparent); /* todo ask for design token */
     outline-style: dashed;
     outline-offset: 3px;
