@@ -11,7 +11,8 @@
     "demo/dist/css/style.min.css",
     "demo/src/style.css",
     "demo/src/vendor/**.css",
-    "demo/scripts/**.js"
+    "demo/scripts/**.js",
+    "demo/App.ts"
   ],
   "scripts": {
     "start": "concurrently \"npm run watch:extended\" \"npm run watch\"",
