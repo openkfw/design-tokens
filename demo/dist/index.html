@@ -11,9 +11,9 @@
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
-    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/assets/main-TSdHvB70.js"></script>
+    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/assets/main-vesb3JzU.js"></script>
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/fonts-DEpxAef5.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/style-DkjWVDh5.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/style-bMVzC7TR.min.css">
   </head>
   <body>
     <div id="top"></div>
@@ -734,20 +734,16 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="file-upload">File browser</label>
-              <input type="file" id="file-upload" name="files" multiple />
-            </div>
-            <div class="form-group">
-              <label for="file-upload2">File browser with title</label>
+              <label for="file-upload">File browser with title</label>
               <div class="file-upload">
                 <div class="file-upload__inner">
                   <i aria-hidden="true" class="icon icon--2xl icon--upload file-upload__icon"></i>
-                  <label for="file-upload2" class="file-upload__title">Choose the files you want to upload</label>
+                  <label for="file-upload" class="file-upload__title">Choose the files you want to upload</label>
                   <button type="button" class="button-secondary button--icon-position-left">
                     <i aria-hidden="true" class="icon icon--sm icon--plus"></i>
                     Choose files
                   </button>
-                  <input class="file-upload__input" type="file" id="file-upload2" name="files2" multiple />
+                  <input class="file-upload__input" type="file" id="file-upload" name="files" multiple />
                 </div>
                 <div class="overflow-auto">
                   <table class="file-upload-table">
@@ -1050,8 +1046,10 @@
 
     <dialog id="main-nav" class="navigation" aria-modal="true" aria-labelledby="navigation-title">
       <div class="navigation__container">
-        <button autofocus type="button" class="button-primary has-icon-only has-icon-only--xl navigation__close" aria-label="Close">
-          <i aria-hidden="true" class="icon icon--close"></i>
+        <button autofocus type="button" class="button-primary has-icon-only has-icon-only--close navigation__close" aria-label="Close">
+          <span class="has-icon-only__inner">
+            <i aria-hidden="true" class="icon icon--close"></i>
+          </span>
         </button>
         <div class="navigation__content bg-white" data-dialog-content>
           <h2 id="navigation-title" class="navigation__title">KfW Design Tokens</h2>
