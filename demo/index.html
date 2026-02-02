@@ -21,8 +21,7 @@
       window.allTokens = allTokens
     </script>
   </head>
-  <body>
-    <div id="top"></div>
+  <body id="top">
     <header id="sticky-header" class="header">
       <div class="container header__inner">
         <button type="button" class="header__hamburger" aria-controls="main-nav" aria-label="Open main nav" aria-expanded="false">
@@ -61,13 +60,13 @@
         <div class="container hero__container">
           <img class="hero__bars-desktop" src="/sb-tbalken-xl-429x25.svg" alt="" aria-hidden="true" />
           <div class="hero__title">
-            <span class="hl--sb mb-0" role="presentation">Welcome to KfW!</span>
+            <span class="hl--sb mb-0">Welcome to KfW!</span>
           </div>
         </div>
       </section>
 
       <div class="container">
-        <section class="my-lg">
+        <section aria-labelledby="disclaimer" class="my-lg">
           <h1 id="disclaimer">Important Usage Notice</h1>
 
           <p class="tx--4">
@@ -82,7 +81,7 @@
           </p>
         </section>
 
-        <section class="my-lg">
+        <section aria-labelledby="color" class="my-lg">
           <h1 id="color">Color</h1>
 
           <div class="mb-lg">
@@ -295,7 +294,7 @@
           </script>
         </section>
 
-        <section class="my-lg">
+        <section aria-labelledby="typography" class="my-lg">
           <h1 id="typography">Typography</h1>
 
           <div class="mb-lg">
@@ -649,7 +648,7 @@
           </div>
         </section>
 
-        <section class="my-lg">
+        <section aria-labelledby="buttons" class="my-lg">
           <h1 id="buttons">Buttons</h1>
           <div class="button-group mb-sm">
             <button type="button" class="button-primary button--icon-position-left">
@@ -666,7 +665,7 @@
             </a>
           </div>
           <h3>Icon Only</h3>
-          <div class="button-group mb-sm">
+          <div class="button-group">
             <button type="button" class="button-primary has-icon-only" aria-label="Next">
               <i aria-hidden="true" class="icon icon--arrow-right"></i>
             </button>
@@ -679,8 +678,8 @@
           </div>
         </section>
 
-        <section class="bg-dark p-sm">
-          <h3 class="hl-3">On Dark</h3>
+        <section aria-labelledby="buttons-on-dark" class="bg-dark p-sm">
+          <h3 id="buttons-on-dark" class="hl-3">On Dark</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
             <a href="#" onclick="event.preventDefault()">similique </a>
@@ -702,7 +701,7 @@
             </a>
           </div>
           <h3>Icon Only</h3>
-          <div class="button-group mb-sm">
+          <div class="button-group">
             <button type="button" class="button-primary has-icon-only" aria-label="Next">
               <i aria-hidden="true" class="icon icon--arrow-right"></i>
             </button>
@@ -715,7 +714,7 @@
           </div>
         </section>
 
-        <section class="my-lg">
+        <section aria-labelledby="form-elements" class="my-lg">
           <form>
             <h1 id="form-elements">Form elements</h1>
             <div class="form-group">
@@ -960,8 +959,9 @@
             </fieldset>
           </form>
         </section>
-        <section class="my-lg" id="tables">
-          <h2>Table</h2>
+
+        <section aria-labelledby="tables" class="my-lg">
+          <h2 id="tables">Table</h2>
           <div class="overflow-auto">
             <table class="striped">
               <thead>
@@ -1033,6 +1033,7 @@
         </section>
       </div>
     </main>
+
     <footer class="footer">
       <nav class="container">
         <span class="footer__copyright">2026 KfW, Frankfurt am Main</span>
