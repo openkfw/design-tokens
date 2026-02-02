@@ -11,12 +11,11 @@
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Favicon_Pfeil_32x32px.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="https://openkfw.github.io/design-tokens/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
-    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/assets/main-vesb3JzU.js"></script>
+    <script type="module" crossorigin src="https://openkfw.github.io/design-tokens/assets/main-esDy6tnY.js"></script>
     <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/fonts-DEpxAef5.min.css">
-    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/style-bMVzC7TR.min.css">
+    <link rel="stylesheet" crossorigin href="https://openkfw.github.io/design-tokens/css/style-BVi2lrWa.min.css">
   </head>
-  <body>
-    <div id="top"></div>
+  <body id="top">
     <header id="sticky-header" class="header">
       <div class="container header__inner">
         <button type="button" class="header__hamburger" aria-controls="main-nav" aria-label="Open main nav" aria-expanded="false">
@@ -24,10 +23,10 @@
         </button>
 
         <a class="header__logo" href="https://openkfw.github.io/design-tokens/" aria-label="Go to homepage">
-          <img width="200" height="60" class="header__logo-small" src="https://openkfw.github.io/design-tokens/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
+          <img width="200" height="60" class="header__logo-small" src="https://openkfw.github.io/design-tokens/kfw_logo.png" alt="Logo KfW" />
           <picture class="header__logo-large">
             <source media="(min-width: 960px)" srcset="https://openkfw.github.io/design-tokens/kfw_logo_large.png" type="image/svg+xml" />
-            <img width="232" height="120" src="https://openkfw.github.io/design-tokens/kfw_logo.png" alt="Logo der KfW - Bank aus Verantwortung" />
+            <img width="232" height="120" src="https://openkfw.github.io/design-tokens/kfw_logo.png" alt="Logo KfW" />
           </picture>
         </a>
 
@@ -55,13 +54,13 @@
         <div class="container hero__container">
           <img class="hero__bars-desktop" src="https://openkfw.github.io/design-tokens/sb-tbalken-xl-429x25.svg" alt="" aria-hidden="true" />
           <div class="hero__title">
-            <span class="hl--sb mb-0" role="presentation">Welcome to KfW!</span>
+            <span class="hl--sb mb-0">Welcome to KfW!</span>
           </div>
         </div>
       </section>
 
       <div class="container">
-        <section class="my-lg">
+        <section aria-labelledby="disclaimer" class="my-lg">
           <h1 id="disclaimer">Important Usage Notice</h1>
 
           <p class="tx--4">
@@ -76,7 +75,7 @@
           </p>
         </section>
 
-        <section class="my-lg">
+        <section aria-labelledby="color" class="my-lg">
           <h1 id="color">Color</h1>
 
           <div class="mb-lg">
@@ -289,7 +288,7 @@
           </script>
         </section>
 
-        <section class="my-lg">
+        <section aria-labelledby="typography" class="my-lg">
           <h1 id="typography">Typography</h1>
 
           <div class="mb-lg">
@@ -643,7 +642,7 @@
           </div>
         </section>
 
-        <section class="my-lg">
+        <section aria-labelledby="buttons" class="my-lg">
           <h1 id="buttons">Buttons</h1>
           <div class="button-group mb-sm">
             <button type="button" class="button-primary button--icon-position-left">
@@ -660,7 +659,7 @@
             </a>
           </div>
           <h3>Icon Only</h3>
-          <div class="button-group mb-sm">
+          <div class="button-group">
             <button type="button" class="button-primary has-icon-only" aria-label="Next">
               <i aria-hidden="true" class="icon icon--arrow-right"></i>
             </button>
@@ -673,8 +672,8 @@
           </div>
         </section>
 
-        <section class="bg-dark p-sm">
-          <h3 class="hl-3">On Dark</h3>
+        <section aria-labelledby="buttons-on-dark" class="bg-dark p-sm">
+          <h3 id="buttons-on-dark" class="hl-3">On Dark</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis cum harum, impedit molestiae non nulla
             <a href="#" onclick="event.preventDefault()">similique </a>
@@ -696,7 +695,7 @@
             </a>
           </div>
           <h3>Icon Only</h3>
-          <div class="button-group mb-sm">
+          <div class="button-group">
             <button type="button" class="button-primary has-icon-only" aria-label="Next">
               <i aria-hidden="true" class="icon icon--arrow-right"></i>
             </button>
@@ -709,7 +708,7 @@
           </div>
         </section>
 
-        <section class="my-lg">
+        <section aria-labelledby="form-elements" class="my-lg">
           <form>
             <h1 id="form-elements">Form elements</h1>
             <div class="form-group">
@@ -954,8 +953,9 @@
             </fieldset>
           </form>
         </section>
-        <section class="my-lg" id="tables">
-          <h2>Table</h2>
+
+        <section aria-labelledby="tables" class="my-lg">
+          <h2 id="tables">Table</h2>
           <div class="overflow-auto">
             <table class="striped">
               <thead>
@@ -1027,6 +1027,7 @@
         </section>
       </div>
     </main>
+
     <footer class="footer">
       <nav class="container">
         <span class="footer__copyright">2026 KfW, Frankfurt am Main</span>
