@@ -975,17 +975,28 @@
     background-color: var(--kfw-color-fn-active);
   }
 
-  .button--small {
-    padding: 0.8rem 1.6rem;
-    font-size: var(--kfw-fontsize-small);
-  }
-
   .button--icon-position-left {
     padding-inline-start: 2rem;
   }
 
   .button--icon-position-right {
     padding-inline-end: 2rem;
+  }
+
+  .button--small {
+    --space-between: 0.6rem;
+
+    padding-block: 0.8rem;
+    padding-inline: 1.6rem;
+    font-size: var(--kfw-fontsize-small);
+  }
+
+  .button--small.button--icon-position-left {
+    padding-inline-start: 1.2rem;
+  }
+
+  .button--small.button--icon-position-right {
+    padding-inline-end: 1.2rem;
   }
 
   input:not([type="submit"], [type="button"], [type="reset"])[disabled],
