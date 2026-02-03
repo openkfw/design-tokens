@@ -1200,6 +1200,10 @@
     outline: none;
   }
 
+  .has-icon-only--close:focus {
+    background: red;
+  }
+
   .has-icon-only--close:hover .has-icon-only__inner {
     outline-width: var(--kfw-borderwidth-large);
   }
