@@ -1212,13 +1212,14 @@
     outline: none;
   }
 
-  .has-icon-only--close:where(:hover, :focus-visible) .has-icon-only__inner {
+  .has-icon-only--close:hover .has-icon-only__inner {
     outline-width: var(--kfw-focusring-outline-width);
   }
 
   .has-icon-only--close:focus-visible .has-icon-only__inner {
     outline-style: var(--kfw-focusring-outline-style);
     outline-offset: var(--kfw-focusring-outline-offset);
+    outline-width: var(--kfw-focusring-outline-width);
   }
 
   .has-icon-only--close:active .has-icon-only__inner {
