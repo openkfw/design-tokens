@@ -18,9 +18,7 @@
       dialog.showModal()
 
       setTimeout(() => {
-        if ("focus" in dummyFocus) {
-          dummyFocus.focus()
-        }
+        dummyFocus?.focus()
       }, 0)
     }
 
