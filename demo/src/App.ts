@@ -7,11 +7,10 @@
   const hamburger = document.querySelector(".header__hamburger") as HTMLElement | null
   const dialog = document.getElementById("main-nav") as HTMLDialogElement | null
 
-  const closeButton = document.querySelector(".navigation__close")
+  const dummyFocus = document.getElementById("dummyFocus") as HTMLDialogElement | null
 
   if (hamburger && dialog) {
     const dialogContent = dialog.querySelector("[data-dialog-content]") as HTMLElement | null
-    closeButton?.setAttribute("tabindex", "-1")
 
     const openNav = () => {
       hamburger.setAttribute("aria-expanded", "true")
@@ -19,10 +18,10 @@
       dialog.showModal()
 
       setTimeout(() => {
-        if ("removeAttribute" in closeButton) {
-          closeButton.removeAttribute("tabindex")
+        if ("focus" in dummyFocus) {
+          dummyFocus.focus()
         }
-      }, 100)
+      }, 0)
     }
 
     const closeNav = () => {
