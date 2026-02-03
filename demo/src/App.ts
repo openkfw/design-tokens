@@ -7,8 +7,6 @@
   const hamburger = document.querySelector(".header__hamburger") as HTMLElement | null
   const dialog = document.getElementById("main-nav") as HTMLDialogElement | null
 
-  const dummyFocus = document.getElementById("dummyFocus") as HTMLDialogElement | null
-
   if (hamburger && dialog) {
     const dialogContent = dialog.querySelector("[data-dialog-content]") as HTMLElement | null
 
@@ -16,10 +14,6 @@
       hamburger.setAttribute("aria-expanded", "true")
       body.classList.add("no-scroll")
       dialog.showModal()
-
-      setTimeout(() => {
-        dummyFocus?.focus()
-      }, 0)
     }
 
     const closeNav = () => {
