@@ -1224,6 +1224,7 @@
 
   .has-icon-only--close:active .has-icon-only__inner {
     outline-width: var(--kfw-borderwidth);
+    outline-style: var(--kfw-borderstyle);
   }
 }
 
