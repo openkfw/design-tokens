@@ -82,7 +82,7 @@
 
   :focus-visible {
     outline-offset: var(--kfw-focusring-outline-offset);
-    outline: var(--kfw-focusring-outline-color) var(--kfw-focusring-outline-style) 0;
+    outline: 0 var(--kfw-focusring-outline-style) var(--kfw-focusring-outline-color);
   }
 
   [data-whatinput="keyboard"] *:focus-visible {
@@ -823,7 +823,7 @@
     border-color: var(--link-border);
     cursor: pointer;
     background-color: var(--link-background);
-    outline: var(--kfw-focusring-outline-color) var(--kfw-focusring-outline-style) 0;
+    outline: 0 var(--kfw-focusring-outline-style) var(--kfw-focusring-outline-color);
   }
 
   :where(a:not([role="button"]), [role="link"]):where(:hover, :focus-visible, :active) {
@@ -836,11 +836,11 @@
   }
 
   :where(a:not([role="button"]), [role="link"]).has-icon-only:where(:hover, :active) {
-    outline: var(--link-color-hover) var(--kfw-borderstyle) var(--kfw-borderwidth-large);
+    outline: var(--kfw-borderwidth-large) var(--kfw-borderstyle) var(--link-color-hover);
   }
 
   :where(a:not([role="button"]), [role="link"]):active {
-    outline: var(--link-color-hover) var(--kfw-borderstyle) var(--kfw-borderwidth);
+    outline: var(--kfw-borderwidth) var(--kfw-borderstyle) var(--link-color-hover);
   }
 
   :where(a:not([role="button"]), [role="link"]).has-icon-only:where(:focus-visible) {
@@ -1185,8 +1185,8 @@
 
   /* Necessary to style the outline around the icon, as it is not possible to apply it directly to masked elements */
   .has-icon-only__inner {
-    outline: var(--kfw-color-background) var(--kfw-borderstyle) 0;
     border-radius: var(--kfw-borderradius);
+    outline: 0 var(--kfw-borderstyle) var(--kfw-color-background);
   }
 
   .has-icon-only--close {
@@ -1211,13 +1211,13 @@
     outline: none;
   }
 
-  .has-icon-only--close:hover .has-icon-only__inner {
-    outline-width: var(--kfw-borderwidth-large);
+  .has-icon-only--close:where(:hover, :focus-visible) .has-icon-only__inner {
+    outline-width: var(--kfw-focusring-outline-width);
   }
 
   .has-icon-only--close:focus-visible .has-icon-only__inner {
     outline-style: var(--kfw-focusring-outline-style);
-    outline-width: var(--kfw-borderwidth-large);
+    outline-offset: var(--kfw-focusring-outline-offset);
   }
 
   .has-icon-only--close:active .has-icon-only__inner {
@@ -1304,7 +1304,8 @@
 
   .header__logo {
     display: block;
-    margin: 0 auto;
+    margin-inline: auto;
+    margin-block: 3rem;
   }
 
   :where(.header__logo-small, .header__logo-large img) {
@@ -1318,7 +1319,6 @@
   .header__logo-large {
     display: none;
     height: 6rem;
-    margin-block: 3rem;
   }
 
   @media (--kfw-breakpoint-desktop) {
