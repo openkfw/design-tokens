@@ -1213,10 +1213,11 @@
     outline-width: var(--kfw-borderwidth);
   }
 
+  /*
     .has-icon-only--close:focus .has-icon-only__inner {
         outline: none;
         background: red;
-    }
+    } */
 }
 
 /* -------------------------------------------------------------------------

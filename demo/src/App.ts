@@ -7,13 +7,22 @@
   const hamburger = document.querySelector(".header__hamburger") as HTMLElement | null
   const dialog = document.getElementById("main-nav") as HTMLDialogElement | null
 
+  const closeButton = document.querySelector(".navigation__close")
+
   if (hamburger && dialog) {
     const dialogContent = dialog.querySelector("[data-dialog-content]") as HTMLElement | null
+    closeButton?.setAttribute("tabindex", "-1")
 
     const openNav = () => {
       hamburger.setAttribute("aria-expanded", "true")
       body.classList.add("no-scroll")
       dialog.showModal()
+
+      setTimeout(() => {
+        if ("removeAttribute" in closeButton) {
+          closeButton.removeAttribute("tabindex")
+        }
+      }, 100)
     }
 
     const closeNav = () => {
