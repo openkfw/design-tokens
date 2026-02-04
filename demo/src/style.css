@@ -38,7 +38,6 @@
     --headline-color: var(--kfw-color-text);
     --kfw-focusring-outline-color: var(--kfw-color-fn-active);
     --kfw-fontsize-heading-4: clamp(var(--kfw-fontsize-heading-4-min), var(--kfw-fontsize-heading-4-val), var(--kfw-fontsize-heading-4-max));
-    --kfw-focusring-outline-offset: 2px; /* @todo check is 2 or 3px correct? */
   }
 
   @media (--kfw-breakpoint-mobile) {
