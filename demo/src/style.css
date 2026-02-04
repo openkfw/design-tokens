@@ -1264,7 +1264,7 @@
   }
 
   .header__hamburger {
-    --outer-size: 4.8rem;
+    --outer-size: 3.6rem;
 
     width: var(--outer-size);
     height: var(--outer-size);
@@ -1273,6 +1273,12 @@
     padding: 0;
     justify-content: center;
     align-items: center;
+  }
+
+  @media (--kfw-breakpoint-tablet) {
+    .header__hamburger {
+      --outer-size: 4.8rem;
+    }
   }
 
   .header__hamburger:where(:active) {
@@ -1305,13 +1311,23 @@
     margin-top: 0;
   }
 
+  .login-text {
+    display: none;
+  }
+
+  @media (--kfw-breakpoint-tablet) {
+    .login-text {
+      display: inline-flex;
+    }
+  }
+
   .header__logo {
     display: block;
     margin: 0 auto;
     padding: 0;
   }
 
-  @media (--kfw-breakpoint-desktop) {
+  @media (--kfw-breakpoint-tablet) {
     .header__logo {
       margin-block: 3rem;
     }
@@ -1334,7 +1350,7 @@
     height: 6rem;
   }
 
-  @media (--kfw-breakpoint-desktop) {
+  @media (--kfw-breakpoint-tablet) {
     .header__logo-small {
       display: none;
     }
