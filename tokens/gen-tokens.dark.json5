@@ -922,7 +922,7 @@
       $type: "dimension",
       $value: {
         unit: "px",
-        value: 3,
+        value: 2,
       },
     },
     layout: {

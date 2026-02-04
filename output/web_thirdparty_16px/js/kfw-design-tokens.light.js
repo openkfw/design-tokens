@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.6 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.7 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100 = {
@@ -241,7 +241,7 @@ export const KfwBaseLetterspacingTight = "-0.5px";
 export const KfwBaseLetterspacingNormal = "0";
 export const KfwBaseLetterspacingWide = "0.5px";
 export const KfwBaseLetterspacingWider = "1px";
-export const KfwBaseOffset = "0.1875rem";
+export const KfwBaseOffset = "2px";
 export const KfwBaseLayoutBreakpointXs = "320px";
 export const KfwBaseLayoutBreakpointSm = "600px";
 export const KfwBaseLayoutBreakpointMd = "840px";
@@ -546,7 +546,7 @@ export const KfwBorderwidth = "1px";
 export const KfwBorderwidthLarge = "2px";
 export const KfwBorderstyle = "solid";
 export const KfwFocusringOutlineWidth = "2px";
-export const KfwFocusringOutlineOffset = "0.1875rem";
+export const KfwFocusringOutlineOffset = "2px";
 export const KfwFocusringOutlineStyle = "dashed";
 export const KfwFocusringOutlineColor = {
   colorSpace: "srgb",

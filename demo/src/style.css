@@ -1307,16 +1307,21 @@
   }
 
   .header__secondary-nav .icon {
-    margin-inline-end: 0.8rem;
     margin-top: 0;
   }
 
-  .login-text {
+  @media (--kfw-breakpoint-tablet) {
+    .header__secondary-nav .icon {
+      margin-inline-end: 0.8rem;
+    }
+  }
+
+  .header__login-text {
     display: none;
   }
 
   @media (--kfw-breakpoint-tablet) {
-    .login-text {
+    .header__login-text {
       display: inline-flex;
     }
   }

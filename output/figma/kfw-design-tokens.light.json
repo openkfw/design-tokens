@@ -317,7 +317,7 @@
       }
     },
     "Offset": {
-      "$value": "3px",
+      "$value": "2px",
       "$type": "dimension"
     }
   },

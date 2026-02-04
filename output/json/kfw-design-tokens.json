@@ -3780,7 +3780,7 @@
       "$type": "dimension",
       "$value": {
         "unit": "px",
-        "value": 3
+        "value": 2
       },
       "filePath": "tokens/tokens.json",
       "isSource": true,
@@ -3788,7 +3788,7 @@
         "$type": "dimension",
         "$value": {
           "unit": "px",
-          "value": 3
+          "value": 2
         },
         "key": "{base.offset}"
       },
@@ -7249,7 +7249,7 @@
         "$type": "dimension",
         "$value": {
           "unit": "px",
-          "value": 3
+          "value": 2
         },
         "filePath": "tokens/tokens.json",
         "isSource": true,

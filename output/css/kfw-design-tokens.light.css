@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.6 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.7 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 :root, :host { color-scheme: light; }
@@ -129,7 +129,7 @@
   --kfw-base-letterspacing-normal: 0;
   --kfw-base-letterspacing-wide: 0.5px;
   --kfw-base-letterspacing-wider: 1px;
-  --kfw-base-offset: 0.3rem;
+  --kfw-base-offset: 2px;
   --kfw-base-layout-breakpoint-xs: 320px;
   --kfw-base-layout-breakpoint-sm: 600px;
   --kfw-base-layout-breakpoint-md: 840px;
@@ -251,7 +251,7 @@
   --kfw-borderwidth-large: 2px;
   --kfw-borderstyle: solid;
   --kfw-focusring-outline-width: 2px;
-  --kfw-focusring-outline-offset: 0.3rem;
+  --kfw-focusring-outline-offset: 2px;
   --kfw-focusring-outline-style: dashed;
   --kfw-focusring-outline-color: #00446e;
   --kfw-focusring-outline-radius: 4px;
