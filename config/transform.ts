@@ -12,6 +12,8 @@ import { transforms, transformTypes } from "style-dictionary/enums"
 import { isPascalCase, kebabToPascalCase } from "./shared"
 import { StyleDictionary } from "style-dictionary-utils"
 
+import { PX_TO_REM_THRESHOLD, PX_TO_REM_EXCLUSIONS, VALID_UNITS_SET, VALID_CSS_UNITS } from "./constants"
+
 export function RegisterTransforms(PREFIX: string) {
   /**
    * Convert (pixel > 2 && pixel > -2) values to rem, not just dimensions and font sizes, uses `platform.options.basePxFontSize`
@@ -25,10 +27,24 @@ export function RegisterTransforms(PREFIX: string) {
     transitive: true,
     filter: (token) => {
       const { $value, path } = token
-      if (path.includes("breakpoint") || path.includes("borderradius") || path.includes("outline-radius"))
-        return false /* 💡 Reason: Media queries use the browser's default root font size (not our custom setting, like 1rem = 10px) and borderradius should be always px */
+      if (!Array.isArray(path)) return false
+
+      /* 💡 Reason: Media queries use the browser's default root font size (not our custom setting, like 1rem = 10px) and borderradius should be always px */
+      if (PX_TO_REM_EXCLUSIONS.some((exclusion) => path.includes(exclusion))) {
+        return false
+      }
+
+      if (typeof $value !== "string" || !$value.endsWith("px")) {
+        return false
+      }
+
       const numericValue = parseFloat($value)
-      return typeof $value === "string" && $value.endsWith("px") && (numericValue < -2 || numericValue > 2 || numericValue === 0)
+      if (isNaN(numericValue)) {
+        console.warn(`Failed to parse numeric value: ${$value} at ${token.name}`)
+        return false
+      }
+
+      return numericValue < -PX_TO_REM_THRESHOLD || numericValue > PX_TO_REM_THRESHOLD || numericValue === 0
     }
   })
 
@@ -39,21 +55,25 @@ export function RegisterTransforms(PREFIX: string) {
     filter: (token) => typeof token.$fluid === "object" && (token.$type === "dimension" || token.$type === "number"),
     transform: (token) => {
       const { $type, $value, $fluid, name } = token
-      const validUnits = new Set(["px", "rem", "em", "vw", "vi", "vh", "vmin", "vmax", "pt", "dp", "%", "cm", "mm", "in", "pc"])
 
-      if (validUnits.has($fluid.unit)) {
-        if ($type === "dimension") {
-          const numericValue = parseFloat($value)
-          const valueUnit = $value.replace(numericValue, "").trim()
-          const sign = numericValue > 0 ? "+" : "-"
-          return `${$fluid.value}${$fluid.unit} ${sign} ${Math.abs(numericValue)}${valueUnit}`
-        }
+      if (!VALID_UNITS_SET.has($fluid.unit)) {
+        throw new Error(
+          `Invalid fluid unit "${$fluid.unit}" at "${name}". Valid units: ${Array.from(VALID_CSS_UNITS).join(", ")}`
+        )
+      }
 
-        if ($type === "number") {
-          return `${$value}${$fluid.unit}`
+      if ($type === "dimension") {
+        const numericValue = parseFloat($value)
+        if (isNaN(numericValue)) {
+          throw new Error(`Invalid dimension value "${$value}" at "${name}"`)
         }
-      } else {
-        console.error(`Invalid Number Unit: ${$fluid.unit} at ${name}. Please use one of the following: ${Array.from(validUnits).join(", ")}.`)
+        const valueUnit = $value.replace(numericValue.toString(), "").trim()
+        const sign = numericValue > 0 ? "+" : "-"
+        return `${$fluid.value}${$fluid.unit} ${sign} ${Math.abs(numericValue)}${valueUnit}`
+      }
+
+      if ($type === "number") {
+        return `${$value}${$fluid.unit}`
       }
 
       return $value

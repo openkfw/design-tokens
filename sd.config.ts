@@ -46,7 +46,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
 
   const src = isDefaultTheme ? DEFAULT_SELECTOR : `*.${theme}`
 
-  function seletorRoot() {
+  function selectorRoot() {
     const SELECTOR = isDefaultTheme ? `:root, :host` : `[data-theme=${theme}], :host(:not([data-theme=light]))`
     return `${SELECTOR} { color-scheme: ${theme}; }\n\n${SELECTOR}`
   }
@@ -66,7 +66,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
             destination: `kfw-design-tokens.${theme}.css`,
             format: formats.cssVariables,
             options: {
-              selector: seletorRoot(),
+              selector: selectorRoot(),
               outputReferences: false
             }
           }
@@ -83,7 +83,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
             destination: `kfw-design-tokens.${theme}.scss`,
             format: formats.scssVariables,
             options: {
-              selector: seletorRoot(),
+              selector: selectorRoot(),
               outputReferences: false
             }
           }

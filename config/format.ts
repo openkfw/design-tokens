@@ -13,45 +13,62 @@ import { humanCase } from "./shared"
 import deep from "deep-get-set-ts"
 import { formatsFigmaPenpot } from "../sd.config"
 import { StyleDictionary } from "style-dictionary-utils"
+import {
+  TYPE_REMAPPING,
+  DESIGN_TOOL_EXCLUSIONS,
+  PATH_TRANSFORMATIONS,
+  PERCENTAGE_MULTIPLIER,
+  PERCENTAGE_DECIMAL_PLACES
+} from "./constants"
 
 const extractTokenValue = ({ $value, $type, path }: TransformedToken) => {
-  const attributes = {
+  const attributes: { $value: unknown; $type: string } = {
     $value,
-    $type
-  }
-  if (path.includes("letterspacing")) {
-    attributes.$type = "letterSpacing"
-  }
-  if (path.includes("borderwidth")) {
-    attributes.$type = "borderWidth"
-  }
-  if (path.includes("fontfamily")) {
-    attributes.$type = "fontFamilies"
-  }
-  if (path.includes("fontweight")) {
-    attributes.$type = "fontWeights"
-  }
-  if (path.includes("fontsize")) {
-    attributes.$type = "fontSizes"
-  }
-  if (path.includes("lineheight")) {
-    attributes.$type = "lineHeights"
-    attributes.$value = `${parseFloat(($value * 100).toFixed(2))}%`
-  }
-  if (path.includes("borderradius")) {
-    attributes.$type = "borderRadius"
-  }
-  if (path.includes("space")) {
-    attributes.$type = "spacing"
+    $type: $type ?? "unknown"
   }
 
-  return {
-    ...attributes
+  for (const [pathKey, mapping] of Object.entries(TYPE_REMAPPING)) {
+    if (path.includes(pathKey)) {
+      Object.assign(attributes, mapping)
+
+      if (pathKey === "lineheight" && typeof $value === "number") {
+        attributes.$value = `${parseFloat(($value * PERCENTAGE_MULTIPLIER).toFixed(PERCENTAGE_DECIMAL_PLACES))}%`
+      }
+    }
   }
+
+  return attributes
 }
 
 interface DeepWithP {
   p?: boolean
+}
+
+/**
+ * Check if token path should be excluded from design tool export
+ */
+const shouldExcludeToken = (path: string[]): boolean => {
+  return DESIGN_TOOL_EXCLUSIONS.some((exclusion) => path.includes(exclusion))
+}
+
+/**
+ * Transform path segments for design tool compatibility
+ */
+const transformPathSegments = (path: string[]): string[] => {
+  const newPath = [...path]
+
+  for (const [from, to] of Object.entries(PATH_TRANSFORMATIONS)) {
+    const index = newPath.indexOf(from)
+    if (index !== -1) {
+      if (to === null) {
+        newPath.splice(index, 1)
+      } else {
+        newPath[index] = to
+      }
+    }
+  }
+
+  return newPath
 }
 
 const convertTokensToJson = (tokens: TransformedToken[]) => {
@@ -59,35 +76,19 @@ const convertTokensToJson = (tokens: TransformedToken[]) => {
 
   ;(deep as DeepWithP).p = true
 
-  tokens.map((token) => {
-    const path = token.path.map(humanCase)
+  tokens.forEach((token) => {
+    const humanCasePath = token.path.map(humanCase)
 
-    /* Hide layout tokens */
-    if (path.includes("Layout")) return
-    if (path.includes("Breakpoint")) return
-    if (path.includes("Contentwrapper")) return
-    if (path.includes("Safezone")) return
-    if (path.includes("Focusring")) return
-
-    /* Hide fluid tokens for design, but show it in functional (mobile/desktop) */
-    if (path.includes("Fluid")) return
-    if (path.includes("Val")) return
-    if (path.includes("Min")) {
-      path[path.indexOf("Min")] = "Mobile"
-    }
-    if (path.includes("Max")) {
-      path[path.indexOf("Max")] = "Desktop"
+    if (shouldExcludeToken(humanCasePath)) {
+      return
     }
 
-    if (path.includes("Static")) {
-      path.splice(path.indexOf("Static"), 1)
-    }
-
-    deep(output, path, extractTokenValue(token))
+    const transformedPath = transformPathSegments(humanCasePath)
+    deep(output, transformedPath, extractTokenValue(token))
   })
 
   output.$metadata = {
-    "tokenSetOrder": ["Base", "Semantic"]
+    tokenSetOrder: ["Base", "Semantic"]
   }
 
   return output
