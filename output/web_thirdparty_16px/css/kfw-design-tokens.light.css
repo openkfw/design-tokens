@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.8 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.9 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 :root, :host { color-scheme: light; }
@@ -172,6 +172,7 @@
   --kfw-base-layout-gridcolumn-4: 4;
   --kfw-base-layout-gridcolumn-6: 6;
   --kfw-base-layout-gridcolumn-8: 8;
+  --kfw-base-layout-gridcolumn-10: 10;
   --kfw-base-layout-gridcolumn-12: 12;
   --kfw-color-fn: #005a8c; /** Main interaction color for buttons and links (Blue 600) */
   --kfw-color-fn-active: #00446e; /** Main interaction color when active (e.g., hover, Blue 700) */

@@ -14,11 +14,12 @@
     <link rel="icon" type="image/png" href="/favicons/KfW_Favicon_Pfeil_96x96px.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="/favicons/KfW_Logo_192x192px.png" sizes="192x192" />
     <script type="module" defer>
-      import "what-input"
-    </script>
-    <script type="module" defer>
       import allTokens from "@openkfw/design-tokens/output/json/kfw-design-tokens.json" with { type: "json" }
       window.allTokens = allTokens
+    </script>
+    <script type="module" defer>
+      import whatInput from "what-input"
+      window.whatInput = whatInput
     </script>
   </head>
   <body id="top">
@@ -711,8 +712,8 @@
         </section>
 
         <section aria-labelledby="form-elements" class="my-lg">
-          <form>
-            <h1 id="form-elements">Form elements</h1>
+          <h1 id="form-elements">Form elements</h1>
+          <form class="custom-form">
             <div class="form-group">
               <label for="searchfield">Search</label>
               <div class="searchfield">
@@ -749,64 +750,64 @@
                 <div class="overflow-auto">
                   <table class="file-upload-table">
                     <thead>
-                      <tr>
-                        <th>Your Files</th>
-                        <th>File Size</th>
-                        <th>Action</th>
-                      </tr>
+                    <tr>
+                      <th>Your Files</th>
+                      <th>File Size</th>
+                      <th>Action</th>
+                    </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td class="file-upload-table__filename">Uploading.jpeg</td>
-                        <td>1.35 MB</td>
-                        <td>
-                          <button type="button" role="link">
-                            <i aria-hidden="true" class="icon icon--sm icon--delete"></i>
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="file-upload-table__filename">Successfully_Uploaded.jpeg</td>
-                        <td>765.82 KB</td>
-                        <td>
-                          <button type="button" role="link">
-                            <i aria-hidden="true" class="icon icon--sm icon--delete"></i>
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="file-upload-table__error" colspan="4">
-                          <span class="invalid-feedback" role="alert"> The upload of the file has failed. </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="file-upload-table__filename">Successfully_Uploaded-final-final2.jpeg</td>
-                        <td>765.82 KB</td>
-                        <td>
-                          <button type="button" role="link">
-                            <i aria-hidden="true" class="icon icon--sm icon--delete"></i>
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
+                    <tr>
+                      <td class="file-upload-table__filename">Uploading.jpeg</td>
+                      <td>1.35 MB</td>
+                      <td>
+                        <button type="button" role="link">
+                          <i aria-hidden="true" class="icon icon--sm icon--delete"></i>
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="file-upload-table__filename">Successfully_Uploaded.jpeg</td>
+                      <td>765.82 KB</td>
+                      <td>
+                        <button type="button" role="link">
+                          <i aria-hidden="true" class="icon icon--sm icon--delete"></i>
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="file-upload-table__error" colspan="4">
+                        <span class="invalid-feedback" role="alert"> The upload of the file has failed. </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="file-upload-table__filename">Successfully_Uploaded-final-final2.jpeg</td>
+                      <td>765.82 KB</td>
+                      <td>
+                        <button type="button" role="link">
+                          <i aria-hidden="true" class="icon icon--sm icon--delete"></i>
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
             <div class="auto-grid">
-              <div class="form-group">
+              <div class="auto-grid__item">
                 <label for="valid">Valid</label>
                 <input class="form-control" type="text" id="valid" name="valid" placeholder="Valid" aria-invalid="false" />
               </div>
-              <div class="form-group">
+              <div class="auto-grid__item">
                 <label for="invalid">Invalid</label>
                 <input class="form-control" type="text" id="invalid" name="invalid" placeholder="Invalid" aria-invalid="true" />
                 <small role="alert" class="invalid-feedback"> Please fill out this field. </small>
               </div>
-              <div class="form-group">
+              <div class="auto-grid__item">
                 <label for="disabled">Disabled</label>
                 <input class="form-control" type="text" id="disabled" name="disabled" placeholder="Disabled" disabled />
               </div>
@@ -832,9 +833,9 @@
                   <label for="radioButton1Desc">
                     Default Radiobox
                     <span>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
-                      dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
-                    </span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
+                        dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
+                      </span>
                   </label>
                 </li>
                 <li>
@@ -842,9 +843,9 @@
                   <label for="radioButton2Desc">
                     Radiobox 2
                     <span>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
-                      dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
-                    </span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
+                        dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
+                      </span>
                   </label>
                 </li>
               </ul>
@@ -897,9 +898,9 @@
                   <label for="checkButton1Desc">
                     Default Checkbox
                     <span>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
-                      dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
-                    </span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
+                        dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
+                      </span>
                   </label>
                 </li>
                 <li>
@@ -907,9 +908,9 @@
                   <label for="checkButton2Desc">
                     Checkbox 2
                     <span>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
-                      dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
-                    </span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
+                        dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
+                      </span>
                   </label>
                 </li>
               </ul>

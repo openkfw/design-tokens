@@ -5042,6 +5042,31 @@
             "8"
           ]
         },
+        "10": {
+          "key": "{base.layout.gridcolumn.10}",
+          "$value": 10,
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "number",
+          "original": {
+            "$value": 10,
+            "$type": "number",
+            "key": "{base.layout.gridcolumn.10}"
+          },
+          "name": "kfw-base-layout-gridcolumn-10",
+          "attributes": {
+            "category": "base",
+            "type": "layout",
+            "item": "gridcolumn",
+            "subitem": "10"
+          },
+          "path": [
+            "base",
+            "layout",
+            "gridcolumn",
+            "10"
+          ]
+        },
         "12": {
           "key": "{base.layout.gridcolumn.12}",
           "$value": 12,

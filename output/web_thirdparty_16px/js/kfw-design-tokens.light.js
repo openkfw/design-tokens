@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.8 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v0.6.9 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 export const KfwBaseColorBlue100 = "#e9f5fb";
@@ -171,6 +171,7 @@ export const KfwBaseLayoutGridcolumn3 = 3;
 export const KfwBaseLayoutGridcolumn4 = 4;
 export const KfwBaseLayoutGridcolumn6 = 6;
 export const KfwBaseLayoutGridcolumn8 = 8;
+export const KfwBaseLayoutGridcolumn10 = 10;
 export const KfwBaseLayoutGridcolumn12 = 12;
 export const KfwColorFn = "#005a8c"; // Main interaction color for buttons and links (Blue 600)
 export const KfwColorFnActive = "#00446e"; // Main interaction color when active (e.g., hover, Blue 700)

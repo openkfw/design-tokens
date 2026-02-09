@@ -6,11 +6,7 @@ declare global {
 
 interface TokenValue {
   $description?: string
-  $value?: {
-    hex?: string
-    alpha?: number
-    components?: [number, number, number]
-  }
+  $value?: string
   name?: string
 }
 
@@ -33,8 +29,6 @@ function getByPath(obj: TokenGroup, path: string): TokenValue | undefined {
     return o[k as keyof typeof o] as TokenGroup | TokenValue | undefined
   }, obj)
 }
-
-const convertToRgb = (color: number): number => Math.min(255, Math.max(0, Math.round(color * 255)))
 
 function createColorPaletteItem(colorEl: HTMLElement, tokenGroup: string, tokenName: string | undefined): void {
   colorEl.classList.add("color-palette__color")
@@ -70,21 +64,7 @@ function createColorPaletteItem(colorEl: HTMLElement, tokenGroup: string, tokenN
   desc.textContent = token?.$description || ""
   btn.textContent = token?.name || "var(--kfw-color-fn)"
 
-  if (token?.$value?.alpha) {
-    const components = token.$value.components
-    if (components) {
-      const [r, g, b] = components
-      colorEl.style.backgroundColor = `rgba(
-        ${convertToRgb(r)},
-        ${convertToRgb(g)},
-        ${convertToRgb(b)},
-        ${token.$value.alpha}
-      )`
-    }
-  } else {
-    colorEl.style.backgroundColor = token?.$value?.hex || ""
-  }
-
+  colorEl.style.backgroundColor = token?.$value || ""
   colorEl.replaceWith(wrapper)
   wrapper.appendChild(colorEl)
   wrapper.appendChild(container)

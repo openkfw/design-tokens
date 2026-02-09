@@ -11,7 +11,7 @@
 /* -------------------------------------------------------------------------
    Reset & Normalize
    ------------------------------------------------------------------------- */
-@import "uaplus/uaplus.css" layer(reset);
+@import url("uaplus/uaplus.css") layer(reset);
 
 /* -------------------------------------------------------------------------
    KfW Design Tokens
@@ -32,8 +32,10 @@
   :root,
   :host {
     --kfw-space-large: clamp(var(--kfw-space-large-min), var(--kfw-space-large-val), var(--kfw-space-large-max));
+    --kfw-space-xlarge: clamp(var(--kfw-space-xlarge-min), var(--kfw-space-xlarge-val), var(--kfw-space-xlarge-max));
     --kfw-space-big: clamp(var(--kfw-space-big-min), var(--kfw-space-big-val), var(--kfw-space-big-max));
     --kfw-gridgap-large: clamp(var(--kfw-gridgap-large-min), var(--kfw-gridgap-large-val), var(--kfw-gridgap-large-max));
+    --kfw-gridgap-basic: clamp(var(--kfw-gridgap-basic-min), var(--kfw-gridgap-basic-val), var(--kfw-gridgap-basic-max));
     --kfw-safezone: var(--kfw-safezone-mobile);
     --headline-color: var(--kfw-color-text);
     --kfw-focusring-outline-color: var(--kfw-color-fn-active);
@@ -85,7 +87,7 @@
     outline: 0 var(--kfw-focusring-outline-style) var(--kfw-focusring-outline-color);
   }
 
-  [data-whatinput="keyboard"] *:focus-visible {
+  [data-whatinput="keyboard"]:not([data-whatintent="mouse"]) *:focus-visible {
     outline-width: var(--kfw-focusring-outline-width);
   }
 
@@ -1694,6 +1696,12 @@
     font-family: var(--kfw-fontfamily-code);
     font-size: var(--kfw-fontsize-small);
     min-width: 20rem;
+  }
+
+  .custom-form {
+    width: 100%;
+    padding-inline: var(--kfw-safezone);
+    max-width: var(--kfw-contentwrapper-narrow);
   }
 
   table.file-upload-table {
