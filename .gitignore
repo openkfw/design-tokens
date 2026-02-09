@@ -9,3 +9,7 @@ npm-debug.log
 package-lock.json
 
 .claude
+
+# Sync generated files
+sync/contract.json
+sync/node_modules

@@ -39,7 +39,7 @@ const DEFAULT_SELECTOR = `!(*.${THEMES.join("|*.")})`
 
 const BUILD_PATH_PREFIX = "output"
 
-const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Config => {
+export const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Config => {
   const isDefaultTheme = theme === "light"
   const isDefaultSize = basePxFontSize === 10
   const variant = isDefaultSize ? "" : "/web_thirdparty_16px"

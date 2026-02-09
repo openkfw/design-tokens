@@ -17,12 +17,16 @@
   "scripts": {
     "start": "npm run watch",
     "watch": "tsx watch --include \"./tokens/*.**\" sd.config.ts",
-    "build": "tsx sd.config.ts",
+    "build": "tsx sd.config.ts && tsx generate-contract.ts",
     "update": "npx npm-check-updates -u",
     "lint": "eslint --ignore-pattern demo . --fix",
     "format": "npx prettier ./ --write --config .prettierrc.json",
     "typecheck": "tsc --noEmit",
-    "precommit": "npm run typecheck && npm run format && npm run lint"
+    "precommit": "npm run typecheck && npm run format && npm run lint",
+    "sync:export": "cd sync && npm run export",
+    "sync:import": "cd sync && npm run import",
+    "sync:validate": "cd sync && npm run validate",
+    "sync:diff": "cd sync && npm run diff"
   },
   "repository": {
     "type": "git",
@@ -43,6 +47,7 @@
     "@types/lodash": "^4.17.23",
     "@types/node": "^24",
     "concurrently": "^9.2.1",
+    "deep-diff": "^1.0.2",
     "deep-get-set-ts": "^1.1.2",
     "eslint": "^9.39.2",
     "json5": "^2.2.3",
