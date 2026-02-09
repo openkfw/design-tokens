@@ -1425,7 +1425,7 @@
   }
 
   .navigation::backdrop {
-    background-color: color-mix(in oklab, black 30%, transparent); /* todo ask for design token */
+    background-color: var(--kfw-color-opaque-gray-500-30);
   }
 
   .navigation__close {
@@ -1669,6 +1669,31 @@
     .color-palette__item:last-child .color-palette__color {
       border-inline-end: var(--kfw-borderwidth) solid var(--kfw-color-fn-inactive);
     }
+  }
+
+  .spacing-demo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kfw-space-xsmall);
+    margin-bottom: var(--kfw-space-big);
+  }
+
+  .spacing-demo__item {
+    display: flex;
+    align-items: center;
+    gap: var(--kfw-space-small);
+  }
+
+  .spacing-demo__visual {
+    height: 3rem;
+    background-color: var(--kfw-color-fn);
+    border-radius: var(--kfw-borderradius-small);
+  }
+
+  .spacing-demo__label {
+    font-family: var(--kfw-fontfamily-code);
+    font-size: var(--kfw-fontsize-small);
+    min-width: 20rem;
   }
 
   table.file-upload-table {

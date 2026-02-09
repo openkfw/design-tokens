@@ -2,146 +2,33 @@
  * KfW Design Tokens v0.6.7 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
-export const KfwBaseColorBlue100: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorBlue400: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorBlue500: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorBlue600: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorBlue700: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorBlue800: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorGreen100: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorGreen300: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorGreen400: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorGreen700: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorWhite90: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-  alpha: number;
-};
-export const KfwBaseColorWhite95: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-  alpha: number;
-};
-export const KfwBaseColorWhite: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorGray50: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorGray100: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorGray200: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorGray300: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorGray400: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorGray50010: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-  alpha: number;
-};
-export const KfwBaseColorGray50030: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-  alpha: number;
-};
-export const KfwBaseColorGray50090: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-  alpha: number;
-};
-export const KfwBaseColorGray500: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorGray600: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorViolet400: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorViolet500: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorRed400: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwBaseColorYellow500: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwBaseColorBlue100: string;
+export const KfwBaseColorBlue400: string;
+export const KfwBaseColorBlue500: string;
+export const KfwBaseColorBlue600: string;
+export const KfwBaseColorBlue700: string;
+export const KfwBaseColorBlue800: string;
+export const KfwBaseColorGreen100: string;
+export const KfwBaseColorGreen300: string;
+export const KfwBaseColorGreen400: string;
+export const KfwBaseColorGreen700: string;
+export const KfwBaseColorWhite90: string;
+export const KfwBaseColorWhite95: string;
+export const KfwBaseColorWhite: string;
+export const KfwBaseColorGray50: string;
+export const KfwBaseColorGray100: string;
+export const KfwBaseColorGray200: string;
+export const KfwBaseColorGray300: string;
+export const KfwBaseColorGray400: string;
+export const KfwBaseColorGray50010: string;
+export const KfwBaseColorGray50030: string;
+export const KfwBaseColorGray50090: string;
+export const KfwBaseColorGray500: string;
+export const KfwBaseColorGray600: string;
+export const KfwBaseColorViolet400: string;
+export const KfwBaseColorViolet500: string;
+export const KfwBaseColorRed400: string;
+export const KfwBaseColorYellow500: string;
 export const KfwBaseFontfamilySans: string;
 export const KfwBaseFontfamilyMono: string;
 export const KfwBaseSpaceStatic5: string;
@@ -284,252 +171,71 @@ export const KfwBaseLayoutGridcolumn6: number;
 export const KfwBaseLayoutGridcolumn8: number;
 export const KfwBaseLayoutGridcolumn12: number;
 /** Main interaction color for buttons and links (Blue 600) */
-export const KfwColorFn: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorFn: string;
 /** Main interaction color when active (e.g., hover, Blue 700) */
-export const KfwColorFnActive: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorFnActive: string;
 /** Interaction color when inactive (Gray 300) */
-export const KfwColorFnInactive: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorFnInactive: string;
 /** Interaction border color (Gray 600) */
-export const KfwColorFnBorder: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorFnBorder: string;
 /** Interaction label color (Gray 600) */
-export const KfwColorFnLabel: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorFnLabel: string;
 /** Main text color for body (Gray 600) */
-export const KfwColorText: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorText: string;
 /** Main text color on dark background (White) */
-export const KfwColorTextOnDarkBg: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorTextOnDarkBg: string;
 /** Headline text color on dark background (Green 300) */
-export const KfwColorTextHeadlineOnDarkBg: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorTextHeadlineOnDarkBg: string;
 /** Text color on disabled (White) */
-export const KfwColorTextOnDisabled: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorTextOnDisabled: string;
 /** Main background color for body (White) */
-export const KfwColorBackground: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorBackground: string;
 /** Neutral (Gray 50) */
-export const KfwColorBackgroundSubtle: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorBackgroundSubtle: string;
 /** Disabled (Gray 300) */
-export const KfwColorBackgroundDisabled: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorBackgroundDisabled: string;
 /** Light blue (Blue 100) */
-export const KfwColorBackgroundLightBlue: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorBackgroundLightBlue: string;
 /** Light green (Green 100) */
-export const KfwColorBackgroundLightGreen: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorBackgroundLightGreen: string;
 /** Green Medium (Green 300) */
-export const KfwColorBackgroundMediumGreen: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorBackgroundMediumGreen: string;
 /** Dark blue (Blue 800) */
-export const KfwColorBackgroundDarkBlue: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorBackgroundDarkBlue: string;
 /** Dark green (Green 700) */
-export const KfwColorBackgroundDarkGreen: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorBackgroundDarkGreen: string;
 /** White 90% */
-export const KfwColorOpaqueWhite90: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-  alpha: number;
-};
+export const KfwColorOpaqueWhite90: string;
 /** White 95% */
-export const KfwColorOpaqueWhite95: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-  alpha: number;
-};
+export const KfwColorOpaqueWhite95: string;
 /** Gray 500 10% */
-export const KfwColorOpaqueGray50010: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-  alpha: number;
-};
+export const KfwColorOpaqueGray50010: string;
 /** Gray 500 30% */
-export const KfwColorOpaqueGray50030: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-  alpha: number;
-};
+export const KfwColorOpaqueGray50030: string;
 /** Gray 500 90% */
-export const KfwColorOpaqueGray50090: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-  alpha: number;
-};
-export const KfwColorStateDanger: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorStateSuccess: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorStateWarning: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorStatusRed: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorStatusYellow: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorStatusGreen: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorLine6: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorLine7: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorLine8: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorLine9: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorLine10: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorLine11: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorLine12: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorProductContainer: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorProductBenefit: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorProductCredit: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorProductCooperation: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorProductCreditBenefit: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorIcon: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorIconSecondary: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorIconDisabled: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
-export const KfwColorIconDisabledSecondary: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwColorOpaqueGray50090: string;
+export const KfwColorStateDanger: string;
+export const KfwColorStateSuccess: string;
+export const KfwColorStateWarning: string;
+export const KfwColorStatusRed: string;
+export const KfwColorStatusYellow: string;
+export const KfwColorStatusGreen: string;
+export const KfwColorLine6: string;
+export const KfwColorLine7: string;
+export const KfwColorLine8: string;
+export const KfwColorLine9: string;
+export const KfwColorLine10: string;
+export const KfwColorLine11: string;
+export const KfwColorLine12: string;
+export const KfwColorProductContainer: string;
+export const KfwColorProductBenefit: string;
+export const KfwColorProductCredit: string;
+export const KfwColorProductCooperation: string;
+export const KfwColorProductCreditBenefit: string;
+export const KfwColorIcon: string;
+export const KfwColorIconSecondary: string;
+export const KfwColorIconDisabled: string;
+export const KfwColorIconDisabledSecondary: string;
 export const KfwFontfamily: string;
 export const KfwFontfamilyCode: string;
 export const KfwSpaceTiny: string;
@@ -580,11 +286,7 @@ export const KfwBorderstyle: string;
 export const KfwFocusringOutlineWidth: string;
 export const KfwFocusringOutlineOffset: string;
 export const KfwFocusringOutlineStyle: string;
-export const KfwFocusringOutlineColor: {
-  colorSpace: string;
-  components: number[];
-  hex: string;
-};
+export const KfwFocusringOutlineColor: string;
 export const KfwFocusringOutlineRadius: string;
 export const KfwFontweight: number;
 export const KfwFontweightBold: number;
