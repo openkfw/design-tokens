@@ -28,23 +28,7 @@ export const PERCENTAGE_MULTIPLIER = 100
 /**
  * Valid CSS units for fluid token transformations
  */
-export const VALID_CSS_UNITS = Object.freeze([
-  "px",
-  "rem",
-  "em",
-  "vw",
-  "vi",
-  "vh",
-  "vmin",
-  "vmax",
-  "pt",
-  "dp",
-  "%",
-  "cm",
-  "mm",
-  "in",
-  "pc"
-] as const)
+export const VALID_CSS_UNITS = Object.freeze(["px", "rem", "em", "vw", "vi", "vh", "vmin", "vmax", "pt", "dp", "%", "cm", "mm", "in", "pc"] as const)
 
 /**
  * Set of valid CSS units for fast lookup
@@ -60,15 +44,7 @@ export const PX_TO_REM_EXCLUSIONS = Object.freeze(["breakpoint", "borderradius",
 /**
  * Token paths that should be excluded from design tool export (Figma/Penpot)
  */
-export const DESIGN_TOOL_EXCLUSIONS = Object.freeze([
-  "Layout",
-  "Breakpoint",
-  "Contentwrapper",
-  "Safezone",
-  "Focusring",
-  "Fluid",
-  "Val"
-] as const)
+export const DESIGN_TOOL_EXCLUSIONS = Object.freeze(["Layout", "Breakpoint", "Contentwrapper", "Safezone", "Focusring", "Fluid", "Val"] as const)
 
 /**
  * Path segment transformations for design tool export

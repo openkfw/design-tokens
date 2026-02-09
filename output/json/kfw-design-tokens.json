@@ -1417,6 +1417,34 @@
             "40"
           ]
         },
+        "48": {
+          "key": "{base.space.static.48}",
+          "$value": "4.8rem",
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "dimension",
+          "original": {
+            "$value": {
+              "unit": "px",
+              "value": 48
+            },
+            "$type": "dimension",
+            "key": "{base.space.static.48}"
+          },
+          "name": "kfw-base-space-static-48",
+          "attributes": {
+            "category": "base",
+            "type": "space",
+            "item": "static",
+            "subitem": "48"
+          },
+          "path": [
+            "base",
+            "space",
+            "static",
+            "48"
+          ]
+        },
         "50": {
           "key": "{base.space.static.50}",
           "$value": "5rem",
@@ -2320,6 +2348,100 @@
               "val"
             ]
           }
+        },
+        "40-48": {
+          "min": {
+            "key": "{base.space.fluid.40-48.min}",
+            "$value": "4rem",
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": "{base.space.static.40}",
+              "$type": "dimension",
+              "key": "{base.space.fluid.40-48.min}"
+            },
+            "name": "kfw-base-space-fluid-40-48-min",
+            "attributes": {
+              "category": "base",
+              "type": "space",
+              "item": "fluid",
+              "subitem": "40-48",
+              "state": "min"
+            },
+            "path": [
+              "base",
+              "space",
+              "fluid",
+              "40-48",
+              "min"
+            ]
+          },
+          "max": {
+            "key": "{base.space.fluid.40-48.max}",
+            "$value": "4.8rem",
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": "{base.space.static.48}",
+              "$type": "dimension",
+              "key": "{base.space.fluid.40-48.max}"
+            },
+            "name": "kfw-base-space-fluid-40-48-max",
+            "attributes": {
+              "category": "base",
+              "type": "space",
+              "item": "fluid",
+              "subitem": "40-48",
+              "state": "max"
+            },
+            "path": [
+              "base",
+              "space",
+              "fluid",
+              "40-48",
+              "max"
+            ]
+          },
+          "val": {
+            "key": "{base.space.fluid.40-48.val}",
+            "$value": "1.471vi + 3.2941rem",
+            "$fluid": {
+              "unit": "vi",
+              "value": 1.471
+            },
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": {
+                "value": 32.941,
+                "unit": "px"
+              },
+              "$fluid": {
+                "unit": "vi",
+                "value": 1.471
+              },
+              "$type": "dimension",
+              "key": "{base.space.fluid.40-48.val}"
+            },
+            "name": "kfw-base-space-fluid-40-48-val",
+            "attributes": {
+              "category": "base",
+              "type": "space",
+              "item": "fluid",
+              "subitem": "40-48",
+              "state": "val"
+            },
+            "path": [
+              "base",
+              "space",
+              "fluid",
+              "40-48",
+              "val"
+            ]
+          }
         }
       }
     },
@@ -2495,14 +2617,14 @@
         },
         "4xl": {
           "key": "{base.fontsize.static.4xl}",
-          "$value": "2.6rem",
+          "$value": "2.5rem",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "dimension",
           "original": {
             "$value": {
               "unit": "px",
-              "value": 26
+              "value": 25
             },
             "$type": "dimension",
             "key": "{base.fontsize.static.4xl}"
@@ -2523,14 +2645,14 @@
         },
         "5xl": {
           "key": "{base.fontsize.static.5xl}",
-          "$value": "2.8rem",
+          "$value": "2.6rem",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "dimension",
           "original": {
             "$value": {
               "unit": "px",
-              "value": 28
+              "value": 26
             },
             "$type": "dimension",
             "key": "{base.fontsize.static.5xl}"
@@ -2551,14 +2673,14 @@
         },
         "6xl": {
           "key": "{base.fontsize.static.6xl}",
-          "$value": "3rem",
+          "$value": "2.8rem",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "dimension",
           "original": {
             "$value": {
               "unit": "px",
-              "value": 30
+              "value": 28
             },
             "$type": "dimension",
             "key": "{base.fontsize.static.6xl}"
@@ -2579,14 +2701,14 @@
         },
         "7xl": {
           "key": "{base.fontsize.static.7xl}",
-          "$value": "3.2rem",
+          "$value": "3rem",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "dimension",
           "original": {
             "$value": {
               "unit": "px",
-              "value": 32
+              "value": 30
             },
             "$type": "dimension",
             "key": "{base.fontsize.static.7xl}"
@@ -2607,14 +2729,14 @@
         },
         "8xl": {
           "key": "{base.fontsize.static.8xl}",
-          "$value": "3.6rem",
+          "$value": "3.2rem",
           "filePath": "tokens/tokens.json",
           "isSource": true,
           "$type": "dimension",
           "original": {
             "$value": {
               "unit": "px",
-              "value": 36
+              "value": 32
             },
             "$type": "dimension",
             "key": "{base.fontsize.static.8xl}"
@@ -2631,6 +2753,34 @@
             "fontsize",
             "static",
             "8xl"
+          ]
+        },
+        "9xl": {
+          "key": "{base.fontsize.static.9xl}",
+          "$value": "3.6rem",
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "dimension",
+          "original": {
+            "$value": {
+              "unit": "px",
+              "value": 36
+            },
+            "$type": "dimension",
+            "key": "{base.fontsize.static.9xl}"
+          },
+          "name": "kfw-base-fontsize-static-9xl",
+          "attributes": {
+            "category": "base",
+            "type": "fontsize",
+            "item": "static",
+            "subitem": "9xl"
+          },
+          "path": [
+            "base",
+            "fontsize",
+            "static",
+            "9xl"
           ]
         }
       },
@@ -3011,6 +3161,100 @@
             ]
           }
         },
+        "xl-3xl": {
+          "min": {
+            "key": "{base.fontsize.fluid.xl-3xl.min}",
+            "$value": "2rem",
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": "{base.fontsize.static.xl}",
+              "$type": "dimension",
+              "key": "{base.fontsize.fluid.xl-3xl.min}"
+            },
+            "name": "kfw-base-fontsize-fluid-xl-3xl-min",
+            "attributes": {
+              "category": "base",
+              "type": "fontsize",
+              "item": "fluid",
+              "subitem": "xl-3xl",
+              "state": "min"
+            },
+            "path": [
+              "base",
+              "fontsize",
+              "fluid",
+              "xl-3xl",
+              "min"
+            ]
+          },
+          "max": {
+            "key": "{base.fontsize.fluid.xl-3xl.max}",
+            "$value": "2.4rem",
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": "{base.fontsize.static.3xl}",
+              "$type": "dimension",
+              "key": "{base.fontsize.fluid.xl-3xl.max}"
+            },
+            "name": "kfw-base-fontsize-fluid-xl-3xl-max",
+            "attributes": {
+              "category": "base",
+              "type": "fontsize",
+              "item": "fluid",
+              "subitem": "xl-3xl",
+              "state": "max"
+            },
+            "path": [
+              "base",
+              "fontsize",
+              "fluid",
+              "xl-3xl",
+              "max"
+            ]
+          },
+          "val": {
+            "key": "{base.fontsize.fluid.xl-3xl.val}",
+            "$value": "0.588vi + 1.6471rem",
+            "$fluid": {
+              "unit": "vi",
+              "value": 0.588
+            },
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": {
+                "unit": "px",
+                "value": 16.471
+              },
+              "$fluid": {
+                "unit": "vi",
+                "value": 0.588
+              },
+              "$type": "dimension",
+              "key": "{base.fontsize.fluid.xl-3xl.val}"
+            },
+            "name": "kfw-base-fontsize-fluid-xl-3xl-val",
+            "attributes": {
+              "category": "base",
+              "type": "fontsize",
+              "item": "fluid",
+              "subitem": "xl-3xl",
+              "state": "val"
+            },
+            "path": [
+              "base",
+              "fontsize",
+              "fluid",
+              "xl-3xl",
+              "val"
+            ]
+          }
+        },
         "2xl": {
           "min": {
             "key": "{base.fontsize.fluid.2xl.min}",
@@ -3140,7 +3384,7 @@
             "isSource": true,
             "$type": "dimension",
             "original": {
-              "$value": "{base.fontsize.static.4xl}",
+              "$value": "{base.fontsize.static.5xl}",
               "$type": "dimension",
               "key": "{base.fontsize.fluid.3xl.max}"
             },
@@ -3202,7 +3446,7 @@
         "4xl": {
           "min": {
             "key": "{base.fontsize.fluid.4xl.min}",
-            "$value": "2.6rem",
+            "$value": "2.5rem",
             "filePath": "tokens/tokens.json",
             "isSource": true,
             "$type": "dimension",
@@ -3229,12 +3473,12 @@
           },
           "max": {
             "key": "{base.fontsize.fluid.4xl.max}",
-            "$value": "2.8rem",
+            "$value": "3rem",
             "filePath": "tokens/tokens.json",
             "isSource": true,
             "$type": "dimension",
             "original": {
-              "$value": "{base.fontsize.static.5xl}",
+              "$value": "{base.fontsize.static.7xl}",
               "$type": "dimension",
               "key": "{base.fontsize.fluid.4xl.max}"
             },
@@ -3256,10 +3500,10 @@
           },
           "val": {
             "key": "{base.fontsize.fluid.4xl.val}",
-            "$value": "0.294vi + 2.4234999999999998rem",
+            "$value": "0.735vi + 2.0588rem",
             "$fluid": {
               "unit": "vi",
-              "value": 0.294
+              "value": 0.735
             },
             "filePath": "tokens/tokens.json",
             "isSource": true,
@@ -3267,11 +3511,11 @@
             "original": {
               "$value": {
                 "unit": "px",
-                "value": 24.235
+                "value": 20.588
               },
               "$fluid": {
                 "unit": "vi",
-                "value": 0.294
+                "value": 0.735
               },
               "$type": "dimension",
               "key": "{base.fontsize.fluid.4xl.val}"
@@ -3296,7 +3540,7 @@
         "5xl": {
           "min": {
             "key": "{base.fontsize.fluid.5xl.min}",
-            "$value": "2.8rem",
+            "$value": "2.6rem",
             "filePath": "tokens/tokens.json",
             "isSource": true,
             "$type": "dimension",
@@ -3323,7 +3567,7 @@
           },
           "max": {
             "key": "{base.fontsize.fluid.5xl.max}",
-            "$value": "3.2rem",
+            "$value": "3rem",
             "filePath": "tokens/tokens.json",
             "isSource": true,
             "$type": "dimension",
@@ -3350,7 +3594,7 @@
           },
           "val": {
             "key": "{base.fontsize.fluid.5xl.val}",
-            "$value": "0.588vi + 2.4471rem",
+            "$value": "0.588vi + 2.2471rem",
             "$fluid": {
               "unit": "vi",
               "value": 0.588
@@ -3361,7 +3605,7 @@
             "original": {
               "$value": {
                 "unit": "px",
-                "value": 24.471
+                "value": 22.471
               },
               "$fluid": {
                 "unit": "vi",
@@ -3390,7 +3634,7 @@
         "6xl": {
           "min": {
             "key": "{base.fontsize.fluid.6xl.min}",
-            "$value": "3rem",
+            "$value": "2.8rem",
             "filePath": "tokens/tokens.json",
             "isSource": true,
             "$type": "dimension",
@@ -3417,7 +3661,7 @@
           },
           "max": {
             "key": "{base.fontsize.fluid.6xl.max}",
-            "$value": "3.6rem",
+            "$value": "3.2rem",
             "filePath": "tokens/tokens.json",
             "isSource": true,
             "$type": "dimension",
@@ -3444,6 +3688,100 @@
           },
           "val": {
             "key": "{base.fontsize.fluid.6xl.val}",
+            "$value": "0.588vi + 2.4471rem",
+            "$fluid": {
+              "unit": "vi",
+              "value": 0.588
+            },
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": {
+                "unit": "px",
+                "value": 24.471
+              },
+              "$fluid": {
+                "unit": "vi",
+                "value": 0.588
+              },
+              "$type": "dimension",
+              "key": "{base.fontsize.fluid.6xl.val}"
+            },
+            "name": "kfw-base-fontsize-fluid-6xl-val",
+            "attributes": {
+              "category": "base",
+              "type": "fontsize",
+              "item": "fluid",
+              "subitem": "6xl",
+              "state": "val"
+            },
+            "path": [
+              "base",
+              "fontsize",
+              "fluid",
+              "6xl",
+              "val"
+            ]
+          }
+        },
+        "7xl": {
+          "min": {
+            "key": "{base.fontsize.fluid.7xl.min}",
+            "$value": "3rem",
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": "{base.fontsize.static.7xl}",
+              "$type": "dimension",
+              "key": "{base.fontsize.fluid.7xl.min}"
+            },
+            "name": "kfw-base-fontsize-fluid-7xl-min",
+            "attributes": {
+              "category": "base",
+              "type": "fontsize",
+              "item": "fluid",
+              "subitem": "7xl",
+              "state": "min"
+            },
+            "path": [
+              "base",
+              "fontsize",
+              "fluid",
+              "7xl",
+              "min"
+            ]
+          },
+          "max": {
+            "key": "{base.fontsize.fluid.7xl.max}",
+            "$value": "3.6rem",
+            "filePath": "tokens/tokens.json",
+            "isSource": true,
+            "$type": "dimension",
+            "original": {
+              "$value": "{base.fontsize.static.9xl}",
+              "$type": "dimension",
+              "key": "{base.fontsize.fluid.7xl.max}"
+            },
+            "name": "kfw-base-fontsize-fluid-7xl-max",
+            "attributes": {
+              "category": "base",
+              "type": "fontsize",
+              "item": "fluid",
+              "subitem": "7xl",
+              "state": "max"
+            },
+            "path": [
+              "base",
+              "fontsize",
+              "fluid",
+              "7xl",
+              "max"
+            ]
+          },
+          "val": {
+            "key": "{base.fontsize.fluid.7xl.val}",
             "$value": "0.882vi + 2.4706rem",
             "$fluid": {
               "unit": "vi",
@@ -3462,21 +3800,21 @@
                 "value": 0.882
               },
               "$type": "dimension",
-              "key": "{base.fontsize.fluid.6xl.val}"
+              "key": "{base.fontsize.fluid.7xl.val}"
             },
-            "name": "kfw-base-fontsize-fluid-6xl-val",
+            "name": "kfw-base-fontsize-fluid-7xl-val",
             "attributes": {
               "category": "base",
               "type": "fontsize",
               "item": "fluid",
-              "subitem": "6xl",
+              "subitem": "7xl",
               "state": "val"
             },
             "path": [
               "base",
               "fontsize",
               "fluid",
-              "6xl",
+              "7xl",
               "val"
             ]
           }
@@ -6716,6 +7054,83 @@
           ]
         }
       },
+      "xlarge": {
+        "min": {
+          "key": "{semantic.space.xlarge.min}",
+          "$value": "4rem",
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "dimension",
+          "original": {
+            "$value": "{base.space.fluid.40-48.min}",
+            "$type": "dimension",
+            "key": "{semantic.space.xlarge.min}"
+          },
+          "name": "kfw-space-xlarge-min",
+          "attributes": {
+            "category": "semantic",
+            "type": "space",
+            "item": "xlarge",
+            "subitem": "min"
+          },
+          "path": [
+            "semantic",
+            "space",
+            "xlarge",
+            "min"
+          ]
+        },
+        "max": {
+          "key": "{semantic.space.xlarge.max}",
+          "$value": "4.8rem",
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "dimension",
+          "original": {
+            "$value": "{base.space.fluid.40-48.max}",
+            "$type": "dimension",
+            "key": "{semantic.space.xlarge.max}"
+          },
+          "name": "kfw-space-xlarge-max",
+          "attributes": {
+            "category": "semantic",
+            "type": "space",
+            "item": "xlarge",
+            "subitem": "max"
+          },
+          "path": [
+            "semantic",
+            "space",
+            "xlarge",
+            "max"
+          ]
+        },
+        "val": {
+          "key": "{semantic.space.xlarge.val}",
+          "$value": "1.471vi + 3.2941rem",
+          "filePath": "tokens/tokens.json",
+          "isSource": true,
+          "$type": "dimension",
+          "original": {
+            "$value": "{base.space.fluid.40-48.val}",
+            "$type": "dimension",
+            "key": "{semantic.space.xlarge.val}"
+          },
+          "name": "kfw-space-xlarge-val",
+          "attributes": {
+            "category": "semantic",
+            "type": "space",
+            "item": "xlarge",
+            "subitem": "val"
+          },
+          "path": [
+            "semantic",
+            "space",
+            "xlarge",
+            "val"
+          ]
+        }
+      },
       "big": {
         "min": {
           "key": "{semantic.space.big.min}",
@@ -6895,7 +7310,7 @@
           "isSource": true,
           "$type": "dimension",
           "original": {
-            "$value": "{base.fontsize.fluid.6xl.min}",
+            "$value": "{base.fontsize.fluid.7xl.min}",
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-1.min}"
           },
@@ -6920,7 +7335,7 @@
           "isSource": true,
           "$type": "dimension",
           "original": {
-            "$value": "{base.fontsize.fluid.6xl.max}",
+            "$value": "{base.fontsize.fluid.7xl.max}",
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-1.max}"
           },
@@ -6945,7 +7360,7 @@
           "isSource": true,
           "$type": "dimension",
           "original": {
-            "$value": "{base.fontsize.fluid.6xl.val}",
+            "$value": "{base.fontsize.fluid.7xl.val}",
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-1.val}"
           },
@@ -6972,7 +7387,7 @@
           "isSource": true,
           "$type": "dimension",
           "original": {
-            "$value": "{base.fontsize.fluid.5xl.min}",
+            "$value": "{base.fontsize.fluid.6xl.min}",
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-2.min}"
           },
@@ -6997,7 +7412,7 @@
           "isSource": true,
           "$type": "dimension",
           "original": {
-            "$value": "{base.fontsize.fluid.5xl.max}",
+            "$value": "{base.fontsize.fluid.6xl.max}",
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-2.max}"
           },
@@ -7022,7 +7437,7 @@
           "isSource": true,
           "$type": "dimension",
           "original": {
-            "$value": "{base.fontsize.fluid.5xl.val}",
+            "$value": "{base.fontsize.fluid.6xl.val}",
             "$type": "dimension",
             "key": "{semantic.fontsize.heading-2.val}"
           },

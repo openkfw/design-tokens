@@ -13,13 +13,7 @@ import { humanCase } from "./shared"
 import deep from "deep-get-set-ts"
 import { formatsFigmaPenpot } from "../sd.config"
 import { StyleDictionary } from "style-dictionary-utils"
-import {
-  TYPE_REMAPPING,
-  DESIGN_TOOL_EXCLUSIONS,
-  PATH_TRANSFORMATIONS,
-  PERCENTAGE_MULTIPLIER,
-  PERCENTAGE_DECIMAL_PLACES
-} from "./constants"
+import { TYPE_REMAPPING, DESIGN_TOOL_EXCLUSIONS, PATH_TRANSFORMATIONS, PERCENTAGE_MULTIPLIER, PERCENTAGE_DECIMAL_PLACES } from "./constants"
 
 const extractTokenValue = ({ $value, $type, path }: TransformedToken) => {
   const attributes: { $value: unknown; $type: string } = {

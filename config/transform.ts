@@ -57,9 +57,7 @@ export function RegisterTransforms(PREFIX: string) {
       const { $type, $value, $fluid, name } = token
 
       if (!VALID_UNITS_SET.has($fluid.unit)) {
-        throw new Error(
-          `Invalid fluid unit "${$fluid.unit}" at "${name}". Valid units: ${Array.from(VALID_CSS_UNITS).join(", ")}`
-        )
+        throw new Error(`Invalid fluid unit "${$fluid.unit}" at "${name}". Valid units: ${Array.from(VALID_CSS_UNITS).join(", ")}`)
       }
 
       if ($type === "dimension") {
@@ -69,7 +67,9 @@ export function RegisterTransforms(PREFIX: string) {
         }
         const valueUnit = $value.replace(numericValue.toString(), "").trim()
         const sign = numericValue > 0 ? "+" : "-"
-        return `${$fluid.value}${$fluid.unit} ${sign} ${Math.abs(numericValue)}${valueUnit}`
+        const fluidValue = Number($fluid.value.toFixed(4))
+        const absValue = Number(Math.abs(numericValue).toFixed(4))
+        return `${fluidValue}${$fluid.unit} ${sign} ${absValue}${valueUnit}`
       }
 
       if ($type === "number") {

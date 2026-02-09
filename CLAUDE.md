@@ -21,6 +21,7 @@ npm run precommit        # Runs typecheck + format + lint sequentially
 ```
 
 The demo app is a separate project in `demo/` with its own `package.json`:
+
 ```bash
 cd demo && npm install   # Separate dependency install
 cd demo && npm run dev   # Vite dev server
@@ -57,6 +58,7 @@ cd demo && npm run build # Vite production build
 ### Output Variants
 
 Tokens are built with two `basePxFontSize` values:
+
 - **10px** (default) — `output/css/`, `output/scss/`, `output/js/`, `output/json/`
 - **16px** (third-party) — `output/web_thirdparty_16px/` (CSS, SCSS, JS only) + `output/figma/` and `output/penpot/`
 

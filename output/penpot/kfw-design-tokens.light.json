@@ -169,6 +169,10 @@
         "$value": "40px",
         "$type": "spacing"
       },
+      "48": {
+        "$value": "48px",
+        "$type": "spacing"
+      },
       "50": {
         "$value": "50px",
         "$type": "spacing"
@@ -204,22 +208,26 @@
         "$type": "fontSizes"
       },
       "4xl": {
-        "$value": "26px",
+        "$value": "25px",
         "$type": "fontSizes"
       },
       "5xl": {
-        "$value": "28px",
+        "$value": "26px",
         "$type": "fontSizes"
       },
       "6xl": {
-        "$value": "30px",
+        "$value": "28px",
         "$type": "fontSizes"
       },
       "7xl": {
-        "$value": "32px",
+        "$value": "30px",
         "$type": "fontSizes"
       },
       "8xl": {
+        "$value": "32px",
+        "$type": "fontSizes"
+      },
+      "9xl": {
         "$value": "36px",
         "$type": "fontSizes"
       }
@@ -556,6 +564,16 @@
         },
         "Desktop": {
           "$value": "40px",
+          "$type": "spacing"
+        }
+      },
+      "Xlarge": {
+        "Mobile": {
+          "$value": "40px",
+          "$type": "spacing"
+        },
+        "Desktop": {
+          "$value": "48px",
           "$type": "spacing"
         }
       },
