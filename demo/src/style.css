@@ -603,7 +603,7 @@
   }
 
   :where(.form-text, .invalid-feedback) {
-    --space-between: 0.8rem;
+    --space-between: 0.5rem;
 
     white-space: pre-line;
     column-gap: var(--space-between);
@@ -627,8 +627,8 @@
   .invalid-feedback::before {
     content: "";
     display: block;
-    width: var(--icon-size-sm);
-    height: var(--icon-size-sm);
+    width: var(--icon-size-xs);
+    height: var(--icon-size-xs);
     color: inherit;
     background-color: currentcolor;
     mask: var(--kfw-icon-alert) center / contain no-repeat;
@@ -1117,6 +1117,7 @@
     --kfw-icon-input-upload-white: svg-load("icons/upload.svg", "var(--kfw-color-background)");
 
     /* icon sizes */
+    --icon-size-xs: 1.4rem;
     --icon-size-sm: 1.6rem;
     --icon-size-md: 2.4rem;
     --icon-size-lg: 2.8rem;
@@ -1183,6 +1184,11 @@
     justify-content: center;
     width: var(--outer-size);
     height: var(--outer-size);
+  }
+
+  .has-icon-only:focus-visible {
+    outline-offset: 0;
+    border-color: transparent;
   }
 
   /* Necessary to style the outline around the icon, as it is not possible to apply it directly to masked elements */
@@ -1700,7 +1706,6 @@
 
   .custom-form {
     width: 100%;
-    padding-inline: var(--kfw-safezone);
     max-width: var(--kfw-contentwrapper-narrow);
   }
 
