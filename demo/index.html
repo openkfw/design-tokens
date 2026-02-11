@@ -682,21 +682,27 @@
 
         <section aria-labelledby="form-elements" class="my-lg">
           <h1 id="form-elements">Form elements</h1>
-          <form class="custom-form">
-            <div class="form-group">
-              <label for="searchfield">Search</label>
-              <div class="searchfield">
-                <input id="searchfield" type="search" class="searchfield__input form-control" placeholder="Search…" />
-                <button role="link" type="button" class="searchfield__button has-icon-only" aria-label="Search">
-                  <i aria-hidden="true" class="icon icon--search"></i>
-                </button>
+
+          <div class="custom-form">
+            <form role="search">
+              <div class="form-group">
+                <label for="searchfield">Search</label>
+                <div class="searchfield">
+                  <input id="searchfield" name="search" type="search" class="searchfield__input form-control" placeholder="Search…" />
+                  <button type="submit" class="searchfield__button has-icon-only">
+                    <span class="visually-hidden">Search</span>
+                    <i aria-hidden="true" class="icon icon--search"></i>
+                  </button>
+                </div>
               </div>
-            </div>
+            </form>
+
             <div class="form-group">
               <label for="text">Text</label>
               <input type="text" id="text" name="text" placeholder="Text" class="form-control" />
               <small class="form-text">Curabitur consequat lacus at lacus porta finibus.</small>
             </div>
+
             <div class="auto-grid">
               <div class="auto-grid__item">
                 <label for="valid">Valid</label>
@@ -712,27 +718,19 @@
                 <input class="form-control" type="text" id="disabled" name="disabled" placeholder="Disabled" disabled />
               </div>
             </div>
+
             <div class="form-group">
               <label for="textarea">Textarea</label>
               <textarea class="form-control" id="textarea" name="textarea" rows="4" placeholder="Textarea"></textarea>
             </div>
-            <fieldset class="form-group">
-              <legend class="form-label">Radio buttons</legend>
+
+            <div class="form-group" role="group" aria-labelledby="radio-group-error-label">
+              <span id="radio-group-error-label" class="form-label">Radios</span>
               <ul class="list-group-form list-group-form--with-description">
                 <li>
                   <input name="radioButton" type="radio" id="radioButton1Desc" />
                   <label for="radioButton1Desc">
-                    Default Radiobox
-                    <span>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
-                      dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
-                    </span>
-                  </label>
-                </li>
-                <li>
-                  <input name="radioButton" type="radio" id="radioButton2Desc" />
-                  <label for="radioButton2Desc">
-                    Radiobox 2
+                    Radio
                     <span>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
                       dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
@@ -742,62 +740,58 @@
               </ul>
               <ul class="list-group-form">
                 <li>
-                  <input name="radioButton" type="radio" id="radioButton3" />
-                  <label for="radioButton3">Radiobox 3</label>
+                  <input name="radioButton" type="radio" id="radioButton2" />
+                  <label for="radioButton2">Radio 2</label>
                 </li>
                 <li>
-                  <input name="radioButton" type="radio" id="radioButton4" />
-                  <label for="radioButton4">Radiobox 4 with 2 Children</label>
+                  <input name="radioButton" type="radio" id="radioButton3" />
+                  <label for="radioButton3">Radio 3 with 3 Children</label>
                   <ul class="list-group-form list-group-form--subgroup">
                     <li>
-                      <input name="radioButton" type="radio" id="radioButton5" />
-                      <label for="radioButton5">Radiobox 5</label>
+                      <input name="radioButton" type="radio" id="radioButton4" />
+                      <label for="radioButton4">Radio 4</label>
                     </li>
                     <li>
-                      <input name="radioButton" type="radio" id="radioButton6" />
-                      <label for="radioButton6"> Radiobox 6 </label>
+                      <input name="radioButton" type="radio" id="radioButton5" aria-invalid="true" />
+                      <label for="radioButton5">Radio 5 (invalid)</label>
+                    </li>
+                    <li>
+                      <input name="radioButton" type="radio" id="radioButton6" disabled />
+                      <label for="radioButton6">Radio 6 (disabled)</label>
                     </li>
                   </ul>
                 </li>
                 <li>
                   <input name="radioButton" type="radio" id="radioButton7" checked />
-                  <label for="radioButton7"> Radiobox 7 checked </label>
+                  <label for="radioButton7">Radio 7 (checked)</label>
                 </li>
               </ul>
-              <ul class="list-group-form list-group-form--inline">
-                <li>
-                  <input name="radioButton" type="radio" id="radioButton8" />
-                  <label for="radioButton8">Valid</label>
-                </li>
-                <li>
-                  <input name="radioButton" type="radio" id="radioButton9" aria-invalid="true" />
-                  <label for="radioButton9">Invalid</label>
-                </li>
-                <li>
-                  <input name="radioButton" type="radio" id="radioButton10" disabled />
-                  <label for="radioButton10">Disabled</label>
-                </li>
-              </ul>
-              <small role="alert" class="invalid-feedback invalid-feedback--standalone"> Please fill out this field. </small>
-            </fieldset>
+            </div>
 
-            <fieldset class="form-group">
-              <legend class="form-label">Checkboxes</legend>
+            <div class="form-group">
+              <div class="invalid-border" aria-invalid="true" role="group" aria-labelledby="radio-group-error-label2">
+                <span id="radio-group-error-label2" class="form-label">Radio Group Error</span>
+                <ul class="list-group-form">
+                  <li>
+                    <input name="radioError" type="radio" id="radio7" />
+                    <label for="radio7">Radio 7</label>
+                  </li>
+                  <li>
+                    <input name="radioError" type="radio" id="radio8" />
+                    <label for="radio8">Radio 8</label>
+                  </li>
+                </ul>
+              </div>
+              <span class="invalid-feedback invalid-feedback--group" role="alert">Please fill out this field.</span>
+            </div>
+
+            <div class="form-group" role="group" aria-labelledby="check-group-error-label">
+              <span id="check-group-error-label" class="form-label">Checkboxes</span>
               <ul class="list-group-form list-group-form--with-description">
                 <li>
                   <input type="checkbox" id="checkButton1Desc" />
                   <label for="checkButton1Desc">
-                    Default Checkbox
-                    <span>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
-                      dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
-                    </span>
-                  </label>
-                </li>
-                <li>
-                  <input type="checkbox" id="checkButton2Desc" />
-                  <label for="checkButton2Desc">
-                    Checkbox 2
+                    Checkbox
                     <span>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda blanditiis consequatur distinctio dolor dolore,
                       dolores dolorum explicabo facere fugiat ipsa minima nisi, nostrum possimus quaerat quis repellat ullam veniam!
@@ -807,20 +801,25 @@
               </ul>
               <ul class="list-group-form">
                 <li>
-                  <input type="checkbox" id="checkButton3" />
-                  <label for="checkButton3">Checkbox 3</label>
+                  <input type="checkbox" id="checkButton2" />
+                  <label for="checkButton2">Checkbox 2</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="checkbox4" />
-                  <label for="checkbox4">Checkbox 4 with 2 Children</label>
+                  <input type="checkbox" id="checkbox3" />
+                  <label for="checkbox3">Checkbox 3 with 3 Children</label>
                   <ul class="list-group-form list-group-form--subgroup">
                     <li>
-                      <input type="checkbox" id="checkbox5" />
-                      <label for="checkbox5">Checkbox 5</label>
+                      <input type="checkbox" id="checkbox4" />
+                      <label for="checkbox4">Checkbox 4</label>
                     </li>
                     <li>
-                      <input type="checkbox" id="checkbox6" />
-                      <label for="checkbox6"> Checkbox 6 </label>
+                      <input type="checkbox" id="checkbox5" aria-invalid="true" />
+                      <label for="checkbox5">Checkbox 5 (invalid)</label>
+                    </li>
+
+                    <li>
+                      <input type="checkbox" id="checkbox6" disabled />
+                      <label for="checkbox6">Checkbox 6 (disabled)</label>
                     </li>
                   </ul>
                 </li>
@@ -829,23 +828,25 @@
                   <label for="checkButton7"> Checkbox 7 checked </label>
                 </li>
               </ul>
-              <ul class="list-group-form list-group-form--inline">
-                <li>
-                  <input type="checkbox" id="checkButton8" />
-                  <label for="checkButton8">Valid</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="checkButton9" aria-invalid="true" />
-                  <label for="checkButton9">Invalid</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="checkButton10" disabled />
-                  <label for="checkButton10">Disabled</label>
-                </li>
-              </ul>
-              <small role="alert" class="invalid-feedback"> Please fill out this field. </small>
-            </fieldset>
-          </form>
+            </div>
+
+            <div class="form-group">
+              <div class="invalid-border" aria-invalid="true" role="group" aria-labelledby="check-group-error-label2">
+                <span id="check-group-error-label2" class="form-label">Checkbox Group Error</span>
+                <ul class="list-group-form">
+                  <li>
+                    <input name="checkError" type="checkbox" id="checkButton8" />
+                    <label for="checkButton8">Checkbox 7</label>
+                  </li>
+                  <li>
+                    <input name="checkError" type="checkbox" id="checkButton9" />
+                    <label for="checkButton9">Checkbox 8</label>
+                  </li>
+                </ul>
+              </div>
+              <span class="invalid-feedback invalid-feedback--group" role="alert">Please fill out this field.</span>
+            </div>
+          </div>
         </section>
 
         <section aria-labelledby="tables" class="my-lg">

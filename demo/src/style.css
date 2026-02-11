@@ -40,6 +40,8 @@
     --headline-color: var(--kfw-color-text);
     --kfw-focusring-outline-color: var(--kfw-color-fn-active);
     --kfw-fontsize-heading-4: clamp(var(--kfw-fontsize-heading-4-min), var(--kfw-fontsize-heading-4-val), var(--kfw-fontsize-heading-4-max));
+    --kfw-invalid-border-width: 0.2rem;
+    --kfw-invalid-border-offset: 1rem;
   }
 
   @media (--kfw-breakpoint-mobile) {
@@ -603,12 +605,12 @@
   }
 
   :where(.form-text, .invalid-feedback) {
-    --space-between: 0.5rem;
+    --space: 0.5rem;
 
     white-space: pre-line;
-    column-gap: var(--space-between);
+    column-gap: var(--space);
     width: 100%;
-    margin-block-start: 0.8rem;
+    margin-block-start: var(--space);
     font-size: var(--kfw-fontsize-small);
     line-height: var(--kfw-lineheight);
     letter-spacing: var(--kfw-base-letterspacing-normal);
@@ -616,8 +618,12 @@
     grid-template-columns: auto 1fr;
   }
 
-  :where(.form-text--standalone, .invalid-feedback--standalone) {
+  :where(.form-text--single, .invalid-feedback--single) {
     margin-block-start: 0;
+  }
+
+  :where(.form-text--group, .invalid-feedback--group) {
+    margin-block-start: calc(var(--kfw-invalid-border-width) + var(--kfw-invalid-border-offset) + 0.5rem);
   }
 
   .invalid-feedback {
@@ -632,7 +638,13 @@
     color: inherit;
     background-color: currentcolor;
     mask: var(--kfw-icon-alert) center / contain no-repeat;
-    margin-top: 0.2rem;
+    position: relative;
+    top: 0.3rem;
+  }
+
+  .invalid-border {
+    outline: var(--kfw-invalid-border-width) solid var(--kfw-color-state-danger);
+    outline-offset: var(--kfw-invalid-border-offset);
   }
 
   :where(label, .form-label) {
@@ -689,11 +701,16 @@
     background-color: var(--kfw-color-background);
   }
 
-  /* Focus styling for invalid states, keyboard users */
+  [aria-invalid="true"] .list-group-form :where([type="checkbox"], [type="radio"]),
   .list-group-form :where([type="checkbox"], [type="radio"])[aria-invalid="true"] {
     border-color: var(--kfw-color-state-danger);
     border-width: var(--kfw-borderwidth-large);
     color: var(--kfw-color-fn-active);
+  }
+
+  [data-whatinput="keyboard"] [aria-invalid="true"] .list-group-form :where([type="checkbox"], [type="radio"]),
+  [data-whatinput="keyboard"] .list-group-form :where([type="checkbox"], [type="radio"])[aria-invalid="true"] {
+    outline-color: var(--kfw-color-state-danger);
   }
 
   .list-group-form [type="radio"] {
@@ -850,9 +867,9 @@
   }
 
   :where(a:not([role="button"]), [role="link"]):has(.icon) {
-    --space-between: 0.5rem;
+    --space: 0.5rem;
 
-    column-gap: var(--space-between);
+    column-gap: var(--space);
   }
 
   p :where(a:not([role="button"]), [role="link"]) {
@@ -864,13 +881,13 @@
   }
 
   :where(button:not([role="link"]), [role="button"]) {
-    --space-between: 0.8rem;
+    --space: 0.8rem;
 
     font-family: var(--kfw-fontfamily);
     font-weight: var(--kfw-fontweight);
     border-radius: var(--kfw-borderradius);
     display: inline-flex;
-    column-gap: var(--space-between);
+    column-gap: var(--space);
     text-align: center;
     text-decoration: none;
     line-height: var(--kfw-lineheight);
@@ -986,7 +1003,7 @@
   }
 
   .button--small {
-    --space-between: 0.6rem;
+    --space: 0.6rem;
 
     padding-block: 0.8rem;
     padding-inline: 1.6rem;
