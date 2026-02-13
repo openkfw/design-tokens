@@ -708,21 +708,21 @@
       "Basic": {
         "Mobile": {
           "$value": "12px",
-          "$type": "dimension"
+          "$type": "spacing"
         },
         "Desktop": {
           "$value": "36px",
-          "$type": "dimension"
+          "$type": "spacing"
         }
       },
       "Large": {
         "Mobile": {
           "$value": "20px",
-          "$type": "dimension"
+          "$type": "spacing"
         },
         "Desktop": {
           "$value": "40px",
-          "$type": "dimension"
+          "$type": "spacing"
         }
       }
     }

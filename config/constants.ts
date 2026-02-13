@@ -78,5 +78,6 @@ export const TYPE_REMAPPING = Object.freeze({
   fontsize: { $type: "fontSizes" },
   lineheight: { $type: "lineHeights" },
   borderradius: { $type: "borderRadius" },
-  space: { $type: "spacing" }
+  space: { $type: "spacing" },
+  gridgap: { $type: "spacing" }
 } as const)
