@@ -44,7 +44,18 @@ export const PX_TO_REM_EXCLUSIONS = Object.freeze(["breakpoint", "borderradius",
 /**
  * Token paths that should be excluded from design tool export (Figma/Penpot)
  */
-export const DESIGN_TOOL_EXCLUSIONS = Object.freeze(["Layout", "Breakpoint", "Contentwrapper", "Safezone", "Focusring", "Borderstyle", "Fluid", "Val"] as const)
+export const DESIGN_TOOL_EXCLUSIONS = Object.freeze([
+  "Layout",
+  "Breakpoint",
+  "Contentwrapper",
+  "Safezone",
+  "Focusring",
+  "Borderstyle",
+  "Offset",
+  "Wordspacing",
+  "Fluid",
+  "Val"
+] as const)
 
 /**
  * Path segment transformations for design tool export

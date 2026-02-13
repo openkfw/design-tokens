@@ -296,16 +296,6 @@
         "$type": "fontWeights"
       }
     },
-    "Wordspacing": {
-      "Normal": {
-        "$value": "0px",
-        "$type": "dimension"
-      },
-      "Wide": {
-        "$value": "1.6px",
-        "$type": "dimension"
-      }
-    },
     "Letterspacing": {
       "Tight": {
         "$value": "-0.5px",
@@ -323,10 +313,6 @@
         "$value": "1px",
         "$type": "letterSpacing"
       }
-    },
-    "Offset": {
-      "$value": "2px",
-      "$type": "dimension"
     }
   },
   "Semantic": {
@@ -716,12 +702,6 @@
       "Bold": {
         "$value": "500",
         "$type": "fontWeights"
-      }
-    },
-    "Wordspacing": {
-      "Lightspeech": {
-        "$value": "1.6px",
-        "$type": "dimension"
       }
     },
     "Gridgap": {
