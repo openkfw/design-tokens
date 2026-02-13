@@ -288,11 +288,11 @@
     },
     "Fontweight": {
       "Regular": {
-        "$value": 400,
+        "$value": "400",
         "$type": "fontWeights"
       },
       "Medium": {
-        "$value": 500,
+        "$value": "500",
         "$type": "fontWeights"
       }
     },
@@ -708,17 +708,13 @@
         "$type": "borderWidth"
       }
     },
-    "Borderstyle": {
-      "$value": "solid",
-      "$type": "strokeStyle"
-    },
     "Fontweight": {
       "Default": {
-        "$value": 400,
+        "$value": "400",
         "$type": "fontWeights"
       },
       "Bold": {
-        "$value": 500,
+        "$value": "500",
         "$type": "fontWeights"
       }
     },

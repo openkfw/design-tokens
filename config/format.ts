@@ -28,6 +28,10 @@ const extractTokenValue = ({ $value, $type, path }: TransformedToken) => {
       if (pathKey === "lineheight" && typeof $value === "number") {
         attributes.$value = `${parseFloat(($value * PERCENTAGE_MULTIPLIER).toFixed(PERCENTAGE_DECIMAL_PLACES))}%`
       }
+
+      if (pathKey === "fontweight" && typeof $value === "number") {
+        attributes.$value = String($value)
+      }
     }
   }
 
