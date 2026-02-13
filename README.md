@@ -116,3 +116,11 @@ In Tailwind CSS v4, you can either:
 
 - Use the [SCSS preprocessor](https://v3.tailwindcss.com/docs/using-with-preprocessors#using-sass-less-or-stylus) and reference breakpoint variables, or
 - Use the CSS version with the `postcss-custom-media` workaround described above.
+
+### How to use design tokens in Figma?
+
+
+Currently, Figma does not natively support importing W3C design tokens. 
+Therefore, we export our design tokens into a Figma-compatible format, inspired by the approach used in the "Token Studio" plugin. 
+Although the Token Studio plugin offers various features, it is not required and some of its functionality comes with a cost. 
+As an alternative, you can use the free plugin "Token Forge", which allows you to easily import our design tokens in the Figma-compatible format and use them as Figma variables.
