@@ -8,4 +8,4 @@ npm-debug.log
 
 package-lock.json
 
-.claude
+.claude/settings.local.json

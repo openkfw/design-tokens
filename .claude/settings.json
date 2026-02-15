@@ -1,0 +1,8 @@
+{
+  "alwaysThinkingEnabled": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": false,
+  "eslint.format.enable": false
+}
+
