@@ -1,0 +1,34 @@
+{
+  "Semantic": {
+    "Color": {
+      "Background": {
+        "Default": {
+          "$value": "#1a1a1a",
+          "$type": "color"
+        },
+        "Subtle": {
+          "$value": "#2d3134",
+          "$type": "color"
+        }
+      },
+      "Text": {
+        "Default": {
+          "$value": "#ffffff",
+          "$type": "color"
+        }
+      },
+      "Border": {
+        "Default": {
+          "$value": "#41484c",
+          "$type": "color"
+        }
+      }
+    }
+  },
+  "$metadata": {
+    "tokenSetOrder": [
+      "Base",
+      "Semantic"
+    ]
+  }
+}

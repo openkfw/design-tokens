@@ -13,7 +13,7 @@ import { formats, logBrokenReferenceLevels, logVerbosityLevels } from "style-dic
 import { RegisterCustom } from "./config"
 import { StyleDictionary } from "style-dictionary-utils"
 
-const THEMES = ["light"] as const
+const THEMES = ["light", "dark"] as const
 export type Theme = (typeof THEMES)[number]
 
 export const formatsFigmaPenpot = "json/figma-penpot"
@@ -44,8 +44,6 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
   const isDefaultSize = basePxFontSize === 10
   const variant = isDefaultSize ? "" : "/web_thirdparty_16px"
 
-  const src = isDefaultTheme ? DEFAULT_SELECTOR : `*.${theme}`
-
   function selectorRoot() {
     const SELECTOR = isDefaultTheme ? `:root, :host` : `[data-theme=${theme}], :host(:not([data-theme=light]))`
     return `${SELECTOR} { color-scheme: ${theme}; }\n\n${SELECTOR}`
@@ -53,7 +51,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
 
   return {
     ...CONFIG_BASE,
-    source: [`tokens/${src}.{json,json5}`],
+    source: isDefaultTheme ? [`tokens/${DEFAULT_SELECTOR}.{json,json5}`] : [`tokens/*.${theme}.{json,json5}`],
     platforms: {
       css: {
         basePxFontSize,
@@ -64,10 +62,23 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
         files: [
           {
             destination: `kfw-design-tokens.${theme}.css`,
-            format: formats.cssVariables,
+            format: theme === "dark" ? "css/advanced" : formats.cssVariables,
             options: {
               selector: selectorRoot(),
-              outputReferences: false
+              outputReferences: false,
+              ...(theme === "dark" && {
+                rules: [
+                  {
+                    matcher: () => true,
+                    selector: `[data-theme="dark"]`
+                  },
+                  {
+                    matcher: () => true,
+                    atRule: `@media (prefers-color-scheme: dark)`,
+                    selector: `:root, :host`
+                  }
+                ]
+              })
             }
           }
         ]
@@ -148,6 +159,50 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
   }
 }
 
+const createAllThemeConfig = (basePxFontSize: number): Config => {
+  const isDefaultSize = basePxFontSize === 10
+  const variant = isDefaultSize ? "" : "/web_thirdparty_16px"
+
+  return {
+    ...CONFIG_BASE,
+    source: [`tokens/${DEFAULT_SELECTOR}.{json,json5}`, `tokens/*.dark.{json,json5}`],
+    platforms: {
+      css: {
+        basePxFontSize,
+        buildPath: `${BUILD_PATH_PREFIX}${variant}/css`,
+        options: { fileHeader: "kfw-file-header" },
+        transformGroup: "css-scss/extended",
+        prefix: PREFIX,
+        files: [
+          {
+            destination: `kfw-design-tokens.all.css`,
+            format: "css/advanced",
+            options: {
+              outputReferences: false,
+              selector: `:root, :host { color-scheme: light dark; }\n\n:root, :host`,
+              rules: [
+                {
+                  matcher: (token: any) => !token.filePath.includes(".dark"),
+                  selector: `:root, :host { color-scheme: light dark; }\n\n:root, :host`
+                },
+                {
+                  matcher: (token: any) => token.filePath.includes(".dark"),
+                  selector: `[data-theme="dark"]`
+                },
+                {
+                  matcher: (token: any) => token.filePath.includes(".dark"),
+                  atRule: `@media (prefers-color-scheme: dark)`,
+                  selector: `:root, :host`
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
 export default (async function buildThemes() {
   console.log("Build started...")
   console.log("\n==============================================")
@@ -163,6 +218,13 @@ export default (async function buildThemes() {
       }
     }
   }
+
+  // Build all.css for default size only
+  console.log("\nBuilding all.css...")
+  const allStyleDictionary = new StyleDictionary()
+  const allSd = await allStyleDictionary.extend(createAllThemeConfig(BASE_PX.default))
+  await allSd.buildAllPlatforms()
+
   console.log("\n==============================================")
   console.log("\nBuild completed!")
 })()

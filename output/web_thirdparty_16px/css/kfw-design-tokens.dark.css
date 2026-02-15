@@ -1,0 +1,19 @@
+/**
+ * KfW Design Tokens v0.6.91 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ */
+
+[data-theme="dark"] {
+  --kfw-color-background: #1a1a1a; /** Main background color for body (Dark) */
+  --kfw-color-background-subtle: #2d3134; /** Neutral background (Dark Gray) */
+  --kfw-color-text: #ffffff; /** Main text color for body (White) */
+  --kfw-color-border: #41484c; /** Border color (Gray) */
+}
+@media (prefers-color-scheme: dark) {
+  :root,
+  :host {
+    --kfw-color-background: #1a1a1a; /** Main background color for body (Dark) */
+    --kfw-color-background-subtle: #2d3134; /** Neutral background (Dark Gray) */
+    --kfw-color-text: #ffffff; /** Main text color for body (White) */
+    --kfw-color-border: #41484c; /** Border color (Gray) */
+  }
+}

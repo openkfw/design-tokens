@@ -16,7 +16,8 @@
 /* -------------------------------------------------------------------------
    KfW Design Tokens
    ------------------------------------------------------------------------- */
-@import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css") layer(tokens);
+/* @import url("@openkfw/design-tokens/output/css/kfw-design-tokens.light.css") layer(tokens); */
+@import url("../kfw-design-tokens.all.css") layer(tokens);
 
 /* -------------------------------------------------------------------------
    Icons

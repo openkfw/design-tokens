@@ -1,0 +1,17 @@
+{
+  "semantic": {
+    "color": {
+      "$type": "color",
+      "background": {
+        "default": { "$value": "#1a1a1a", "$description": "Main background color for body (Dark)" },
+        "subtle": { "$value": "#2d3134", "$description": "Neutral background (Dark Gray)" }
+      },
+      "text": {
+        "default": { "$value": "#ffffff", "$description": "Main text color for body (White)" }
+      },
+      "border": {
+        "default": { "$value": "#41484c", "$description": "Border color (Gray)" }
+      }
+    }
+  }
+}
