@@ -28,8 +28,23 @@ export function initializeNavigation(): void {
 
     if (!target) return
 
-    if (target.closest("a")) {
+    const anchor = target.closest("a")
+
+    if (anchor) {
+      event.preventDefault() // Prevent immediate navigation, so we can scroll only after closing (after removing overflow: hidden)
       dialog.close()
+
+      const href = anchor.getAttribute("href")
+      if (!href) return
+
+      if (href.startsWith("#")) {
+        const scrollTarget = document.querySelector(href)
+        if (scrollTarget) {
+          scrollTarget.scrollIntoView({ behavior: "instant" })
+        }
+      } else {
+        window.location.href = href
+      }
       return
     }
 
