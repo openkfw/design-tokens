@@ -22,6 +22,7 @@
     "stylelint": "^16",
     "stylelint-config-standard": "^39",
     "stylelint-media-use-custom-media": "^4.1.0",
+    "stylelint-plugin-logical-css": "^2.0.2",
     "typescript": "^5.9.3",
     "uaplus": "^0.3.1",
     "vite": "^7.3.1",

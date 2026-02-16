@@ -1,7 +1,7 @@
 /** @type {import('stylelint').Config} */
 export default {
-  extends: ["stylelint-config-standard"],
-  plugins: ["stylelint-media-use-custom-media"],
+  extends: ["stylelint-config-standard", "stylelint-plugin-logical-css/configs/recommended"],
+  plugins: ["stylelint-media-use-custom-media", "stylelint-plugin-logical-css"],
   rules: {
     "declaration-property-value-no-unknown": [
       true,
