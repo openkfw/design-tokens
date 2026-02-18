@@ -8,7 +8,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { Config } from "style-dictionary/types"
+import { Config, TransformedToken } from "style-dictionary/types"
 import { formats, logBrokenReferenceLevels, logVerbosityLevels } from "style-dictionary/enums"
 import { RegisterCustom } from "./config"
 import { StyleDictionary } from "style-dictionary-utils"
@@ -74,7 +74,7 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
                   },
                   {
                     matcher: () => true,
-                    atRule: `@media (prefers-color-scheme: dark)`,
+                    atRule: `\n@media (prefers-color-scheme: dark)`,
                     selector: `:root, :host`
                   }
                 ]
@@ -159,48 +159,35 @@ const createStyleDictionaryConfig = (theme: Theme, basePxFontSize: number): Conf
   }
 }
 
-const createAllThemeConfig = (basePxFontSize: number): Config => {
+async function createAllCssFile(basePxFontSize: number) {
   const isDefaultSize = basePxFontSize === 10
   const variant = isDefaultSize ? "" : "/web_thirdparty_16px"
+  const buildPath = `${BUILD_PATH_PREFIX}${variant}/css`
 
-  return {
-    ...CONFIG_BASE,
-    source: [`tokens/${DEFAULT_SELECTOR}.{json,json5}`, `tokens/*.dark.{json,json5}`],
-    platforms: {
-      css: {
-        basePxFontSize,
-        buildPath: `${BUILD_PATH_PREFIX}${variant}/css`,
-        options: { fileHeader: "kfw-file-header" },
-        transformGroup: "css-scss/extended",
-        prefix: PREFIX,
-        files: [
-          {
-            destination: `kfw-design-tokens.all.css`,
-            format: "css/advanced",
-            options: {
-              outputReferences: false,
-              selector: `:root, :host { color-scheme: light dark; }\n\n:root, :host`,
-              rules: [
-                {
-                  matcher: (token: any) => !token.filePath.includes(".dark"),
-                  selector: `:root, :host { color-scheme: light dark; }\n\n:root, :host`
-                },
-                {
-                  matcher: (token: any) => token.filePath.includes(".dark"),
-                  selector: `[data-theme="dark"]`
-                },
-                {
-                  matcher: (token: any) => token.filePath.includes(".dark"),
-                  atRule: `@media (prefers-color-scheme: dark)`,
-                  selector: `:root, :host`
-                }
-              ]
-            }
-          }
-        ]
-      }
-    }
-  }
+  const fs = await import("fs/promises")
+  const path = await import("path")
+
+  const lightCssPath = path.join(buildPath, "kfw-design-tokens.light.css")
+  const darkCssPath = path.join(buildPath, "kfw-design-tokens.dark.css")
+  const allCssPath = path.join(buildPath, "kfw-design-tokens.all.css")
+
+  const lightCss = await fs.readFile(lightCssPath, "utf-8")
+  const darkCss = await fs.readFile(darkCssPath, "utf-8")
+
+  // Extract header from light.css
+  const headerMatch = lightCss.match(/^\/\*\*[\s\S]*?\*\//)
+  const header = headerMatch ? headerMatch[0] : ""
+
+  // Extract variables from light.css (remove header and selector, keep content)
+  const lightContent = lightCss
+    .replace(/^\/\*\*[\s\S]*?\*\/\s*/, "") // Remove header
+    .replace(/^:root,\s*:host\s*{\s*color-scheme:\s*light;\s*}\s*/, "") // Remove color-scheme declaration
+    .replace(/^:root,\s*:host\s*{/, ":root,\n:host {\n  color-scheme: light dark;") // Update color-scheme
+
+  // Combine
+  const allCss = `${header}\n\n${lightContent}\n${darkCss}`
+
+  await fs.writeFile(allCssPath, allCss, "utf-8")
 }
 
 export default (async function buildThemes() {
@@ -219,11 +206,9 @@ export default (async function buildThemes() {
     }
   }
 
-  // Build all.css for default size only
+  // Build all.css by combining light.css and dark.css
   console.log("\nBuilding all.css...")
-  const allStyleDictionary = new StyleDictionary()
-  const allSd = await allStyleDictionary.extend(createAllThemeConfig(BASE_PX.default))
-  await allSd.buildAllPlatforms()
+  await createAllCssFile(BASE_PX.default)
 
   console.log("\n==============================================")
   console.log("\nBuild completed!")

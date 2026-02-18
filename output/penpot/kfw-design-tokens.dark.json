@@ -22,6 +22,16 @@
           "$value": "#41484c",
           "$type": "color"
         }
+      },
+      "Opaque": {
+        "White-90": {
+          "$value": "#1a1a1a",
+          "$type": "color"
+        },
+        "White-95": {
+          "$value": "#1a1a1a",
+          "$type": "color"
+        }
       }
     }
   },

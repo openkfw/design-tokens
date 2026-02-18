@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-whatpersist="false">
+<html lang="en" data-whatpersist="false" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,18 +30,26 @@
         </button>
 
         <a class="header__logo" href="%BASE_URL%" aria-label="Go to homepage">
-          <img width="200" height="60" class="header__logo-small" src="/kfw_logo.png" alt="Logo KfW" />
+          <img width="200" height="60" class="header__logo-small" src="/kfw_logo.svg" alt="Logo KfW" />
           <picture class="header__logo-large">
-            <source media="(min-width: 840px)" srcset="/kfw_logo_large.png" type="image/svg+xml" />
-            <img width="232" height="120" src="/kfw_logo.png" alt="Logo KfW" />
+            <source media="(min-width: 840px)" srcset="/kfw_logo_large.svg" type="image/svg+xml" />
+            <img width="232" height="120" src="/kfw_logo.svg" alt="Logo KfW" />
           </picture>
         </a>
 
         <nav class="header__secondary-nav" aria-label="Secondary nav">
-          <a href="/login" onclick="event.preventDefault()">
+          <button id="theme-toggle" role="link">
             <i aria-hidden="true" class="icon icon--md icon--login"></i>
-            <span class="header__login-text">Login</span>
-          </a>
+            Toggle Theme
+          </button>
+          <script>
+            document.getElementById("theme-toggle").addEventListener("click", function () {
+              const html = document.documentElement
+              const currentTheme = html.getAttribute("data-theme")
+              const newTheme = currentTheme === "light" ? "dark" : "light"
+              html.setAttribute("data-theme", newTheme)
+            })
+          </script>
         </nav>
       </div>
     </header>

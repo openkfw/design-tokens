@@ -11,6 +11,10 @@
       },
       "border": {
         "default": { "$value": "#41484c", "$description": "Border color (Gray)" }
+      },
+      "opaque": {
+        "white-90": { "$value": "#1a1a1a", "$description": "Dark" },
+        "white-95": { "$value": "#1a1a1a", "$description": "Dark" }
       }
     }
   }

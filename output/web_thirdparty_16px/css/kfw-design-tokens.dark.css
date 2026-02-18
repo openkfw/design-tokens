@@ -1,5 +1,5 @@
 /**
- * KfW Design Tokens v0.6.91 | MPL-2.0 | https://github.com/openkfw/design-tokens
+ * KfW Design Tokens v1.1.0-alpha.0 | MPL-2.0 | https://github.com/openkfw/design-tokens
  */
 
 [data-theme="dark"] {
@@ -7,7 +7,10 @@
   --kfw-color-background-subtle: #2d3134; /** Neutral background (Dark Gray) */
   --kfw-color-text: #ffffff; /** Main text color for body (White) */
   --kfw-color-border: #41484c; /** Border color (Gray) */
+  --kfw-color-opaque-white-90: #1a1a1a; /** Dark */
+  --kfw-color-opaque-white-95: #1a1a1a; /** Dark */
 }
+
 @media (prefers-color-scheme: dark) {
   :root,
   :host {
@@ -15,5 +18,7 @@
     --kfw-color-background-subtle: #2d3134; /** Neutral background (Dark Gray) */
     --kfw-color-text: #ffffff; /** Main text color for body (White) */
     --kfw-color-border: #41484c; /** Border color (Gray) */
+    --kfw-color-opaque-white-90: #1a1a1a; /** Dark */
+    --kfw-color-opaque-white-95: #1a1a1a; /** Dark */
   }
 }
