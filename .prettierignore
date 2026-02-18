@@ -1,3 +1,4 @@
 output
 tokens/gen-**.**
 demo/dist/**
+demo/scripts/icon-mapping-report.json

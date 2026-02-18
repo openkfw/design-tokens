@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "icons": "npm run map:icons && npm run build:icons",
+    "map:icons": "node scripts/map-icons.js",
     "build:icons": "node scripts/build-icons.js",
     "build:cm": "node scripts/build-custom-media.js",
     "preview": "vite preview",
@@ -14,7 +16,7 @@
     "lint": "npx stylelint 'src/*.css' --fix"
   },
   "devDependencies": {
-    "@openkfw/design-tokens": "^0.6.8",
+    "@openkfw/design-tokens": "^0.7.0",
     "autoprefixer": "^10.4.24",
     "postcss-custom-media": "^12.0.0",
     "postcss-inline-svg": "^6.0.0",
@@ -22,6 +24,7 @@
     "stylelint": "^16",
     "stylelint-config-standard": "^39",
     "stylelint-media-use-custom-media": "^4.1.0",
+    "stylelint-plugin-logical-css": "^2.0.2",
     "typescript": "^5.9.3",
     "uaplus": "^0.3.1",
     "vite": "^7.3.1",
