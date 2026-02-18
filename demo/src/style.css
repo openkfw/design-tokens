@@ -702,10 +702,6 @@
     border-color: var(--kfw-color-state-danger);
     border-width: var(--kfw-borderwidth-large);
     color: var(--kfw-color-fn-active);
-  }
-
-  [data-whatinput="keyboard"] [aria-invalid="true"] .list-group-form :where([type="checkbox"], [type="radio"]),
-  [data-whatinput="keyboard"] .list-group-form :where([type="checkbox"], [type="radio"])[aria-invalid="true"] {
     outline-color: var(--kfw-color-state-danger);
   }
 
@@ -756,9 +752,12 @@
     content: "";
   }
 
-  .list-group-form :where([type="radio"], [type="checkbox"]):hover:not(:disabled),
-  .list-group-form :where([type="radio"], [type="checkbox"]):focus-visible:not(:disabled) {
+  .list-group-form :where([type="radio"], [type="checkbox"]):hover:not(:disabled) {
     border-width: var(--kfw-borderwidth-large);
+  }
+
+  .list-group-form :where([type="radio"], [type="checkbox"]):focus-visible:not(:disabled) {
+    outline-width: var(--kfw-focusring-outline-width);
   }
 
   .list-group-form--with-description label {
@@ -1899,16 +1898,20 @@
     --button-border-color-hover: var(--kfw-color-text-on-dark-bg);
   }
 
-  :where(.bg-dark) :where(.button-primary.has-icon-only:where(:hover, :focus-visible)),
-  :where(.bg-dark) :where(.button-secondary.has-icon-only:where(:hover, :focus-visible)) {
+  :where(.bg-dark, .footer) :where(.button-primary.has-icon-only:where(:hover, :focus-visible)),
+  :where(.bg-dark, .footer) :where(.button-secondary.has-icon-only:where(:hover, :focus-visible)) {
     color: var(--kfw-color-text-on-dark-bg);
     background-color: var(--kfw-color-fn-active);
-    border-color: var(--kfw-color-text-on-dark-bg);
     border-width: var(--kfw-borderradius-small);
   }
 
-  :where(.bg-dark) :where(.button-primary.has-icon-only:where(:active)),
-  :where(.bg-dark) :where(.button-secondary.has-icon-only:where(:active)) {
+  :where(.bg-dark, .footer) :where(.button-primary.has-icon-only:where(:hover)),
+  :where(.bg-dark, .footer) :where(.button-secondary.has-icon-only:where(:hover)) {
+    border-color: var(--kfw-color-text-on-dark-bg);
+  }
+
+  :where(.bg-dark, .footer) :where(.button-primary.has-icon-only:where(:active)),
+  :where(.bg-dark, .footer) :where(.button-secondary.has-icon-only:where(:active)) {
     border-width: var(--kfw-borderwidth);
   }
 
