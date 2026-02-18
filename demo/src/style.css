@@ -1376,6 +1376,7 @@
   .header__logo-large {
     display: none;
     block-size: 6rem;
+    inline-size: 11.7rem;
   }
 
   @media (--kfw-breakpoint-tablet) {
