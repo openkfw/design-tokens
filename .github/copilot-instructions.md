@@ -17,6 +17,7 @@ npm run precommit        # Runs typecheck + format + lint sequentially
 ```
 
 **Demo app** (separate project in `demo/` with its own `package.json`):
+
 ```bash
 cd demo && npm install   # Separate dependency install
 cd demo && npm run dev   # Vite dev server
