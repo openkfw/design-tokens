@@ -8,7 +8,7 @@
     "build": "vite build",
     "icons": "npm run map:icons && npm run build:icons",
     "map:icons": "node scripts/map-icons.js",
-    "build:icons": "node scripts/build-icons.js",
+    "build:icons": "node scripts/build-icons-css.js",
     "build:cm": "node scripts/build-custom-media.js",
     "preview": "vite preview",
     "format": "npx prettier --write .",

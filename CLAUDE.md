@@ -12,8 +12,8 @@ KfW Design Tokens — the source of truth for KfW-branded digital products. Toke
 nvm use                  # Switch to Node 24 (.nvmrc)
 npm install              # Install dependencies
 
-npm run build            # Full build: extended tokens first, then Style Dictionary
-npm run start            # Dev mode with watch (runs both watchers concurrently)
+npm run build            # Full build: compiles tokens with Style Dictionary
+npm run start            # Dev mode with watch (recompiles on token changes)
 npm run typecheck        # TypeScript type checking (tsc --noEmit)
 npm run lint             # ESLint with --fix (ignores demo/)
 npm run format           # Prettier on entire repo
@@ -32,14 +32,15 @@ cd demo && npm run build # Vite production build
 
 ### Build Pipeline
 
-1. **Extended tokens build** (`tokens/extended/build.ts`): Merges theme-specific token files (e.g., `tokens.dark.json`) with the base `tokens.json` using lodash `merge`, outputting generated JSON5 files prefixed with `gen-` (e.g., `gen-tokens.dark.json5`). These generated files are gitignored from prettier.
+**Style Dictionary build** (`sd.config.ts`): The main config that processes tokens into platform outputs. Currently configured for light theme only. The build iterates over base pixel sizes (`10px` default, `16px` for third-party) to generate output variants.
 
-2. **Style Dictionary build** (`sd.config.ts`): The main config that processes tokens into platform outputs. It iterates over themes (`light` by default) and base pixel sizes (`10px` default, `16px` for third-party) to generate output variants.
+### Theme Support
+
+**Light theme only**: The project currently supports only a light theme. There is no dark theme implementation in the codebase. All token definitions in `tokens/tokens.json` are for the light theme, simplifying maintenance and reducing output file sizes.
 
 ### Key Directories
 
-- `tokens/` — Source token definitions in JSON/JSON5 (W3C DTCG format with `$value`, `$type`)
-- `tokens/extended/` — Theme overrides (dark mode etc.) that get merged with base tokens
+- `tokens/` — Source token definitions in JSON/JSON5 (W3C DTCG format with `$value`, `$type`). Currently light theme only.
 - `config/` — Style Dictionary customizations (transforms, formats, shared utilities)
 - `output/` — Generated build artifacts (CSS, SCSS, JS, JSON, Figma, Penpot). Not manually edited.
 - `demo/` — Standalone Vite app showcasing the design tokens (separate npm project, KfW brand assets)
