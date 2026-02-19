@@ -765,29 +765,15 @@
                     </li>
                     <li>
                       <input name="radioButton" type="radio" id="radioButton5" disabled />
-                      <label for="radioButton5">Radio 5 (disabled)</label>
+                      <label for="radioButton5">Radio 5 (Disabled)</label>
                     </li>
                   </ul>
                 </li>
                 <li>
                   <input name="radioButton" type="radio" id="radioButton6" checked />
-                  <label for="radioButton6">Radio 6 (checked)</label>
+                  <label for="radioButton6">Radio 6 (Checked)</label>
                 </li>
               </ul>
-            </div>
-
-            <div class="form-group">
-              <ul class="list-group-form list-group-form--inline">
-                <li>
-                  <input name="radioButton" type="radio" id="radioButton7" aria-invalid="true" />
-                  <label for="radioButton7">Radio 7 (invalid)</label>
-                </li>
-                <li>
-                  <input name="radioButton" type="radio" id="radioButton8" />
-                  <label for="radioButton8">Radio 8 (valid)</label>
-                </li>
-              </ul>
-              <span class="invalid-feedback invalid-feedback--single" role="alert">Please fill out this field.</span>
             </div>
 
             <div class="form-group">
@@ -795,12 +781,12 @@
                 <span id="radio-group-error-label2" class="form-label">Radio Group Error</span>
                 <ul class="list-group-form">
                   <li>
-                    <input name="radioError" type="radio" id="radio9" />
-                    <label for="radio9">Radio 9</label>
+                    <input name="radioError" type="radio" id="radio7" />
+                    <label for="radio7">Radio 7</label>
                   </li>
                   <li>
-                    <input name="radioError" type="radio" id="radio10" />
-                    <label for="radio10">Radio 10</label>
+                    <input name="radioError" type="radio" id="radio8" />
+                    <label for="radio8">Radio 8</label>
                   </li>
                 </ul>
               </div>
@@ -836,29 +822,31 @@
                     </li>
                     <li>
                       <input type="checkbox" id="checkbox5" disabled />
-                      <label for="checkbox5">Checkbox 5 (disabled)</label>
+                      <label for="checkbox5">Checkbox 5 (Disabled)</label>
                     </li>
                   </ul>
                 </li>
                 <li>
                   <input type="checkbox" id="checkButton6" checked />
-                  <label for="checkButton6"> Checkbox 6 (checked)</label>
+                  <label for="checkButton6"> Checkbox 6 (Checked)</label>
                 </li>
               </ul>
             </div>
 
             <div class="form-group">
-              <ul class="list-group-form list-group-form--inline">
-                <li>
-                  <input name="radioButton" type="checkbox" id="checkButton7" aria-invalid="true" />
-                  <label for="checkButton7">Checkbox 7 (invalid)</label>
-                </li>
-                <li>
-                  <input name="radioButton" type="checkbox" id="checkButton8" />
-                  <label for="checkButton8">Checkbox 8 (valid)</label>
-                </li>
-              </ul>
-              <span class="invalid-feedback invalid-feedback--single" role="alert">Please fill out this field.</span>
+              <div class="form-group__inner">
+                <ul class="list-group-form list-group-form--inline">
+                  <li>
+                    <input name="radioButton" type="checkbox" id="checkButton7" aria-invalid="true" />
+                    <label for="checkButton7">Checkbox 7 (Error)</label>
+                  </li>
+                  <li>
+                    <input name="radioButton" type="checkbox" id="checkButton8" />
+                    <label for="checkButton8">Checkbox 8</label>
+                  </li>
+                </ul>
+              </div>
+              <span class="invalid-feedback" role="alert">Please fill out this field.</span>
             </div>
 
             <div class="form-group">
