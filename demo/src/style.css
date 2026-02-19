@@ -1947,6 +1947,18 @@
     display: block;
   }
 
+  .d-inline {
+    display: inline;
+  }
+
+  .d-inline-block {
+    display: inline-block;
+  }
+
+  .d-inline-flex {
+    display: inline-flex;
+  }
+
   .my-lg {
     margin-block: var(--kfw-space-large);
   }
