@@ -121,5 +121,6 @@ In Tailwind CSS v4, you can either:
 
 Currently, Figma does not natively support importing W3C design tokens.
 Therefore, we export our design tokens into a Figma-compatible format, inspired by the approach used in the "Token Studio" plugin.
+
 Although the Token Studio plugin offers various features, it is not required and some of its functionality comes with a cost.
-As an alternative, you can use the free plugin "Token Forge", which allows you to easily import our design tokens in the Figma-compatible format and use them as Figma variables.
+As an alternative, you can use the free plugin [Token Forge](https://www.figma.com/files/team/917113827271362612/resources/community/plugin/1566133735926608173/token-forge-variables-tokens-builder?fuid=917113818148995313), which allows you to easily import our design tokens in the Figma-compatible format and use them as Figma variables.
