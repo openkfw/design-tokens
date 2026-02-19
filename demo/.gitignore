@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+scripts/icon-mapping-report.json
 
 node_modules
 *.local
