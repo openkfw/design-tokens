@@ -7,12 +7,9 @@
     "LICENSE",
     "output",
     "tokens/tokens.json",
-    "tokens/gen-tokens.dark.json5",
     "demo/dist/css/style.min.css",
-    "demo/src/style.css",
-    "demo/src/vendor/**.css",
     "demo/scripts/**.js",
-    "demo/App.ts"
+    "demo/src/vendor/gen-custom-media.css"
   ],
   "scripts": {
     "start": "npm run watch",
