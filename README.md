@@ -12,10 +12,7 @@
 KfW Design Tokens is the source of truth for designing KfW-branded digital products. By default, it's built to align with our corporate brand and design but allows for customization to fit your particular product.
 The tokens follow a template that complies with the <a href="https://tr.designtokens.org/">W3C DTCG format</a>.
 
-**Note: The Design Tokens are still in the pilot phase.** This means that they are currently being tested and evaluated for functionality and usability. Feedback from users during this phase is crucial for making improvements and ensuring that the tokens meet the needs of all stakeholders before a full stable release.
-
 ![Design Tokens badge](https://img.shields.io/badge/openkfw-design--tokens-005a8c)
-![Status: Pilot](https://img.shields.io/badge/status-pilot-yellow)
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen)](./LICENSE)
 [![NPM package](https://img.shields.io/npm/v/@openkfw/design-tokens.svg)](https://www.npmjs.com/package/@openkfw/design-tokens)
 ![GitHub repo size](https://img.shields.io/github/repo-size/openkfw/design-tokens)
