@@ -44,7 +44,7 @@ Considering supporting with your contribution? Whether you like to contribute ne
 
 ## 📒 License
 
-Copyright (c) 2025 KfW Bankengruppe
+Copyright (c) 2026 KfW Bankengruppe
 
 The source code in this repository is licensed under the **Mozilla Public License 2.0 (MPL-2.0)**.
 All KfW brand assets, including logos, icons, images, fonts, and design documentation, are **excluded** and remain the property of KfW Bankengruppe.
