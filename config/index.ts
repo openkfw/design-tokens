@@ -12,7 +12,6 @@ import { RegisterTransforms } from "./transform"
 import { RegisterFormats } from "./format"
 import { FileHeader } from "style-dictionary/types"
 import { version } from "../package.json"
-
 import { StyleDictionary } from "style-dictionary-utils"
 
 export const RegisterCustom = (PREFIX: string) => {
@@ -30,3 +29,5 @@ export const RegisterCustom = (PREFIX: string) => {
   }
   StyleDictionary.registerFileHeader(customFileHeader)
 }
+
+export * from "./constants"

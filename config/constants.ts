@@ -81,3 +81,19 @@ export const TYPE_REMAPPING = Object.freeze({
   space: { $type: "spacing" },
   gridgap: { $type: "spacing" }
 } as const)
+
+/**
+ * Precision for fluid token calculations (decimal places)
+ * Uses 4 decimals to match CSS clamp() precision requirements
+ */
+export const FLUID_PRECISION = 4
+
+/**
+ * Base font sizes for different output variants
+ */
+export const BASE_PX_FONT_SIZES = Object.freeze({
+  /** Default internal KfW size (10px = 1rem) */
+  DEFAULT: 10,
+  /** Third-party integrations using browser default (16px = 1rem) */
+  THIRDPARTY: 16
+} as const)

@@ -12,7 +12,7 @@ import { transforms, transformTypes } from "style-dictionary/enums"
 import { isPascalCase, kebabToPascalCase } from "./shared"
 import { StyleDictionary } from "style-dictionary-utils"
 
-import { PX_TO_REM_THRESHOLD, PX_TO_REM_EXCLUSIONS, VALID_UNITS_SET, VALID_CSS_UNITS } from "./constants"
+import { PX_TO_REM_THRESHOLD, PX_TO_REM_EXCLUSIONS, VALID_UNITS_SET, VALID_CSS_UNITS, FLUID_PRECISION } from "./constants"
 
 export function RegisterTransforms(PREFIX: string) {
   /**
@@ -67,8 +67,8 @@ export function RegisterTransforms(PREFIX: string) {
         }
         const valueUnit = $value.replace(numericValue.toString(), "").trim()
         const sign = numericValue > 0 ? "+" : "-"
-        const fluidValue = Number($fluid.value.toFixed(4))
-        const absValue = Number(Math.abs(numericValue).toFixed(4))
+        const fluidValue = Number($fluid.value.toFixed(FLUID_PRECISION))
+        const absValue = Number(Math.abs(numericValue).toFixed(FLUID_PRECISION))
         return `${fluidValue}${$fluid.unit} ${sign} ${absValue}${valueUnit}`
       }
 

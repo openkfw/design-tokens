@@ -10,7 +10,7 @@
 
 import { Config } from "style-dictionary/types"
 import { formats, logBrokenReferenceLevels, logVerbosityLevels } from "style-dictionary/enums"
-import { RegisterCustom } from "./config"
+import { RegisterCustom, BASE_PX_FONT_SIZES } from "./config"
 import { StyleDictionary } from "style-dictionary-utils"
 
 const THEMES = ["light"] as const
@@ -19,7 +19,7 @@ export type Theme = (typeof THEMES)[number]
 export const formatsFigmaPenpot = "json/figma-penpot"
 
 const PREFIX = "kfw"
-const BASE_PX = { default: 10, thirdparty: 16 } as const
+const BASE_PX = { default: BASE_PX_FONT_SIZES.DEFAULT, thirdparty: BASE_PX_FONT_SIZES.THIRDPARTY } as const
 
 const CONFIG_BASE: Config = {
   usesDtcg: true,

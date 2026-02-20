@@ -1,8 +1,8 @@
 publiccodeYmlVersion: "0.4"
 name: KfW Design Tokens
 url: "https://github.com/openkfw/design-tokens"
-releaseDate: "2025-08-20"
-softwareVersion: 0.1.2
+releaseDate: "2026-02-20"
+softwareVersion: 1.0.0
 developmentStatus: stable
 platforms:
   - web
