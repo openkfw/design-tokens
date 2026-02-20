@@ -9,7 +9,8 @@
     "tokens/tokens.json",
     "demo/dist/css/style.min.css",
     "demo/scripts/**.js",
-    "demo/src/vendor/gen-custom-media.css"
+    "demo/src/vendor/gen-custom-media.css",
+    "demo/src/**.ts"
   ],
   "scripts": {
     "start": "npm run watch",
